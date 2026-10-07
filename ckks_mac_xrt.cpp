@@ -12,11 +12,16 @@
 #include <vector>
 
 #ifndef CKKSMAC_PARSER_ONLY
+#if __has_include(<xrt/detail/ert.h>)
+#include <xrt/detail/ert.h>
+#else
 #include <ert.h>
+#endif
 #include <xrt/xrt_bo.h>
 #include <xrt/xrt_device.h>
 #include <xrt/xrt_graph.h>
 #include <xrt/xrt_kernel.h>
+#include <xrt/experimental/xrt_ini.h>
 #endif
 
 namespace fs = std::filesystem;
@@ -51,6 +56,66 @@ uint64_t read_le(std::istream& stream, unsigned bytes) {
         value |= uint64_t(static_cast<unsigned char>(byte)) << (8 * i);
     }
     return value;
+}
+
+// AXLF has a stable on-disk layout. Inspect it before creating an XRT device:
+// a flat xclbin without LOAD_PDI can register CUs without programming hardware.
+void validate_runtime_xclbin(const fs::path& path) {
+    std::ifstream stream(path, std::ios::binary);
+    require(bool(stream), "cannot open xclbin: " + path.string());
+    const auto size = fs::file_size(path);
+    require(size >= 456, "truncated xclbin header");
+    std::array<char, 8> magic{};
+    stream.read(magic.data(), magic.size());
+    require(magic == std::array<char, 8>{'x','c','l','b','i','n','2','\0'},
+            "invalid xclbin magic");
+    stream.seekg(304);
+    require(read_le(stream, 8) == size, "xclbin length mismatch");
+    stream.seekg(332);
+    const auto mode = read_le(stream, 2);
+    const auto actions = read_le(stream, 2);
+    require(mode == 0 && actions == 2,
+            "expected flat runtime xclbin with LOAD_PDI (action_mask=2); "
+            "refusing a metadata-only or AIE-only load");
+    stream.seekg(448);
+    const auto count = read_le(stream, 4);
+    require(count > 0 && count <= 1024 && 456 + count * 40 <= size,
+            "invalid xclbin section table");
+    uint64_t pdi_offset = 0, pdi_size = 0;
+    bool has_aie = false, has_resources = false, has_ip = false;
+    for (uint64_t i = 0; i < count; ++i) {
+        stream.seekg(static_cast<std::streamoff>(456 + i * 40));
+        const auto kind = read_le(stream, 4);
+        stream.seekg(20, std::ios::cur);  // section name and alignment padding
+        const auto offset = read_le(stream, 8);
+        const auto length = read_le(stream, 8);
+        require(offset >= 456 + count * 40 && offset <= size && length <= size - offset,
+                "xclbin section exceeds file bounds");
+        require(kind != 0 && kind != 19 && kind != 20 && kind != 30 && kind != 32,
+                "runtime xclbin must use a single PDI load without BITSTREAM or overlay");
+        if (kind == 18) {
+            require(pdi_size == 0, "duplicate PDI section");
+            pdi_offset = offset;
+            pdi_size = length;
+        }
+        has_ip |= kind == 8;
+        has_aie |= kind == 25;
+        has_resources |= kind == 29;
+    }
+    require(pdi_size >= 128 && has_ip && has_aie && has_resources,
+            "missing runtime PDI, kernel layout or packaged AIE resources");
+    stream.seekg(static_cast<std::streamoff>(pdi_offset));
+    require(read_le(stream, 4) == 0xdd && read_le(stream, 4) == 0x11223344 &&
+                read_le(stream, 4) == 0x55667788 && read_le(stream, 4) == 0x99aabbcc,
+            "PDI lacks the Versal runtime sync header");
+    require(read_le(stream, 4) == 0x00040000 && read_le(stream, 4) == 3,
+            "PDI must contain exactly the PL and two AIE images, without a boot header");
+    stream.seekg(static_cast<std::streamoff>(pdi_offset + 0x10 + 0x18));
+    require(read_le(stream, 4) == 0x14cd3093, "PDI device ID is not the linked VEK280 device");
+    stream.seekg(static_cast<std::streamoff>(pdi_offset + 0x10 + 0x28));
+    require(read_le(stream, 4) == 0x50504449, "PDI is not a runtime PPDI");
+    std::cout << "PASS xclbin mode=flat action_mask=LOAD_PDI runtime_pdi_bytes="
+              << pdi_size << "\n" << std::flush;
 }
 
 #ifndef CKKSMAC_PARSER_ONLY
@@ -249,15 +314,23 @@ void wait_for_run(const char* name, xrt::run& run,
 
 void run_hardware(const fs::path& xclbin, const InputCase& input,
                   const fs::path& output_path, uint64_t timeout_ms) {
-    require(fs::exists(xclbin), "xclbin does not exist: " + xclbin.string());
+    validate_runtime_xclbin(xclbin);
+    // The PL interrupt controller is replaced by this design. Polling avoids
+    // depending on the official NPU image's interrupt layout.
+    xrt::ini::set("Runtime.ert_polling", "true");
+    xrt::ini::set("Runtime.xgq_polling", "true");
+    std::cout << "STAGE load_xclbin begin (PL+AIE programming, polling enabled)\n"
+              << std::flush;
     auto device = xrt::device(0);
     const auto uuid = device.load_xclbin(xclbin.string());
+    std::cout << "STAGE load_xclbin complete\n" << std::flush;
 
     auto reader = xrt::kernel(device, uuid, "ct_reader:{ct_reader_1}",
                               xrt::kernel::cu_access_mode::exclusive);
     auto reducer = xrt::kernel(device, uuid, "ct_reduce_accum:{ct_reduce_accum_1}",
                                xrt::kernel::cu_access_mode::exclusive);
     auto graph = xrt::graph(device, uuid, "ckks_graph");
+    std::cout << "STAGE kernels_and_graph ready\n" << std::flush;
 
     const auto parameters = pack_parameters(input);
     std::vector<uint64_t> output(static_cast<size_t>(input.output_words()), 0);
@@ -295,6 +368,7 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
     require(frame_count <= static_cast<uint64_t>(std::numeric_limits<int>::max()),
             "AIE frame count exceeds graph API range");
     graph.reset();
+    std::cout << "STAGE execution begin frames=" << frame_count << "\n" << std::flush;
     reducer_run.start();
     graph.run(static_cast<int>(frame_count));
     reader_run.start();
@@ -350,6 +424,10 @@ void print_inspection(const InputCase& input) {
 
 int main(int argc, char** argv) {
     try {
+        if (argc == 3 && std::string(argv[1]) == "--inspect-xclbin") {
+            validate_runtime_xclbin(argv[2]);
+            return 0;
+        }
 #ifdef CKKSMAC_PARSER_ONLY
         if (argc != 2) {
             std::cerr << "Usage: ckks_mac_parser INPUT_BIN\n";
