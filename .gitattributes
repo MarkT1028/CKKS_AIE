@@ -1,9 +1,6 @@
-# Linux deployment files must keep LF on Windows and Linux checkouts.
 *.sh text eol=lf
 *.cpp text eol=lf
 SHA256SUMS text eol=lf
 .gitattributes text eol=lf
-
-# Hardware and reference data must never undergo text conversion.
-*.xclbin -text
 *.bin -text
+*.xclbin -text

@@ -5,8 +5,10 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <iterator>
 #include <limits>
 #include <stdexcept>
+#include <sstream>
 #include <string>
 #include <system_error>
 #include <vector>
@@ -58,9 +60,22 @@ uint64_t read_le(std::istream& stream, unsigned bytes) {
     return value;
 }
 
-// AXLF has a stable on-disk layout. Inspect it before creating an XRT device:
-// a flat xclbin without LOAD_PDI can register CUs without programming hardware.
-void validate_runtime_xclbin(const fs::path& path) {
+constexpr const char* kBootUuid = "1b664c9b428c5972904d75ffc08ea5df";
+
+// This host accepts only metadata for the matching boot-programmed design.
+// Check the DT marker before creating an XRT device or touching CU registers.
+void validate_boot_marker(const fs::path& path =
+    "/sys/firmware/devicetree/base/chosen/ckks,boot-xclbin-uuid") {
+    std::ifstream stream(path, std::ios::binary);
+    require(bool(stream), "CKKS boot marker missing; boot the supplied CKKS image first");
+    const std::string marker((std::istreambuf_iterator<char>(stream)),
+                             std::istreambuf_iterator<char>());
+    require(marker == std::string(kBootUuid) + '\0',
+            "CKKS boot marker does not match this host/xclbin; refusing CU access");
+    std::cout << "PASS boot marker matches CKKS hardware\n" << std::flush;
+}
+
+void validate_boot_xclbin(const fs::path& path) {
     std::ifstream stream(path, std::ios::binary);
     require(bool(stream), "cannot open xclbin: " + path.string());
     const auto size = fs::file_size(path);
@@ -74,14 +89,18 @@ void validate_runtime_xclbin(const fs::path& path) {
     stream.seekg(332);
     const auto mode = read_le(stream, 2);
     const auto actions = read_le(stream, 2);
-    require(mode == 0 && actions == 2,
-            "expected flat runtime xclbin with LOAD_PDI (action_mask=2); "
-            "refusing a metadata-only or AIE-only load");
+    require(mode == 0 && actions == 0,
+            "expected flat boot-programmed metadata with action_mask=0; "
+            "refusing hardware reload");
+    stream.seekg(416);
+    std::ostringstream uuid;
+    for (unsigned i = 0; i < 16; ++i)
+        uuid << std::hex << std::setfill('0') << std::setw(2) << read_le(stream, 1);
+    require(uuid.str() == kBootUuid, "xclbin UUID does not match CKKS boot image");
     stream.seekg(448);
     const auto count = read_le(stream, 4);
     require(count > 0 && count <= 1024 && 456 + count * 40 <= size,
             "invalid xclbin section table");
-    uint64_t pdi_offset = 0, pdi_size = 0;
     bool has_aie = false, has_resources = false, has_ip = false;
     for (uint64_t i = 0; i < count; ++i) {
         stream.seekg(static_cast<std::streamoff>(456 + i * 40));
@@ -91,31 +110,17 @@ void validate_runtime_xclbin(const fs::path& path) {
         const auto length = read_le(stream, 8);
         require(offset >= 456 + count * 40 && offset <= size && length <= size - offset,
                 "xclbin section exceeds file bounds");
-        require(kind != 0 && kind != 19 && kind != 20 && kind != 30 && kind != 32,
-                "runtime xclbin must use a single PDI load without BITSTREAM or overlay");
-        if (kind == 18) {
-            require(pdi_size == 0, "duplicate PDI section");
-            pdi_offset = offset;
-            pdi_size = length;
-        }
+        require(kind != 0 && kind != 18 && kind != 19 && kind != 20 &&
+                    kind != 30 && kind != 32,
+                "boot metadata must not contain PDI, BITSTREAM, partition or overlay");
         has_ip |= kind == 8;
         has_aie |= kind == 25;
         has_resources |= kind == 29;
     }
-    require(pdi_size >= 128 && has_ip && has_aie && has_resources,
-            "missing runtime PDI, kernel layout or packaged AIE resources");
-    stream.seekg(static_cast<std::streamoff>(pdi_offset));
-    require(read_le(stream, 4) == 0xdd && read_le(stream, 4) == 0x11223344 &&
-                read_le(stream, 4) == 0x55667788 && read_le(stream, 4) == 0x99aabbcc,
-            "PDI lacks the Versal runtime sync header");
-    require(read_le(stream, 4) == 0x00040000 && read_le(stream, 4) == 3,
-            "PDI must contain exactly the PL and two AIE images, without a boot header");
-    stream.seekg(static_cast<std::streamoff>(pdi_offset + 0x10 + 0x18));
-    require(read_le(stream, 4) == 0x14cd3093, "PDI device ID is not the linked VEK280 device");
-    stream.seekg(static_cast<std::streamoff>(pdi_offset + 0x10 + 0x28));
-    require(read_le(stream, 4) == 0x50504449, "PDI is not a runtime PPDI");
-    std::cout << "PASS xclbin mode=flat action_mask=LOAD_PDI runtime_pdi_bytes="
-              << pdi_size << "\n" << std::flush;
+    require(has_ip && has_aie && has_resources,
+            "missing kernel layout or packaged AIE resources");
+    std::cout << "PASS xclbin mode=flat action_mask=0 boot_programmed uuid="
+              << uuid.str() << "\n" << std::flush;
 }
 
 #ifndef CKKSMAC_PARSER_ONLY
@@ -314,16 +319,18 @@ void wait_for_run(const char* name, xrt::run& run,
 
 void run_hardware(const fs::path& xclbin, const InputCase& input,
                   const fs::path& output_path, uint64_t timeout_ms) {
-    validate_runtime_xclbin(xclbin);
-    // The PL interrupt controller is replaced by this design. Polling avoids
-    // depending on the official NPU image's interrupt layout.
+    validate_boot_xclbin(xclbin);
+    validate_boot_marker();
+    // Hardware was programmed by PLM before Linux. Only register metadata.
+    xrt::ini::set("Runtime.enable_flat", "false");
+    xrt::ini::set("Runtime.force_program_xclbin", "false");
     xrt::ini::set("Runtime.ert_polling", "true");
     xrt::ini::set("Runtime.xgq_polling", "true");
-    std::cout << "STAGE load_xclbin begin (PL+AIE programming, polling enabled)\n"
+    std::cout << "STAGE metadata registration begin (hardware already programmed at boot)\n"
               << std::flush;
     auto device = xrt::device(0);
     const auto uuid = device.load_xclbin(xclbin.string());
-    std::cout << "STAGE load_xclbin complete\n" << std::flush;
+    std::cout << "STAGE metadata registration complete\n" << std::flush;
 
     auto reader = xrt::kernel(device, uuid, "ct_reader:{ct_reader_1}",
                               xrt::kernel::cu_access_mode::exclusive);
@@ -425,7 +432,7 @@ void print_inspection(const InputCase& input) {
 int main(int argc, char** argv) {
     try {
         if (argc == 3 && std::string(argv[1]) == "--inspect-xclbin") {
-            validate_runtime_xclbin(argv[2]);
+            validate_boot_xclbin(argv[2]);
             return 0;
         }
 #ifdef CKKSMAC_PARSER_ONLY
@@ -436,7 +443,7 @@ int main(int argc, char** argv) {
         print_inspection(read_input(argv[1]));
 #else
         if (argc < 4 || argc > 5) {
-            std::cerr << "Usage: ckks_mac_xrt XCLBIN INPUT_BIN OUTPUT_BIN [TIMEOUT_MS]\n";
+            std::cerr << "Usage: ckks_mac_boot_xrt XCLBIN INPUT_BIN OUTPUT_BIN [TIMEOUT_MS]\n";
             return 2;
         }
         const uint64_t timeout_ms = argc == 5 ? parse_timeout(argv[4]) : 120000;
