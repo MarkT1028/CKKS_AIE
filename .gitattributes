@@ -1,6 +1,6 @@
 *.sh text eol=lf
 *.cpp text eol=lf
-SHA256SUMS text eol=lf
+*SHA256SUMS* text eol=lf
 .gitattributes text eol=lf
 *.bin -text
 *.xclbin -text
