@@ -319,6 +319,8 @@ void wait_for_run(const char* name, xrt::run& run,
 
 void run_hardware(const fs::path& xclbin, const InputCase& input,
                   const fs::path& output_path, uint64_t timeout_ms) {
+    using Clock = std::chrono::steady_clock;
+    const auto path_begin = Clock::now();
     validate_boot_xclbin(xclbin);
     validate_boot_marker();
     // Hardware was programmed by PLM before Linux. Only register metadata.
@@ -338,6 +340,7 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
                                xrt::kernel::cu_access_mode::exclusive);
     auto graph = xrt::graph(device, uuid, "ckks_graph");
     std::cout << "STAGE kernels_and_graph ready\n" << std::flush;
+    const auto init_end = Clock::now();
 
     const auto parameters = pack_parameters(input);
     std::vector<uint64_t> output(static_cast<size_t>(input.output_words()), 0);
@@ -356,6 +359,7 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
     input_bo.sync(XCL_BO_SYNC_BO_TO_DEVICE);
     parameter_bo.sync(XCL_BO_SYNC_BO_TO_DEVICE);
     output_bo.sync(XCL_BO_SYNC_BO_TO_DEVICE);
+    const auto upload_end = Clock::now();
 
     xrt::run reducer_run(reducer);
     reducer_run.set_arg(1, output_bo);
@@ -376,6 +380,7 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
             "AIE frame count exceeds graph API range");
     graph.reset();
     std::cout << "STAGE execution begin frames=" << frame_count << "\n" << std::flush;
+    const auto execution_begin = Clock::now();
     reducer_run.start();
     graph.run(static_cast<int>(frame_count));
     reader_run.start();
@@ -392,6 +397,7 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
         try { graph.reset(); } catch (...) {}
         throw;
     }
+    const auto execution_end = Clock::now();
 
     // Both kernels return only values validated by the host before launch.
     // Reading 0x10 verifies the HLS ap_return register itself.
@@ -403,12 +409,28 @@ void run_hardware(const fs::path& xclbin, const InputCase& input,
 
     output_bo.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
     output_bo.read(output.data(), output_bytes, 0);
+    const auto readback_end = Clock::now();
     for (size_t index = 0; index < output.size(); ++index) {
         const uint32_t tower = static_cast<uint32_t>(index / (uint64_t(input.n) * 3));
         require(output[index] < input.parameters[tower].q,
                 "noncanonical hardware output at word " + std::to_string(index));
     }
+    const auto validation_end = Clock::now();
     write_output(output_path, input, output);
+
+    const auto ms = [](auto begin, auto end) {
+        return std::chrono::duration<double, std::milli>(end - begin).count();
+    };
+    // Host wall times. Execution includes launch, PL DDR traffic and waiting;
+    // it is not an isolated AIE kernel cycle count. File I/O is excluded.
+    std::cout << std::fixed << std::setprecision(6)
+              << "TIMING init_ms=" << ms(path_begin, init_end)
+              << " upload_ms=" << ms(init_end, upload_end)
+              << " setup_ms=" << ms(upload_end, execution_begin)
+              << " execution_ms=" << ms(execution_begin, execution_end)
+              << " readback_ms=" << ms(execution_end, readback_end)
+              << " validation_ms=" << ms(readback_end, validation_end)
+              << " host_path_ms=" << ms(path_begin, validation_end) << "\n";
 
     std::cout << "PASS hardware frames=" << frame_count << " N=" << input.n
               << " L=" << input.l << " K=" << input.k
