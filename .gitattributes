@@ -1,9 +1,4 @@
-*.cpp text eol=lf
-*.sh text eol=lf
-*.ini text eol=lf
-*.md text eol=lf
-*.json text eol=lf
-SHA256SUMS* text eol=lf
 .gitattributes text eol=lf
-*.bin -text
-*.xclbin -text
+*.sh text eol=lf
+*.md text eol=lf
+SHA256SUMS_DMA text eol=lf
