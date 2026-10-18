@@ -1,0 +1,16 @@
+{
+  "status": "OFFLINE_ONLY_NOT_BOARD_TESTED",
+  "ready_variants": [
+    "baseline_1",
+    "sink_1",
+    "raw_1_pipe",
+    "raw_2_shared",
+    "raw_2_full",
+    "raw_2_pipe",
+    "diag_1_pipe",
+    "diag_2_pipe"
+  ],
+  "not_ready_variants": [],
+  "max_aie_cores": 2,
+  "no_boot_installation_performed": true
+}

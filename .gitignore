@@ -1,0 +1,6 @@
+/bin/
+/results_*/
+/switch_logs/
+/board_before_switch.txt
+*.log
+__pycache__/

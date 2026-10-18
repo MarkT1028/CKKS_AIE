@@ -1,0 +1,8 @@
+{
+  "id": "raw_1_pipe",
+  "cores": 1,
+  "format": "raw",
+  "backend": "pipeline",
+  "topology": "single",
+  "purpose": "Isolate reducer pipeline improvement"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "diag_1_pipe",
+  "cores": 1,
+  "format": "diagonal",
+  "backend": "pipeline",
+  "topology": "single",
+  "purpose": "Reduce partials 16 to 7 words per coefficient/product"
+}

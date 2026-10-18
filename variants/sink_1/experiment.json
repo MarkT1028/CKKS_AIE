@@ -1,0 +1,8 @@
+{
+  "id": "sink_1",
+  "cores": 1,
+  "format": "raw",
+  "backend": "sink",
+  "topology": "single",
+  "purpose": "Diagnostic receiver; NOT complete CKKS MAC"
+}

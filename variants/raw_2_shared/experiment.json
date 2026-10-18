@@ -1,0 +1,8 @@
+{
+  "id": "raw_2_shared",
+  "cores": 2,
+  "format": "raw",
+  "backend": "baseline",
+  "topology": "shared",
+  "purpose": "Two AIEs sharing original reducer and output path"
+}

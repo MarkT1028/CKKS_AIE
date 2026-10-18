@@ -1,0 +1,8 @@
+{
+  "id": "baseline_1",
+  "cores": 1,
+  "format": "raw",
+  "backend": "baseline",
+  "topology": "single",
+  "purpose": "Matched newly linked one-core control at the same interface settings"
+}

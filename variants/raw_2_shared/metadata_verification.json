@@ -1,0 +1,38 @@
+{
+  "status": "PASS_OFFLINE_METADATA_NOT_BOARD_EXECUTION",
+  "variant": "raw_2_shared",
+  "max_aie_cores": 2,
+  "actual_core_tiles": [
+    [
+      17,
+      0
+    ],
+    [
+      18,
+      0
+    ]
+  ],
+  "actual_ip_names": [
+    "ai_engine:ai_engine_0",
+    "ct_reader_dual:ct_reader_dual_1",
+    "ct_partials_join:ct_partials_join_1",
+    "ct_reduce_accum:ct_reduce_accum_1"
+  ],
+  "actual_plio_names": [
+    "ckks_left_0",
+    "ckks_left_1",
+    "ckks_partials_0",
+    "ckks_partials_1",
+    "ckks_right_0",
+    "ckks_right_1"
+  ],
+  "connected_dram_bases": [
+    "0x0",
+    "0x880000000"
+  ],
+  "uuid": "ddc58ff13f865f89b38344b20398ac1d",
+  "metadata_sha256": "50df8d48112669c30647ac733a58c3dc1ff7e7aa214e0ec70ae6d3a3c577de5b",
+  "boot_sha256": "3836766af6e87e11f3698726b5755a105833b3e177f78dc60f74517f85f25171",
+  "programming_sections_absent": true,
+  "flat_action_mask": 0
+}

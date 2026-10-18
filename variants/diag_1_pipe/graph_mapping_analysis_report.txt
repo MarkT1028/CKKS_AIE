@@ -1,0 +1,61 @@
+Mapping Analysis Report
+
+
+Acronym List
+    * CR(x,y)    - Core <column, row>
+    * MG(x,y):b  - MemoryGroup <column, row> : Bank
+    * MT(x,y):b  - MemoryTile <column, row> : Bank
+
+
+===============================================
+Block Mapping Report:
+===============================================
+
+Block:Function Name  CR(x,y)/IO(x)  Schedule  Utilization  Variable Name  Graph Name
+-------------------  -------------  --------  -----------  -------------  ----------
+i0:PLIO              IO(17)                                left[0]        ckks_graph
+i1:PLIO              IO(17)                                right[0]       ckks_graph
+i2:PLIO              IO(17)                                partials[0]    ckks_graph
+i3:limb_diag         CR(17,0)              0        0.900  mul[0]         ckks_graph
+
+
+===============================================
+Port Mapping Report:
+===============================================
+
+PortName  Dir  PrtType  BufType  Buffer Name  MG(x,y):b      Addr  Size  Variable Name      Graph Name
+--------  ---  -------  -------  -----------  ----------  -------  ----  -----------------  ----------
+i0_po0    out  stream   mem      buf0         MG(17,0):0  0x00000   512  left[0].out[0]     ckks_graph
+i0_po0    out  stream   mem      buf0d        MG(17,0):1  0x04000   512  left[0].out[0]     ckks_graph
+i1_po0    out  stream   mem      buf1         MG(17,1):2  0x08000   512  right[0].out[0]    ckks_graph
+i1_po0    out  stream   mem      buf1d        MG(17,1):0  0x00000   512  right[0].out[0]    ckks_graph
+i2_pi0    in   stream   mem      buf2         MG(17,1):3  0x0c000  1792  partials[0].in[0]  ckks_graph
+i2_pi0    in   stream   mem      buf2d        MG(17,1):1  0x04000  1792  partials[0].in[0]  ckks_graph
+i3_pi0    in   buffer   mem      buf0         MG(17,0):0  0x00000   512  mul[0].in[0]       ckks_graph
+i3_pi0    in   buffer   mem      buf0d        MG(17,0):1  0x04000   512  mul[0].in[0]       ckks_graph
+i3_pi1    in   buffer   mem      buf1         MG(17,1):2  0x08000   512  mul[0].in[1]       ckks_graph
+i3_pi1    in   buffer   mem      buf1d        MG(17,1):0  0x00000   512  mul[0].in[1]       ckks_graph
+i3_po0    out  buffer   mem      buf2         MG(17,1):3  0x0c000  1792  mul[0].out[0]      ckks_graph
+i3_po0    out  buffer   mem      buf2d        MG(17,1):1  0x04000  1792  mul[0].out[0]      ckks_graph
+
+
+===============================================
+Memory Bank Report:
+===============================================
+
+MG(x,y):b   Buffer Name     Addr  Size  Accessing Block  CR(x,y)/IO(x)
+----------  -----------  -------  ----  ---------------  -------------
+MG(16,0):0  sysmem3      0x00000  1175  main             CR(17,0)     
+MG(17,0):0  buf0         0x00000   512  i3:limb_diag     CR(17,0)     
+MG(17,0):0  buf0         0x00000   512  i0               IO(17)       
+MG(17,0):1  buf0d        0x04000   512  i3:limb_diag     CR(17,0)     
+MG(17,0):1  buf0d        0x04000   512  i0               IO(17)       
+MG(17,1):0  buf1d        0x00000   512  i1               IO(17)       
+MG(17,1):0  buf1d        0x00000   512  i3:limb_diag     CR(17,0)     
+MG(17,1):1  buf2d        0x04000  1792  i3:limb_diag     CR(17,0)     
+MG(17,1):1  buf2d        0x04000  1792  i2               IO(17)       
+MG(17,1):2  buf1         0x08000   512  i1               IO(17)       
+MG(17,1):2  buf1         0x08000   512  i3:limb_diag     CR(17,0)     
+MG(17,1):3  buf2         0x0c000  1792  i3:limb_diag     CR(17,0)     
+MG(17,1):3  buf2         0x0c000  1792  i2               IO(17)       
+
