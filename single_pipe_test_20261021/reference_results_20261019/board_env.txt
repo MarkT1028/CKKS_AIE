@@ -1,0 +1,11 @@
+Linux xilinx-vek280-20252 6.12.40-xilinx-g31626ef92ff1 #1 SMP Fri Nov  7 15:28:23 UTC 2025 aarch64 GNU/Linux
+UTC=2026-10-19T01:08:03Z
+56912d8044fa00b6543a3abf8b1dc17e63d029dbc5038640e4e6b7fc753d6376  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/bin/perf_host_baseline_1
+6cdbde2251e22b115ab2ee2de601d8a8c7d2e6b7650413175c8c417e0d6972d4  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/variants/baseline_1/ckks_hw_boot.xclbin
+0.00 0.00 0.00 1/101 778
+MemTotal:        4020300 kB
+MemAvailable:    3767056 kB
+CmaTotal:         524288 kB
+CmaFree:          509800 kB
+/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq=1400000
+/sys/devices/system/cpu/cpufreq/policy0/scaling_governor=userspace

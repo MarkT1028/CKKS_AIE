@@ -1,0 +1,9 @@
+{
+  "setup_slack_ns": 0.825,
+  "hold_slack_ns": 0.008,
+  "drc_errors": 0,
+  "board_tested": false,
+  "bus_skew_min_slack_ns": 12.527,
+  "independent_bus_skew_rerun": true,
+  "xsa_sha256": "ae5ff7faca14f02c216b16654e61463122fdf1b8eb0416ebf5aa0ee3c9cd0961"
+}

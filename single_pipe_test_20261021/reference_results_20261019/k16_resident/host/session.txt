@@ -1,0 +1,12 @@
+variant=baseline_1
+N=8192
+L=3
+K=16
+mode=resident
+cores=1
+repetitions=30
+warmups=3
+session_start_epoch_ns=1792372088432976333
+session_start_steady_ns=1753386646174
+init_ms=54.857
+prepare_ms=53.4059

@@ -1,0 +1,40 @@
+{
+  "research_question": "How much does the bundled reducer pipeline change help a single complete AIE path?",
+  "control": "baseline_1",
+  "candidate": "raw_1_pipe",
+  "same_core_count": 1,
+  "same_complete_input": true,
+  "same_raw_partials_bytes_K16": 100663296,
+  "candidate_vs_control_resources": {
+    "CLB_LUT": [
+      12753,
+      17618
+    ],
+    "CLB_FF": [
+      17068,
+      24030
+    ],
+    "DSP": [
+      55,
+      167
+    ],
+    "BRAM_tiles": [
+      12.5,
+      12.5
+    ]
+  },
+  "do_not_claim": [
+    "Candidate speedup before board measurements",
+    "Isolated benefit of the DATAFLOW pragma alone",
+    "CPU superiority",
+    "New power or decryption results"
+  ],
+  "recommended_sequence": [
+    "raw_1_pipe short 1",
+    "raw_1_pipe formal 30",
+    "baseline_1 short 1",
+    "baseline_1 formal 30"
+  ],
+  "comparison_default": "Historical 2026-10-19 baseline_1; --reference selects a new same-session-group reference.",
+  "optional_followup": "Repeat separate boot sessions and alternate order to assess run-to-run stability."
+}

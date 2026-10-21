@@ -1,0 +1,21 @@
+Mon Oct 19 00:12:01 UTC 2026
+Linux xilinx-vek280-20252 6.12.40-xilinx-g31626ef92ff1 #1 SMP Fri Nov  7 15:28:23 UTC 2025 aarch64 GNU/Linux
+g++ (GCC) 13.4.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+COMPILE_FLAGS=-std=c++17 -O3 -Wall -Wextra -pthread; XRT ABI checks enabled
+3446aeb227e4095a7dd33c4da9deaaa01716c2258e0e14a36c14fc1614d10682  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/variants/baseline_1/host/perf_host.cpp
+8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/variants/baseline_1/host/timed_base.hpp
+ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/variants/baseline_1/host/expected_reader.hpp
+491e19005f0eb6d0c24f8029a29656709a153f7469ca9b3ec5edc1b3b36d1a59  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/variants/baseline_1/host/variant_config.hpp
+	linux-vdso.so.1 (0x0000ffff82954000)
+	libxrt_coreutil.so.2 => /usr/lib/libxrt_coreutil.so.2 (0x0000ffff82650000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x0000ffff823f0000)
+	libm.so.6 => /usr/lib/libm.so.6 (0x0000ffff82340000)
+	libgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x0000ffff82300000)
+	libpthread.so.0 => /usr/lib/libpthread.so.0 (0x0000ffff822d0000)
+	libc.so.6 => /usr/lib/libc.so.6 (0x0000ffff82120000)
+	libuuid.so.1 => /usr/lib/libuuid.so.1 (0x0000ffff820f0000)
+	/usr/lib/ld-linux-aarch64.so.1 (0x0000ffff82910000)

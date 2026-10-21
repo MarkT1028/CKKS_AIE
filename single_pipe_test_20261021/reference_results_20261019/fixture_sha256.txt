@@ -1,0 +1,4 @@
+d52170ef4d5dbe641a8766f21accf02aeafb08f756e4221a2fb11cf60217766c  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/fixtures/inputs.bin
+8750a2611b56ca973e3e95ae13e050ad8bf9468056fdfe28dfe4eb27a8f457f6  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/fixtures/expected_raw.bin
+400f50243e1075fbf88d3babaf99e95bc8997806d76f1b7b1abe374fb9476756  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/fixtures/inputs_k16.bin
+9582b26d263c10bee1b10d967299e90b69f0a7c38fb0b98e39af17a1943be7df  /root/114C75007/vek280/AIE/diag_20261014/dma_profile_20261016/perf2/fixtures/expected_k16_raw.bin

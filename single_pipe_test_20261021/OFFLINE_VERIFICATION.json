@@ -1,0 +1,92 @@
+{
+  "prepared_date": "2026-10-21",
+  "status": "PASS_OFFLINE_RELEASE_CHECKS",
+  "candidate": "raw_1_pipe",
+  "reference": "baseline_1",
+  "actual_aie_cores_each_variant": 1,
+  "candidate_board_tested": false,
+  "new_candidate_timing_available": false,
+  "firmware_rebuilt_this_revision": false,
+  "CPU_benchmark_performed": false,
+  "host_compute_and_timing_sources_identical_between_variants": true,
+  "host_compute_and_timing_sources_match_previous_dual_pipe_package": true,
+  "board_or_boot_partition_touched_during_verification": false,
+  "reboot_or_register_commands_executed_during_verification": false,
+  "comparison_tests_used_isolated_synthetic_candidate_folders_only": true,
+  "passed_check_groups": 18,
+  "checks": [
+    {
+      "test": "POSIX shell syntax, complete SHA checks, LF text and two-variant identity",
+      "status": "PASS"
+    },
+    {
+      "test": "Original firmware digests, one actual AIE core per variant, matching flat metadata and routed signoff",
+      "status": "PASS"
+    },
+    {
+      "test": "Bundled historical reference revalidated: four complete 30-repetition suites, full outputs and host provenance",
+      "status": "PASS"
+    },
+    {
+      "test": "Independent xclbin sections: exactly one AIE tile, reader and reducer; three PLIOs; DDR mapping; matching UUID; no programming payload",
+      "status": "PASS"
+    },
+    {
+      "test": "Both C++ parsers: K1/K16 metadata and full split/merge checks; wrong UUID and programming payload rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "Known prior image whitelist; unknown image rejection; mock backup, staging, idempotence and rollback",
+      "status": "PASS"
+    },
+    {
+      "test": "Real switch entry points refuse the x86 PC before boot changes or reboot requests",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Suite did not finish",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Profiling must be disabled",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Saved full output differs",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses >=30 measured repetitions",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Summary median mismatch",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Host source mismatch",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Hardware identity mismatch",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Case identity/scope mismatch: cores",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison refuses Case identity/scope mismatch: topology",
+      "status": "PASS"
+    },
+    {
+      "test": "Comparison positive CLI and overwrite guard use synthetic inputs only, not new board results",
+      "status": "PASS"
+    },
+    {
+      "test": "Git autocrlf=true roundtrip preserves every file hash, including historical host.log files",
+      "status": "PASS"
+    }
+  ],
+  "note": "Ready for user-run board testing; these offline checks do not establish speedup."
+}

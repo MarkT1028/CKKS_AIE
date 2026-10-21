@@ -1,0 +1,2 @@
+variant,K,cores,topology,format,scope,mode,repetitions,warmups,init_ms,prepare_ms,execution_median_ms,execution_p95_ms,execution_min_ms,execution_max_ms,transaction_median_ms,validation_median_ms
+baseline_1,1,1,single,raw,raw_ckks_mac,transfer,30,3,53.833851,17.092782,3.626473,3.653883,3.616332,3.673383,5.194845,0.166831

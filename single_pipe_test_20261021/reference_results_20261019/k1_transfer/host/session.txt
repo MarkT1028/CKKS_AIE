@@ -1,0 +1,12 @@
+variant=baseline_1
+N=8192
+L=3
+K=1
+mode=transfer
+cores=1
+repetitions=30
+warmups=3
+session_start_epoch_ns=1792372084536562146
+session_start_steady_ns=1749490232308
+init_ms=53.8339
+prepare_ms=17.0928

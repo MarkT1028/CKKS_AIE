@@ -1,0 +1,20 @@
+{
+  "method": "retained native routed timing report and final implementation log; no independent checkpoint rerun",
+  "setup_wns_ns": 0.479,
+  "hold_whs_ns": 0.014,
+  "pulse_width_slack_ns": 0.016,
+  "drc_errors": 0,
+  "route": {
+    "Failed Nets": 0,
+    "Unrouted Nets": 0,
+    "Partially Routed Nets": 0,
+    "Node Overlaps": 0
+  },
+  "independent_bus_skew_rerun": false,
+  "xsa_sha256": "a88b2e5fdb95ec8dc06491ffceafa1b23086c10b97ef43142c0236ca160a19db",
+  "evidence_sha256": {
+    "link_hw_20261017_093931.log": "eaca6a68309b20cf663c32306007e16b48bfa31a97cfcefeae89c4ba70ad4c22",
+    "_x_hw_20261017_093931/reports/link/imp/impl_1_route_report_timing_summary_0.rpt": "b90c81d49140a18769f5a3598237914d2720bd631cf21b698d009e30ae7b5167",
+    "_x_hw_20261017_093931/logs/link/vivado.log": "63ab6f4facbc523640b966710e2ce2a950cb2b7efe3d9acb81322d2dd5dd89c4"
+  }
+}

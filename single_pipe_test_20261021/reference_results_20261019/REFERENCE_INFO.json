@@ -1,0 +1,10 @@
+{
+  "reference_variant": "baseline_1",
+  "measurement_date": "2026-10-19",
+  "historical_reference": true,
+  "source_folder": "E:\\vek280_AIe_ckks\\reports\\20261019_baseline_analysis\\raw\\baseline_results\\results_baseline_1_none_HxoLuEjM",
+  "formal_repetitions_each_case": 30,
+  "warmups_each_case": 3,
+  "no_new_measurement_generated_during_packaging": true,
+  "scope": "Historical matched one-AIE original-reducer board result; not CPU and not a new pipeline measurement."
+}
