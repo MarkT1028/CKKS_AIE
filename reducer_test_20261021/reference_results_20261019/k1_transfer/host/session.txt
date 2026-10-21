@@ -1,0 +1,12 @@
+variant=raw_2_full
+N=8192
+L=3
+K=1
+mode=transfer
+cores=2
+repetitions=30
+warmups=3
+session_start_epoch_ns=1792386057680102078
+session_start_steady_ns=296935324609
+init_ms=57.9399
+prepare_ms=24.8409

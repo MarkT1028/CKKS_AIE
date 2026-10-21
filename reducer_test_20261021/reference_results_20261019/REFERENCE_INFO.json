@@ -1,0 +1,10 @@
+{
+  "reference_variant": "raw_2_full",
+  "measurement_date": "2026-10-19",
+  "historical_reference": true,
+  "source_folder": "E:\\vek280_AIe_ckks\\reports\\20261019_dual_aie_analysis\\raw\\perf2\\results_raw_2_full_none_ul7GYgTD",
+  "formal_repetitions_each_case": 30,
+  "warmups_each_case": 3,
+  "no_new_measurement_generated_during_packaging": true,
+  "scope": "Historical two-complete-pipeline board reference, not CPU and not the new pipelined reducer."
+}

@@ -1,0 +1,12 @@
+PASS xclbin mode=flat action_mask=0 boot_programmed uuid=13484466bab75e5fa29e49271ebeb01d
+PASS boot marker matches CKKS hardware
+XAIEFAL: INFO: Resource group Avail is created.
+XAIEFAL: INFO: Resource group Static is created.
+XAIEFAL: INFO: Resource group Generic is created.
+PASS variant=raw_2_full repetition=0 warmup=1 execution_ms=22.767396 transaction_ms=24.488658 verified_words=73728
+PASS variant=raw_2_full repetition=1 warmup=1 execution_ms=22.752745 transaction_ms=24.303179 verified_words=73728
+PASS variant=raw_2_full repetition=2 warmup=1 execution_ms=22.749495 transaction_ms=24.205855 verified_words=73728
+PASS variant=raw_2_full repetition=12 warmup=0 execution_ms=22.746995 transaction_ms=24.183133 verified_words=73728
+PASS variant=raw_2_full repetition=22 warmup=0 execution_ms=22.760056 transaction_ms=24.198423 verified_words=73728
+PASS variant=raw_2_full repetition=32 warmup=0 execution_ms=22.774376 transaction_ms=24.210214 verified_words=73728
+PASS FULL_MAC execution_median_ms=22.755281 transaction_median_ms=24.198223

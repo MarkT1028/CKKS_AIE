@@ -1,0 +1,11 @@
+/bin/
+/results_*/
+/switch_logs/
+/LAST_RESULTS_*.txt
+/comparison_*.csv
+/comparison_*.json
+/board_before_switch.txt
+*.log
+__pycache__/
+!reference_results_20261019/
+!reference_results_20261019/**

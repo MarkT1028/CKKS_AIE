@@ -1,0 +1,25 @@
+{
+  "package": "reducer_test_20261021",
+  "prepared_date": "2026-10-21",
+  "max_aie_cores": 2,
+  "candidate": "raw_2_pipe",
+  "reference": "raw_2_full",
+  "candidate_board_tested": false,
+  "candidate_firmware_built_and_offline_validated": true,
+  "candidate_firmware_rebuilt_this_revision": false,
+  "reference_board_measured": "2026-10-19",
+  "reference_host_decryption_verified": "2026-10-20",
+  "this_revision_changes": [
+    "Focused two-variant upload package",
+    "Single-purpose build/switch/run helpers",
+    "Saved-result comparison against raw_2_full, not baseline_1 or CPU",
+    "Aggregate suite summary and running UUID/temperature/frequency snapshots",
+    "Recognize prior prepared slot-1 images by protected digest list"
+  ],
+  "hardware_change_relative_to_raw_2_full": "Each reducer uses reconstruct / modular reduction / accumulation DATAFLOW stages with depth-32 FIFOs; original raw AIE arithmetic and two complete paths retained.",
+  "host_compute_and_timing_source_unchanged": true,
+  "cpu_benchmark_included": false,
+  "actual_board_accessed": false,
+  "expected_speedup": null,
+  "timing_and_drc_source": "Original offline signoff; no new board-performance claim."
+}

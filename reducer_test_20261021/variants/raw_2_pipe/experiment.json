@@ -1,0 +1,8 @@
+{
+  "id": "raw_2_pipe",
+  "cores": 2,
+  "format": "raw",
+  "backend": "pipeline",
+  "topology": "split",
+  "purpose": "Two complete pipelines with improved reducer"
+}

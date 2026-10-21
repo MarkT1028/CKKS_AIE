@@ -1,0 +1,12 @@
+variant=raw_2_full
+N=8192
+L=3
+K=16
+mode=resident
+cores=2
+repetitions=30
+warmups=3
+session_start_epoch_ns=1792386061487238465
+session_start_steady_ns=300742461086
+init_ms=58.1536
+prepare_ms=78.0757
