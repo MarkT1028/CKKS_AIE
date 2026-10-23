@@ -1,0 +1,8 @@
+{
+  "id": "raw_2_full",
+  "cores": 2,
+  "format": "raw",
+  "backend": "baseline",
+  "topology": "split",
+  "purpose": "Two complete original pipelines, coefficient partition"
+}

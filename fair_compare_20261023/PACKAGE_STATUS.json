@@ -1,0 +1,14 @@
+{
+  "package": "fair_compare_20261023",
+  "date": "2026-10-23",
+  "new_firmware": false,
+  "previous_hardware_versions_board_tested": true,
+  "new_CPU_comparison_board_tested": false,
+  "new_CPU_reference_threads": [
+    1,
+    2
+  ],
+  "new_pipeline_decryption_passed": true,
+  "new_performance_numbers_available": false,
+  "execution_requires": "VEK280 ARM Linux, matching boot UUID, same-board build and explicit user-run experiments"
+}

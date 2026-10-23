@@ -1,0 +1,6 @@
+bin/
+results_fair_*/
+comparison_*/
+switch_logs/
+__pycache__/
+*.pyc

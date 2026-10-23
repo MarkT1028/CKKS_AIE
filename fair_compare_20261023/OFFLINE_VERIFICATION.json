@@ -1,0 +1,115 @@
+{
+  "status": "PASS_OFFLINE_CHECKS_BOARD_MEASUREMENT_PENDING",
+  "task_date": "2026-10-23",
+  "CPU_checks": {
+    "status": "PASS_OFFLINE_CPU_FUNCTIONAL_ONLY",
+    "runtime_architecture": "x86_64",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "new_board_CPU_or_hardware_performance_results": false,
+    "selftest_configurations_per_build": 18,
+    "selftest_repetitions_each": 5,
+    "cases": [
+      {
+        "build": "release",
+        "K": 1,
+        "threads": 1,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "release",
+        "K": 1,
+        "threads": 2,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "release",
+        "K": 16,
+        "threads": 1,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "release",
+        "K": 16,
+        "threads": 2,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "sanitized",
+        "K": 1,
+        "threads": 1,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "sanitized",
+        "K": 1,
+        "threads": 2,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "sanitized",
+        "K": 16,
+        "threads": 1,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      },
+      {
+        "build": "sanitized",
+        "K": 16,
+        "threads": 2,
+        "saved_output_matches_golden": true,
+        "measured_samples_for_functional_test_only": 3
+      }
+    ],
+    "source_sha256": "74410a29c4870092b3a409d52feeb504b04c59ab3d8c3a86199726341fb4abe3",
+    "notes": "x86 WSL timings are functional checks only, never ARM benchmark results. Both release and ASan+UBSan passed."
+  },
+  "guard_and_analysis_checks": {
+    "status": "PASS_OFFLINE_GUARDS_AND_ANALYSIS",
+    "checks": [
+      "package identities and four unchanged common hardware hosts",
+      "all Python syntax and POSIX shell syntax/LF",
+      "CPU rejects wrong-K golden",
+      "CPU rejects threads 0",
+      "CPU rejects threads 3",
+      "CPU rejects repetitions 0",
+      "CPU rejects repetitions -1",
+      "CPU rejects repetitions 10001",
+      "CPU preserves existing result directory",
+      "CPU detects changed expected payload",
+      "CPU measured statistics and warmups revalidated",
+      "real historical ARM hardware CSV independently recomputed",
+      "analysis rejects warmup",
+      "analysis rejects repetition",
+      "analysis rejects phase_sum",
+      "analysis rejects summary",
+      "SHA guard rejects modified CPU source",
+      "SHA guard rejects traversal path",
+      "analysis rejects synthetic board fixture",
+      "run refuses PC/WSL",
+      "detect refuses PC/WSL",
+      "switch refuses PC/WSL",
+      "PC refusal creates no fake board result directory"
+    ],
+    "check_count": 23,
+    "tested_source_sha256": {
+      "board_experiment.py": "ff52f41ccd34bf0565939ce74793b8c1e555b4c8aee0da34460d8f1be1e8e720",
+      "summarize_results.py": "636dc266b13a0e55e8252b4ff3aaf965497e074eb2d68ec916fd9539745b58d3",
+      "cpu/cpu_bench.cpp": "74410a29c4870092b3a409d52feeb504b04c59ab3d8c3a86199726341fb4abe3",
+      "build_fair_board.sh": "25760884fd76c7d1ab1c02fafea609072f47bff4e0a320d72e5e8605651a386a",
+      "run_fair_board.sh": "49c672d9ea77c71316377b42fe18e236198b8c58bdb273085b3c023f25b92310",
+      "switch_fair_board.sh": "64072f2eb3b0af85cec4a52867391a36f2c3854cc433596170df020e73dd3584"
+    },
+    "board_run_performed": false,
+    "note": "CPU functional samples and historical real board CSV used for parser/statistic checks. Negative fixtures are temporary tests, not new performance evidence."
+  },
+  "board_CPU_performance_test_executed": false,
+  "new_hardware_performance_test_executed": false,
+  "ARM_cross_compiler_available_in_WSL": false,
+  "limitation": "CPU functionality tested on x86 WSL, including ASan/UBSan. Board driver and analysis validated offline; XRT host sources and firmware reused unchanged from earlier board-validated packages."
+}

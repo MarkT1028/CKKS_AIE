@@ -1,0 +1,307 @@
+{
+  "task_date": "2026-10-23",
+  "firmware_changed": false,
+  "common_hardware_host_changed": false,
+  "variant_sources": [
+    {
+      "path": "variants/baseline_1/boot0001.bin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\boot0001.bin",
+      "sha256": "65241b03e1eee03be396c53f933ba0fbc96785e2a42757ec17319818e8aa69d9"
+    },
+    {
+      "path": "variants/baseline_1/ckks_hw_boot.xclbin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\ckks_hw_boot.xclbin",
+      "sha256": "6cdbde2251e22b115ab2ee2de601d8a8c7d2e6b7650413175c8c417e0d6972d4"
+    },
+    {
+      "path": "variants/baseline_1/DMA_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\DMA_report.txt",
+      "sha256": "75dc678848b4147e2966a8f024b1aefafac720e445aedc91fd9fa082595348a4"
+    },
+    {
+      "path": "variants/baseline_1/EXPECTED_BOOT_SHA256",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\EXPECTED_BOOT_SHA256",
+      "sha256": "ada6881d028b63ea7b51c648dac27f17c569c7e448fa7fbecd37cf8d512776cc"
+    },
+    {
+      "path": "variants/baseline_1/EXPECTED_BOOT_UUID",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\EXPECTED_BOOT_UUID",
+      "sha256": "e45f4c6ac6c744b74df41a7655224857ce975402af99c6e4d04c398fb32320eb"
+    },
+    {
+      "path": "variants/baseline_1/experiment.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\experiment.json",
+      "sha256": "d689f031ba2b1ad0ce0a7db4d82a0f0332cec808ca97781c6d5a2d8862c054c5"
+    },
+    {
+      "path": "variants/baseline_1/graph_mapping_analysis_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\graph_mapping_analysis_report.txt",
+      "sha256": "35ac501a7070984a61f7ec92214b8e9ff26ec17cc8a012a69b699dfe9382a58c"
+    },
+    {
+      "path": "variants/baseline_1/host/expected_reader.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\host\\expected_reader.hpp",
+      "sha256": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6"
+    },
+    {
+      "path": "variants/baseline_1/host/perf_host.cpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\host\\perf_host.cpp",
+      "sha256": "3446aeb227e4095a7dd33c4da9deaaa01716c2258e0e14a36c14fc1614d10682"
+    },
+    {
+      "path": "variants/baseline_1/host/timed_base.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\host\\timed_base.hpp",
+      "sha256": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23"
+    },
+    {
+      "path": "variants/baseline_1/host/variant_config.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\host\\variant_config.hpp",
+      "sha256": "491e19005f0eb6d0c24f8029a29656709a153f7469ca9b3ec5edc1b3b36d1a59"
+    },
+    {
+      "path": "variants/baseline_1/Lock_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\Lock_report.txt",
+      "sha256": "3192e7d2455298e95be99702297019718361dabb4845960a30b636429fb03b1b"
+    },
+    {
+      "path": "variants/baseline_1/manifest.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\manifest.json",
+      "sha256": "294e1b2dd1935c9fd5083bcb0af71aff1289f5058378e0c25fc3f6206fc655d0"
+    },
+    {
+      "path": "variants/baseline_1/metadata_verification.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\metadata_verification.json",
+      "sha256": "855ce1fc39cf9531cd723426c02ed10e1073977f2f66d98baa675cb317e7ca7c"
+    },
+    {
+      "path": "variants/baseline_1/postcheck_signoff.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\baseline_1\\postcheck_signoff.json",
+      "sha256": "d7e65344a0148d77ea223082e957d2c2ae3d94734fe7bcd8a49c2224d1285262"
+    },
+    {
+      "path": "variants/raw_1_pipe/boot0001.bin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\boot0001.bin",
+      "sha256": "3e9082737b3dc6092b31dbc9d0109f764c38a97be694ddeddef55af5f1158d54"
+    },
+    {
+      "path": "variants/raw_1_pipe/ckks_hw_boot.xclbin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\ckks_hw_boot.xclbin",
+      "sha256": "96b42c0d1577cc94d072f6b766e537b1710bbe1f1ff853bb6a7297a2d838b73d"
+    },
+    {
+      "path": "variants/raw_1_pipe/DMA_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\DMA_report.txt",
+      "sha256": "75dc678848b4147e2966a8f024b1aefafac720e445aedc91fd9fa082595348a4"
+    },
+    {
+      "path": "variants/raw_1_pipe/EXPECTED_BOOT_SHA256",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\EXPECTED_BOOT_SHA256",
+      "sha256": "275b9a3d8215ea873ab5d311aee01aef28f462c9e54dce32a684b189b80ad2f4"
+    },
+    {
+      "path": "variants/raw_1_pipe/EXPECTED_BOOT_UUID",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\EXPECTED_BOOT_UUID",
+      "sha256": "e98f3d23fc0aab29783e1ec9f407866448dd7fb89273a9b21f07bfad826c5da7"
+    },
+    {
+      "path": "variants/raw_1_pipe/experiment.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\experiment.json",
+      "sha256": "b761bbeaa3b43f7791b7c8853e34d894cf2915aaf761a49f93316cfdb3e0b39a"
+    },
+    {
+      "path": "variants/raw_1_pipe/graph_mapping_analysis_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\graph_mapping_analysis_report.txt",
+      "sha256": "35ac501a7070984a61f7ec92214b8e9ff26ec17cc8a012a69b699dfe9382a58c"
+    },
+    {
+      "path": "variants/raw_1_pipe/host/expected_reader.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\host\\expected_reader.hpp",
+      "sha256": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6"
+    },
+    {
+      "path": "variants/raw_1_pipe/host/perf_host.cpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\host\\perf_host.cpp",
+      "sha256": "3446aeb227e4095a7dd33c4da9deaaa01716c2258e0e14a36c14fc1614d10682"
+    },
+    {
+      "path": "variants/raw_1_pipe/host/timed_base.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\host\\timed_base.hpp",
+      "sha256": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23"
+    },
+    {
+      "path": "variants/raw_1_pipe/host/variant_config.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\host\\variant_config.hpp",
+      "sha256": "3d92e4aea4bd60bdf56eca1e5581675bac75aafdb22fdd27d2901933f6e5f939"
+    },
+    {
+      "path": "variants/raw_1_pipe/Lock_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\Lock_report.txt",
+      "sha256": "3192e7d2455298e95be99702297019718361dabb4845960a30b636429fb03b1b"
+    },
+    {
+      "path": "variants/raw_1_pipe/manifest.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\manifest.json",
+      "sha256": "dc6a55af31d83e262229b96abc5e3da4cc3dcd56586a99de142be5d5c551d58e"
+    },
+    {
+      "path": "variants/raw_1_pipe/metadata_verification.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\metadata_verification.json",
+      "sha256": "7649f0d8a77216109008eca5e856b51526e1a37652830b6114045242f469f679"
+    },
+    {
+      "path": "variants/raw_1_pipe/postcheck_signoff.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_1_pipe\\postcheck_signoff.json",
+      "sha256": "6601ecd66ed048b6078ba6ee0b61b7b3ab4eb5d8f976a72e0cb949f262bbe96b"
+    },
+    {
+      "path": "variants/raw_2_full/boot0001.bin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\boot0001.bin",
+      "sha256": "c026f3967030d069a9a83723afd246102533c46b2581888ee470ad5e33dca8dd"
+    },
+    {
+      "path": "variants/raw_2_full/ckks_hw_boot.xclbin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\ckks_hw_boot.xclbin",
+      "sha256": "1dc7e6667f1622b7ee8785a88f1b3c848a952c6ee74187686e7647a675dddd1e"
+    },
+    {
+      "path": "variants/raw_2_full/DMA_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\DMA_report.txt",
+      "sha256": "e03bdb676281869e7a6720cff38cb549ed2dbecf34b99a120aa0c5f32f8b77c2"
+    },
+    {
+      "path": "variants/raw_2_full/EXPECTED_BOOT_SHA256",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\EXPECTED_BOOT_SHA256",
+      "sha256": "31a5f88cd4768da4188147ec72bd52afb7a1cdced9cd03d0e30c81011385093a"
+    },
+    {
+      "path": "variants/raw_2_full/EXPECTED_BOOT_UUID",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\EXPECTED_BOOT_UUID",
+      "sha256": "0f4b1e7e6d816027fb7aaa1b5ff027aecfb01856a9ead7c74e3f3dcf17ec56dd"
+    },
+    {
+      "path": "variants/raw_2_full/experiment.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\experiment.json",
+      "sha256": "724594c29c49ac8d4ca062d7c04c4c9fd24e4bac4934773017d2249286c711a0"
+    },
+    {
+      "path": "variants/raw_2_full/graph_mapping_analysis_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\graph_mapping_analysis_report.txt",
+      "sha256": "e44d63d664c9b1623e511461a635c4e66c1a09b91d5c03a8ab70caec8475dc9e"
+    },
+    {
+      "path": "variants/raw_2_full/host/expected_reader.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\host\\expected_reader.hpp",
+      "sha256": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6"
+    },
+    {
+      "path": "variants/raw_2_full/host/perf_host.cpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\host\\perf_host.cpp",
+      "sha256": "3446aeb227e4095a7dd33c4da9deaaa01716c2258e0e14a36c14fc1614d10682"
+    },
+    {
+      "path": "variants/raw_2_full/host/timed_base.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\host\\timed_base.hpp",
+      "sha256": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23"
+    },
+    {
+      "path": "variants/raw_2_full/host/variant_config.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\host\\variant_config.hpp",
+      "sha256": "5af179ecf929eef43b29a02504ef598961b7882128167d288b932192e055c659"
+    },
+    {
+      "path": "variants/raw_2_full/Lock_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\Lock_report.txt",
+      "sha256": "b188d58d46726c85b065710cc96b45bec055b68866fc58c4b7474d24ae50e582"
+    },
+    {
+      "path": "variants/raw_2_full/manifest.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\manifest.json",
+      "sha256": "fac4cee9b42e2905806bd9419c3178e1a5ebbdad9a2df05672eda433e5fe599e"
+    },
+    {
+      "path": "variants/raw_2_full/metadata_verification.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\metadata_verification.json",
+      "sha256": "dcfb6230b1eb5797617a6a7b0bd314bbe695a827c5e1d97f043a4a2fad4013ce"
+    },
+    {
+      "path": "variants/raw_2_full/postcheck_signoff.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_full\\postcheck_signoff.json",
+      "sha256": "fcf65b402119ea9d250c4932338f8d00c50446a9e21f2c440c227a98fb532a4d"
+    },
+    {
+      "path": "variants/raw_2_pipe/boot0001.bin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\boot0001.bin",
+      "sha256": "8bf0880952e0adb427364a7cf9a633bae5601433c24fccab2d192e9e8ac17b86"
+    },
+    {
+      "path": "variants/raw_2_pipe/ckks_hw_boot.xclbin",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\ckks_hw_boot.xclbin",
+      "sha256": "375af63d0a316dc6251c447bba7c96682548061ed431ee041a9dade2a85e2529"
+    },
+    {
+      "path": "variants/raw_2_pipe/DMA_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\DMA_report.txt",
+      "sha256": "e03bdb676281869e7a6720cff38cb549ed2dbecf34b99a120aa0c5f32f8b77c2"
+    },
+    {
+      "path": "variants/raw_2_pipe/EXPECTED_BOOT_SHA256",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\EXPECTED_BOOT_SHA256",
+      "sha256": "8b395975fff3306dc836bf24610122a3d9816dbe4bdd6f4483ddd585c1fc1f53"
+    },
+    {
+      "path": "variants/raw_2_pipe/EXPECTED_BOOT_UUID",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\EXPECTED_BOOT_UUID",
+      "sha256": "10b899ab27914633772c4b3621f6747ab0c8522cafb3323849b30b632cc3ea7a"
+    },
+    {
+      "path": "variants/raw_2_pipe/experiment.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\experiment.json",
+      "sha256": "ae09ddca973b597a885b31abd3eca91a15be15a8eb96908e3b5f28b3fe3784ea"
+    },
+    {
+      "path": "variants/raw_2_pipe/graph_mapping_analysis_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\graph_mapping_analysis_report.txt",
+      "sha256": "e44d63d664c9b1623e511461a635c4e66c1a09b91d5c03a8ab70caec8475dc9e"
+    },
+    {
+      "path": "variants/raw_2_pipe/host/expected_reader.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\host\\expected_reader.hpp",
+      "sha256": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6"
+    },
+    {
+      "path": "variants/raw_2_pipe/host/perf_host.cpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\host\\perf_host.cpp",
+      "sha256": "3446aeb227e4095a7dd33c4da9deaaa01716c2258e0e14a36c14fc1614d10682"
+    },
+    {
+      "path": "variants/raw_2_pipe/host/timed_base.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\host\\timed_base.hpp",
+      "sha256": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23"
+    },
+    {
+      "path": "variants/raw_2_pipe/host/variant_config.hpp",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\host\\variant_config.hpp",
+      "sha256": "2dce6b1b512728265bc48fc767f812b99b1b73340679ee3b79b6964733944434"
+    },
+    {
+      "path": "variants/raw_2_pipe/Lock_report.txt",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\Lock_report.txt",
+      "sha256": "b188d58d46726c85b065710cc96b45bec055b68866fc58c4b7474d24ae50e582"
+    },
+    {
+      "path": "variants/raw_2_pipe/manifest.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\manifest.json",
+      "sha256": "0ba8d3eaf8e3b3589dc4a8ed0790b91db369b80285c615fe411e71d4fd63dd92"
+    },
+    {
+      "path": "variants/raw_2_pipe/metadata_verification.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\metadata_verification.json",
+      "sha256": "40ddef2a81968833f4dc214d78e2f8e3fe1dcab049e4b20d1a354c227ffdda96"
+    },
+    {
+      "path": "variants/raw_2_pipe/postcheck_signoff.json",
+      "source": "E:\\vek280_AIe_ckks\\AIE_git\\variants\\raw_2_pipe\\postcheck_signoff.json",
+      "sha256": "915f741cfa417e1e75e7dd147eda47a4882981b7d8b70b89a8027c7940d59f3d"
+    }
+  ]
+}
