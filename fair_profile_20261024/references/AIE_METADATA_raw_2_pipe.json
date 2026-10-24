@@ -1,0 +1,211 @@
+{
+    "aie_metadata": {
+        "driver_config": {
+            "hw_gen": "2",
+            "base_address": "2199023255552",
+            "npi_address": "4140892160",
+            "column_shift": "25",
+            "row_shift": "20",
+            "num_rows": "11",
+            "num_columns": "38",
+            "shim_row": "0",
+            "mem_tile_row_start": "1",
+            "mem_tile_num_rows": "2",
+            "aie_tile_row_start": "3",
+            "aie_tile_num_rows": "8",
+            "aie_partition_json": {
+                "AIE": {
+                    "ai_engine_0": {
+                        "startColumn": "0",
+                        "numColumns": "38",
+                        "partitions": [
+                            {
+                                "startColumn": "0",
+                                "numColumns": "38",
+                                "uuid": "0xaa381e20e8cd0cc63a41adcd33c0d4e5",
+                                "aie_pl_intf_id": "0x33c0d4e5",
+                                "namespace": ""
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "aiecompiler_options": {
+            "broadcast_enable_core": "true",
+            "graph_iterator_event": "false",
+            "enable_multi_layer": "false"
+        },
+        "graphs": {
+            "graph0": {
+                "id": "0",
+                "name": "ckks_graph",
+                "core_columns": [
+                    "17",
+                    "18"
+                ],
+                "core_rows": [
+                    "0",
+                    "0"
+                ],
+                "iteration_memory_columns": [
+                    "17",
+                    "17"
+                ],
+                "iteration_memory_rows": [
+                    "0",
+                    "0"
+                ],
+                "iteration_memory_addresses": [
+                    "4",
+                    "16388"
+                ],
+                "multirate_triggers": [
+                    "false",
+                    "false"
+                ],
+                "pl_kernel_instance_names": "",
+                "pl_axi_lite_modes": ""
+            }
+        },
+        "TileMapping": {
+            "AIEKernelToTileMapping": [
+                {
+                    "graph": "ckks_graph",
+                    "tile": "aie",
+                    "column": "17",
+                    "row": "0",
+                    "schedule": "0",
+                    "function": "limb_mul.mul[0]"
+                },
+                {
+                    "graph": "ckks_graph",
+                    "tile": "aie",
+                    "column": "18",
+                    "row": "0",
+                    "schedule": "0",
+                    "function": "limb_mul.mul[1]"
+                }
+            ],
+            "SharedBufferToTileMapping": ""
+        },
+        "RTPs": "",
+        "GMIOs": "",
+        "ExternalBufferConfigs": "",
+        "SharedBufferConfigs": "",
+        "PLIOs": {
+            "plio0": {
+                "id": "0",
+                "name": "ckks_graph.left[0]",
+                "logical_name": "ckks_left_0",
+                "shim_column": "17",
+                "slaveOrMaster": "0",
+                "stream_id": "0"
+            },
+            "plio1": {
+                "id": "1",
+                "name": "ckks_graph.right[0]",
+                "logical_name": "ckks_right_0",
+                "shim_column": "17",
+                "slaveOrMaster": "0",
+                "stream_id": "4"
+            },
+            "plio2": {
+                "id": "2",
+                "name": "ckks_graph.partials[0]",
+                "logical_name": "ckks_partials_0",
+                "shim_column": "17",
+                "slaveOrMaster": "1",
+                "stream_id": "0"
+            },
+            "plio3": {
+                "id": "3",
+                "name": "ckks_graph.left[1]",
+                "logical_name": "ckks_left_1",
+                "shim_column": "18",
+                "slaveOrMaster": "0",
+                "stream_id": "0"
+            },
+            "plio4": {
+                "id": "4",
+                "name": "ckks_graph.right[1]",
+                "logical_name": "ckks_right_1",
+                "shim_column": "18",
+                "slaveOrMaster": "0",
+                "stream_id": "4"
+            },
+            "plio5": {
+                "id": "5",
+                "name": "ckks_graph.partials[1]",
+                "logical_name": "ckks_partials_1",
+                "shim_column": "18",
+                "slaveOrMaster": "1",
+                "stream_id": "0"
+            }
+        },
+        "EventGraphs": {
+            "graph0": {
+                "id": "0",
+                "name": "ckks_graph",
+                "core_columns": [
+                    "17",
+                    "18"
+                ],
+                "core_rows": [
+                    "0",
+                    "0"
+                ],
+                "dma_columns": [
+                    "16",
+                    "16",
+                    "18",
+                    "18",
+                    "17",
+                    "18"
+                ],
+                "dma_rows": [
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "1",
+                    "0"
+                ]
+            }
+        },
+        "DeviceData": {
+            "AIEBaseAddress": "0x20000000000",
+            "AIEFrequency": "1250"
+        },
+        "TraceGMIOs": "",
+        "AIEConfigsForTraceAndProfile": {
+            "GMIOs": "",
+            "PLIOs": {
+                "plio0": {
+                    "logical_name": "ckks_left_0",
+                    "data_width": "128"
+                },
+                "plio1": {
+                    "logical_name": "ckks_right_0",
+                    "data_width": "128"
+                },
+                "plio2": {
+                    "logical_name": "ckks_partials_0",
+                    "data_width": "128"
+                },
+                "plio3": {
+                    "logical_name": "ckks_left_1",
+                    "data_width": "128"
+                },
+                "plio4": {
+                    "logical_name": "ckks_right_1",
+                    "data_width": "128"
+                },
+                "plio5": {
+                    "logical_name": "ckks_partials_1",
+                    "data_width": "128"
+                }
+            }
+        }
+    }
+}

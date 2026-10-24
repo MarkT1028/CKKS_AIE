@@ -1,0 +1,16 @@
+{
+  "package": "fair_profile_20261024",
+  "date": "2026-10-24",
+  "status": "READY_FOR_USER_BOARD_VALIDATION",
+  "new_FPGA_build": false,
+  "firmware_images_changed": false,
+  "max_AIE_cores": 2,
+  "board_tests_of_new_controls_or_profile": "NOT_EXECUTED_LOCALLY",
+  "includes": [
+    "4 historical firmware images",
+    "CPU affinity/order/boot controls",
+    "independent result validation",
+    "raw_2_pipe runtime core/local-DMA profiling",
+    "host wait-return observations, not individual PL kernel cycle timings"
+  ]
+}

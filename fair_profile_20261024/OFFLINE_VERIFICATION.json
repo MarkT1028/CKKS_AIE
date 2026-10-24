@@ -1,0 +1,52 @@
+{
+  "status": "PASS_OFFLINE_CHECKS_BOARD_VALIDATION_PENDING",
+  "date": "2026-10-24",
+  "CPU_arithmetic_function_byte_unchanged": true,
+  "CPU_functional_runtime": "x86_64 Linux / WSL; not board performance evidence",
+  "CPU_release_selftest_configurations": 20,
+  "CPU_sanitized_selftest_configurations": 20,
+  "selftest_repetitions_each": 5,
+  "ASan_UBSan_selftest": "PASS",
+  "actual_fixture_functional_cases": 10,
+  "actual_fixture_functional_K": [
+    1,
+    16
+  ],
+  "actual_fixture_affinity_configs": [
+    "unbound_t1",
+    "unbound_t2",
+    "pinned_t1_c0",
+    "pinned_t1_c1",
+    "pinned_t2_c01"
+  ],
+  "actual_fixture_repetitions_per_case": 3,
+  "actual_fixture_warmups_per_case": 3,
+  "all_local_saved_outputs_match_complete_golden": true,
+  "ARM64_cross_compile": "PASS; binary is not shipped or used as a board timing result",
+  "XRT_profile_host": "PASS syntax-only using existing XRT API headers and DISABLE_ABI_CHECK for missing generated local version header; real board build/link pending",
+  "Python_and_POSIX_shell_syntax": "PASS",
+  "offline_test_suite": {
+    "tests": 13,
+    "status": "PASS",
+    "coverage": [
+      "real local CPU fixtures in all affinity settings",
+      "zero/max/random U128 and persistent workers",
+      "invalid affinity and expected-output corruption",
+      "both AIE cores, neighbor DMA tiles, channel/event coverage",
+      "zero stalls accepted, unconfirmed activity qualified",
+      "profile header-only/missing events/wrong hardware generation",
+      "24-case forward/reverse orchestration and partial failure preservation",
+      "deep statistics and individual-worker affinity validation",
+      "cross-boot coverage does not count same-boot renamed sessions",
+      "profiling orchestration with partial coverage and exact round counts"
+    ],
+    "synthetic_hardware_records_are_explicitly_tagged_and_not_performance_evidence": true
+  },
+  "formal_hardware_hosts_and_firmware_and_fixtures_unchanged_files": 64,
+  "board_performance_test_executed": false,
+  "board_profiling_executed": false,
+  "new_FPGA_build": false,
+  "new_decryption_run": false,
+  "PL_reader_or_reducer_cycle_counters_added": false,
+  "scope_limit": "Runtime core/local DMA profiling plus separate host wait observations; precise individual PL hardware durations are not claimed."
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-23",
+  "status": "PASS_ALL_16_PIPELINE_OUTPUTS_RAW_DECRYPT_AND_ENCRYPTED_SQUARE",
+  "saved_output_files_verified": 16,
+  "distinct_raw_payloads": 2,
+  "raw_words_compared_total": 1179648,
+  "openfhe_version": "1.5.1 EXACT",
+  "secret_keys_exported": false,
+  "new_board_execution": false,
+  "original_private_inputs_unchanged": true,
+  "verification_json_sha256": "bdb060b0e713a619124acaf5bbc031af8cd25d5259bc7344c10752693487a30f",
+  "variants": {
+    "raw_1_pipe": {
+      "saved_outputs": 8,
+      "max_mac_abs_error": 1.769126512e-12,
+      "max_square_abs_error": 3.561977102e-13
+    },
+    "raw_2_pipe": {
+      "saved_outputs": 8,
+      "max_mac_abs_error": 1.711256137e-12,
+      "max_square_abs_error": 3.538194718e-13
+    }
+  },
+  "full_result_directory": "E:/vek280_AIe_ckks/reports/20261023_cpu_and_pipeline_validation"
+}

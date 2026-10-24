@@ -1,0 +1,14 @@
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.ini text eol=lf
+SHA256SUMS_* text eol=lf
+EXPECTED_BOOT_UUID text eol=lf
+EXPECTED_BOOT_SHA256 text eol=lf
+ckks-perf2-srst text eol=lf
+*.bin binary
+*.xclbin binary

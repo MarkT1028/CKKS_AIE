@@ -1,0 +1,30 @@
+{
+  "status": "PASS_OFFLINE_METADATA_NOT_BOARD_EXECUTION",
+  "variant": "raw_1_pipe",
+  "max_aie_cores": 2,
+  "actual_core_tiles": [
+    [
+      17,
+      0
+    ]
+  ],
+  "actual_ip_names": [
+    "ai_engine:ai_engine_0",
+    "ct_reader:ct_reader_1",
+    "ct_reduce_accum:ct_reduce_accum_1"
+  ],
+  "actual_plio_names": [
+    "ckks_left_0",
+    "ckks_partials_0",
+    "ckks_right_0"
+  ],
+  "connected_dram_bases": [
+    "0x0",
+    "0x880000000"
+  ],
+  "uuid": "e5e148622540515eb6d0e2c896c903ba",
+  "metadata_sha256": "96b42c0d1577cc94d072f6b766e537b1710bbe1f1ff853bb6a7297a2d838b73d",
+  "boot_sha256": "3e9082737b3dc6092b31dbc9d0109f764c38a97be694ddeddef55af5f1158d54",
+  "programming_sections_absent": true,
+  "flat_action_mask": 0
+}
