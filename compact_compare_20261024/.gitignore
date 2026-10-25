@@ -9,3 +9,5 @@ __pycache__/
 *.pyc
 results_compact_*/
 comparison_compact_*/
+# Required, checksummed historical evidence; override repository-wide *.log.
+!prior_offline_evidence/full_raw_MAC_C_models_test.log
