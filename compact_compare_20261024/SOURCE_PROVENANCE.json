@@ -1,0 +1,26 @@
+{
+  "base_package_manifest_sha256": "9d4241a8836dcef20831a4765538889a89dd2c6b5f909991dffe1cee53249810",
+  "raw_2_pipe_source": "Existing board-validated fair_profile_20261024 variant",
+  "diag_2_pipe_source": "Existing offline signed-off ckks_perf2_20261017 release variant; never claimed board-validated",
+  "CPU_source_unchanged_sha256": "dca74ed782443b5e878fe49af285ad1411a3cd657527b7f6af3f185cfb8b5850",
+  "firmware_and_metadata": {
+    "raw_2_pipe": {
+      "boot0001.bin": "8bf0880952e0adb427364a7cf9a633bae5601433c24fccab2d192e9e8ac17b86",
+      "ckks_hw_boot.xclbin": "375af63d0a316dc6251c447bba7c96682548061ed431ee041a9dade2a85e2529"
+    },
+    "diag_2_pipe": {
+      "boot0001.bin": "7a39488a54dde673f8bd19473fe285d37452f8d19a40e64eb95fdd2d9485c26f",
+      "ckks_hw_boot.xclbin": "bad3c79697dec14e1b4fb1730be2d931d2643124bdf75446d294d173dfae6d63"
+    }
+  },
+  "candidate_prior_signoff": {
+    "setup_slack_ns": 0.566,
+    "hold_slack_ns": 0.011,
+    "drc_errors": 0,
+    "board_tested": false,
+    "bus_skew_min_slack_ns": 12.276,
+    "independent_bus_skew_rerun": true,
+    "xsa_sha256": "0efd8b6b344eec2f97d4db67bd8614d1293633402f390488781f5a29327104bc"
+  },
+  "new_board_results_included": false
+}

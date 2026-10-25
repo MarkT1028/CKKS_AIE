@@ -1,0 +1,24 @@
+DMA Analysis Report 
+
+DMA Report: S2MM
+portinst: i3_pi0 idx[0] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[0].in[0])
+ MG(16,0) : channel=0, startBD=0, lockID=0, name=buf0
+ MG(16,0) : channel=0, startBD=1, lockID=0, name=buf0d
+portinst: i3_pi1 idx[1] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[0].in[1])
+ MG(16,0) : channel=1, startBD=2, lockID=2, name=buf1
+ MG(16,0) : channel=1, startBD=3, lockID=2, name=buf1d
+portinst: i7_pi0 idx[0] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[1].in[0])
+ MG(18,0) : channel=0, startBD=0, lockID=0, name=buf3
+ MG(18,0) : channel=0, startBD=1, lockID=0, name=buf3d
+portinst: i7_pi1 idx[1] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[1].in[1])
+ MG(18,1) : channel=0, startBD=0, lockID=0, name=buf4
+ MG(18,1) : channel=0, startBD=1, lockID=0, name=buf4d
+
+DMA Report: MM2S
+portinst: i3_po0 idx[2] datatype:buff<uint32> mem out bw_utlization = 1 (variable name:  mul[0].out[0])
+ MG(17,1) : channel=0, startBD=0, lockID=0, name=buf2
+ MG(17,1) : channel=0, startBD=1, lockID=0, name=buf2d
+portinst: i7_po0 idx[2] datatype:buff<uint32> mem out bw_utlization = 1 (variable name:  mul[1].out[0])
+ MG(18,0) : channel=0, startBD=2, lockID=2, name=buf5
+ MG(18,0) : channel=0, startBD=3, lockID=2, name=buf5d
+

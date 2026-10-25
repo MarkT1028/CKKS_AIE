@@ -1,0 +1,11 @@
+bin/
+results_fair_*/
+results_controlled_*/
+results_profile_*/
+comparison_controlled_*/
+comparison_*/
+switch_logs/
+__pycache__/
+*.pyc
+results_compact_*/
+comparison_compact_*/

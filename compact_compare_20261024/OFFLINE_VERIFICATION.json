@@ -1,0 +1,30 @@
+{
+  "status": "PASS_OFFLINE_CHECKS_BOARD_TEST_PENDING",
+  "date": "2026-10-24",
+  "new_FPGA_build": false,
+  "new_candidate_board_execution": false,
+  "candidate_measured_speedup": null,
+  "new_checks": {
+    "all_shell_scripts_syntax": "PASS",
+    "all_Python_sources_compile": "PASS",
+    "raw_and_diagonal_K1_K16_parser_split_merge_full_golden_checks": "PASS",
+    "both_xclbin_preflight_and_wrong_UUID_rejection": "PASS",
+    "exact_unsigned_diagonal_edge_and_random_pairs": 10003,
+    "maximum_uint32_diagonal": 4294705156,
+    "unit_tests_passed": 5,
+    "CPU_arithmetic_and_common_formal_host_identical_to_fair_profile": "PASS",
+    "AArch64_XRT_host_syntax_only": "PASS"
+  },
+  "syntax_check_limit": "Syntax-only cross compilation using local XRT headers and DISABLE_ABI_CHECK because generated version-slim.h is absent. No ABI or link validation is claimed. Actual board builds use unchanged normal flags without DISABLE_ABI_CHECK.",
+  "prior_evidence_only": {
+    "AIE_x86_simulator_diagonal": "PASS",
+    "AIE_hardware_simulator_diagonal": "PASS",
+    "diagonal_reducer_RTL_cosimulation": "PASS",
+    "full_N8192_K1_K16_C_models": "PASS",
+    "routed_candidate_setup_slack_ns": 0.566,
+    "routed_candidate_hold_slack_ns": 0.011,
+    "routed_candidate_DRC_errors": 0,
+    "note": "Copied historical evidence under prior_offline_evidence; these simulator and FPGA builds were not rerun for this delivery."
+  },
+  "scope": "Preparation and offline verification only; no board reset, firmware installation, OpenFHE decryption or candidate speed measurement performed."
+}

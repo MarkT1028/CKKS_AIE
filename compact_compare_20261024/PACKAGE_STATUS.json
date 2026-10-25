@@ -1,0 +1,16 @@
+{
+  "package": "compact_compare_20261024",
+  "status": "PREPARED_BOARD_TEST_PENDING",
+  "new_FPGA_build": false,
+  "AIE_cores": 2,
+  "variants": [
+    "raw_2_pipe",
+    "diag_2_pipe"
+  ],
+  "change": "Existing exact diagonal candidate: 16 partials to 7 unsigned 32-bit diagonal sums; matching pipelined reducer",
+  "candidate_new_board_tested": false,
+  "candidate_performance_prediction": null,
+  "PL_build_clock_hz": 225000000,
+  "partial_bytes_K16_total_raw": 100663296,
+  "partial_bytes_K16_total_diagonal": 44040192
+}

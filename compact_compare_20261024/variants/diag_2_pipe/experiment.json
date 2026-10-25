@@ -1,0 +1,8 @@
+{
+  "id": "diag_2_pipe",
+  "cores": 2,
+  "format": "diagonal",
+  "backend": "pipeline",
+  "topology": "split",
+  "purpose": "Two complete pipelines plus compact partials"
+}
