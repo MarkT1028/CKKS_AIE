@@ -1,0 +1,12 @@
+{
+  "schema": "CKKSMAC1",
+  "source": "openfhe-synthetic-ctct-mac",
+  "openfhe_version": "1.5.1",
+  "K": 1, "N": 8192, "L": 3,
+  "scaling_technique": "FIXEDMANUAL", "security": "HEStd_NotSet",
+  "domain": "EVALUATION", "scale": 36028797018963968,
+  "level": 0, "input_noise_scale_degree": 1,
+  "input_layout": "pair,tower,coefficient,[a0,a1,b0,b1]",
+  "output_layout": "tower,coefficient,[s0,s1,s2]",
+  "contains_secret_key": false, "contains_plaintext_slots": false
+}

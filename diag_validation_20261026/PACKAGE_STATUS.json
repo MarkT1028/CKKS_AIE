@@ -1,0 +1,21 @@
+{
+  "schema": "ckks_diag_validation_package_v1",
+  "date_Taiwan": "2026-10-26",
+  "status": "READY_FOR_BOARD_VALIDATION_NO_NEW_PERFORMANCE_CLAIM",
+  "new_FPGA_build": false,
+  "new_board_execution": false,
+  "formal_comparison_frozen": true,
+  "formal_manifest_sha256": "e8eb79f26795ada7523163e6a22efa51905cd0a1f61d01195c399cc1dbae27e9",
+  "existing_saved_diag_MAC_decryption_and_square": "PASS_8_OUTPUTS_ACTUAL_OPENFHE_1_5_1",
+  "four_fresh_encrypted_fixtures": "PASS_SOFTWARE_GOLDEN_DECRYPT_AND_SQUARE_BOARD_PENDING",
+  "pending": [
+    "A2 and B2 separate-boot reverse-case-order formal runs",
+    "raw and diagonal execution of all fresh fixtures",
+    "decryption and square of returned fresh hardware outputs",
+    "CPU same-process A/A board diagnosis",
+    "actual diagonal profiling coverage and analysis"
+  ],
+  "secret_keys_in_package": false,
+  "automatic_reboot": false,
+  "first_steps": "START_HERE.md"
+}

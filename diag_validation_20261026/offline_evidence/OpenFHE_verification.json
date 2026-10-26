@@ -1,0 +1,191 @@
+{
+  "status": "PASS_8_SAVED_DIAG_DECRYPT_SQUARE_AND_4_SOFTWARE_FIXTURES",
+  "date_Taiwan": "2026-10-26",
+  "OpenFHE": "1.5.1 EXACT",
+  "secret_keys_exported": false,
+  "new_board_execution": false,
+  "source_cpp_sha256": "414416fff232ec991d15e168870802bc6049c84b96a0159ccda64786d482709e",
+  "original_verifier_cpp_sha256": "0b84e46d5d71b767c35295b4ab9c7c626450d71f59c0cd374f6cbf25c7eae9d0",
+  "verifier_sha256": "b4e2265edccf12f1ff44ac566f1335256574567c560ac33d4dc2c81a0269558a",
+  "linked_libraries": [
+    {
+      "name": "libOPENFHEpke.so.1.5.1",
+      "sha256": "9339807e0f05bc2f73b635f6b06ddac2a9fc178f232401be38bb8b6719f0ab1b"
+    },
+    {
+      "name": "libOPENFHEcore.so.1.5.1",
+      "sha256": "66521b1704043f6e05e336474b042ea9b6c6820b9d2fda9a53b340a080b93311"
+    },
+    {
+      "name": "libOPENFHEbinfhe.so.1.5.1",
+      "sha256": "3610a8235f8e7d6f239ffc153ff90767c126f5a8ae3d9046ca2bb2e3064f5459"
+    }
+  ],
+  "thresholds": {
+    "MAC": 1e-07,
+    "encrypted_square": 1e-06
+  },
+  "saved_diagonal_outputs": [
+    {
+      "id": "diag_B1_k1_resident",
+      "K": 1,
+      "output_sha256": "8750a2611b56ca973e3e95ae13e050ad8bf9468056fdfe28dfe4eb27a8f457f6",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 6.244563935e-13,
+      "square_max_abs_error": 2.746658394e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_B1_k1_resident.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_B1_k1_transfer",
+      "K": 1,
+      "output_sha256": "8750a2611b56ca973e3e95ae13e050ad8bf9468056fdfe28dfe4eb27a8f457f6",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 6.009637232e-13,
+      "square_max_abs_error": 2.667857104e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_B1_k1_transfer.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_B1_k16_resident",
+      "K": 16,
+      "output_sha256": "9582b26d263c10bee1b10d967299e90b69f0a7c38fb0b98e39af17a1943be7df",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 1.658340132e-12,
+      "square_max_abs_error": 3.427258477e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_B1_k16_resident.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_B1_k16_transfer",
+      "K": 16,
+      "output_sha256": "9582b26d263c10bee1b10d967299e90b69f0a7c38fb0b98e39af17a1943be7df",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 1.665223515e-12,
+      "square_max_abs_error": 3.384237335e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_B1_k16_transfer.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_smoke_B_k1_resident",
+      "K": 1,
+      "output_sha256": "8750a2611b56ca973e3e95ae13e050ad8bf9468056fdfe28dfe4eb27a8f457f6",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 6.838696276e-13,
+      "square_max_abs_error": 2.537849219e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_smoke_B_k1_resident.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_smoke_B_k1_transfer",
+      "K": 1,
+      "output_sha256": "8750a2611b56ca973e3e95ae13e050ad8bf9468056fdfe28dfe4eb27a8f457f6",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 5.851916174e-13,
+      "square_max_abs_error": 2.441846155e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_smoke_B_k1_transfer.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_smoke_B_k16_resident",
+      "K": 16,
+      "output_sha256": "9582b26d263c10bee1b10d967299e90b69f0a7c38fb0b98e39af17a1943be7df",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 1.616123901e-12,
+      "square_max_abs_error": 3.023015865e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_smoke_B_k16_resident.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "diag_smoke_B_k16_transfer",
+      "K": 16,
+      "output_sha256": "9582b26d263c10bee1b10d967299e90b69f0a7c38fb0b98e39af17a1943be7df",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 1.679600903e-12,
+      "square_max_abs_error": 3.619587269e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/diag_smoke_B_k16_transfer.txt",
+      "status": "PASS"
+    }
+  ],
+  "fresh_fixtures": [
+    {
+      "id": "fixture_p1_k1",
+      "K": 1,
+      "output_sha256": "0b6c0fdc8fce9b70aeebce7854f8657cdca9a24f306f1907f326c156a4078ad3",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 1.428218654e-12,
+      "square_max_abs_error": 2.97013282e-13,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/fixture_p1_k1.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "fixture_p1_k16",
+      "K": 16,
+      "output_sha256": "b4d3ae1f7a2489d6a226526b70798084720c0b68d69ca626bf6494f5bed6682a",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 4.9192872e-12,
+      "square_max_abs_error": 1.829064677e-12,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/fixture_p1_k16.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "fixture_p2_k1",
+      "K": 1,
+      "output_sha256": "b7dac3d7b1d751ac169a8ea24a0d111eac0f7df0b10d759ab9afc8595fa210d2",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 4.945155396e-12,
+      "square_max_abs_error": 1.928457394e-12,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/fixture_p2_k1.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "fixture_p2_k16",
+      "K": 16,
+      "output_sha256": "b88d72e23b21db9b47f26f4a076ec3ede4e018ab92a5da099d7e36870b680c34",
+      "raw_words": 73728,
+      "decoded_slots": 4096,
+      "MAC_max_abs_error": 2.092659379e-11,
+      "square_max_abs_error": 3.538858095e-11,
+      "MAC_level": 1,
+      "square_level": 2,
+      "log": "logs/fixture_p2_k16.txt",
+      "status": "PASS"
+    }
+  ],
+  "original_private_cases_unchanged": true,
+  "completed_at_utc": "2026-10-26T07:56:55.853582+00:00",
+  "fresh_fixture_board_test_pending": true
+}

@@ -1,0 +1,99 @@
+{
+  "variant": "diag_2_pipe",
+  "xclbin_sha256": "bad3c79697dec14e1b4fb1730be2d931d2643124bdf75446d294d173dfae6d63",
+  "AIE_METADATA_sha256": "e8ffed44f4e56977291ec11ff4e59c4dddfbe0c77b6f3915255a463f4bfe420b",
+  "core_tiles": [
+    [
+      17,
+      0
+    ],
+    [
+      18,
+      0
+    ]
+  ],
+  "memory_tiles": [
+    [
+      16,
+      0
+    ],
+    [
+      17,
+      1
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      18,
+      1
+    ]
+  ],
+  "coordinates": "Compiler/CSV logical AIE tile coordinates, not physical row indices",
+  "routes": [
+    {
+      "lane": 0,
+      "port": "left",
+      "tile": [
+        16,
+        0
+      ],
+      "direction": "s2mm",
+      "channel": 0
+    },
+    {
+      "lane": 0,
+      "port": "right",
+      "tile": [
+        16,
+        0
+      ],
+      "direction": "s2mm",
+      "channel": 1
+    },
+    {
+      "lane": 0,
+      "port": "partials",
+      "tile": [
+        17,
+        1
+      ],
+      "direction": "mm2s",
+      "channel": 0
+    },
+    {
+      "lane": 1,
+      "port": "left",
+      "tile": [
+        18,
+        0
+      ],
+      "direction": "s2mm",
+      "channel": 0
+    },
+    {
+      "lane": 1,
+      "port": "right",
+      "tile": [
+        18,
+        1
+      ],
+      "direction": "s2mm",
+      "channel": 0
+    },
+    {
+      "lane": 1,
+      "port": "partials",
+      "tile": [
+        18,
+        0
+      ],
+      "direction": "mm2s",
+      "channel": 0
+    }
+  ],
+  "DMA_report_sha256": "0859a39212e73dd52f1967e4206fc321a93ab4ab28f0bf443189be3ddd5b4e52",
+  "PL_hardware_cycle_monitors_added": false,
+  "coordinates_verified_against": "Both actual diagonal AIE_METADATA and diagonal compiler mapping/DMA report"
+}

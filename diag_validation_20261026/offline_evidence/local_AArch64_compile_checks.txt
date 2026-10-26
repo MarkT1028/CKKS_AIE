@@ -1,0 +1,62 @@
+aarch64-amd-linux-g++.real (GCC) 13.4.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+In file included from /mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/diagnostics/cpu_reference.inc:6,
+                 from /mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/diagnostics/cpu_aa.cpp:3:
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/diagnostics/parser/timed_base.hpp:67:6: warning: 'void {anonymous}::validate_boot_marker(const std::filesystem::__cxx11::path&)' defined but not used [-Wunused-function]
+   67 | void validate_boot_marker(const fs::path& path =
+      |      ^~~~~~~~~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/_diag_validation_checks_20261026/cpu_aa_aarch64_OFFLINE_ONLY: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=1a17cac8c2ddf27cc8599b9478ea5bcb82977490, for GNU/Linux 5.15.0, with debug_info, not stripped
+In file included from /mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:14,
+                 from /mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/timed_base.hpp:25,
+                 from /mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:3:
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/detail/span.h:61:13: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   61 |   constexpr const_iterator cbegin() const noexcept { return begin(); }
+      |             ^~~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/detail/span.h:62:13: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   62 |   constexpr const_iterator cend() const noexcept { return end(); }
+      |             ^~~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/detail/span.h:67:13: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   67 |   constexpr const_iterator crend() const noexcept { return rend(); }
+      |             ^~~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/timed_base.hpp: In function 'void {anonymous}::run_hardware(const std::filesystem::__cxx11::path&, const InputCase&, const std::filesystem::__cxx11::path&, uint64_t)':
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/timed_base.hpp:404:56: warning: 'uint32_t xrt::kernel::read_register(uint32_t) const' is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  404 |     const uint32_t reader_status = reader.read_register(0x10);
+      |                                    ~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/timed_base.hpp:405:58: warning: 'uint32_t xrt::kernel::read_register(uint32_t) const' is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  405 |     const uint32_t reducer_status = reducer.read_register(0x10);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp: In function 'void {anonymous}::hardware(const std::filesystem::__cxx11::path&, const InputCase&, const std::vector<long unsigned int>&, const std::filesystem::__cxx11::path&, unsigned int, unsigned int, const std::string&)':
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:133:65: warning: 'uint32_t xrt::kernel::read_register(uint32_t) const' is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  133 |         for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}
+      |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:133:127: warning: 'uint32_t xrt::kernel::read_register(uint32_t) const' is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  133 |         for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}
+      |                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:134:44: warning: 'uint32_t xrt::kernel::read_register(uint32_t) const' is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  134 |         if(join)require(join->read_register(0x10)==0,"join status");auto status_end=Clock::now();
+      |                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:134:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  134 |         if(join)require(join->read_register(0x10)==0,"join status");auto status_end=Clock::now();
+      |         ^~
+/mnt/e/v32_gpu/v32_gpu/board_packages/diag_validation_20261026/profile_host/perf_host.cpp:134:69: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  134 |         if(join)require(join->read_register(0x10)==0,"join status");auto status_end=Clock::now();
+      |                                                                     ^~~~
+PASS_AARCH64_CPU_LINK_AND_XRT_HOST_SYNTAX_ONLY

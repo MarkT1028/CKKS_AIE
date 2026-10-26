@@ -1,0 +1,64 @@
+{
+  "schema": "ckks_diag_validation_sources_v1",
+  "date_Taiwan": "2026-10-26",
+  "formal_suite": {
+    "source": "board_packages/compact_compare_20261024",
+    "destination": "comparison",
+    "manifest_sha256": "e8eb79f26795ada7523163e6a22efa51905cd0a1f61d01195c399cc1dbae27e9",
+    "copied_files_including_manifest": 83,
+    "source_and_fixtures_modified": false
+  },
+  "CPU_AA": {
+    "reference": "comparison/cpu/cpu_bench.cpp",
+    "implementation": "diagnostics/cpu_reference.inc",
+    "arithmetic_and_ComputePool": "original prefix copied exactly; original CLI main excluded",
+    "added_controls": "same process and pool; stable virtual backing storage; copy and reallocation controls; short/long warmups"
+  },
+  "profile_host": {
+    "reference": "board_packages/fair_profile_20261024/profile_host",
+    "change": "Only variant_config.hpp selected for exact diagonal image",
+    "timings": "diagnostic only; not formal E8 timings"
+  },
+  "mapping": {
+    "source": "actual diagonal xclbin AIE_METADATA and compiler DMA report",
+    "metadata_sha256": "e8ffed44f4e56977291ec11ff4e59c4dddfbe0c77b6f3915255a463f4bfe420b",
+    "DMA_report_sha256": "0859a39212e73dd52f1967e4206fc321a93ab4ab28f0bf443189be3ddd5b4e52"
+  },
+  "fresh_generation": {
+    "generator_cpp_sha256": "414416fff232ec991d15e168870802bc6049c84b96a0159ccda64786d482709e",
+    "original_cpp_sha256": "0b84e46d5d71b767c35295b4ab9c7c626450d71f59c0cd374f6cbf25c7eae9d0",
+    "change": "fixture plaintext generation only; original verify function unchanged",
+    "parameters": "N=8192 L=3 K=1,16, same modulus/scale settings",
+    "patterns": [
+      "dense deterministic signed modular values in all 4096 slots",
+      "signed levels with zero slots in all 4096 slots"
+    ],
+    "actual_OpenFHE_encryption": true,
+    "private_context_and_keys": "retained only on development computer"
+  },
+  "board_source_sha256": {
+    "diagnostics/cpu_aa.cpp": "03d8c670c370b85d6915cc9fdcaf5e9805795bc7cad76684dee1876f73462e2e",
+    "diagnostics/cpu_reference.inc": "86e3807214253d47fb66a2f506cf4688754c72ec638d274bfdad38ca01566073",
+    "diagnostics/parser/expected_reader.hpp": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6",
+    "diagnostics/parser/timed_base.hpp": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23",
+    "diagnostics/parser/variant_config.hpp": "491e19005f0eb6d0c24f8029a29656709a153f7469ca9b3ec5edc1b3b36d1a59",
+    "profile_host/expected_reader.hpp": "ecfafc063d01ebff0afcf807bd464addc70927c3ea02e95cbf45b9deed0547a6",
+    "profile_host/perf_host.cpp": "1b2e2ecb0ab720aa6955d5048fcfeab3e059b13a1df824e772ddaccaad08bd6d",
+    "profile_host/timed_base.hpp": "8f51a42e4dd095e1004bce5fda0f83b8ef4c3448fc25538abd729004beab2d23",
+    "profile_host/variant_config.hpp": "7158650e86f474dd4143a478d0163cf32e5e15aa83f2a44b3d046e2562705e11",
+    "collect_results.py": "40c21a95869df42d5099922cdc371e3cf1e1b7ab8f86b94a2a65881f45013cd4",
+    "cpu_aa_analysis.py": "3a9905685e4e689ca6566d6aaf27b6242abff82dc9a481c48c8c94914dbcee77",
+    "diag_profile_board.py": "3a791292f97d7f802229ab990a4306d8e7f76f8e20c276bd99165bf012b8ee46",
+    "summarize_repeats.py": "fdbec73af1f4f7464fd5862291ea542b06b708d03bba6f32c870c1fad3ff0498",
+    "validation_board.py": "32698189c85d4dbdd0f05fb0c20dedf2175818637ab3334f8dfafdbdf21b19aa",
+    "validation_common.py": "524dd8673d072dd50d0efe8a612dfbc4c40a0d8b950c1fc833bf8d330fcce48b",
+    "build_validation_board.sh": "2ae68353cabe0166f9a623fe0b49ae5c992da8edc6bef1ae4a66499801c6e08a",
+    "check_package.sh": "fa6e61b7c8304c00f1b13adae3763366a8f5ec5b2104936b4493e1a6c224fb80",
+    "run_cpu_aa_board.sh": "1d1b0b3d2f94d4fdaadceabbdd8443680ebe7f2df2be6dcc3ca546d00e5b9ac7",
+    "run_diag_profile_board.sh": "75a985b83c5fc5b690e05dee1aca89b00c807e8927e246654432b692a58690e9",
+    "run_fresh_board.sh": "a79b76bccab3b70efa4eaf2acef7f3124e5295bab4f0debf5f29ab4374300a72",
+    "run_repeat_board.sh": "252c22bc7288ca2cb7be67f0e87cceab05f17b8c35f42ff99c47ea4d65605998",
+    "switch_validation_board.sh": "8238dd8127f08a4454872f62b0a586738154291648b093d9523988ba788a18c2"
+  },
+  "interpretation": "comparison contains immutable historical metadata from original package. Current public status is PACKAGE_STATUS.json and PREPARATION_RESULTS.md."
+}

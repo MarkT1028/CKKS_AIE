@@ -1,0 +1,15 @@
+{
+  "id": "raw_2_pipe",
+  "cores": 2,
+  "format": "raw",
+  "backend": "pipeline",
+  "topology": "split",
+  "purpose": "Two complete pipelines with improved reducer",
+  "aie_shape": "raw2",
+  "inputs_sha256": {
+    "libadf.a": "8732be05d86f4b92ac45488b367c467f2d6634b265ae757ed20887bd02dca07a",
+    "ct_reader.xo": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+    "ct_reduce_accum.xo": "11e47cadc697e9b1d36c0903b3568b7c1308386124503c3a936e7d1b9c91edbb"
+  },
+  "clock_hz": 225000000
+}

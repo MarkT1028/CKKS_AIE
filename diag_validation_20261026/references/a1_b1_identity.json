@@ -1,0 +1,25 @@
+{
+  "archive_sha256": "615951a322aa470faff4c00bc9583c2686fa1389b59f14aae071acd8acf9cf6d",
+  "formal_package_manifest_sha256": "e8eb79f26795ada7523163e6a22efa51905cd0a1f61d01195c399cc1dbae27e9",
+  "formal_runs": [
+    {
+      "variant": "diag_2_pipe",
+      "directory": "results_compact_diag_2_pipe_B1_1t4xxt5w",
+      "boot_id": "df37ceb8-7aea-4029-ae65-296c8026ea24",
+      "boot_uuid": "2b5c68811dc2575a91b0bb9d8f8e2f98",
+      "order": "forward",
+      "start_Taiwan": "2026-10-25T10:58:05.084209+08:00",
+      "end_Taiwan": "2026-10-25T10:58:37.159662+08:00"
+    },
+    {
+      "variant": "raw_2_pipe",
+      "directory": "results_compact_raw_2_pipe_A1_sco2kuxr",
+      "boot_id": "a4571c22-012f-494f-a299-40c587b72810",
+      "boot_uuid": "f265f4974d10586c99675916b10bdf7e",
+      "order": "forward",
+      "start_Taiwan": "2026-10-25T10:47:28.689288+08:00",
+      "end_Taiwan": "2026-10-25T10:48:01.516285+08:00"
+    }
+  ],
+  "status": "Prior A1/B1 board evidence, not a new measurement"
+}

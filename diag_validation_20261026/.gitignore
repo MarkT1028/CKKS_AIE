@@ -1,0 +1,7 @@
+bin/
+results_*/
+comparison_*/
+__pycache__/
+*.pyc
+collected_results_*.tar.gz
+collected_results_*.tar.xz

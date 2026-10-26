@@ -1,0 +1,49 @@
+{
+  "status": "PASS_VALIDATION_PACKAGE",
+  "files": 138,
+  "manifest_sha256": "481eef3fe15c86f66cacdfc517645c8390625a0b0a8d835a3f9f0322ef63e089",
+  "formal_package_manifest_sha256": "e8eb79f26795ada7523163e6a22efa51905cd0a1f61d01195c399cc1dbae27e9",
+  "firmware_changed": false
+}
+profile_host/perf_host.cpp:37:23: warning: ‘std::vector<long unsigned int> {anonymous}::sink_reference(const InputCase&)’ defined but not used [-Wunused-function]
+   37 | std::vector<uint64_t> sink_reference(const InputCase& in) {
+      |                       ^~~~~~~~~~~~~~
+profile_host/perf_host.cpp:16:10: warning: ‘unsigned int {anonymous}::number(const std::string&, unsigned int)’ defined but not used [-Wunused-function]
+   16 | unsigned number(const std::string& s,unsigned max){require(!s.empty()&&s.find_first_not_of("0123456789")==std::string::npos,"invalid repetition count");auto n=std::stoul(s);require(n<=max,"repetition count too large");return unsigned(n);}
+      |          ^~~~~~
+profile_host/perf_host.cpp:15:8: warning: ‘double {anonymous}::p95(std::vector<double>)’ defined but not used [-Wunused-function]
+   15 | double p95(std::vector<double> v){std::sort(v.begin(),v.end());return v[size_t(std::ceil(v.size()*.95))-1];}
+      |        ^~~
+profile_host/perf_host.cpp:14:8: warning: ‘double {anonymous}::median(std::vector<double>)’ defined but not used [-Wunused-function]
+   14 | double median(std::vector<double> v){std::sort(v.begin(),v.end());require(!v.empty(),"no samples");size_t n=v.size();return n%2?v[n/2]:(v[n/2-1]+v[n/2])/2;}
+      |        ^~~~~~
+profile_host/perf_host.cpp:13:8: warning: ‘double {anonymous}::ms(std::chrono::_V2::steady_clock::time_point, std::chrono::_V2::steady_clock::time_point)’ defined but not used [-Wunused-function]
+   13 | double ms(Clock::time_point a,Clock::time_point b){return std::chrono::duration<double,std::milli>(b-a).count();}
+      |        ^~
+In file included from profile_host/perf_host.cpp:3:
+profile_host/timed_base.hpp:67:6: warning: ‘void {anonymous}::validate_boot_marker(const std::filesystem::__cxx11::path&)’ defined but not used [-Wunused-function]
+   67 | void validate_boot_marker(const fs::path& path =
+      |      ^~~~~~~~~~~~~~~~~~~~
+PASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=73728
+PASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=73728
+PASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=73728
+PASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=73728
+PASS xclbin mode=flat action_mask=0 boot_programmed uuid=2b5c68811dc2575a91b0bb9d8f8e2f98
+PASS input N=8192 L=3 K=16 input_words=1572864 parameter_bytes=96 frames=24576 output_words=73728
+PASS PREFLIGHT variant=diag_2_pipe
+FAIL xclbin UUID does not match CKKS boot image
+test_PC_guard (__main__.Tests.test_PC_guard) ... ok
+test_actual_diagonal_mapping_and_wrong_boot (__main__.Tests.test_actual_diagonal_mapping_and_wrong_boot) ... ok
+test_collector_roundtrip_excludes_fixtures_and_keys (__main__.Tests.test_collector_roundtrip_excludes_fixtures_and_keys) ... ok
+test_corrupted_full_output_rejected (__main__.Tests.test_corrupted_full_output_rejected) ... ok
+test_counter_parser_replays_old_logs_only_as_parser_test (__main__.Tests.test_counter_parser_replays_old_logs_only_as_parser_test) ... ok
+test_dropped_warmup_or_changed_pointer_rejected (__main__.Tests.test_dropped_warmup_or_changed_pointer_rejected) ... ok
+test_manifest_and_frozen_formal_identity (__main__.Tests.test_manifest_and_frozen_formal_identity) ... ok
+test_private_filenames_absent (__main__.Tests.test_private_filenames_absent) ... ok
+test_same_process_pointer_controls_and_all_golden (__main__.Tests.test_same_process_pointer_controls_and_all_golden) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.033s
+
+OK
+PASS_VALIDATION_OFFLINE_CHECKS_NOT_NEW_BOARD_RESULTS

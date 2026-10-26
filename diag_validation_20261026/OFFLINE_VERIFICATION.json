@@ -1,0 +1,39 @@
+{
+  "status": "PASS_OFFLINE_CONTROLS_NEW_BOARD_TESTS_PENDING",
+  "date_Taiwan": "2026-10-26",
+  "checks": {
+    "shell_syntax": "PASS",
+    "Python_syntax": "PASS",
+    "all_manifest_payload_sha256": "PASS",
+    "frozen_E8_formal_identity": "PASS",
+    "original_CPU_arithmetic_affinity_self_test": "PASS_20_CONFIGURATIONS_NATIVE_ONLY",
+    "native_CPU_AA_controls": "PASS_3_AFFINITY_CONFIGS_10_PHASES_EACH_60_MEASURED_ITERATIONS_EACH",
+    "independent_control_and_negative_tests": "PASS_9_TESTS_NATIVE_ONLY",
+    "new_four_ciphertext_fixture_parser_and_host_split_merge_fault_test": "PASS",
+    "diagonal_metadata_and_six_DMA_routes": "PASS_ACTUAL_COMPILED_METADATA_CHECK",
+    "wrong_xclbin_UUID": "CORRECTLY_REJECTED",
+    "same_A1_B1_boot_id_as_formal_repeat": "CORRECTLY_REJECTED",
+    "dropped_warmup_wrong_pointer_wrong_output": "CORRECTLY_REJECTED",
+    "counter_parser": "PASS_REPLAY_OF_PRIOR_RAW_LOGS_ONLY_NOT_NEW_DIAGONAL_COUNTER_EVIDENCE",
+    "collector": "PASS_WHITELIST_ARCHIVE_ROUNDTRIP_KEYS_AND_INPUT_FIXTURES_EXCLUDED",
+    "AArch64_CPU_AA": "CROSS_COMPILE_AND_LINK_PASS_NOT_EXECUTED",
+    "AArch64_XRT_host": "SYNTAX_ONLY_PASS_NOT_LINKED_OR_EXECUTED",
+    "local_returned_OpenFHE_helper": "PASS_SAVED_FORMAL_IDENTITY_SOFTWARE_ONLY_FIXTURE_AND_NEGATIVE_CONTROLS"
+  },
+  "cross_compile_scope": "Offline XRT syntax check uses DISABLE_ABI_CHECK only because generated version-slim header is absent locally. Board build uses original flags without this macro and links installed board XRT.",
+  "known_compile_warnings": [
+    "Inherited XRT read_register deprecation",
+    "Parser-only unused functions",
+    "Inherited compact host formatting warning"
+  ],
+  "actual_crypto_evidence": "offline_evidence/OpenFHE_verification.json",
+  "actual_crypto_status": "PASS_8_SAVED_DIAG_DECRYPT_SQUARE_AND_4_SOFTWARE_FIXTURES",
+  "no_new_FPGA_or_board_execution": true,
+  "counter_results_for_new_diagonal_test": "PENDING",
+  "test_logs_note": "Local check logs are preparation snapshots; the final delivered identity is SHA256SUMS_PACKAGE. These are not ARM board timings.",
+  "local_check_logs": {
+    "offline_evidence/local_control_checks.txt": "1c76b569089a737b8c64c4e6cc7aecd84cc606fc6d5181c150ff3105b858c931",
+    "offline_evidence/local_AArch64_compile_checks.txt": "15a54f4d0c645bbc6c68207f809e91ded30cfa9aede0db8a301fe669b6d3e793",
+    "offline_evidence/local_returned_helper_checks.txt": "d6a03f7bb8ad463f9f1a555470464402cbe74b3aa07f6cfa0be409a8db504501"
+  }
+}

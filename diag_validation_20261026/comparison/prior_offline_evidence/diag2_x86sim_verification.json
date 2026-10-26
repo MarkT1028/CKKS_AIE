@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "actual_simulator_outputs": [
+    {
+      "core": 0,
+      "samples": 86016,
+      "actual_sha256": "638e77f0b472772683e23deb42af713ec06c5374bfa1eba205311c4137fa0e40"
+    },
+    {
+      "core": 1,
+      "samples": 86016,
+      "actual_sha256": "f7cfdcf378a5a71c71c15f43c79e20649cea0f161581c790fab3297db13f6716"
+    }
+  ]
+}

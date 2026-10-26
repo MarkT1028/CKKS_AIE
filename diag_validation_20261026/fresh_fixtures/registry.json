@@ -1,0 +1,52 @@
+{
+  "schema": "ckks_fresh_fixtures_v1",
+  "N": 8192,
+  "L": 3,
+  "cases": [
+    {
+      "id": "p1_k1",
+      "K": 1,
+      "pattern": 1,
+      "description": "dense_signed_modular_pattern",
+      "inputs_sha256": "a6e9783db87f783d2fbb88e6a9f3af35927f443e847b29e43805caa12569f861",
+      "expected_sha256": "0b6c0fdc8fce9b70aeebce7854f8657cdca9a24f306f1907f326c156a4078ad3",
+      "metadata_sha256": "aedbe36f840ed2eedf3d7a6328ccca0385e376d6a33c4783645f0dccdff10771",
+      "public_only": true,
+      "new_board_tested": false
+    },
+    {
+      "id": "p1_k16",
+      "K": 16,
+      "pattern": 1,
+      "description": "dense_signed_modular_pattern",
+      "inputs_sha256": "1f0ae02b8712982bc24748c97e9305bab74178e52fa3a479abdb9eb5916f057f",
+      "expected_sha256": "b4d3ae1f7a2489d6a226526b70798084720c0b68d69ca626bf6494f5bed6682a",
+      "metadata_sha256": "47309c2aad96f9d43c12e89bc20f3ba013474aaa95c3b0b2d3c871b537b92642",
+      "public_only": true,
+      "new_board_tested": false
+    },
+    {
+      "id": "p2_k1",
+      "K": 1,
+      "pattern": 2,
+      "description": "signed_levels_with_zero_slots",
+      "inputs_sha256": "14d7dec90aa1cc26152be8b92073619afb63bc9d32338ca0265f6bebea54bcaa",
+      "expected_sha256": "b7dac3d7b1d751ac169a8ea24a0d111eac0f7df0b10d759ab9afc8595fa210d2",
+      "metadata_sha256": "aedbe36f840ed2eedf3d7a6328ccca0385e376d6a33c4783645f0dccdff10771",
+      "public_only": true,
+      "new_board_tested": false
+    },
+    {
+      "id": "p2_k16",
+      "K": 16,
+      "pattern": 2,
+      "description": "signed_levels_with_zero_slots",
+      "inputs_sha256": "f1a484be9abe1a71ac9b3e21d2b05b960f51a77e2f703756fd2ba6d1aaa81b27",
+      "expected_sha256": "b88d72e23b21db9b47f26f4a076ec3ede4e018ab92a5da099d7e36870b680c34",
+      "metadata_sha256": "47309c2aad96f9d43c12e89bc20f3ba013474aaa95c3b0b2d3c871b537b92642",
+      "public_only": true,
+      "new_board_tested": false
+    }
+  ],
+  "secret_keys_exported": false
+}

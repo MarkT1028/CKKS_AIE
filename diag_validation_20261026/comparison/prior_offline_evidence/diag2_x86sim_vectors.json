@@ -1,0 +1,11 @@
+{
+  "n": 128,
+  "l": 3,
+  "k": 16,
+  "cores": 2,
+  "compact": true,
+  "topology": "split",
+  "frames_per_core": 192,
+  "max_diagonal": 4294639622,
+  "expected_samples_per_core": 86016
+}

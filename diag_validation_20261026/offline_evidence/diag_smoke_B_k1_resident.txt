@@ -1,0 +1,2 @@
+PASS raw_words=73728 K=1 mac_error=6.838696276e-13 square_error=2.537849219e-13 level=1 next_level=2
+INPUT_RESULT="/mnt/e/v32_gpu/v32_gpu/analysis/compact_20261025/extracted/results_compact/results_compact_diag_2_pipe_smoke_B_u5ulvo6t/hardware/k1_resident/host/output_last.bin"
