@@ -1,0 +1,433 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ct_reduce_accum'
+================================================================
++ General Information: 
+    * Date:           Tue Oct 27 11:40:31 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        project
+    * Solution:       solution1 (Vitis Kernel Flow Target)
+    * Product family: versalaiedge
+    * Target device:  xcve2802-vsvh1760-2MP-e-S
+    
+
+* Performance & Resource Estimates: 
++------------------------------------------------------------------------------------------+------+---------------------+----------+----------+---------+----------+----------+-----------+------+----------+-----------+------------+------------+-----+
+|                                          Modules                                         | Issue|                     | Iteration|          |   Trip  |          |        Latency       |      |          |           |            |            |     |
+|                                          & Loops                                         | Type |    Violation Type   |  Latency | Interval |  Count  | Pipelined| (cycles) |    (ns)   | Slack|   BRAM   |    DSP    |     FF     |     LUT    | URAM|
++------------------------------------------------------------------------------------------+------+---------------------+----------+----------+---------+----------+----------+-----------+------+----------+-----------+------------+------------+-----+
+|+ ct_reduce_accum                                                                         |     -|                    -|         -|         -|        -|        no|         -|          -|  0.06|  10 (~0%)|  176 (13%)|  18878 (1%)|  19989 (3%)|    -|
+| + ct_reduce_accum_Pipeline_VITIS_LOOP_161_1                                              |     -|                    -|         -|         -|        -|        no|         -|          -|  0.10|         -|    18 (1%)|   905 (~0%)|   970 (~0%)|    -|
+|  o VITIS_LOOP_161_1                                                                      |    II|  Resource Limitation|        82|        82|        -|       yes|         -|          -|  2.34|         -|          -|           -|           -|    -|
+| + p_anonymous_namespace_pipeline*                                                        |     -|                    -|         -|  18087942|        -|  dataflow|  18087941|  5.788e+07|  0.06|         -|  158 (12%)|  13922 (1%)|  15547 (2%)|    -|
+|  + p_anonymous_namespace_reconstruct                                                     |     -|                    -|         -|  18087941|        -|        no|  18087941|  5.788e+07|  0.10|         -|    6 (~0%)|  2784 (~0%)|  3382 (~0%)|    -|
+|   o VITIS_LOOP_20_1                                                                      |     -|                    -|       138|         -|   131072|        no|  18087936|  5.788e+07|  2.34|         -|          -|           -|           -|    -|
+|    + p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3          |     -|                    -|         -|         -|        -|       yes|       116|    371.200|  0.14|         -|          -|  1516 (~0%)|  2662 (~0%)|    -|
+|     o VITIS_LOOP_23_2_VITIS_LOOP_24_3                                                    |     -|                    -|         4|         1|      112|       yes|       114|    364.800|  2.34|         -|          -|           -|           -|    -|
+|    + p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5                          |     -|                    -|         -|         -|        -|       yes|        18|     57.600|  0.49|         -|          -|    10 (~0%)|    31 (~0%)|    -|
+|     o VITIS_LOOP_53_5                                                                    |     -|                    -|         2|         1|       16|       yes|        16|     51.200|  2.34|         -|          -|           -|           -|    -|
+|  + p_anonymous_namespace_modular_reduce                                                  |     -|                    -|         -|   2097173|        -|        no|   2097173|  6.711e+06|  0.06|         -|  148 (11%)|  6165 (~0%)|   7219 (1%)|    -|
+|   + p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2        |     -|                    -|         -|         -|        -|       yes|   2097168|  6.711e+06|  0.06|         -|  140 (10%)|  5968 (~0%)|   7128 (1%)|    -|
+|    o VITIS_LOOP_70_1_VITIS_LOOP_75_2                                                     |     -|                    -|        16|         1|  2097152|       yes|   2097166|  6.711e+06|  2.34|         -|          -|           -|           -|    -|
+|  + p_anonymous_namespace_accumulate                                                      |     -|                    -|         -|   2559201|        -|        no|   2559201|  8.189e+06|  0.10|         -|    4 (~0%)|  4155 (~0%)|  4440 (~0%)|    -|
+|   o VITIS_LOOP_95_1                                                                      |     -|                    -|    159950|         -|       16|        no|   2559200|  8.189e+06|  2.34|         -|          -|           -|           -|    -|
+|    o VITIS_LOOP_98_2                                                                     |     -|                    -|      1249|         -|      128|        no|    159872|  5.116e+05|  2.34|         -|          -|           -|           -|    -|
+|     + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_100_3                         |     -|                    -|         -|         -|        -|       yes|        18|     57.600|  0.55|         -|          -|     9 (~0%)|    25 (~0%)|    -|
+|      o VITIS_LOOP_100_3                                                                  |     -|                    -|         1|         1|       16|       yes|        16|     51.200|  2.34|         -|          -|           -|           -|    -|
+|     + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_110_6_VITIS_LOOP_112_7_VITIS  |     -|                    -|         -|         -|        -|       yes|      1029|  3.293e+03|  0.22|         -|          -|  1147 (~0%)|  1681 (~0%)|    -|
+|      o VITIS_LOOP_110_6_VITIS_LOOP_112_7_VITIS_LOOP_114_8                                |     -|                    -|         5|         1|     1024|       yes|      1027|  3.286e+03|  2.34|         -|          -|           -|           -|    -|
+|     + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_124_10_VITIS_LOOP_125_11      |     -|                    -|         -|         -|        -|       yes|       196|    627.200|  0.26|         -|          -|   810 (~0%)|   351 (~0%)|    -|
+|      o VITIS_LOOP_124_10_VITIS_LOOP_125_11                                               |     -|                    -|         4|         1|      192|       yes|       194|    620.800|  2.34|         -|          -|           -|           -|    -|
++------------------------------------------------------------------------------------------+------+---------------------+----------+----------+---------+----------+----------+-----------+------+----------+-----------+------------+------------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | WRITE_ONLY | 64 -> 64   | 64            | 64      | slave  | 0        | 512       | 16           | 64           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | READ_ONLY  | 192 -> 256 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=8            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 24     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | ap_return | 0x10   | 32    | R      | Data signal of ap_return         |                                                                                    |
+| s_axi_control | outputs_1 | 0x18   | 32    | W      | Data signal of outputs           |                                                                                    |
+| s_axi_control | outputs_2 | 0x1c   | 32    | W      | Data signal of outputs           |                                                                                    |
+| s_axi_control | params_1  | 0x24   | 32    | W      | Data signal of params            |                                                                                    |
+| s_axi_control | params_2  | 0x28   | 32    | W      | Data signal of params            |                                                                                    |
+| s_axi_control | n         | 0x30   | 32    | W      | Data signal of n                 |                                                                                    |
+| s_axi_control | l         | 0x38   | 32    | W      | Data signal of l                 |                                                                                    |
+| s_axi_control | k         | 0x40   | 32    | W      | Data signal of k                 |                                                                                    |
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| partials  | in        | both          | 128   | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------+
+| Argument | Direction | Datatype                 |
++----------+-----------+--------------------------+
+| partials | in        | stream<ap_uint<128>, 0>& |
+| outputs  | out       | ap_uint<64>*             |
+| params   | in        | ap_uint<192> const *     |
+| n        | in        | unsigned int             |
+| l        | in        | unsigned int             |
+| k        | in        | unsigned int             |
+| return   | out       | int                      |
++----------+-----------+--------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| partials | partials      | interface |          |                                     |
+| outputs  | m_axi_gmem0   | interface |          | channel=0                           |
+| outputs  | s_axi_control | register  | offset   | name=outputs_1 offset=0x18 range=32 |
+| outputs  | s_axi_control | register  | offset   | name=outputs_2 offset=0x1c range=32 |
+| params   | m_axi_gmem1   | interface |          | channel=0                           |
+| params   | s_axi_control | register  | offset   | name=params_1 offset=0x24 range=32  |
+| params   | s_axi_control | register  | offset   | name=params_2 offset=0x28 range=32  |
+| n        | s_axi_control | register  |          | name=n offset=0x30 range=32         |
+| l        | s_axi_control | register  |          | name=l offset=0x38 range=32         |
+| k        | s_axi_control | register  |          | name=k offset=0x40 range=32         |
+| return   | s_axi_control | register  |          | name=ap_return offset=0x10 range=32 |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+
+| HW Interface | Direction | Length   | Width |
++--------------+-----------+----------+-------+
+| m_axi_gmem0  | write     | variable | 64    |
++--------------+-----------+----------+-------+
+
+* All M_AXI Variable Accesses
++--------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                                                        | Direction | Burst Status | Length   | Loop              | Loop Location                                                                          | Resolution | Problem                                                                            |
++--------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------+
+| m_axi_gmem0  | outputs  | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:127:54 | write     | Widen Fail   |          | VITIS_LOOP_125_11 | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:125:36 | 214-307    | Could not widen since type i64 size is greater than or equal to alignment 8(bytes) |
+| m_axi_gmem0  | outputs  | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:127:54 | write     | Fail         |          | VITIS_LOOP_95_1   | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:95:22  | 214-230    | Stride is incompatible                                                             |
+| m_axi_gmem0  | outputs  | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:127:54 | write     | Inferred     | variable | VITIS_LOOP_98_2   | /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:98:26  |            |                                                                                    |
++--------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------------------------------------+-----+--------+----------------------+-----------+--------------------------+---------+
+| Name                                                                                   | DSP | Pragma | Variable             | Op        | Impl                     | Latency |
++----------------------------------------------------------------------------------------+-----+--------+----------------------+-----------+--------------------------+---------+
+| + ct_reduce_accum                                                                      | 176 |        |                      |           |                          |         |
+|   add_ln18_fu_193_p2                                                                   |     |        | add_ln18             | add       | fabric                   | 0       |
+|   icmp_ln18_fu_198_p2                                                                  |     |        | icmp_ln18            | setgt     | auto                     | 0       |
+|   add_ln18_1_fu_204_p2                                                                 |     |        | add_ln18_1           | add       | fabric                   | 0       |
+|   and_ln18_fu_209_p2                                                                   |     |        | and_ln18             | and       | auto                     | 0       |
+|   icmp_ln18_1_fu_214_p2                                                                |     |        | icmp_ln18_1          | seteq     | auto                     | 0       |
+|   add_ln19_fu_220_p2                                                                   |     |        | add_ln19             | add       | fabric                   | 0       |
+|   icmp_ln19_fu_235_p2                                                                  |     |        | icmp_ln19            | seteq     | auto                     | 0       |
+|   add_ln20_fu_241_p2                                                                   |     |        | add_ln20             | add       | fabric                   | 0       |
+|   icmp_ln20_fu_256_p2                                                                  |     |        | icmp_ln20            | seteq     | auto                     | 0       |
+|   icmp_ln161_fu_262_p2                                                                 |     |        | icmp_ln161           | setne     | auto                     | 0       |
+|   select_ln161_fu_267_p3                                                               |     |        | select_ln161         | select    | auto_sel                 | 0       |
+|   cond_fu_275_p2                                                                       |     |        | cond                 | seteq     | auto                     | 0       |
+|  + ct_reduce_accum_Pipeline_VITIS_LOOP_161_1                                           | 18  |        |                      |           |                          |         |
+|    icmp_ln161_fu_161_p2                                                                |     |        | icmp_ln161           | setlt     | auto                     | 0       |
+|    add_ln161_fu_166_p2                                                                 |     |        | add_ln161            | add       | fabric                   | 0       |
+|    add_ln162_fu_182_p2                                                                 |     |        | add_ln162            | add       | fabric                   | 0       |
+|    icmp_ln27_fu_259_p2                                                                 |     |        | icmp_ln27            | seteq     | auto                     | 0       |
+|    icmp_ln27_1_fu_275_p2                                                               |     |        | icmp_ln27_1          | setne     | auto                     | 0       |
+|    or_ln27_fu_281_p2                                                                   |     |        | or_ln27              | or        | auto                     | 0       |
+|    icmp_ln28_fu_301_p2                                                                 |     |        | icmp_ln28            | seteq     | auto                     | 0       |
+|    mul_128ns_64ns_145_5_1_U1                                                           | 18  |        | scaled               | mul       | auto                     | 4       |
+|    icmp_ln32_fu_323_p2                                                                 |     |        | icmp_ln32            | setlt     | auto                     | 0       |
+|    add_ln32_fu_336_p2                                                                  |     |        | add_ln32             | add       | fabric                   | 0       |
+|    icmp_ln32_1_fu_342_p2                                                               |     |        | icmp_ln32_1          | setgt     | auto                     | 0       |
+|  + p_anonymous_namespace_pipeline                                                      | 158 |        |                      |           |                          |         |
+|   + p_anonymous_namespace_reconstruct                                                  | 6   |        |                      |           |                          |         |
+|     mul_30s_30s_30_2_1_U18                                                             | 4   |        | mul_ln19             | mul       | auto                     | 1       |
+|     mul_30s_26ns_30_2_1_U17                                                            | 2   |        | mul_ln19_1           | mul       | auto                     | 1       |
+|     frame_2_fu_176_p2                                                                  |     |        | frame_2              | add       | fabric                   | 0       |
+|     icmp_ln20_fu_182_p2                                                                |     |        | icmp_ln20            | seteq     | auto                     | 0       |
+|    + p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3        | 0   |        |                      |           |                          |         |
+|      add_ln23_fu_180_p2                                                                |     |        | add_ln23             | add       | fabric                   | 0       |
+|      icmp_ln23_fu_186_p2                                                               |     |        | icmp_ln23            | seteq     | auto                     | 0       |
+|      select_ln23_fu_210_p3                                                             |     |        | select_ln23          | select    | auto_sel                 | 0       |
+|      add_ln23_1_fu_222_p2                                                              |     |        | add_ln23_1           | add       | fabric                   | 0       |
+|      select_ln23_1_fu_228_p3                                                           |     |        | select_ln23_1        | select    | auto_sel                 | 0       |
+|      icmp_ln30_fu_294_p2                                                               |     |        | icmp_ln30            | seteq     | auto                     | 0       |
+|      sub_ln31_fu_306_p2                                                                |     |        | sub_ln31             | sub       | fabric                   | 0       |
+|      term_fu_324_p2                                                                    |     |        | term                 | shl       | auto_pipe                | 0       |
+|      term_1_fu_342_p2                                                                  |     |        | term_1               | shl       | auto_pipe                | 0       |
+|      term_2_fu_360_p2                                                                  |     |        | term_2               | shl       | auto_pipe                | 0       |
+|      previous_0_225_i_i_fu_384_p3                                                      |     |        | previous_0_225_i_i   | select    | auto_sel                 | 0       |
+|      previous_0202124_i_i_fu_390_p3                                                    |     |        | previous_0202124_i_i | select    | auto_sel                 | 0       |
+|      previous_0_12223_i_i_fu_396_p3                                                    |     |        | previous_0_12223_i_i | select    | auto_sel                 | 0       |
+|      previous_4_fu_402_p3                                                              |     |        | previous_4           | select    | auto_sel                 | 0       |
+|      add_ln32_fu_408_p2                                                                |     |        | add_ln32             | add       | fabric                   | 0       |
+|      add_ln32_1_fu_413_p2                                                              |     |        | add_ln32_1           | add       | fabric                   | 0       |
+|      add_ln32_2_fu_418_p2                                                              |     |        | add_ln32_2           | add       | fabric                   | 0       |
+|      term_3_fu_378_p2                                                                  |     |        | term_3               | shl       | auto_pipe                | 0       |
+|      add_ln32_3_fu_423_p2                                                              |     |        | add_ln32_3           | add       | fabric                   | 0       |
+|      add_ln24_fu_270_p2                                                                |     |        | add_ln24             | add       | fabric                   | 0       |
+|    + p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5                        | 0   |        |                      |           |                          |         |
+|      add_ln53_fu_131_p2                                                                |     |        | add_ln53             | add       | fabric                   | 0       |
+|   + p_anonymous_namespace_modular_reduce                                               | 148 |        |                      |           |                          |         |
+|     mul_32s_32s_32_2_1_U43                                                             | 4   |        | mul_ln74             | mul       | auto                     | 1       |
+|     mul_32ns_32ns_64_2_1_U42                                                           | 4   |        | bound                | mul       | auto                     | 1       |
+|    + p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2     | 140 |        |                      |           |                          |         |
+|      add_ln70_fu_206_p2                                                                |     |        | add_ln70             | add       | fabric                   | 0       |
+|      icmp_ln70_fu_212_p2                                                               |     |        | icmp_ln70            | seteq     | auto                     | 0       |
+|      icmp_ln75_fu_220_p2                                                               |     |        | icmp_ln75            | seteq     | auto                     | 0       |
+|      or_ln70_fu_225_p2                                                                 |     |        | or_ln70              | or        | auto                     | 0       |
+|      add_ln70_1_fu_231_p2                                                              |     |        | add_ln70_1           | add       | fabric                   | 0       |
+|      select_ln70_fu_237_p3                                                             |     |        | select_ln70          | select    | auto_sel                 | 0       |
+|      mul_120ns_84ns_192_7_1_U31                                                        | 26  |        | scaled               | mul       | auto                     | 6       |
+|      mul_64ns_60ns_120_5_1_U27                                                         | 9   |        | times_q              | mul       | auto                     | 4       |
+|      remainder_fu_509_p2                                                               |     |        | remainder            | sub       | fabric                   | 0       |
+|      icmp_ln41_fu_515_p2                                                               |     |        | icmp_ln41            | setlt     | auto                     | 0       |
+|      xor_ln41_fu_597_p2                                                                |     |        | xor_ln41             | xor       | auto                     | 0       |
+|      sub_ln41_fu_602_p2                                                                |     |        | sub_ln41             | sub       | fabric                   | 0       |
+|      select_ln41_fu_607_p3                                                             |     |        | select_ln41          | select    | auto_sel                 | 0       |
+|      mul_120ns_84ns_192_7_1_U32                                                        | 26  |        | scaled_1             | mul       | auto                     | 6       |
+|      mul_64ns_60ns_120_5_1_U28                                                         | 9   |        | times_q_1            | mul       | auto                     | 4       |
+|      remainder_1_fu_532_p2                                                             |     |        | remainder_1          | sub       | fabric                   | 0       |
+|      icmp_ln41_1_fu_538_p2                                                             |     |        | icmp_ln41_1          | setlt     | auto                     | 0       |
+|      xor_ln41_1_fu_614_p2                                                              |     |        | xor_ln41_1           | xor       | auto                     | 0       |
+|      sub_ln41_1_fu_619_p2                                                              |     |        | sub_ln41_1           | sub       | fabric                   | 0       |
+|      mul_120ns_84ns_192_7_1_U33                                                        | 26  |        | scaled_2             | mul       | auto                     | 6       |
+|      mul_64ns_60ns_120_5_1_U29                                                         | 9   |        | times_q_2            | mul       | auto                     | 4       |
+|      remainder_2_fu_555_p2                                                             |     |        | remainder_2          | sub       | fabric                   | 0       |
+|      icmp_ln41_2_fu_561_p2                                                             |     |        | icmp_ln41_2          | setlt     | auto                     | 0       |
+|      xor_ln41_2_fu_624_p2                                                              |     |        | xor_ln41_2           | xor       | auto                     | 0       |
+|      sub_ln41_2_fu_629_p2                                                              |     |        | sub_ln41_2           | sub       | fabric                   | 0       |
+|      select_ln41_1_fu_634_p3                                                           |     |        | select_ln41_1        | select    | auto_sel                 | 0       |
+|      mul_120ns_84ns_192_7_1_U34                                                        | 26  |        | scaled_3             | mul       | auto                     | 6       |
+|      mul_64ns_60ns_120_5_1_U30                                                         | 9   |        | times_q_3            | mul       | auto                     | 4       |
+|      remainder_3_fu_578_p2                                                             |     |        | remainder_3          | sub       | fabric                   | 0       |
+|      icmp_ln41_3_fu_584_p2                                                             |     |        | icmp_ln41_3          | setlt     | auto                     | 0       |
+|      xor_ln41_3_fu_641_p2                                                              |     |        | xor_ln41_3           | xor       | auto                     | 0       |
+|      sub_ln41_3_fu_646_p2                                                              |     |        | sub_ln41_3           | sub       | fabric                   | 0       |
+|      select_ln41_2_fu_651_p3                                                           |     |        | select_ln41_2        | select    | auto_sel                 | 0       |
+|      select_ln41_3_fu_658_p3                                                           |     |        | select_ln41_3        | select    | auto_sel                 | 0       |
+|      add_ln75_fu_250_p2                                                                |     |        | add_ln75             | add       | fabric                   | 0       |
+|      i_3_fu_256_p3                                                                     |     |        | i_3                  | select    | auto_sel                 | 0       |
+|   + p_anonymous_namespace_accumulate                                                   | 4   |        |                      |           |                          |         |
+|     icmp_ln98_fu_293_p2                                                                |     |        | icmp_ln98            | seteq     | auto                     | 0       |
+|     add_ln95_fu_299_p2                                                                 |     |        | add_ln95             | add       | fabric                   | 0       |
+|     add_ln95_2_fu_355_p2                                                               |     |        | add_ln95_2           | add       | fabric                   | 0       |
+|     add_ln95_3_fu_377_p2                                                               |     |        | add_ln95_3           | add       | fabric                   | 0       |
+|     icmp_ln95_fu_383_p2                                                                |     |        | icmp_ln95            | seteq     | auto                     | 0       |
+|     sub_ln97_fu_394_p2                                                                 |     |        | sub_ln97             | sub       | fabric                   | 0       |
+|     mul_32s_32s_32_2_1_U104                                                            | 4   |        | mul_ln97             | mul       | auto                     | 1       |
+|     add_ln97_fu_425_p2                                                                 |     |        | add_ln97             | add       | fabric                   | 0       |
+|     add_ln98_fu_462_p2                                                                 |     |        | add_ln98             | add       | fabric                   | 0       |
+|     icmp_ln98_1_fu_468_p2                                                              |     |        | icmp_ln98_1          | seteq     | auto                     | 0       |
+|    + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_100_3                        | 0   |        |                      |           |                          |         |
+|      add_ln100_fu_246_p2                                                               |     |        | add_ln100            | add       | fabric                   | 0       |
+|    + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_110_6_VITIS_LOOP_112_7_VITIS | 0   |        |                      |           |                          |         |
+|      add_ln110_fu_412_p2                                                               |     |        | add_ln110            | add       | fabric                   | 0       |
+|      icmp_ln110_fu_418_p2                                                              |     |        | icmp_ln110           | seteq     | auto                     | 0       |
+|      icmp_ln112_fu_423_p2                                                              |     |        | icmp_ln112           | seteq     | auto                     | 0       |
+|      select_ln110_fu_459_p3                                                            |     |        | select_ln110         | select    | auto_sel                 | 0       |
+|      select_ln110_1_fu_466_p3                                                          |     |        | select_ln110_1       | select    | auto_sel                 | 0       |
+|      xor_ln114_fu_481_p2                                                               |     |        | xor_ln114            | xor       | auto                     | 0       |
+|      or_ln110_fu_487_p2                                                                |     |        | or_ln110             | or        | auto                     | 0       |
+|      product_2_fu_492_p2                                                               |     |        | product_2            | add       | fabric                   | 0       |
+|      select_ln112_fu_498_p3                                                            |     |        | select_ln112         | select    | auto_sel                 | 0       |
+|      select_ln112_1_fu_506_p3                                                          |     |        | select_ln112_1       | select    | auto_sel                 | 0       |
+|      icmp_ln113_fu_514_p2                                                              |     |        | icmp_ln113           | seteq     | auto                     | 0       |
+|      icmp_ln113_1_fu_520_p2                                                            |     |        | icmp_ln113_1         | seteq     | auto                     | 0       |
+|      select_ln113_fu_616_p3                                                            |     |        | select_ln113         | select    | auto_sel                 | 0       |
+|      or_ln113_fu_623_p2                                                                |     |        | or_ln113             | or        | auto                     | 0       |
+|      component_fu_627_p3                                                               |     |        | component            | select    | auto_sel                 | 0       |
+|      sparsemux_7_2_64_1_1_U64                                                          |     |        | a                    | sparsemux | onehotencoding_realdef   | 0       |
+|      add_ln46_fu_736_p2                                                                |     |        | add_ln46             | add       | fabric                   | 0       |
+|      sum_fu_741_p2                                                                     |     |        | sum                  | add       | fabric                   | 0       |
+|      icmp_ln47_fu_747_p2                                                               |     |        | icmp_ln47            | setlt     | auto                     | 0       |
+|      xor_ln47_fu_871_p2                                                                |     |        | xor_ln47             | xor       | auto                     | 0       |
+|      sub_ln47_fu_752_p2                                                                |     |        | sub_ln47             | sub       | fabric                   | 0       |
+|      select_ln47_fu_876_p3                                                             |     |        | select_ln47          | select    | auto_sel                 | 0       |
+|      sparsemux_7_2_64_1_1_U65                                                          |     |        | a_1                  | sparsemux | onehotencoding_realdef   | 0       |
+|      add_ln46_2_fu_802_p2                                                              |     |        | add_ln46_2           | add       | fabric                   | 0       |
+|      sum_4_fu_807_p2                                                                   |     |        | sum_4                | add       | fabric                   | 0       |
+|      icmp_ln47_1_fu_813_p2                                                             |     |        | icmp_ln47_1          | setlt     | auto                     | 0       |
+|      xor_ln47_1_fu_886_p2                                                              |     |        | xor_ln47_1           | xor       | auto                     | 0       |
+|      sub_ln47_1_fu_818_p2                                                              |     |        | sub_ln47_1           | sub       | fabric                   | 0       |
+|      select_ln47_1_fu_891_p3                                                           |     |        | select_ln47_1        | select    | auto_sel                 | 0       |
+|      sparsemux_7_2_64_1_1_U66                                                          |     |        | a_2                  | sparsemux | onehotencoding_realdef   | 0       |
+|      add_ln46_4_fu_826_p2                                                              |     |        | add_ln46_4           | add       | fabric                   | 0       |
+|      sum_5_fu_831_p2                                                                   |     |        | sum_5                | add       | fabric                   | 0       |
+|      icmp_ln47_2_fu_837_p2                                                             |     |        | icmp_ln47_2          | setlt     | auto                     | 0       |
+|      xor_ln47_2_fu_901_p2                                                              |     |        | xor_ln47_2           | xor       | auto                     | 0       |
+|      sub_ln47_2_fu_842_p2                                                              |     |        | sub_ln47_2           | sub       | fabric                   | 0       |
+|      select_ln47_2_fu_906_p3                                                           |     |        | select_ln47_2        | select    | auto_sel                 | 0       |
+|      sparsemux_7_2_64_1_1_U67                                                          |     |        | a_3                  | sparsemux | onehotencoding_realdef   | 0       |
+|      add_ln46_6_fu_850_p2                                                              |     |        | add_ln46_6           | add       | fabric                   | 0       |
+|      sum_6_fu_855_p2                                                                   |     |        | sum_6                | add       | fabric                   | 0       |
+|      icmp_ln47_3_fu_861_p2                                                             |     |        | icmp_ln47_3          | setlt     | auto                     | 0       |
+|      xor_ln47_3_fu_916_p2                                                              |     |        | xor_ln47_3           | xor       | auto                     | 0       |
+|      sub_ln47_3_fu_866_p2                                                              |     |        | sub_ln47_3           | sub       | fabric                   | 0       |
+|      select_ln47_3_fu_921_p3                                                           |     |        | select_ln47_3        | select    | auto_sel                 | 0       |
+|      add_ln114_fu_600_p2                                                               |     |        | add_ln114            | add       | fabric                   | 0       |
+|      add_ln112_1_fu_429_p2                                                             |     |        | add_ln112_1          | add       | fabric                   | 0       |
+|      select_ln112_2_fu_435_p3                                                          |     |        | select_ln112_2       | select    | auto_sel                 | 0       |
+|    + p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_124_10_VITIS_LOOP_125_11     | 0   |        |                      |           |                          |         |
+|      add_ln124_fu_352_p2                                                               |     |        | add_ln124            | add       | fabric                   | 0       |
+|      icmp_ln124_fu_358_p2                                                              |     |        | icmp_ln124           | seteq     | auto                     | 0       |
+|      icmp_ln125_fu_370_p2                                                              |     |        | icmp_ln125           | seteq     | auto                     | 0       |
+|      select_ln124_fu_376_p3                                                            |     |        | select_ln124         | select    | auto_sel                 | 0       |
+|      add_ln124_1_fu_384_p2                                                             |     |        | add_ln124_1          | add       | fabric                   | 0       |
+|      select_ln124_1_fu_390_p3                                                          |     |        | select_ln124_1       | select    | auto_sel                 | 0       |
+|      first_iter_1_fu_398_p2                                                            |     |        | first_iter_1         | seteq     | auto                     | 0       |
+|      sparsemux_9_2_64_1_1_U85                                                          |     |        | tmp                  | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_9_2_64_1_1_U86                                                          |     |        | tmp_s                | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_9_2_64_1_1_U87                                                          |     |        | tmp_2                | sparsemux | compactencoding_dontcare | 0       |
+|      sparsemux_7_2_64_1_1_U88                                                          |     |        | tmp_3                | sparsemux | onehotencoding_realdef   | 0       |
+|      add_ln125_fu_418_p2                                                               |     |        | add_ln125            | add       | fabric                   | 0       |
++----------------------------------------------------------------------------------------+-----+--------+----------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------------------------+--------------+-----------+------+------+--------+----------+--------+---------+------------------+
+| Name                                  | Usage        | Type      | BRAM | URAM | Pragma | Variable | Impl   | Latency | Bitwidth, Depth, |
+|                                       |              |           |      |      |        |          |        |         | Banks            |
++---------------------------------------+--------------+-----------+------+------+--------+----------+--------+---------+------------------+
+| + ct_reduce_accum                     |              |           | 10   | 0    |        |          |        |         |                  |
+|   control_s_axi_U                     | interface    | s_axilite |      |      |        |          |        |         |                  |
+|   gmem0_m_axi_U                       | interface    | m_axi     | 2    |      |        |          |        |         |                  |
+|   gmem1_m_axi_U                       | interface    | m_axi     | 8    |      |        |          |        |         |                  |
+|   cached_U                            | ram_2p array |           | 5    |      |        | cached   | auto   | 1       | 148, 16, 1       |
+|  + p_anonymous_namespace_pipeline     |              |           | 0    | 0    |        |          |        |         |                  |
+|    products_U                         | fifo channel | stream    |      |      |        | products | memory | 0       | 480, 32, 1       |
+|    residues_U                         | fifo channel | stream    |      |      |        | residues | memory | 0       | 256, 32, 1       |
+|   + p_anonymous_namespace_reconstruct |              |           | 0    | 0    |        |          |        |         |                  |
+|     values_U                          | ram_2p array |           | 4    |      |        | values   | auto   | 1       | 120, 16, 1       |
+|     values_1_U                        | ram_2p array |           | 4    |      |        | values_1 | auto   | 1       | 120, 16, 1       |
+|     values_2_U                        | ram_2p array |           | 4    |      |        | values_2 | auto   | 1       | 120, 16, 1       |
+|     values_3_U                        | ram_2p array |           | 4    |      |        | values_3 | auto   | 1       | 120, 16, 1       |
+|   + p_anonymous_namespace_accumulate  |              |           | 0    | 0    |        |          |        |         |                  |
+|     sums_U                            | ram_2p array |           | 4    |      |        | sums     | auto   | 1       | 64, 16, 1        |
+|     sums_1_U                          | ram_2p array |           | 4    |      |        | sums_1   | auto   | 1       | 64, 16, 1        |
+|     sums_2_U                          | ram_2p array |           | 4    |      |        | sums_2   | auto   | 1       | 64, 16, 1        |
+|     sums_3_U                          | ram_2p array |           | 4    |      |        | sums_3   | auto   | 1       | 64, 16, 1        |
+|     sums_4_U                          | ram_2p array |           | 4    |      |        | sums_4   | auto   | 1       | 64, 16, 1        |
+|     sums_5_U                          | ram_2p array |           | 4    |      |        | sums_5   | auto   | 1       | 64, 16, 1        |
+|     sums_6_U                          | ram_2p array |           | 4    |      |        | sums_6   | auto   | 1       | 64, 16, 1        |
+|     sums_7_U                          | ram_2p array |           | 4    |      |        | sums_7   | auto   | 1       | 64, 16, 1        |
+|     sums_8_U                          | ram_2p array |           | 4    |      |        | sums_8   | auto   | 1       | 64, 16, 1        |
+|     sums_9_U                          | ram_2p array |           | 4    |      |        | sums_9   | auto   | 1       | 64, 16, 1        |
+|     sums_10_U                         | ram_2p array |           | 4    |      |        | sums_10  | auto   | 1       | 64, 16, 1        |
+|     sums_11_U                         | ram_2p array |           | 4    |      |        | sums_11  | auto   | 1       | 64, 16, 1        |
++---------------------------------------+--------------+-----------+------+------+--------+----------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++--------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+| Type         | Options | Location                                                                                                                                                                                                                                   | Inferred From                                                                                |
++--------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+| LOOP_FLATTEN |         | loop VITIS_LOOP_23_2 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:23:26) in (anonymous namespace)::reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:23)    | pipeline /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:25  |
+| LOOP_FLATTEN |         | loop VITIS_LOOP_70_1 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:70:22) in (anonymous namespace)::modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:70) | pipeline /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:76  |
+| LOOP_FLATTEN |         | loop VITIS_LOOP_112_7 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:112:35) in (anonymous namespace)::accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:112)  | pipeline /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:115 |
+| LOOP_FLATTEN |         | loop VITIS_LOOP_110_6 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:110:31) in (anonymous namespace)::accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:110)  | pipeline /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:115 |
+| LOOP_FLATTEN |         | loop VITIS_LOOP_124_10 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:124:32) in (anonymous namespace)::accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:124) | pipeline /mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:126 |
+| PIPELINE     |         | loop VITIS_LOOP_161_1 (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:161:23) in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:161)                    | syn.compile.pipeline_loops=64                                                                |
++--------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| Type            | Options                                                                             | Location                                                                                                 |
++-----------------+-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| INLINE          |                                                                                     | in dimensions (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/ct_mac.hpp:17)                 |
+| INLINE          |                                                                                     | in valid_parameter (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/ct_mac.hpp:24)            |
+| INLINE          |                                                                                     | in reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/ct_mac.hpp:35)                     |
+| INLINE          |                                                                                     | in add_mod (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/ct_mac.hpp:45)                    |
+| INLINE          | off                                                                                 | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:16)      |
+| ARRAY_PARTITION | variable=values cyclic factor=4 dim=1                                               | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:18)      |
+| LOOP_TRIPCOUNT  | min=4 max=131072                                                                    | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:21)      |
+| PIPELINE        | ii=1                                                                                | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:25)      |
+| UNROLL          |                                                                                     | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:28)      |
+| PIPELINE        | ii=1                                                                                | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:54)      |
+| UNROLL          |                                                                                     | in reconstruct (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:57)      |
+| INLINE          | off                                                                                 | in modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:69)   |
+| LOOP_TRIPCOUNT  | min=1 max=16                                                                        | in modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:71)   |
+| PIPELINE        | ii=1                                                                                | in modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:76)   |
+| LOOP_TRIPCOUNT  | min=64 max=131072                                                                   | in modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:77)   |
+| UNROLL          |                                                                                     | in modular_reduce (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:80)   |
+| INLINE          | off                                                                                 | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:91)       |
+| ARRAY_PARTITION | variable=sums complete dim=1                                                        | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:93)       |
+| ARRAY_PARTITION | variable=sums cyclic factor=4 dim=2                                                 | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:94)       |
+| LOOP_TRIPCOUNT  | min=1 max=16                                                                        | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:96)       |
+| LOOP_TRIPCOUNT  | min=1 max=128                                                                       | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:99)       |
+| PIPELINE        | ii=1                                                                                | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:101)      |
+| UNROLL          |                                                                                     | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:103)      |
+| UNROLL          |                                                                                     | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:105)      |
+| LOOP_TRIPCOUNT  | min=1 max=16                                                                        | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:111)      |
+| PIPELINE        | ii=1                                                                                | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:115)      |
+| UNROLL          |                                                                                     | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:118)      |
+| PIPELINE        | ii=1                                                                                | in accumulate (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:126)      |
+| INLINE          | off                                                                                 | in pipeline (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:136)        |
+| DATAFLOW        |                                                                                     | in pipeline (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:137)        |
+| STREAM          | variable=products depth=32                                                          | in pipeline (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:140)        |
+| STREAM          | variable=residues depth=32                                                          | in pipeline (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:141)        |
+| INTERFACE       | axis port=partials                                                                  | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:150) |
+| INTERFACE       | m_axi port=outputs offset=slave bundle=gmem0 depth=393216 max_write_burst_length=64 | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:151) |
+| INTERFACE       | m_axi port=params offset=slave bundle=gmem1 depth=16                                | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:152) |
+| INTERFACE       | s_axilite port=outputs bundle=control                                               | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:153) |
+| INTERFACE       | s_axilite port=params bundle=control                                                | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:154) |
+| INTERFACE       | s_axilite port=n bundle=control                                                     | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:155) |
+| INTERFACE       | s_axilite port=l bundle=control                                                     | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:156) |
+| INTERFACE       | s_axilite port=k bundle=control                                                     | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:157) |
+| INTERFACE       | s_axilite port=return bundle=control                                                | in ct_reduce_accum (/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/design/reducer_pipeline.cpp:158) |
++-----------------+-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+
+

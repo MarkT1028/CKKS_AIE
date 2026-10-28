@@ -1,0 +1,59 @@
+{
+  "status": "PASS_PACKAGE_AND_BOOT_TOOLS",
+  "tests": [
+    {
+      "test": "all supplied shell scripts pass POSIX syntax",
+      "status": "PASS"
+    },
+    {
+      "test": "complete small fixture accepted with full ring coverage",
+      "status": "PASS"
+    },
+    {
+      "test": "modified package bytes fail SHA",
+      "status": "PASS"
+    },
+    {
+      "test": "missing input rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "manifest-rehashed missing chunk fails semantic coverage",
+      "status": "PASS"
+    },
+    {
+      "test": "manifest-rehashed wrong RNS tower order rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "path traversal rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "duplicate manifest paths rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "silently dropped manifest member rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "symlink package member rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "hardware entry point refuses x86 WSL",
+      "status": "PASS"
+    },
+    {
+      "test": "result collector verifies archive members and excludes large inputs/private state",
+      "status": "PASS"
+    },
+    {
+      "test": "atomic SD staging/rollback/corruption guards validated on mock files only",
+      "status": "PASS"
+    }
+  ],
+  "actual_SD_changed": false,
+  "actual_registers_changed": false
+}

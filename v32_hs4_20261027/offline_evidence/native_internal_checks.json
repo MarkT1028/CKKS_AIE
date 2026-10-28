@@ -1,0 +1,138 @@
+{
+  "status": "PASS_COMPLETED_NATIVE_CHECKS",
+  "tests": [
+    {
+      "label": "native_configure",
+      "exit_code": 0,
+      "seconds": 0.33321628300018347
+    },
+    {
+      "label": "native_build",
+      "exit_code": 0,
+      "seconds": 2.312032126000304
+    },
+    {
+      "label": "matched_export",
+      "exit_code": 0,
+      "seconds": 1.2182604439994975
+    },
+    {
+      "label": "matched_full_u128_emulate",
+      "exit_code": 0,
+      "seconds": 0.2741968420004923
+    },
+    {
+      "label": "matched_reconstruct_decrypt_square",
+      "exit_code": 0,
+      "seconds": 0.3706480070004545
+    },
+    {
+      "label": "bad_returned_residue",
+      "exit_code": 1,
+      "seconds": 0.27321403000041755
+    },
+    {
+      "label": "pending_export",
+      "exit_code": 0,
+      "seconds": 1.0332272089999606
+    },
+    {
+      "label": "pending_full_u128_emulate",
+      "exit_code": 0,
+      "seconds": 0.31981991400061816
+    },
+    {
+      "label": "pending_reconstruct_decrypt_square",
+      "exit_code": 0,
+      "seconds": 0.3646189860000959
+    },
+    {
+      "label": "mixed_level_export",
+      "exit_code": 0,
+      "seconds": 1.053497046999837
+    },
+    {
+      "label": "mixed_level_full_u128_emulate",
+      "exit_code": 0,
+      "seconds": 0.32110660200032726
+    },
+    {
+      "label": "mixed_level_reconstruct_decrypt_square",
+      "exit_code": 0,
+      "seconds": 0.3523724950000542
+    },
+    {
+      "label": "mixed_degree_export",
+      "exit_code": 0,
+      "seconds": 1.0648902359998829
+    },
+    {
+      "label": "mixed_degree_full_u128_emulate",
+      "exit_code": 0,
+      "seconds": 0.3288367860004655
+    },
+    {
+      "label": "mixed_degree_reconstruct_decrypt_square",
+      "exit_code": 0,
+      "seconds": 0.39874817300005816
+    },
+    {
+      "label": "real_hs4_export",
+      "exit_code": 0,
+      "seconds": 49.80540208399998
+    },
+    {
+      "label": "real_hs4_full_u128_emulate",
+      "exit_code": 0,
+      "seconds": 14.518455845999597
+    },
+    {
+      "label": "real_hs4_reconstruct_decrypt_square",
+      "exit_code": 0,
+      "seconds": 16.966632871
+    },
+    {
+      "label": "reducer_compile",
+      "exit_code": 0,
+      "seconds": 6.244805788999656
+    },
+    {
+      "label": "reducer_c_models",
+      "exit_code": 0,
+      "seconds": 0.1118394579998494
+    },
+    {
+      "label": "host_parser_compile",
+      "exit_code": 0,
+      "seconds": 3.325151367000217
+    },
+    {
+      "label": "matched_host_parser",
+      "exit_code": 0,
+      "seconds": 0.1282349629991586
+    },
+    {
+      "label": "pending_host_parser",
+      "exit_code": 0,
+      "seconds": 0.11793949000002613
+    },
+    {
+      "label": "mixed_level_host_parser",
+      "exit_code": 0,
+      "seconds": 0.10906486899966694
+    },
+    {
+      "label": "mixed_degree_host_parser",
+      "exit_code": 0,
+      "seconds": 0.1239943669997956
+    },
+    {
+      "label": "real_hs4_host_parser",
+      "exit_code": 0,
+      "seconds": 5.129680951999944
+    }
+  ],
+  "test_run_dir": "/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/build/checks_20261027_125015",
+  "actual_v32_included": true,
+  "hardware_build_and_board_execution": "separate; not implied by native tests"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "actual_simulator_outputs": [
+    {
+      "core": 0,
+      "samples": 86016,
+      "actual_sha256": "1f7e610ee66ee4f1eecadc9ac2e375e75995eaaebc291705ad4fbc8747ea5ae5"
+    },
+    {
+      "core": 1,
+      "samples": 86016,
+      "actual_sha256": "c4eb2affa05c8ce31ecbda61bcabb0bef4eb1562e77271074986d34f934b5103"
+    }
+  ],
+  "vector_metadata": {
+    "provenance": {
+      "type": "synthetic_45_51_60_bit_unsigned_edges"
+    },
+    "n": 128,
+    "l": 3,
+    "k": 16,
+    "cores": 2,
+    "compact": true,
+    "frames_per_core": 192,
+    "expected_samples_per_core": 86016
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_ACTUAL_PARAMETER_AUDIT",
+  "N": 131072,
+  "active_L": 14,
+  "K": 16,
+  "nominal_scaling_mod_size": 45,
+  "actual_prime_bit_lengths": {
+    "51": 1,
+    "45": 2,
+    "46": 11
+  },
+  "reciprocal_max_bits": 84,
+  "source_levels_A": [
+    42
+  ],
+  "source_levels_B": [
+    43
+  ],
+  "normalized_level": 43,
+  "input_payload_MiB": 896.0,
+  "raw_output_payload_MiB": 42.0,
+  "limbs_per_operand": 4,
+  "limb_bits": 15,
+  "note": "Nominal ScalingModSize=45 does not make every actual prime smaller than 2^45; retain all actual residues and four limbs"
+}

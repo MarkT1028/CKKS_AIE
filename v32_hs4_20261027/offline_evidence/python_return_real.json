@@ -1,0 +1,8 @@
+{
+  "status": "PASS_ORIGINAL_PYTHON_BACKEND_RETURN",
+  "exact_check_pairs_manifest": "E:\\v32_gpu\\v32_gpu\\integration\\v32_aie_20261027\\private\\return_tests\\python_return_real_final\\pairs.json",
+  "level": 44,
+  "degree": 2,
+  "scope": "Returned ciphertext replay; full live v32 board RPC is not implemented",
+  "exact_native_comparisons": 4
+}

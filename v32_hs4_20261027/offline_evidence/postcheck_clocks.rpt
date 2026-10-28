@@ -1,0 +1,197 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Tue Oct 27 12:26:09 2026
+| Host              : DESKTOP-BBJQNG9 running 64-bit Ubuntu 24.04.1 LTS
+| Command           : report_clocks -file /home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/postcheck_clocks.rpt
+| Design            : bd_wrapper
+| Device            : xcve2802-vsvh1760
+| Speed File        : -2MP  PRODUCTION 2.03 2025-08-05
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                            Period(ns)  Waveform(ns)    Attributes  Sources
+bd_i/versal_clk_4x/inst/clk_250  4.000       {0.000 2.000}   P           {bd_i/versal_clk_4x/inst/clk_250}
+bd_i/versal_clk_srvbus/inst/clk  4.000       {0.000 2.000}   P           {bd_i/versal_clk_srvbus/inst/clk}
+clk_pl_0                         4.000       {0.000 2.000}   P           {bd_i/versal_cips_0/inst/pspmc_0/inst/PS9_inst/PMCRCLKCLK[0]}
+lpddr4_sysclk_c0_clk_p           5.000       {0.000 2.500}   P           {lpddr4_sysclk_c0_clk_p}
+lpddr4_sysclk_c1_clk_p           5.000       {0.000 2.500}   P           {lpddr4_sysclk_c1_clk_p}
+lpddr4_sysclk_c2_clk_p           5.000       {0.000 2.500}   P           {lpddr4_sysclk_c2_clk_p}
+bank1_clkout0                    1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+bank1_clkout0_1                  1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+bank1_clkout0_2                  1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+bank1_xpll0_fifo_rd_clk          1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+bank1_xpll0_fifo_rd_clk_1        1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+bank1_xpll0_fifo_rd_clk_2        1.081       {0.000 0.541}   P,G,A       {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+clkout1_primitive                2.222       {0.000 1.111}   P,G,A       {bd_i/versal_clk_4x/inst/clock_primitive_inst/MMCME5_inst/CLKOUT0}
+clkout1_primitive_3              100.000     {0.000 50.000}  P,G,A       {bd_i/versal_clk_srvbus/inst/clock_primitive_inst/MMCME5_inst/CLKOUT0}
+mc_clk_xpll                      1.081       {0.000 0.541}   P,G,A,S     {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+mc_clk_xpll_1                    1.081       {0.000 0.541}   P,G,A,S     {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+mc_clk_xpll_2                    1.081       {0.000 0.541}   P,G,A,S     {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+pll_clk_xpll                     0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+pll_clk_xpll_1                   0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+pll_clk_xpll_2                   0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+pll_clktoxphy[0]                 0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKOUTPHY}
+pll_clktoxphy[0]_1               0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKOUTPHY}
+pll_clktoxphy[2]                 0.270       {0.000 0.135}   P,G,A       {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank2/CLKOUTPHY}
+versal_clk_4x_clk_500_o2         4.444       {0.000 2.222}   P,G,A       {bd_i/versal_clk_4x/inst/clock_primitive_inst/MBUFGCE_clkout1_inst/O2}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : bank1_clkout0
+Master Source       : bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c1_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+
+Generated Clock     : bank1_clkout0_1
+Master Source       : bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c2_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+
+Generated Clock     : bank1_clkout0_2
+Master Source       : bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c0_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT0}
+
+Generated Clock     : bank1_xpll0_fifo_rd_clk
+Master Source       : bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c1_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+
+Generated Clock     : bank1_xpll0_fifo_rd_clk_1
+Master Source       : bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c2_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+
+Generated Clock     : bank1_xpll0_fifo_rd_clk_2
+Master Source       : bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c0_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Generated Sources   : {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT2}
+
+Generated Clock     : clkout1_primitive
+Master Source       : bd_i/versal_clk_4x/inst/clock_primitive_inst/MMCME5_inst/CLKIN1
+Master Clock        : bd_i/versal_clk_4x/inst/clk_250
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -0.889 -1.778}
+Generated Sources   : {bd_i/versal_clk_4x/inst/clock_primitive_inst/MMCME5_inst/CLKOUT0}
+
+Generated Clock     : clkout1_primitive_3
+Master Source       : bd_i/versal_clk_srvbus/inst/clock_primitive_inst/MMCME5_inst/CLKIN1
+Master Clock        : bd_i/versal_clk_srvbus/inst/clk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 48.000 96.000}
+Generated Sources   : {bd_i/versal_clk_srvbus/inst/clock_primitive_inst/MMCME5_inst/CLKOUT0}
+
+Generated Clock     : mc_clk_xpll
+Master Source       : bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c1_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Pin Phase Shift(ns) : 0.642  (214 degrees)
+Generated Sources   : {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+
+Generated Clock     : mc_clk_xpll_1
+Master Source       : bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c2_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Pin Phase Shift(ns) : 0.642  (214 degrees)
+Generated Sources   : {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+
+Generated Clock     : mc_clk_xpll_2
+Master Source       : bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c0_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.959 -3.919}
+Pin Phase Shift(ns) : 0.642  (214 degrees)
+Generated Sources   : {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUT1}
+
+Generated Clock     : pll_clk_xpll
+Master Source       : bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c1_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -2.365 -4.730}
+Generated Sources   : {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+
+Generated Clock     : pll_clk_xpll_1
+Master Source       : bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c2_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -2.365 -4.730}
+Generated Sources   : {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+
+Generated Clock     : pll_clk_xpll_2
+Master Source       : bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKIN
+Master Clock        : lpddr4_sysclk_c0_clk_p
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -2.365 -4.730}
+Generated Sources   : {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1/CLKOUTPHY}
+
+Generated Clock     : pll_clktoxphy[0]
+Master Source       : bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKIN
+Master Clock        : bank1_clkout0
+Multiply By         : 4
+Generated Sources   : {bd_i/noc_ddr_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKOUTPHY}
+
+Generated Clock     : pll_clktoxphy[0]_1
+Master Source       : bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKIN
+Master Clock        : bank1_clkout0_1
+Multiply By         : 4
+Generated Sources   : {bd_i/noc_ddr_1/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0/CLKOUTPHY}
+
+Generated Clock     : pll_clktoxphy[2]
+Master Source       : bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank2/CLKIN
+Master Clock        : bank1_clkout0_2
+Multiply By         : 4
+Generated Sources   : {bd_i/noc_ddr_2/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank2/CLKOUTPHY}
+
+Generated Clock     : versal_clk_4x_clk_500_o2
+Master Source       : bd_i/versal_clk_4x/inst/clock_primitive_inst/MBUFGCE_clkout1_inst/I
+Master Clock        : clkout1_primitive
+Divide By           : 2
+Generated Sources   : {bd_i/versal_clk_4x/inst/clock_primitive_inst/MBUFGCE_clkout1_inst/O2}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock                            Jitter(ns)
+bd_i/versal_clk_4x/inst/clk_250  0.100
+bd_i/versal_clk_srvbus/inst/clk  0.100
+

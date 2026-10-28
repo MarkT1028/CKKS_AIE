@@ -1,0 +1,7 @@
+{
+  "status": "PASS_ROTATION_KEY_DISK_CACHE",
+  "rotations": 16,
+  "slots_each": 4096,
+  "max_abs_error": 2.0234187436685147e-08,
+  "scope": "small 1.4.2 fixture, not full v32 performance"
+}

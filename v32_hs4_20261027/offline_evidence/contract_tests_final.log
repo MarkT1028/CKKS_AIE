@@ -1,0 +1,9 @@
+test_barrett_84_bit_exact (__main__.Contract) ... ok
+test_complete_tiling (__main__.Contract) ... ok
+test_old_reciprocal_really_insufficient (__main__.Contract) ... ok
+test_record_roundtrip_and_faults (__main__.Contract) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.245s
+
+OK

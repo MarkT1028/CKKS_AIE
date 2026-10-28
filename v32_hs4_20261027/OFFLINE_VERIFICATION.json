@@ -1,0 +1,77 @@
+{
+  "status": "PASS_OFFLINE_REAL_V32_INTEGRATION",
+  "board_tested": false,
+  "exact_integer_mac_relin_square": true,
+  "python_backend_return_exact": true,
+  "full_original_inference_reference": true,
+  "full_chunk_c_models": 16,
+  "actual_aie_hw_scope": {
+    "provenance": {
+      "type": "actual_v32_endpoint_NTT_positions",
+      "full_shape": {
+        "N": 131072,
+        "L": 14,
+        "K": 16,
+        "chunks": 16,
+        "level": 43,
+        "degree": 2,
+        "scale": 1.2379494717061894e+27,
+        "moduli": [
+          2251799807131649,
+          35184320708609,
+          35184474587137,
+          35184454926337,
+          35184600416257,
+          35184329097217,
+          35184596746241,
+          35184489791489,
+          35184521248769,
+          35184497655809,
+          35184517316609,
+          35184502898689,
+          35184508665857,
+          35184504471553
+        ]
+      },
+      "positions_per_lane": 64,
+      "all_active_towers": true,
+      "all_pairs": false,
+      "selected_ciphertext_pairs": [
+        0,
+        15
+      ]
+    },
+    "n": 128,
+    "l": 14,
+    "k": 2,
+    "cores": 2,
+    "compact": true,
+    "frames_per_core": 112,
+    "expected_samples_per_core": 50176
+  },
+  "route_signoff": {
+    "setup_slack_ns": 0.359,
+    "hold_slack_ns": 0.013,
+    "drc_errors": 0,
+    "board_tested": false,
+    "xsa_sha256": "865f3464f563ff17ed977d975ea0468162272bd8d0f52ed64e45581f2ac736e8",
+    "bus_skew_min_slack_ns": 12.457,
+    "routing_errors": 0,
+    "provenance": "independent routed checkpoint reopened with project postcheck.tcl",
+    "report_sha256": {
+      "postcheck.log": "7e94a26171327b2d8995e1d5e8434aceb73fe9532f3cce01db82ee76f5cb1de9",
+      "postcheck_bus_skew.rpt": "c6a08f5fb35cfe6cc0a709bdd1aacf0a76601322e9b2f41d9aadcd68932474ee",
+      "postcheck_clocks.rpt": "c582c9ddfa6e212008a0a9b9b613089dc53a6ad286681669119d671acf0b32cc",
+      "postcheck_drc.rpt": "e2185311edeaae483571255241ee4637e46b8e1e514134518f668db13d9deb03",
+      "postcheck_route_status.rpt": "7b9b4e0473b13601e1c97295c77ae6b1ae224f31ddef5f55a91901658d3e19a2",
+      "postcheck_timing_summary.rpt": "d8db41fc7da81eb5822402fb96e7664be7247d1e0f1e12f655e329d3bb4c8eb6",
+      "postcheck_utilization.rpt": "bb4bc11ba014fa48aecb541297ad7b39db1e07cec2414f106d1026305bce3d5d"
+    }
+  },
+  "private_keys_context_and_serialized_ct_not_in_package": true,
+  "limitations": [
+    "No live PC-board RPC yet",
+    "No new board performance measurements yet",
+    "PC export/network/import/relinearization excluded from board replay timer"
+  ]
+}

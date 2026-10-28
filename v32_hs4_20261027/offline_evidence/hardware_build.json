@@ -1,0 +1,69 @@
+{
+  "status": "OFFLINE_HARDWARE_CANDIDATE_READY_NOT_BOARD_TESTED",
+  "architecture": "2 AIE, diagonal, pipeline reducer, 84-bit reciprocal",
+  "boot_manifest": {
+    "status": "OFFLINE_VALIDATED_NOT_BOARD_TESTED",
+    "source_sha256": {
+      "BOOT.BIN": "e73f7a483fea0db0e8398f7f8290ff914428ec4cf2cb632b3d86277218371afd",
+      "Image": "79359c3f0af65cef3dbabab725b156a4b7b1925f781ab42f2f997be70f6dc86c",
+      "boot.scr": "ac5f09919439a3a94cf9729ac070d26f6e637acae91796f74f6416d3c10e748e"
+    },
+    "xclbin_uuid_hex": "6719127d5f785a7fa4fab0a9869d6ccd",
+    "partitions": 12,
+    "candidate_sha256": "398f9b917ce256e32c347b01a40c46383aa6d251a19ac533243eff01c1997822",
+    "metadata_sha256": "938525af774d79c9d3427734793f5969ef5b7aefb175c4ef2cf106cf943ef821",
+    "hardware_boot_sha256": "a2e376aa922faab3033b31189464245bc70111bb45fcddc85cd2132828f563ad",
+    "checks": [
+      "unchanged source files",
+      "identical linked hardware partitions",
+      "identical BL31/U-Boot addresses, privileges and payloads",
+      "patched DTB embedded at 0x1000",
+      "flat metadata action_mask=0"
+    ]
+  },
+  "source_sha256": {
+    "ct_mac.hpp": "d88bcc00065ea3ed67c0bae6039b453ecd6a70a517657d0fe9594ae18ad4d6b8",
+    "ct_reader.cpp": "41eb67020a2aabf98b9fea6701ffb9421de9147e4c11e83adc0f3086f6189f3f",
+    "record_io.hpp": "a29eb333dac175c01d78d0f4344bc06f42427cdd7d164f88991547ba130f043d",
+    "reducer_pipeline.cpp": "9ed97456c6304d587dd05d3f01711f106cae822449d21bb758f8bcc555828bb7",
+    "rtl_tb.cpp": "45c1d3ecba993171d075a0ce406e8f61c8158df9f6ec6f8bd8a7cb6e00c89fdd",
+    "test_reducer.cpp": "916ee9f0cc0ee7976a5ed9033fbaf3aace1859b528702c881ceeadb07ed0c081"
+  },
+  "inherited_aie_sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67",
+  "inherited_reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+  "xsa_sha256": "865f3464f563ff17ed977d975ea0468162272bd8d0f52ed64e45581f2ac736e8",
+  "routed_signoff": {
+    "setup_slack_ns": 0.359,
+    "hold_slack_ns": 0.013,
+    "drc_errors": 0,
+    "board_tested": false,
+    "xsa_sha256": "865f3464f563ff17ed977d975ea0468162272bd8d0f52ed64e45581f2ac736e8",
+    "bus_skew_min_slack_ns": 12.457,
+    "routing_errors": 0,
+    "provenance": "independent routed checkpoint reopened with project postcheck.tcl",
+    "report_sha256": {
+      "postcheck.log": "7e94a26171327b2d8995e1d5e8434aceb73fe9532f3cce01db82ee76f5cb1de9",
+      "postcheck_bus_skew.rpt": "c6a08f5fb35cfe6cc0a709bdd1aacf0a76601322e9b2f41d9aadcd68932474ee",
+      "postcheck_clocks.rpt": "c582c9ddfa6e212008a0a9b9b613089dc53a6ad286681669119d671acf0b32cc",
+      "postcheck_drc.rpt": "e2185311edeaae483571255241ee4637e46b8e1e514134518f668db13d9deb03",
+      "postcheck_route_status.rpt": "7b9b4e0473b13601e1c97295c77ae6b1ae224f31ddef5f55a91901658d3e19a2",
+      "postcheck_timing_summary.rpt": "d8db41fc7da81eb5822402fb96e7664be7247d1e0f1e12f655e329d3bb4c8eb6",
+      "postcheck_utilization.rpt": "bb4bc11ba014fa48aecb541297ad7b39db1e07cec2414f106d1026305bce3d5d"
+    }
+  },
+  "hls_xo_sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b",
+  "packaged_xclbin_sha256": "ef1465b7ed165b6cb8318c644f6c226185a142531fd98504ebc1e4629d75350f",
+  "routed_resources": {
+    "total_luts": 35292,
+    "logic_luts": 27101,
+    "lutram": 5827,
+    "srl": 2364,
+    "ff": 47571,
+    "ramb36": 24,
+    "ramb18": 2,
+    "uram": 0,
+    "dsp": 334
+  },
+  "inherited_board_proven_aie_source_sha256": "7339ca04c6d5d4ff25b70a3894ad2e1f0558d9cebe882eb4fccf291312b7d5f5",
+  "rtl_cosim_sha256": "47f941844be05527b16f82b7f8cfc488e07c3f12bbc52c59d3fc8f03f8ffc5d5"
+}

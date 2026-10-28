@@ -1,0 +1,13 @@
+{
+  "status": "DEVELOPMENT_SOURCE_SNAPSHOT",
+  "files_sha256": {
+    "v32_diag_inference.py": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+    "openfhe.cp310-win_amd64.pyd": "c908e8cddcdadb170f277f794bda7be3673a2b4af435f526237621dbd3efc30e",
+    "checkpoint\\checkpoint_eval_ready_bnfolded.pth.tar": "af53f4a49d881de4d1b095475e6a01bc4b19b9119d456a89468aceda4db17bc7",
+    "input_64x64.png": "e294ef1d10f6ba9ddf89cfb741eed5a679ffc970c668585d03c6dfd77b207029",
+    "board_packages\\diag_validation_20261026\\SHA256SUMS_PACKAGE": "3a7e1a2ad41dfab5b0bd9491eab41bae3f4408585d9e7457cdb3f6c3a1a27851",
+    "runtime\\libOPENFHEbinfhe.dll": "816c81975673310cd5fcf947dc7b2bd65e2f2280085bfbf520fe78888a0df95f",
+    "runtime\\libOPENFHEcore.dll": "6e9c007443dc0dc56a72106c26e7ce56479b09d2ef10d6a809679e4806b7e426",
+    "runtime\\libOPENFHEpke.dll": "17f4429598968789ab1fccd3a7cf87d44e084d33be05541c0a384229ff6dabef"
+  }
+}

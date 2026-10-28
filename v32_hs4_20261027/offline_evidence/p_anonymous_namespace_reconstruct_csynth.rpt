@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_reconstruct'
+================================================================
+* Date:           Tue Oct 27 11:40:26 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        project
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: versalaiedge
+* Target device:  xcve2802-vsvh1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.238 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+----------+----------+-----------+-----+----------+---------+
+    |  Latency (cycles)  |  Latency (absolute)  |    Interval    | Pipeline|
+    |   min   |    max   |    min   |    max    | min |    max   |   Type  |
+    +---------+----------+----------+-----------+-----+----------+---------+
+    |      557|  18087941|  1.782 us|  57.881 ms|  557|  18087941|       no|
+    +---------+----------+----------+-----------+-----+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |                                                                                       |                                                                            |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+        |                                        Instance                                       |                                   Module                                   |   min   |   max   |    min    |    max    | min | max |        Type       |
+        +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3_fu_104  |p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3  |      116|      116|   0.371 us|   0.371 us|    0|    0|  loop pipeline stp|
+        |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5_fu_114                  |p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5                  |       18|       18|  57.600 ns|  57.600 ns|    0|    0|  loop pipeline stp|
+        +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+
+        * Loop: 
+        +-------------------+---------+----------+----------+-----------+-----------+------------+----------+
+        |                   |  Latency (cycles)  | Iteration|  Initiation Interval  |    Trip    |          |
+        |     Loop Name     |   min   |    max   |  Latency |  achieved |   target  |    Count   | Pipelined|
+        +-------------------+---------+----------+----------+-----------+-----------+------------+----------+
+        |- VITIS_LOOP_20_1  |      552|  18087936|       138|          -|          -|  4 ~ 131072|        no|
+        +-------------------+---------+----------+----------+-----------+-----------+------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|      47|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|     6|     1595|    2735|    -|
+|Memory           |        0|     -|     1024|     516|    0|
+|Multiplexer      |        -|     -|        0|      84|    -|
+|Register         |        -|     -|      165|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|     6|     2784|    3382|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1200|  1312|  1041408|  520704|  264|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|    ~0|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+----+------+------+-----+
+    |                                        Instance                                       |                                   Module                                   | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+----+------+------+-----+
+    |mul_30s_26ns_30_2_1_U17                                                                |mul_30s_26ns_30_2_1                                                         |        0|   2|    23|     0|    0|
+    |mul_30s_30s_30_2_1_U18                                                                 |mul_30s_30s_30_2_1                                                          |        0|   4|    46|    42|    0|
+    |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3_fu_104  |p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3  |        0|   0|  1516|  2662|    0|
+    |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5_fu_114                  |p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5                  |        0|   0|    10|    31|    0|
+    +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                                  |                                                                            |        0|   6|  1595|  2735|    0|
+    +---------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------+--------------------------------------------------------+---------+-----+-----+-----+------+-----+------+-------------+
+    |   Memory   |                         Module                         | BRAM_18K|  FF | LUT | URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+--------------------------------------------------------+---------+-----+-----+-----+------+-----+------+-------------+
+    |values_U    |p_anonymous_namespace_reconstruct_values_RAM_AUTO_1R1W  |        0|  256|  129|    0|    16|  120|     1|         1920|
+    |values_1_U  |p_anonymous_namespace_reconstruct_values_RAM_AUTO_1R1W  |        0|  256|  129|    0|    16|  120|     1|         1920|
+    |values_2_U  |p_anonymous_namespace_reconstruct_values_RAM_AUTO_1R1W  |        0|  256|  129|    0|    16|  120|     1|         1920|
+    |values_3_U  |p_anonymous_namespace_reconstruct_values_RAM_AUTO_1R1W  |        0|  256|  129|    0|    16|  120|     1|         1920|
+    +------------+--------------------------------------------------------+---------+-----+-----+-----+------+-----+------+-------------+
+    |Total       |                                                        |        0| 1024|  516|    0|    64|  480|     4|         7680|
+    +------------+--------------------------------------------------------+---------+-----+-----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |frame_2_fu_176_p2    |         +|   0|  0|  32|          32|           1|
+    |icmp_ln20_fu_182_p2  |      icmp|   0|  0|  13|          32|          32|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  47|          65|          34|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |   5|         10|    1|         10|
+    |ap_done            |   1|          2|    1|          2|
+    |frame_fu_66        |  32|          2|   32|         64|
+    |partials_TREADY    |   1|          2|    1|          2|
+    |real_start         |   1|          2|    1|          2|
+    |values_1_address0  |   8|          3|    4|         12|
+    |values_1_ce0       |   1|          3|    1|          3|
+    |values_1_ce1       |   1|          2|    1|          2|
+    |values_1_we0       |   1|          2|    1|          2|
+    |values_2_address0  |   8|          3|    4|         12|
+    |values_2_ce0       |   1|          3|    1|          3|
+    |values_2_ce1       |   1|          2|    1|          2|
+    |values_2_we0       |   1|          2|    1|          2|
+    |values_3_address0  |   8|          3|    4|         12|
+    |values_3_ce0       |   1|          3|    1|          3|
+    |values_3_ce1       |   1|          2|    1|          2|
+    |values_3_we0       |   1|          2|    1|          2|
+    |values_address0    |   8|          3|    4|         12|
+    |values_ce0         |   1|          3|    1|          3|
+    |values_ce1         |   1|          2|    1|          2|
+    |values_we0         |   1|          2|    1|          2|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              |  84|         58|   64|        156|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                Name                                                | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                           |   9|   0|    9|          0|
+    |ap_done_reg                                                                                         |   1|   0|    1|          0|
+    |frame_fu_66                                                                                         |  32|   0|   32|          0|
+    |frames_reg_246                                                                                      |  30|   0|   32|          2|
+    |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_23_2_VITIS_LOOP_24_3_fu_104_ap_start_reg  |   1|   0|    1|          0|
+    |grp_p_anonymous_namespace_reconstruct_Pipeline_VITIS_LOOP_53_5_fu_114_ap_start_reg                  |   1|   0|    1|          0|
+    |k_read_reg_223                                                                                      |  30|   0|   30|          0|
+    |l_read_reg_229                                                                                      |  30|   0|   30|          0|
+    |mul_ln19_reg_235                                                                                    |  30|   0|   30|          0|
+    |start_once_reg                                                                                      |   1|   0|    1|          0|
+    +----------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                               | 165|   0|  167|          2|
+    +----------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++-------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|start_full_n             |   in|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|start_out                |  out|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|start_write              |  out|    1|  ap_ctrl_hs|  (anonymous namespace)reconstruct|  return value|
+|partials_TDATA           |   in|  128|        axis|                          partials|       pointer|
+|partials_TVALID          |   in|    1|        axis|                          partials|       pointer|
+|partials_TREADY          |  out|    1|        axis|                          partials|       pointer|
+|products_din             |  out|  480|     ap_fifo|                          products|       pointer|
+|products_full_n          |   in|    1|     ap_fifo|                          products|       pointer|
+|products_write           |  out|    1|     ap_fifo|                          products|       pointer|
+|products_num_data_valid  |   in|   32|     ap_fifo|                          products|       pointer|
+|products_fifo_cap        |   in|   32|     ap_fifo|                          products|       pointer|
+|n                        |   in|   32|   ap_stable|                                 n|        scalar|
+|l                        |   in|   30|   ap_stable|                                 l|        scalar|
+|k                        |   in|   30|   ap_stable|                                 k|        scalar|
++-------------------------+-----+-----+------------+----------------------------------+--------------+
+

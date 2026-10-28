@@ -1,0 +1,218 @@
+{
+  "status": "PASS_REAL_V32_LOCAL_REPLAY",
+  "work_directory": "/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/build/real_checks_20261027_123913",
+  "source_capture": {
+    "status": "CAPTURED_REAL_V32_MAC",
+    "layer": "h_s.4",
+    "bsgs_group": 5,
+    "diagonal_indices": [
+      80,
+      95
+    ],
+    "K": 16,
+    "ring_dimension": 131072,
+    "params": {
+      "security": "HEStd_128_classic",
+      "ring_dim": 131072,
+      "depth": 56,
+      "scale": 45,
+      "first": 51,
+      "slots": 65536,
+      "block": 1024,
+      "bsgs_r": 16,
+      "method": "v29 diagonal, multi-position",
+      "opt": {
+        "lazy_relin": true,
+        "rescale_once": true,
+        "hoist_im2col": true,
+        "hoist_bsgs": false
+      },
+      "rot_keys": 90,
+      "input": "E:\\v32_gpu\\v32_gpu\\input_64x64.png"
+    },
+    "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+    "checkpoint_sha256": "af53f4a49d881de4d1b095475e6a01bc4b19b9119d456a89468aceda4db17bc7",
+    "input_sha256": "e294ef1d10f6ba9ddf89cfb741eed5a679ffc970c668585d03c6dfd77b207029",
+    "input_levels_a": [
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42,
+      42
+    ],
+    "input_levels_b": [
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43,
+      43
+    ],
+    "input_degrees_a": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "input_degrees_b": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "raw_level": 43,
+    "raw_degree": 2,
+    "rotation_key_disk_cache": true,
+    "keys": "LOCAL_GROUND_ONLY_NOT_FOR_BOARD",
+    "inference": "CPU reference continues; no hardware speed claim"
+  },
+  "coverage": {
+    "status": "PASS_COMPLETE_FULL_RING_CHUNK_COVERAGE",
+    "shape": {
+      "N": 131072,
+      "L": 14,
+      "K": 16,
+      "chunks": 16,
+      "level": 43,
+      "degree": 2,
+      "scale": 1.2379494717061894e+27,
+      "moduli": [
+        2251799807131649,
+        35184320708609,
+        35184474587137,
+        35184454926337,
+        35184600416257,
+        35184329097217,
+        35184596746241,
+        35184489791489,
+        35184521248769,
+        35184497655809,
+        35184517316609,
+        35184502898689,
+        35184508665857,
+        35184504471553
+      ]
+    },
+    "chunks": 16,
+    "raw_words": 5505024,
+    "canonical_checked": true
+  },
+  "all_chunk_c_models": [
+    {
+      "id": "chunk_0",
+      "sha256": "7b772916e6ce42519b7964cf525cdc13569a7a2200dcb7f7a39b22b0439304ed"
+    },
+    {
+      "id": "chunk_1",
+      "sha256": "ad68111df589d811483790ac5772cbe31526ddc8a986bd23cdd7261a95329073"
+    },
+    {
+      "id": "chunk_2",
+      "sha256": "3d20b2b59eadcb822da16f43baf1229360cf076c0660e87911e62eb58f3b1cb1"
+    },
+    {
+      "id": "chunk_3",
+      "sha256": "7d9dfe353790eb6f0ffbdcbc68d9d1cb24bb0ec5da0c15cfc07f7df35e798129"
+    },
+    {
+      "id": "chunk_4",
+      "sha256": "b230917b95f40965f766946cf28bd4d9c893a9d543fcde4928a5c3ff4db0bc44"
+    },
+    {
+      "id": "chunk_5",
+      "sha256": "7fdd6235e4d862fd9091eb67e61aeebcf80081da159eff9f73ac5d25ffc93b73"
+    },
+    {
+      "id": "chunk_6",
+      "sha256": "ba40b1d1ec6187a03b06972045026b792b44b25e0f877b3b48ef32db8ae9baaf"
+    },
+    {
+      "id": "chunk_7",
+      "sha256": "bd0fd85b65a9a7993953b537c503d3fe3e0267a6cd57110784584b32ebc720c0"
+    },
+    {
+      "id": "chunk_8",
+      "sha256": "a221411208b02ca18fe6be3efeb3ee8314662b49c7d69119bf325138aa16647a"
+    },
+    {
+      "id": "chunk_9",
+      "sha256": "4d3fe6c7dbcca30daf23481c6795e166df67a2e1db0b79d7ecf135fb7f773242"
+    },
+    {
+      "id": "chunk_10",
+      "sha256": "50af3874793d74ece7697b59f1693d36909b90ccdc4e6b6b46a7b6cc447f15ce"
+    },
+    {
+      "id": "chunk_11",
+      "sha256": "71f358121d1e1d304d6acbf0c2410bff534771c410152591aff0278ecd8a3e9d"
+    },
+    {
+      "id": "chunk_12",
+      "sha256": "31d994f74f1b5fb860bc23b57cbb74d283c8ac3a90d525149569ee64923b8fe9"
+    },
+    {
+      "id": "chunk_13",
+      "sha256": "734ed6eb572a13be0b4a29e607a3148015504defb9fc8ac865322ddf9a1354f3"
+    },
+    {
+      "id": "chunk_14",
+      "sha256": "0f17d5549723b969c3711c7f7f50daee0c83cb85b38f45fc9cd9164f29e07e10"
+    },
+    {
+      "id": "chunk_15",
+      "sha256": "0754f6952de2d5d9d39efa64c185225b34fb5e93ceaea84d0e79d08002c4aaf2"
+    }
+  ],
+  "integer_raw_relin_square_and_metadata_exact": true,
+  "python_original_backend_return_exact": true,
+  "hardware_board_execution": "NOT_YET_TESTED",
+  "windows_return_invoked_separately": true,
+  "final_crypto_verification_directory": "/mnt/e/v32_gpu/v32_gpu/integration/v32_aie_20261027/build/real_checks_20261027_123913/c_model_verified_final142",
+  "final_runtime_provenance": "runtime_library_provenance.json",
+  "fresh_all_142_export_files_sha256_equal": 34
+}

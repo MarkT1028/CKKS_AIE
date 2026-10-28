@@ -1,0 +1,61 @@
+{
+  "status": "PASS_REAL_V32_CPU_REFERENCE",
+  "params": {
+    "security": "HEStd_128_classic",
+    "ring_dim": 131072,
+    "depth": 56,
+    "scale": 45,
+    "first": 51,
+    "slots": 65536,
+    "block": 1024,
+    "bsgs_r": 16,
+    "method": "v29 diagonal, multi-position",
+    "opt": {
+      "lazy_relin": true,
+      "rescale_once": true,
+      "hoist_im2col": true,
+      "hoist_bsgs": false
+    },
+    "rot_keys": 90,
+    "input": "E:\\v32_gpu\\v32_gpu\\input_64x64.png"
+  },
+  "verify": {
+    "g_a.0": 2.9911032206619836e-07,
+    "g_a.2": 1.653198668405409e-06,
+    "g_a.3": 7.136417231046188e-07,
+    "g_a.5": 4.738412842542061e-06,
+    "g_a.6": 8.073469705549563e-07,
+    "g_a.8": 7.308439897713015e-06,
+    "g_a.9": 8.553998089411152e-06,
+    "y_compact": 9.704002242649779e-06,
+    "h_a.0": 1.968980135491627e-06,
+    "h_a.1": 2.5596465568433757e-05,
+    "h_a.2": 1.4121854187143512e-06,
+    "h_a.3": 3.308107035771002e-05,
+    "h_a.4": 8.507551150893633e-06,
+    "cheby_z": 1.3798994874636428e-05,
+    "h_s.0.0": 7.279748090657789e-07,
+    "ps0": 7.041303064156401e-07,
+    "h_s.1": 4.270875619050152e-06,
+    "h_s.2.0": 6.500023724299864e-07,
+    "ps2": 6.483673207439283e-07,
+    "h_s.3": 3.4707793188371028e-06,
+    "h_s.4(mean)": 9.959888187971444e-06
+  },
+  "final": {
+    "diff_y_hat": 0.2937981897044035,
+    "psnr_A": 26.15996873713277,
+    "psnr_B": 26.124257739856816,
+    "delta": 0.035710997275952394,
+    "images": [
+      "v32_full_input.png",
+      "v32_full_recon_plain.png",
+      "v32_full_recon_ckks.png"
+    ],
+    "y_hat_files": [
+      "v32_full_y_hat_ckks.npy",
+      "v32_full_y_hat_plain.npy"
+    ]
+  },
+  "timing_scope": "Diagnostic rotation-key disk IO included; not original CPU performance baseline"
+}

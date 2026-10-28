@@ -1,0 +1,10 @@
+bin/
+results_*/
+switch_logs/
+__pycache__/
+*.pyc
+.board.lock
+collected_real_v32_*.tar.xz
+collection_index_*.json
+!offline_evidence/
+!offline_evidence/*.log

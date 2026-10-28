@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_100_3'
+================================================================
+* Date:           Tue Oct 27 11:40:27 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        project
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: versalaiedge
+* Target device:  xcve2802-vsvh1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.792 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |       18|       18|  57.600 ns|  57.600 ns|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_100_3  |       16|       16|         1|          1|          1|    16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|       8|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|     -|        -|       -|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        0|      17|    -|
+|Register         |        -|     -|        9|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|     0|        9|      25|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1200|  1312|  1041408|  520704|  264|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     0|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln100_fu_246_p2  |         +|   0|  0|   8|           7|           3|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|   8|           7|           3|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   1|          2|    1|          2|
+    |ap_sig_allocacmp_j_2  |   8|          2|    7|         14|
+    |j_fu_58               |   8|          2|    7|         14|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  17|          6|   15|         30|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |j_fu_58      |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  9|   0|    9|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  (anonymous namespace)accumulate_Pipeline_VITIS_LOOP_100_3|  return value|
+|sums_11_address0  |  out|    4|   ap_memory|                                                    sums_11|         array|
+|sums_11_ce0       |  out|    1|   ap_memory|                                                    sums_11|         array|
+|sums_11_we0       |  out|    1|   ap_memory|                                                    sums_11|         array|
+|sums_11_d0        |  out|   64|   ap_memory|                                                    sums_11|         array|
+|sums_10_address0  |  out|    4|   ap_memory|                                                    sums_10|         array|
+|sums_10_ce0       |  out|    1|   ap_memory|                                                    sums_10|         array|
+|sums_10_we0       |  out|    1|   ap_memory|                                                    sums_10|         array|
+|sums_10_d0        |  out|   64|   ap_memory|                                                    sums_10|         array|
+|sums_9_address0   |  out|    4|   ap_memory|                                                     sums_9|         array|
+|sums_9_ce0        |  out|    1|   ap_memory|                                                     sums_9|         array|
+|sums_9_we0        |  out|    1|   ap_memory|                                                     sums_9|         array|
+|sums_9_d0         |  out|   64|   ap_memory|                                                     sums_9|         array|
+|sums_8_address0   |  out|    4|   ap_memory|                                                     sums_8|         array|
+|sums_8_ce0        |  out|    1|   ap_memory|                                                     sums_8|         array|
+|sums_8_we0        |  out|    1|   ap_memory|                                                     sums_8|         array|
+|sums_8_d0         |  out|   64|   ap_memory|                                                     sums_8|         array|
+|sums_7_address0   |  out|    4|   ap_memory|                                                     sums_7|         array|
+|sums_7_ce0        |  out|    1|   ap_memory|                                                     sums_7|         array|
+|sums_7_we0        |  out|    1|   ap_memory|                                                     sums_7|         array|
+|sums_7_d0         |  out|   64|   ap_memory|                                                     sums_7|         array|
+|sums_6_address0   |  out|    4|   ap_memory|                                                     sums_6|         array|
+|sums_6_ce0        |  out|    1|   ap_memory|                                                     sums_6|         array|
+|sums_6_we0        |  out|    1|   ap_memory|                                                     sums_6|         array|
+|sums_6_d0         |  out|   64|   ap_memory|                                                     sums_6|         array|
+|sums_5_address0   |  out|    4|   ap_memory|                                                     sums_5|         array|
+|sums_5_ce0        |  out|    1|   ap_memory|                                                     sums_5|         array|
+|sums_5_we0        |  out|    1|   ap_memory|                                                     sums_5|         array|
+|sums_5_d0         |  out|   64|   ap_memory|                                                     sums_5|         array|
+|sums_4_address0   |  out|    4|   ap_memory|                                                     sums_4|         array|
+|sums_4_ce0        |  out|    1|   ap_memory|                                                     sums_4|         array|
+|sums_4_we0        |  out|    1|   ap_memory|                                                     sums_4|         array|
+|sums_4_d0         |  out|   64|   ap_memory|                                                     sums_4|         array|
+|sums_3_address0   |  out|    4|   ap_memory|                                                     sums_3|         array|
+|sums_3_ce0        |  out|    1|   ap_memory|                                                     sums_3|         array|
+|sums_3_we0        |  out|    1|   ap_memory|                                                     sums_3|         array|
+|sums_3_d0         |  out|   64|   ap_memory|                                                     sums_3|         array|
+|sums_2_address0   |  out|    4|   ap_memory|                                                     sums_2|         array|
+|sums_2_ce0        |  out|    1|   ap_memory|                                                     sums_2|         array|
+|sums_2_we0        |  out|    1|   ap_memory|                                                     sums_2|         array|
+|sums_2_d0         |  out|   64|   ap_memory|                                                     sums_2|         array|
+|sums_1_address0   |  out|    4|   ap_memory|                                                     sums_1|         array|
+|sums_1_ce0        |  out|    1|   ap_memory|                                                     sums_1|         array|
+|sums_1_we0        |  out|    1|   ap_memory|                                                     sums_1|         array|
+|sums_1_d0         |  out|   64|   ap_memory|                                                     sums_1|         array|
+|sums_address0     |  out|    4|   ap_memory|                                                       sums|         array|
+|sums_ce0          |  out|    1|   ap_memory|                                                       sums|         array|
+|sums_we0          |  out|    1|   ap_memory|                                                       sums|         array|
+|sums_d0           |  out|   64|   ap_memory|                                                       sums|         array|
++------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

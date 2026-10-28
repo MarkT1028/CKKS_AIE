@@ -1,0 +1,38 @@
+{
+  "status": "PASS_MATCHED_OPENFHE_142_RUNTIMES",
+  "linux_native_binary_sha256": "e4bf5bc00307fce0a90ed861449dc5b04db1cfb7c1d64ccf4e4a9a1c1ea34367",
+  "linux_libraries": {
+    "libOPENFHEpke.so.1": {
+      "path": "/home/mark/v32_aie_20261027/openfhe-install/lib/libOPENFHEpke.so.1.4.2",
+      "sha256": "9f65f7acab44d45586ca95bd7f8fcfa04d37bffc5cfbef511e22104bede35126"
+    },
+    "libOPENFHEcore.so.1": {
+      "path": "/home/mark/v32_aie_20261027/openfhe-install/lib/libOPENFHEcore.so.1.4.2",
+      "sha256": "5032c75c52c5f4e68476531ff41ffe74bcc94ed91cbe718bc36f2d3977e43d9f"
+    },
+    "libOPENFHEbinfhe.so.1": {
+      "path": "/home/mark/v32_aie_20261027/openfhe-install/lib/libOPENFHEbinfhe.so.1.4.2",
+      "sha256": "e9e3ed1ff7a5643fe9405609f84bc73921175dab22356813c0bbac1d210a5211"
+    }
+  },
+  "windows": {
+    "status": "PASS_ORIGINAL_WINDOWS_RUNTIME_PATHS",
+    "binding_path": "E:\\v32_gpu\\v32_gpu\\openfhe.cp310-win_amd64.pyd",
+    "libraries": {
+      "libOPENFHEpke.dll": {
+        "path": "E:\\v32_gpu\\v32_gpu\\runtime\\libOPENFHEpke.dll",
+        "sha256": "17f4429598968789ab1fccd3a7cf87d44e084d33be05541c0a384229ff6dabef"
+      },
+      "libOPENFHEcore.dll": {
+        "path": "E:\\v32_gpu\\v32_gpu\\runtime\\libOPENFHEcore.dll",
+        "sha256": "6e9c007443dc0dc56a72106c26e7ce56479b09d2ef10d6a809679e4806b7e426"
+      },
+      "libOPENFHEbinfhe.dll": {
+        "path": "E:\\v32_gpu\\v32_gpu\\runtime\\libOPENFHEbinfhe.dll",
+        "sha256": "816c81975673310cd5fcf947dc7b2bd65e2f2280085bfbf520fe78888a0df95f"
+      }
+    }
+  },
+  "openfhe_source_commit": "aa391988d354d4360f390f223a90e0d1b98839d7",
+  "note": "Final checks use all three local 1.4.2 components; executable DT_RPATH prevents unrelated system BinFHE from being selected"
+}

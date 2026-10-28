@@ -1,0 +1,26 @@
+{
+  "status": "PASS_FULL_REFERENCE_PSNRS",
+  "current": {
+    "diff_y_hat": 0.2937981897044035,
+    "psnr_A": 26.15996873713277,
+    "psnr_B": 26.124257739856816,
+    "delta": 0.035710997275952394,
+    "images": [
+      "v32_full_input.png",
+      "v32_full_recon_plain.png",
+      "v32_full_recon_ckks.png"
+    ],
+    "y_hat_files": [
+      "v32_full_y_hat_ckks.npy",
+      "v32_full_y_hat_plain.npy"
+    ]
+  },
+  "prior_reference": {
+    "diff_y_hat": 0.29379243513933906,
+    "psnr_A": 26.159968737132765,
+    "psnr_B": 26.124258014978032,
+    "delta": 0.035710722154732366
+  },
+  "abs_psnr_B_delta": 2.7512121647532695e-07,
+  "scope": "Original approximation error remains; not a board result"
+}

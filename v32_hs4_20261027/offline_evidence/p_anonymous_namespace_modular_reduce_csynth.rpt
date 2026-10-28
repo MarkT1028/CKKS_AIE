@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_modular_reduce'
+================================================================
+* Date:           Tue Oct 27 11:40:27 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        project
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: versalaiedge
+* Target device:  xcve2802-vsvh1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.279 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+---------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max   |   Type  |
+    +---------+---------+----------+----------+-----+---------+---------+
+    |       85|  2097173|  0.272 us|  6.711 ms|   85|  2097173|       no|
+    +---------+---------+----------+----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |                                                                                         |                                                                               |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+        |                                         Instance                                        |                                     Module                                    |   min   |   max   |    min   |    max   | min | max |        Type       |
+        +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |grp_p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2_fu_64  |p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2  |       80|  2097168|  0.256 us|  6.711 ms|    0|    0|  loop pipeline stp|
+        +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|       2|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|   148|     6060|    7212|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        0|       5|    -|
+|Register         |        -|     -|      105|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|   148|     6165|    7219|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1200|  1312|  1041408|  520704|  264|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|    11|       ~0|       1|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+-----+------+------+-----+
+    |                                         Instance                                        |                                     Module                                    | BRAM_18K| DSP |  FF  |  LUT | URAM|
+    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+-----+------+------+-----+
+    |mul_32ns_32ns_64_2_1_U42                                                                 |mul_32ns_32ns_64_2_1                                                           |        0|    4|    46|    42|    0|
+    |mul_32s_32s_32_2_1_U43                                                                   |mul_32s_32s_32_2_1                                                             |        0|    4|    46|    42|    0|
+    |grp_p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2_fu_64  |p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2  |        0|  140|  5968|  7128|    0|
+    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+-----+------+------+-----+
+    |Total                                                                                    |                                                                               |        0|  148|  6060|  7212|    0|
+    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+-----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |ap_NS_fsm   |   3|          7|    1|          7|
+    |ap_done     |   1|          2|    1|          2|
+    |real_start  |   1|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+    |Total       |   5|         11|    3|         11|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                 Name                                                 | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                             |   6|   0|    6|          0|
+    |ap_done_reg                                                                                           |   1|   0|    1|          0|
+    |bound_reg_155                                                                                         |  64|   0|   64|          0|
+    |grp_p_anonymous_namespace_modular_reduce_Pipeline_VITIS_LOOP_70_1_VITIS_LOOP_75_2_fu_64_ap_start_reg  |   1|   0|    1|          0|
+    |mul_ln74_reg_139                                                                                      |  32|   0|   32|          0|
+    |start_once_reg                                                                                        |   1|   0|    1|          0|
+    +------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                 | 105|   0|  105|          0|
+    +------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|start_full_n             |   in|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|start_out                |  out|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|start_write              |  out|    1|  ap_ctrl_hs|  (anonymous namespace)modular_reduce|  return value|
+|products_dout            |   in|  480|     ap_fifo|                             products|       pointer|
+|products_empty_n         |   in|    1|     ap_fifo|                             products|       pointer|
+|products_read            |  out|    1|     ap_fifo|                             products|       pointer|
+|products_num_data_valid  |   in|    6|     ap_fifo|                             products|       pointer|
+|products_fifo_cap        |   in|    6|     ap_fifo|                             products|       pointer|
+|residues_din             |  out|  256|     ap_fifo|                             residues|       pointer|
+|residues_full_n          |   in|    1|     ap_fifo|                             residues|       pointer|
+|residues_write           |  out|    1|     ap_fifo|                             residues|       pointer|
+|residues_num_data_valid  |   in|    6|     ap_fifo|                             residues|       pointer|
+|residues_fifo_cap        |   in|    6|     ap_fifo|                             residues|       pointer|
+|cached_address0          |  out|    4|   ap_stable|                               cached|         array|
+|cached_ce0               |  out|    1|   ap_stable|                               cached|         array|
+|cached_q0                |   in|  148|   ap_stable|                               cached|         array|
+|n                        |   in|   32|   ap_stable|                                    n|        scalar|
+|l                        |   in|   32|   ap_stable|                                    l|        scalar|
+|k                        |   in|   32|   ap_stable|                                    k|        scalar|
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+

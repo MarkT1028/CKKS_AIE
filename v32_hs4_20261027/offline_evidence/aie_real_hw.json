@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "actual_simulator_outputs": [
+    {
+      "core": 0,
+      "samples": 50176,
+      "actual_sha256": "17cc7bace49c05d448d895f9ec5f646ab78d38bbe3d822a2334e6ac8684bf9c2"
+    },
+    {
+      "core": 1,
+      "samples": 50176,
+      "actual_sha256": "4262cbc4c434c25f8ccebffbd1651911c776df5da511f1b49ddec624ba62dbaa"
+    }
+  ],
+  "vector_metadata": {
+    "provenance": {
+      "type": "actual_v32_endpoint_NTT_positions",
+      "full_shape": {
+        "N": 131072,
+        "L": 14,
+        "K": 16,
+        "chunks": 16,
+        "level": 43,
+        "degree": 2,
+        "scale": 1.2379494717061894e+27,
+        "moduli": [
+          2251799807131649,
+          35184320708609,
+          35184474587137,
+          35184454926337,
+          35184600416257,
+          35184329097217,
+          35184596746241,
+          35184489791489,
+          35184521248769,
+          35184497655809,
+          35184517316609,
+          35184502898689,
+          35184508665857,
+          35184504471553
+        ]
+      },
+      "positions_per_lane": 64,
+      "all_active_towers": true,
+      "all_pairs": false,
+      "selected_ciphertext_pairs": [
+        0,
+        15
+      ]
+    },
+    "n": 128,
+    "l": 14,
+    "k": 2,
+    "cores": 2,
+    "compact": true,
+    "frames_per_core": 112,
+    "expected_samples_per_core": 50176
+  }
+}
