@@ -1,0 +1,8 @@
+bin/
+build/
+__pycache__/
+results_bo_*/
+collected_bo_*.tar.*
+collection_index_*.json
+.board.lock
+!offline_evidence/*.log

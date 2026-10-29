@@ -1,0 +1,13 @@
+{
+  "status": "PASS_FINAL_NATIVE_FUNCTIONAL",
+  "final_source_output_files_byte_exact": 48,
+  "three_modes_full_real_replays_each": 3,
+  "CPU_selftest_configurations": 18,
+  "CPU_selftest_repetitions_each": 5,
+  "source_sha256": {
+    "host/bo_host.cpp": "f83003f22fce0a90db86ae61c656110113895d34b7f069805fe49aac001206b3",
+    "common/replay.hpp": "fec0727cfab0688f6b25a9e5065b637050d890caab359c7086374bc79b849563",
+    "tests/fake_backend.cpp": "daa5be213a3e81a20ca675574e4ba11d538049023a940d9657fbec94afdb0f33"
+  },
+  "hardware_executed": false
+}

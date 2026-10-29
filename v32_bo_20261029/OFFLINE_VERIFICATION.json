@@ -1,0 +1,57 @@
+{
+  "status": "OFFLINE_FUNCTIONALLY_VERIFIED_BOARD_SPEED_PENDING",
+  "created_utc": "2026-10-29T05:06:10.220724+00:00",
+  "board_tested": false,
+  "firmware_changed": false,
+  "contract": {
+    "status": "PASS_NATIVE_CONTRACT_FUNCTIONAL_NOT_BOARD_PERFORMANCE",
+    "sanitizers": "ASan+UBSan halt on error",
+    "matrix": [
+      {
+        "N": 128,
+        "L": 3,
+        "K": 3,
+        "result": "PASS FUNCTIONAL_SCHEDULE_ONLY modes=3 repetitions_each=3 chunks=1 saved_output_sets=3 canaries=1 failure_cleanup=1 alias_bounds=1 board_performance=NOT_MEASURED"
+      },
+      {
+        "N": 256,
+        "L": 1,
+        "K": 1,
+        "result": "PASS FUNCTIONAL_SCHEDULE_ONLY modes=3 repetitions_each=3 chunks=1 saved_output_sets=3 canaries=1 failure_cleanup=1 alias_bounds=1 board_performance=NOT_MEASURED"
+      },
+      {
+        "N": 16384,
+        "L": 1,
+        "K": 3,
+        "result": "PASS FUNCTIONAL_SCHEDULE_ONLY modes=3 repetitions_each=3 chunks=2 saved_output_sets=3 canaries=1 failure_cleanup=1 alias_bounds=1 board_performance=NOT_MEASURED"
+      }
+    ],
+    "full_real_functional_modes": 3,
+    "full_real_replays_per_mode": 3,
+    "full_real_output_files_byte_exact": 48,
+    "full_real_residues_per_saved_set": 5505024,
+    "stable_bank_order_and_canaries": true,
+    "injected_prepare_wait_output_failures_rejected": true,
+    "worker_join_and_exception_recovery": true,
+    "null_alias_lane_length_faults_rejected": true,
+    "old_packages_unchanged": true,
+    "hardware_executed": false
+  },
+  "tools": {
+    "status": "PASS_ISOLATED_BO_TOOLS",
+    "PC_hardware_guard": true,
+    "manifest_faults_rejected": true,
+    "trace_missing_duplicate_bank_lifetime_faults_rejected": true,
+    "serial_and_overlap_accounting": true,
+    "export_excluded_from_medians_but_retained": true,
+    "cpu_chunks_and_all_raw_sets_checked": true,
+    "smoke_formal_reverse_command_counts": true,
+    "gzip_and_xz_archive_inventory_hash_verified": true,
+    "symlink_and_unsafe_archive_rejected": true,
+    "hardware_emulation": false
+  },
+  "full_real_split_merge": "PASS all 16 real chunks against unchanged original block helpers",
+  "xrt": "official archived headers syntax only; PC DISABLE_ABI_CHECK absent from board build flags",
+  "cryptographic_scope": "No new hardware output yet. Actual mapped BO, synchronization overlap, performance and original-context return verification require board results.",
+  "transport": "exact SHA inventory tested after ZIP extraction and isolated Git autocrlf checkout before publication; final receipt stored outside frozen kit"
+}
