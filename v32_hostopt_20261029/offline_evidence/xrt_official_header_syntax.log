@@ -1,0 +1,48 @@
+In file included from host/perf_host.cpp:3,
+                 from host/cached_host.cpp:3:
+host/timed_base.hpp: In function ‘void {anonymous}::run_hardware(const std::filesystem::__cxx11::path&, const InputCase&, const std::filesystem::__cxx11::path&, uint64_t)’:
+host/timed_base.hpp:414:56: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  414 |     const uint32_t reader_status = reader.read_register(0x10);
+      |                                    ~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from host/timed_base.hpp:25:
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/timed_base.hpp:415:58: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  415 |     const uint32_t reducer_status = reducer.read_register(0x10);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/perf_host.cpp: In function ‘void {anonymous}::hardware(const std::filesystem::__cxx11::path&, const InputCase&, const std::vector<long unsigned int>&, const std::filesystem::__cxx11::path&, unsigned int, unsigned int, const std::string&)’:
+host/perf_host.cpp:131:65: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  131 |         for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}
+      |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/perf_host.cpp:131:127: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  131 |         for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}
+      |                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/perf_host.cpp:132:44: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+  132 |         if(join)require(join->read_register(0x10)==0,"join status");auto status_end=Clock::now();
+      |                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/cached_host.cpp: In function ‘void tiled(const std::filesystem::__cxx11::path&, const std::filesystem::__cxx11::path&, const std::filesystem::__cxx11::path&, unsigned int, unsigned int, const std::string&)’:
+host/cached_host.cpp:27:84: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+   27 |    auto exend=Clock::now();for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}auto status=Clock::now();
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~
+host/cached_host.cpp:27:146: warning: ‘uint32_t xrt::kernel::read_register(uint32_t) const’ is deprecated: It is not recommended to use read_register() with XRT managed kernels.  Please use user-managed xrt::ip for read and write register functionality [-Wdeprecated-declarations]
+   27 |    auto exend=Clock::now();for(auto& lane:lanes){require(lane->reader.read_register(0x10)==0,"reader status");require(lane->reducer.read_register(0x10)==0,"reducer status");}auto status=Clock::now();
+      |                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers/xrt/xrt_kernel.h:896:3: note: declared here
+  896 |   read_register(uint32_t offset) const;
+      |   ^~~~~~~~~~~~~

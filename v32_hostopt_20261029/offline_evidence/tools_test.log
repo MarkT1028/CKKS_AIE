@@ -1,0 +1,23 @@
+Host-only experiment; firmware unchanged.
+Setup/admission are outside resident iteration times and listed separately.
+stream_scalar: main=16.000 ms; verified transaction=48.000 ms; replay=49.000 ms; CPU before/after drift=+0.00%
+resident_scalar: main=16.000 ms; verified transaction=48.000 ms; replay=49.000 ms; CPU before/after drift=+0.00%
+resident_block: main=16.000 ms; verified transaction=48.000 ms; replay=49.000 ms; CPU before/after drift=+0.00%
+All full-replay samples, including final output saving, are retained. Return the collected archive for independent and cryptographic verification.
+{
+  "status": "COLLECTED_AND_VERIFIED",
+  "download_this_file": "/tmp/hostopt-tools-z0pxhm87/collected_hostopt_20261028T170851195561Z.tar.xz",
+  "files": 52,
+  "bytes": 3980,
+  "sha256": "f37b2dfb5e92058c409479bdbc554c8d6464c0246156063a6efd1c2b3c032886"
+}
+{
+  "status": "PASS_ISOLATED_PACKAGE_TOOLS",
+  "board_guard_rejects_PC": true,
+  "changed_hash_unsafe_path_rejected": true,
+  "missing_duplicate_chunk_and_wrong_summary_rejected": true,
+  "save_samples_retained": true,
+  "collector_inventory_hash_and_raw_outputs_verified": true,
+  "symlink_rejected": true,
+  "hardware_emulation": false
+}

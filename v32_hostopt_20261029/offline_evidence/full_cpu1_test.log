@@ -1,0 +1,3 @@
+PASS CACHED_CPU_REPLAY repetition=0 warmup=1 compute_sum_ms=71.5948 full_replay_ms=77.0356
+PASS CACHED_CPU_REPLAY repetition=1 warmup=0 compute_sum_ms=71.7734 full_replay_ms=76.8594
+PASS CACHED_CPU_REPLAY repetition=2 warmup=0 compute_sum_ms=73.085 full_replay_ms=1863.71

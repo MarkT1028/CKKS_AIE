@@ -1,0 +1,9 @@
+{
+  "small": "PASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_0 words=1152\nPASS ALL_CACHED_CHUNKS stable_buffers=1 corruption_detected=1 invalid_lane_alias_rejected=1\n",
+  "multi": "PASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_0 words=24576\nPASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_1 words=24576\nPASS ALL_CACHED_CHUNKS stable_buffers=1 corruption_detected=1 invalid_lane_alias_rejected=1\n",
+  "admission_faults_rejected": 12,
+  "full_real_cpu_saved_files_byte_exact": 32,
+  "full_real_residues_per_file_set": 5505024,
+  "all_frozen_base_files_unchanged": 126,
+  "status": "PASS_NATIVE_CONTRACT_NOT_BOARD_PERFORMANCE"
+}

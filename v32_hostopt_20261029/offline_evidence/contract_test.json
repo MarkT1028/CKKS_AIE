@@ -1,0 +1,32 @@
+{
+  "small": "PASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_0 words=1152\nPASS ALL_CACHED_CHUNKS stable_buffers=1 corruption_detected=1 invalid_lane_alias_rejected=1\n",
+  "multi": "PASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_0 words=24576\nPASS CACHE_SCALAR_BLOCK_SPLIT_MERGE chunk_1 words=24576\nPASS ALL_CACHED_CHUNKS stable_buffers=1 corruption_detected=1 invalid_lane_alias_rejected=1\n",
+  "admission_faults_rejected": 12,
+  "full_real_cpu_saved_files_byte_exact": 32,
+  "full_real_residues_per_file_set": 5505024,
+  "baseline_provenance": {
+    "base_manifest_sha256": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+    "copies": {
+      "baseline/host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+      "host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+      "baseline/host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+      "host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+      "baseline/host/tiled_host.cpp": "717985f31e4d5635544178ceddb88e0a86422b6f5c4afdfa1a1ade53f3557394",
+      "baseline/host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+      "host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+      "baseline/host/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+      "host/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+      "baseline/cpu/cpu_bench.cpp": "e0300276e9f44f43382ab2dcdd575f7e5c54ba8d9505576d73959b4652721d4e",
+      "cpu/cpu_bench.cpp": "e0300276e9f44f43382ab2dcdd575f7e5c54ba8d9505576d73959b4652721d4e",
+      "baseline/cpu/tiled_cpu.cpp": "8a370eb7a688e17222b136f36888dc361ad5aea6bbf257b9bb359510a21e8ce3",
+      "baseline/cpu/parser/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+      "cpu/parser/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+      "baseline/cpu/parser/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+      "cpu/parser/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+      "baseline/cpu/parser/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+      "cpu/parser/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd"
+    }
+  },
+  "all_frozen_base_files_unchanged": 126,
+  "status": "PASS_NATIVE_CONTRACT_NOT_BOARD_PERFORMANCE"
+}

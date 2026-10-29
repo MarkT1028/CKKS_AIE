@@ -1,0 +1,8 @@
+bin/
+build/
+__pycache__/
+results_hostopt_*/
+collected_hostopt_*.tar.xz
+collection_index_*.json
+.board.lock
+!offline_evidence/*.log

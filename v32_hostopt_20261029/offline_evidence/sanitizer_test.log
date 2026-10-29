@@ -1,0 +1,2 @@
+PASS CPU_SELFTEST configurations=18 repetitions_each=5 edge_zero_max_random=1 corruption_detected=1
+PASS CACHE_LEASE_NATIVE configurations=18 repeated_runs=3 exception_restore=1 malformed_block=1

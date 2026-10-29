@@ -1,0 +1,10 @@
+{
+  "status": "PASS_ISOLATED_PACKAGE_TOOLS",
+  "board_guard_rejects_PC": true,
+  "changed_hash_unsafe_path_rejected": true,
+  "missing_duplicate_chunk_and_wrong_summary_rejected": true,
+  "save_samples_retained": true,
+  "collector_inventory_hash_and_raw_outputs_verified": true,
+  "symlink_rejected": true,
+  "hardware_emulation": false
+}
