@@ -1,0 +1,12 @@
+{
+  "v32_diag_2_pipe": {
+    "uuid": "6719127d5f785a7fa4fab0a9869d6ccd",
+    "boot_sha256": "398f9b917ce256e32c347b01a40c46383aa6d251a19ac533243eff01c1997822",
+    "metadata_sha256": "938525af774d79c9d3427734793f5969ef5b7aefb175c4ef2cf106cf943ef821"
+  },
+  "v32_core_2_pipe": {
+    "uuid": "050ea5cc23fb5038bad0aca23cbd240b",
+    "boot_sha256": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+    "metadata_sha256": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b"
+  }
+}

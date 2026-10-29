@@ -1,0 +1,52 @@
+{
+  "status": "OFFLINE_FUNCTIONAL_AND_ROUTED_VERIFIED_BOARD_SPEED_PENDING",
+  "created_utc": "2026-10-29T10:03:47.642512+00:00",
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "hardware_programmed": false,
+  "checks": {
+    "status": "PASS_COREOPT_OFFLINE_AUDIT",
+    "routed_setup_slack_ns": 0.315,
+    "routed_hold_slack_ns": 0.014,
+    "routed_drc_errors": 0,
+    "route_errors": 0,
+    "bus_skew_no_violations": true,
+    "full_real_C_model_output_words": 5505024,
+    "full_real_C_model_chunks": 16,
+    "AIE_real_sim_frames_per_core": 896,
+    "AIE_real_sim_samples_per_core": 401408,
+    "AIE_max_limb_diagonal": 4294705156,
+    "HLS_random_stall_restarts": [
+      1,
+      3,
+      16,
+      16
+    ],
+    "actual_AIE_to_reducer_RTL_endpoint_words": 5376,
+    "actual_libadf_and_XO_hashes_bound_to_physical_build": true,
+    "reader_and_225MHz_clocks_unchanged": true,
+    "CPU_host_scheduler_and_private_v32_source_unchanged": true,
+    "previous_three_packages_unchanged": true,
+    "boot_originals_preserved": true,
+    "board_tested": false,
+    "board_performance": "PENDING"
+  },
+  "tools": {
+    "status": "PASS_ISOLATED_COREOPT_RUNNER_AND_ACCOUNTING",
+    "both_boot_variants_and_wrong_boot_guard": true,
+    "CPU_before_after_fixed_two_threads": true,
+    "CPU_and_host_scheduler_unchanged": true,
+    "tampered_binary_rejected": true,
+    "timeline_missing_duplicate_bank_order_faults_rejected": true,
+    "export_cannot_enter_measured_samples": true,
+    "CPU_compute_and_full_wall_distinguished": true,
+    "three_boot_ABA_cohorts_not_pooled": true,
+    "saved_full_output_corruption_rejected": true,
+    "progressful_archive_hash_inventory_checked": true,
+    "unsafe_collection_symlink_rejected": true,
+    "PC_hardware_guard": true,
+    "hardware_executed": false
+  },
+  "cryptographic_scope": "All 16 C-model output records are byte identical to the previously cryptographically validated original golden. New physical board outputs still require collection and original-context decryption/relinearization/square verification.",
+  "timing_scope": "AIE cycle simulator and HLS clocks are offline evidence only. Primary board metric is all-16-chunk actual verified resident replay wall, compared with adjacent unchanged cached two-thread CPU full replay and compute-only times."
+}

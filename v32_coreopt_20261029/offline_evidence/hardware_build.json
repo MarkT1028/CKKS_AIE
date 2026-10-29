@@ -1,0 +1,44 @@
+{
+  "status": "PHYSICAL_CANDIDATE_READY_PENDING_ALL_OFFLINE_GATES",
+  "architecture": "2 AIE compile-time exact diagonal kernels + forwarding reducer; inherited reader and 225MHz clocks",
+  "build": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe",
+  "inputs": {
+    "base.xsa": {
+      "source": "/home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/base.xsa",
+      "sha256": "62cf1c3ee8c72849c286a54813bca4926784f31546c30a1b23d1abaf5ac4ff0a"
+    },
+    "ct_reader.xo": {
+      "source": "/home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/ct_reader.xo",
+      "sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7"
+    },
+    "ct_reduce_accum.xo": {
+      "source": "/home/mark/v32_coreopt_20261029/hls/reducer_forward/ct_reduce_accum.xo",
+      "sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2"
+    },
+    "libadf.a": {
+      "source": "/home/mark/v32_coreopt_20261029/aie/static_real/hw/libadf.a",
+      "sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57"
+    }
+  },
+  "boot_manifest": {
+    "status": "OFFLINE_VALIDATED_NOT_BOARD_TESTED",
+    "source_sha256": {
+      "BOOT.BIN": "e73f7a483fea0db0e8398f7f8290ff914428ec4cf2cb632b3d86277218371afd",
+      "Image": "79359c3f0af65cef3dbabab725b156a4b7b1925f781ab42f2f997be70f6dc86c",
+      "boot.scr": "ac5f09919439a3a94cf9729ac070d26f6e637acae91796f74f6416d3c10e748e"
+    },
+    "xclbin_uuid_hex": "050ea5cc23fb5038bad0aca23cbd240b",
+    "partitions": 12,
+    "candidate_sha256": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+    "metadata_sha256": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b",
+    "hardware_boot_sha256": "8b43dfe76fba18e057e437ea8e4f17d4c84dd998e7a51867090637d69a9b8b43",
+    "checks": [
+      "unchanged source files",
+      "identical linked hardware partitions",
+      "identical BL31/U-Boot addresses, privileges and payloads",
+      "patched DTB embedded at 0x1000",
+      "flat metadata action_mask=0"
+    ]
+  },
+  "board_performance": "PENDING"
+}

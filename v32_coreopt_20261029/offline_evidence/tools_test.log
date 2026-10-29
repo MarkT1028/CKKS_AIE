@@ -1,0 +1,81 @@
+Same-firmware BO comparison. Primary: actual verified replay wall; setup and export are separate.
+copy_serial: verified wall=41.248 ms; host run/wait sum=32.000 ms; input-sync host overlap=0.000 ms; CPU drift=+0.00%
+map_serial: verified wall=39.232 ms; host run/wait sum=32.000 ms; input-sync host overlap=0.000 ms; CPU drift=+0.00%
+map_pingpong: verified wall=34.822 ms; host run/wait sum=32.000 ms; input-sync host overlap=0.600 ms; CPU drift=+0.00%
+copy_serial__to__map_serial: +4.89% less wall time; 1.0514x
+map_serial__to__map_pingpong: +11.24% less wall time; 1.1266x
+copy_serial__to__map_pingpong: +15.58% less wall time; 1.1845x
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+RESULTS=/tmp/bo-tools-aslfl4ak/cli/results_bo_smoke_20261029T050603091792Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/bo-tools-aslfl4ak/cli/results_bo_formal_20261029T050603092715Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/bo-tools-aslfl4ak/cli/results_bo_formal_20261029T050603093514Z
+NEXT: python3 collect_results.py
+INDEXING files=105 source_MiB=0.5
+INDEX 50/105
+INDEX 100/105
+INDEX 105/105
+PACKING compression=gz level=1
+PACK 20/106
+PACK 40/106
+PACK 60/106
+PACK 80/106
+PACK 100/106
+PACK 106/106
+VERIFYING compressed archive against the saved SHA-256 inventory
+VERIFY 20/106
+VERIFY 40/106
+VERIFY 60/106
+VERIFY 80/106
+VERIFY 100/106
+VERIFY 106/106
+{
+  "status": "COLLECTED_AND_VERIFIED",
+  "download_this_file": "/tmp/bo-tools-aslfl4ak/collected_bo_20261029T050603100102Z.tar.gz",
+  "files": 106,
+  "source_bytes": 575898,
+  "bytes": 119733,
+  "sha256": "11b1b8042a6b104eef6f733df351a8fcf2f4ee2548d4133787f1f8a869b03793",
+  "compression": "gz"
+}
+INDEXING files=105 source_MiB=0.5
+INDEX 50/105
+INDEX 100/105
+INDEX 105/105
+PACKING compression=xz preset=1
+PACK 20/106
+PACK 40/106
+PACK 60/106
+PACK 80/106
+PACK 100/106
+PACK 106/106
+VERIFYING compressed archive against the saved SHA-256 inventory
+VERIFY 20/106
+VERIFY 40/106
+VERIFY 60/106
+VERIFY 80/106
+VERIFY 100/106
+VERIFY 106/106
+{
+  "status": "COLLECTED_AND_VERIFIED",
+  "download_this_file": "/tmp/bo-tools-aslfl4ak/collected_bo_20261029T050603142579Z.tar.xz",
+  "files": 106,
+  "source_bytes": 575898,
+  "bytes": 37956,
+  "sha256": "55af0bb18f8407166220be8af70000c8a03ae8212a3759e98cbb481a018d676d",
+  "compression": "xz"
+}
+{
+  "status": "PASS_ISOLATED_BO_TOOLS",
+  "PC_hardware_guard": true,
+  "manifest_faults_rejected": true,
+  "trace_missing_duplicate_bank_lifetime_faults_rejected": true,
+  "serial_and_overlap_accounting": true,
+  "export_excluded_from_medians_but_retained": true,
+  "cpu_chunks_and_all_raw_sets_checked": true,
+  "smoke_formal_reverse_command_counts": true,
+  "gzip_and_xz_archive_inventory_hash_verified": true,
+  "symlink_and_unsafe_archive_rejected": true,
+  "hardware_emulation": false
+}
