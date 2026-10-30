@@ -1,0 +1,20 @@
+{
+  "status": "OFFLINE_VALIDATED_NOT_BOARD_TESTED",
+  "source_sha256": {
+    "BOOT.BIN": "e73f7a483fea0db0e8398f7f8290ff914428ec4cf2cb632b3d86277218371afd",
+    "Image": "79359c3f0af65cef3dbabab725b156a4b7b1925f781ab42f2f997be70f6dc86c",
+    "boot.scr": "ac5f09919439a3a94cf9729ac070d26f6e637acae91796f74f6416d3c10e748e"
+  },
+  "xclbin_uuid_hex": "d8c3e07c10375578829a22582579847f",
+  "partitions": 12,
+  "candidate_sha256": "ac01907a7981edba9723fcd4a2714cc9c37c924d57bf592c474716b0bef07e67",
+  "metadata_sha256": "41d22e225a7484a62c898691c0eb71055d3c7b43896604f0f052d5f38d204297",
+  "hardware_boot_sha256": "dab5129ec6390861cf6f270c89ed411c8963ff37e2f2c2c71417b76ea3008187",
+  "checks": [
+    "unchanged source files",
+    "identical linked hardware partitions",
+    "identical BL31/U-Boot addresses, privileges and payloads",
+    "patched DTB embedded at 0x1000",
+    "flat metadata action_mask=0"
+  ]
+}

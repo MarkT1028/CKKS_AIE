@@ -1,0 +1,72 @@
+{
+  "status": "PASS_ACTUAL_AIE_X86_AND_CYCLE_SIM",
+  "variant": "static",
+  "case": "limbmax",
+  "source_sha256": "2386ef824f6808526f9a519787fceac2a509db34e9e39dc320583dbfce865f24",
+  "libadf_sha256": "c4799a317e5a9aba3f3c8d65ca5e1d8b06d75ffe721469e18f4fb5e46696c475",
+  "build": "/home/mark/v32_coreopt_20261029/aie/static_limbmax",
+  "elapsed_seconds": 266.478808887,
+  "results": [
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 1792,
+          "actual_sha256": "ae86166b3c37ec4719554e50a4272f01ffa1d6b6d105c76fb1913b4f473086a2"
+        },
+        {
+          "core": 1,
+          "samples": 1792,
+          "actual_sha256": "ae86166b3c37ec4719554e50a4272f01ffa1d6b6d105c76fb1913b4f473086a2"
+        }
+      ],
+      "vector_metadata": {
+        "provenance": {
+          "type": "AIE unit input limbs: all 32767, zero, one, alternating; max exact diagonal 4294705156 exceeds INT32_MAX; no claim this artificial full word is a canonical residue"
+        },
+        "n": 128,
+        "l": 1,
+        "k": 1,
+        "cores": 2,
+        "compact": true,
+        "frames_per_core": 4,
+        "expected_samples_per_core": 1792
+      },
+      "variant": "static",
+      "target": "x86sim",
+      "board_performance": "NOT_MEASURED"
+    },
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 1792,
+          "actual_sha256": "729b5611876f0a86fc9ae20f030fe486d99e45d6bfc7576f4915e380afdc770a"
+        },
+        {
+          "core": 1,
+          "samples": 1792,
+          "actual_sha256": "c310e0f055e18309498135953192283ddfd21027317f8c4b6b00acc554c00388"
+        }
+      ],
+      "vector_metadata": {
+        "provenance": {
+          "type": "AIE unit input limbs: all 32767, zero, one, alternating; max exact diagonal 4294705156 exceeds INT32_MAX; no claim this artificial full word is a canonical residue"
+        },
+        "n": 128,
+        "l": 1,
+        "k": 1,
+        "cores": 2,
+        "compact": true,
+        "frames_per_core": 4,
+        "expected_samples_per_core": 1792
+      },
+      "variant": "static",
+      "target": "hw",
+      "board_performance": "NOT_MEASURED"
+    }
+  ],
+  "board_performance": "PENDING"
+}

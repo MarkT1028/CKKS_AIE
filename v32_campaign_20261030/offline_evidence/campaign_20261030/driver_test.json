@@ -1,0 +1,14 @@
+{
+  "status": "PASS_ACTUAL_COORDINATOR_WITH_SYNTHETIC_BACKEND",
+  "three_independent_host_boots": true,
+  "H02_reverse_formal_order": true,
+  "whole_step_lock_held_across_calls": true,
+  "same_boot_rejected_before_hardware": true,
+  "wrong_phase_and_variant_rejected_before_hardware": true,
+  "failed_partial_step_retained_and_retry_allowed": true,
+  "A01_reuses_H03_boot_but_A02_requires_new_boot": true,
+  "CPU_diagnostics_host_only": true,
+  "summary_JSON_CSV_generated": true,
+  "hardware_executed": false,
+  "boot_files_or_registers_changed": false
+}

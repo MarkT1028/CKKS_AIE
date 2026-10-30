@@ -1,0 +1,72 @@
+{
+  "status": "PASS_ACTUAL_AIE_X86_AND_CYCLE_SIM",
+  "variant": "static",
+  "case": "edges",
+  "source_sha256": "2386ef824f6808526f9a519787fceac2a509db34e9e39dc320583dbfce865f24",
+  "libadf_sha256": "945f45a76dde69db0da333f542c0a5f8bb7b92b59ec3034036cfd773abd29d7e",
+  "build": "/home/mark/v32_coreopt_20261029/aie/static_edges",
+  "elapsed_seconds": 754.979759354,
+  "results": [
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 86016,
+          "actual_sha256": "1f7e610ee66ee4f1eecadc9ac2e375e75995eaaebc291705ad4fbc8747ea5ae5"
+        },
+        {
+          "core": 1,
+          "samples": 86016,
+          "actual_sha256": "c4eb2affa05c8ce31ecbda61bcabb0bef4eb1562e77271074986d34f934b5103"
+        }
+      ],
+      "vector_metadata": {
+        "provenance": {
+          "type": "synthetic_45_51_60_bit_unsigned_edges"
+        },
+        "n": 128,
+        "l": 3,
+        "k": 16,
+        "cores": 2,
+        "compact": true,
+        "frames_per_core": 192,
+        "expected_samples_per_core": 86016
+      },
+      "variant": "static",
+      "target": "x86sim",
+      "board_performance": "NOT_MEASURED"
+    },
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 86016,
+          "actual_sha256": "e8baf04c134acf1070ead6c30fbbcb3acefcdbd1baab366c169cbb44a90259ab"
+        },
+        {
+          "core": 1,
+          "samples": 86016,
+          "actual_sha256": "1da8ee1caa566e484fe91291083a287888cf1ee7c026e159ee3cae46518947c4"
+        }
+      ],
+      "vector_metadata": {
+        "provenance": {
+          "type": "synthetic_45_51_60_bit_unsigned_edges"
+        },
+        "n": 128,
+        "l": 3,
+        "k": 16,
+        "cores": 2,
+        "compact": true,
+        "frames_per_core": 192,
+        "expected_samples_per_core": 86016
+      },
+      "variant": "static",
+      "target": "hw",
+      "board_performance": "NOT_MEASURED"
+    }
+  ],
+  "board_performance": "PENDING"
+}

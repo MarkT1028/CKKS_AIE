@@ -1,0 +1,236 @@
+{
+  "frozen_reference_files": {
+    "reference/common/dataset_cache.hpp": "f21bcbd17eb36c6704cfc6c3fbb2203ea57217c99793c3525f2f4083a4f9f981",
+    "reference/cpu/cached_cpu.cpp": "c74e0bcac3ada4f9f15399de5894fb4b513fdbd686331d38f991cfe1f2adb132",
+    "reference/cpu/cpu_bench.cpp": "e0300276e9f44f43382ab2dcdd575f7e5c54ba8d9505576d73959b4652721d4e",
+    "reference/host/cached_host.cpp": "fa50944cc94269e0d438f55b75d93ff6b480348b8ea5b8359cd741ebe4066787",
+    "reference/host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+    "reference/host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/host/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+    "reference/cpu/parser/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/cpu/parser/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/cpu/parser/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd"
+  },
+  "prior_core_package_manifest_sha256": "fa86d44bfd6acecae5a66516c71c99d8bfbb63b94a04cf414860e2ebbfda8fb1",
+  "base_manifest_sha256": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+  "modified_units": [
+    "host/bo_host.cpp",
+    "common/finish_overlap.hpp",
+    "controlled tools"
+  ],
+  "CPU_arithmetic_source_unchanged": true,
+  "baseline_scheduler_unchanged": true,
+  "physical_matrix": {
+    "v32_diag_2_pipe": {
+      "aie_sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67",
+      "reducer_sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b",
+      "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+      "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+      "cores": 2,
+      "PL_Hz": 225000000,
+      "host_ablation_mode": "map_pingpong"
+    },
+    "v32_aie_only_2_pipe": {
+      "aie_sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57",
+      "reducer_sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b",
+      "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+      "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+      "cores": 2,
+      "PL_Hz": 225000000,
+      "host_ablation_mode": "map_pingpong"
+    },
+    "v32_reducer_only_2_pipe": {
+      "aie_sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67",
+      "reducer_sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2",
+      "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+      "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+      "cores": 2,
+      "PL_Hz": 225000000,
+      "host_ablation_mode": "map_pingpong"
+    },
+    "v32_core_2_pipe": {
+      "aie_sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57",
+      "reducer_sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2",
+      "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+      "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+      "cores": 2,
+      "PL_Hz": 225000000,
+      "host_ablation_mode": "map_pingpong"
+    }
+  },
+  "physical_ablations": {
+    "v32_aie_only_2_pipe": {
+      "status": "PASS_PHYSICAL_ABLATION_BUILD",
+      "variant": "v32_aie_only_2_pipe",
+      "build": "/home/mark/v32_overlap_20261029/hardware/systems/v32_aie_only_2_pipe",
+      "inputs": {
+        "base.xsa": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/base.xsa",
+          "sha256": "62cf1c3ee8c72849c286a54813bca4926784f31546c30a1b23d1abaf5ac4ff0a"
+        },
+        "ct_reader.xo": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/ct_reader.xo",
+          "sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7"
+        },
+        "ct_reduce_accum.xo": {
+          "source": "/home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/ct_reduce_accum.xo",
+          "sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b"
+        },
+        "libadf.a": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/libadf.a",
+          "sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57"
+        }
+      },
+      "uuid": "f562f05930ff572e8a707a85f3625787",
+      "boot_sha256": "cacc3cdc9288decfa1c11526e899190e14f167349cbaee2f8d131c3945283013",
+      "metadata_sha256": "efb175694fc5d2977a951cd206db9a9c06d37635097f0a5a01ce7355c19ee815",
+      "elapsed_seconds": 2220.2202744310002,
+      "board_tested": false,
+      "board_performance": "PENDING"
+    },
+    "v32_reducer_only_2_pipe": {
+      "status": "PASS_PHYSICAL_ABLATION_BUILD",
+      "variant": "v32_reducer_only_2_pipe",
+      "build": "/home/mark/v32_overlap_20261029/hardware/systems/v32_reducer_only_2_pipe",
+      "inputs": {
+        "base.xsa": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/base.xsa",
+          "sha256": "62cf1c3ee8c72849c286a54813bca4926784f31546c30a1b23d1abaf5ac4ff0a"
+        },
+        "ct_reader.xo": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/ct_reader.xo",
+          "sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7"
+        },
+        "ct_reduce_accum.xo": {
+          "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/ct_reduce_accum.xo",
+          "sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2"
+        },
+        "libadf.a": {
+          "source": "/home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/libadf.a",
+          "sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67"
+        }
+      },
+      "uuid": "d8c3e07c10375578829a22582579847f",
+      "boot_sha256": "ac01907a7981edba9723fcd4a2714cc9c37c924d57bf592c474716b0bef07e67",
+      "metadata_sha256": "41d22e225a7484a62c898691c0eb71055d3c7b43896604f0f052d5f38d204297",
+      "elapsed_seconds": 1317.579939799,
+      "board_tested": false,
+      "board_performance": "PENDING"
+    }
+  },
+  "main_v32_source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "campaign_control_overlay": {
+    "parent_package": "v32_overlap_20261030",
+    "parent_manifest_sha256": "1bcb9582a15d6555abe83c4984397ea1aece53419aa42c8148a49b31e4eba3f6",
+    "unchanged_source_members": [
+      "host/bo_host.cpp",
+      "common/finish_overlap.hpp",
+      "common/replay.hpp",
+      "reference/common/dataset_cache.hpp",
+      "reference/cpu/cached_cpu.cpp",
+      "reference/cpu/cpu_bench.cpp",
+      "reference/host/cached_host.cpp",
+      "reference/host/expected_reader.hpp",
+      "reference/host/perf_host.cpp",
+      "reference/host/timed_base.hpp",
+      "reference/host/variant_config.hpp",
+      "reference/cpu/parser/expected_reader.hpp",
+      "reference/cpu/parser/timed_base.hpp",
+      "reference/cpu/parser/variant_config.hpp",
+      "tests/fake_backend.cpp",
+      "tests/finish_overlap_test.cpp",
+      "variants/v32_aie_only_2_pipe/boot0001.bin",
+      "variants/v32_aie_only_2_pipe/ckks_hw_boot.xclbin",
+      "variants/v32_aie_only_2_pipe/EXPECTED_BOOT_SHA256",
+      "variants/v32_aie_only_2_pipe/EXPECTED_BOOT_UUID",
+      "variants/v32_aie_only_2_pipe/manifest.json",
+      "variants/v32_core_2_pipe/boot0001.bin",
+      "variants/v32_core_2_pipe/ckks_hw_boot.xclbin",
+      "variants/v32_core_2_pipe/EXPECTED_BOOT_SHA256",
+      "variants/v32_core_2_pipe/EXPECTED_BOOT_UUID",
+      "variants/v32_core_2_pipe/manifest.json",
+      "variants/v32_diag_2_pipe/boot0001.bin",
+      "variants/v32_diag_2_pipe/ckks_hw_boot.xclbin",
+      "variants/v32_diag_2_pipe/EXPECTED_BOOT_SHA256",
+      "variants/v32_diag_2_pipe/EXPECTED_BOOT_UUID",
+      "variants/v32_reducer_only_2_pipe/boot0001.bin",
+      "variants/v32_reducer_only_2_pipe/ckks_hw_boot.xclbin",
+      "variants/v32_reducer_only_2_pipe/EXPECTED_BOOT_SHA256",
+      "variants/v32_reducer_only_2_pipe/EXPECTED_BOOT_UUID",
+      "variants/v32_reducer_only_2_pipe/manifest.json",
+      "variants/v32_aie_only_2_pipe/host/bo_host.cpp",
+      "variants/v32_aie_only_2_pipe/host/cached_host.cpp",
+      "variants/v32_aie_only_2_pipe/host/expected_reader.hpp",
+      "variants/v32_aie_only_2_pipe/host/perf_host.cpp",
+      "variants/v32_aie_only_2_pipe/host/timed_base.hpp",
+      "variants/v32_aie_only_2_pipe/host/variant_config.hpp",
+      "variants/v32_core_2_pipe/host/bo_host.cpp",
+      "variants/v32_core_2_pipe/host/cached_host.cpp",
+      "variants/v32_core_2_pipe/host/expected_reader.hpp",
+      "variants/v32_core_2_pipe/host/perf_host.cpp",
+      "variants/v32_core_2_pipe/host/timed_base.hpp",
+      "variants/v32_core_2_pipe/host/variant_config.hpp",
+      "variants/v32_diag_2_pipe/host/bo_host.cpp",
+      "variants/v32_diag_2_pipe/host/cached_host.cpp",
+      "variants/v32_diag_2_pipe/host/expected_reader.hpp",
+      "variants/v32_diag_2_pipe/host/perf_host.cpp",
+      "variants/v32_diag_2_pipe/host/timed_base.hpp",
+      "variants/v32_diag_2_pipe/host/variant_config.hpp",
+      "variants/v32_reducer_only_2_pipe/host/bo_host.cpp",
+      "variants/v32_reducer_only_2_pipe/host/cached_host.cpp",
+      "variants/v32_reducer_only_2_pipe/host/expected_reader.hpp",
+      "variants/v32_reducer_only_2_pipe/host/perf_host.cpp",
+      "variants/v32_reducer_only_2_pipe/host/timed_base.hpp",
+      "variants/v32_reducer_only_2_pipe/host/variant_config.hpp",
+      "candidate_source/aie/aie.cfg",
+      "candidate_source/aie/graph.cpp",
+      "candidate_source/aie/graph.hpp",
+      "candidate_source/aie/limb_diag.cpp",
+      "candidate_source/aie/limb_mul.cpp",
+      "candidate_source/aie/limb_mul.hpp",
+      "candidate_source/build_scripts/build_aie.py",
+      "candidate_source/build_scripts/build_hardware.py",
+      "candidate_source/build_scripts/build_hls.py",
+      "candidate_source/build_scripts/compare_cycles.py",
+      "candidate_source/build_scripts/configure_candidates.py",
+      "candidate_source/build_scripts/README.md",
+      "candidate_source/build_scripts/run_aie.sh",
+      "candidate_source/build_scripts/run_chain.sh",
+      "candidate_source/build_scripts/run_hardware.sh",
+      "candidate_source/build_scripts/run_hls.sh",
+      "candidate_source/build_scripts/run_models.sh",
+      "candidate_source/build_scripts/test_chain.py",
+      "candidate_source/build_scripts/test_models.py",
+      "candidate_source/design/ct_mac.hpp",
+      "candidate_source/design/ct_reader.cpp",
+      "candidate_source/design/record_io.hpp",
+      "candidate_source/design/reducer_forward.cpp",
+      "candidate_source/design/reducer_pipeline.cpp",
+      "candidate_source/design/rtl_tb.cpp",
+      "candidate_source/design/test_reducer.cpp",
+      "candidate_source/overlap_build_scripts/bootstrap.py",
+      "candidate_source/overlap_build_scripts/build_ablations.py",
+      "candidate_source/overlap_build_scripts/edit_host.py",
+      "candidate_source/overlap_build_scripts/edit_tools.py",
+      "candidate_source/overlap_build_scripts/finalize_images.py",
+      "candidate_source/overlap_build_scripts/generate_edges.py",
+      "candidate_source/overlap_build_scripts/offline_audit.py",
+      "candidate_source/overlap_build_scripts/prepare_hosts.py",
+      "candidate_source/overlap_build_scripts/prepare_transport_check.py",
+      "candidate_source/overlap_build_scripts/resource_matrix.py",
+      "candidate_source/overlap_build_scripts/run_ablations.sh",
+      "candidate_source/overlap_build_scripts/run_chains.sh",
+      "candidate_source/overlap_build_scripts/run_host_tests.sh",
+      "candidate_source/overlap_build_scripts/seal_package.py",
+      "candidate_source/overlap_build_scripts/test_ablation_chains.py",
+      "candidate_source/overlap_build_scripts/test_diagnostics.py",
+      "candidate_source/overlap_build_scripts/test_tools.py",
+      "candidate_source/overlap_build_scripts/verify_transport.py"
+    ],
+    "all_four_image_bytes_unchanged": true,
+    "arithmetic_and_CPU_unchanged": true,
+    "new_protocol_sha256": "6ca98f3dbffc39d837337ff7b0ca6a620fdd87cc4d3ac19ca58013782af2e781",
+    "new_board_results": "PENDING"
+  }
+}

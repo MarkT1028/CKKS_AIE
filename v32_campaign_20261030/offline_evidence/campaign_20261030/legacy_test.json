@@ -1,0 +1,10 @@
+{
+  "status": "PASS_REUSED_RUNNER_TIMELINE_AND_CPU_DIAGNOSTIC_REGRESSIONS",
+  "timeline_missing_duplicate_reuse_concurrent_status_and_aggregate_faults_rejected": true,
+  "all_four_variant_run_commands_checked": true,
+  "formal_counts_and_cpu_before_after_unchanged": true,
+  "wrong_boot_and_tampered_binary_rejected": true,
+  "manifest_unsafe_and_corrupt_entries_rejected": true,
+  "CPU_diagnostics_fake_child_and_failure_cleanup": true,
+  "hardware_executed": false
+}

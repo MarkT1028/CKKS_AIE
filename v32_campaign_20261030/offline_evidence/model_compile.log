@@ -1,0 +1,42 @@
+board_files/tests/finish_overlap_test.cpp: In member function ‘void AsyncModel::wait(unsigned int, unsigned int)’:
+board_files/tests/finish_overlap_test.cpp:57:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   57 |         if(device_error)std::rethrow_exception(device_error);status_pending=i;banks[b].complete=true;
+      |         ^~
+board_files/tests/finish_overlap_test.cpp:57:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   57 |         if(device_error)std::rethrow_exception(device_error);status_pending=i;banks[b].complete=true;
+      |                                                              ^~~~~~~~~~~~~~
+board_files/tests/finish_overlap_test.cpp: In member function ‘void AsyncModel::finish(unsigned int, unsigned int, boexp::Frame&, std::chrono::_V2::steady_clock::time_point)’:
+board_files/tests/finish_overlap_test.cpp:66:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |         if(running)++overlapped;fail("finish",i);
+      |         ^~
+board_files/tests/finish_overlap_test.cpp:66:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |         if(running)++overlapped;fail("finish",i);
+      |                                 ^~~~
+In file included from board_files/tests/finish_overlap_test.cpp:5:
+board_files/tests/../reference/common/dataset_cache.hpp: At global scope:
+board_files/tests/../reference/common/dataset_cache.hpp:93:6: warning: ‘void {anonymous}::fill_shard_block(const InputCase&, unsigned int, InputCase&)’ defined but not used [-Wunused-function]
+   93 | void fill_shard_block(const InputCase& in,unsigned lane,InputCase& out) {
+      |      ^~~~~~~~~~~~~~~~
+In file included from board_files/tests/finish_overlap_test.cpp:4:
+board_files/tests/../reference/host/perf_host.cpp:51:6: warning: ‘void {anonymous}::selftest(const InputCase&, const std::vector<long unsigned int>&)’ defined but not used [-Wunused-function]
+   51 | void selftest(const InputCase& in,const std::vector<uint64_t>& expected) {
+      |      ^~~~~~~~
+board_files/tests/../reference/host/perf_host.cpp:39:23: warning: ‘std::vector<long unsigned int> {anonymous}::sink_reference(const InputCase&)’ defined but not used [-Wunused-function]
+   39 | std::vector<uint64_t> sink_reference(const InputCase& in) {
+      |                       ^~~~~~~~~~~~~~
+board_files/tests/../reference/host/perf_host.cpp:16:10: warning: ‘unsigned int {anonymous}::number(const std::string&, unsigned int)’ defined but not used [-Wunused-function]
+   16 | unsigned number(const std::string& s,unsigned max){require(!s.empty()&&s.find_first_not_of("0123456789")==std::string::npos,"invalid repetition count");auto n=std::stoul(s);require(n<=max,"repetition count too large");return unsigned(n);}
+      |          ^~~~~~
+board_files/tests/../reference/host/perf_host.cpp:15:8: warning: ‘double {anonymous}::p95(std::vector<double>)’ defined but not used [-Wunused-function]
+   15 | double p95(std::vector<double> v){std::sort(v.begin(),v.end());return v[size_t(std::ceil(v.size()*.95))-1];}
+      |        ^~~
+board_files/tests/../reference/host/perf_host.cpp:14:8: warning: ‘double {anonymous}::median(std::vector<double>)’ defined but not used [-Wunused-function]
+   14 | double median(std::vector<double> v){std::sort(v.begin(),v.end());require(!v.empty(),"no samples");size_t n=v.size();return n%2?v[n/2]:(v[n/2-1]+v[n/2])/2;}
+      |        ^~~~~~
+board_files/tests/../reference/host/perf_host.cpp:13:8: warning: ‘double {anonymous}::ms(std::chrono::_V2::steady_clock::time_point, std::chrono::_V2::steady_clock::time_point)’ defined but not used [-Wunused-function]
+   13 | double ms(Clock::time_point a,Clock::time_point b){return std::chrono::duration<double,std::milli>(b-a).count();}
+      |        ^~
+In file included from board_files/tests/../reference/host/perf_host.cpp:3:
+board_files/tests/../reference/host/timed_base.hpp:76:6: warning: ‘void {anonymous}::validate_boot_marker(const std::filesystem::__cxx11::path&)’ defined but not used [-Wunused-function]
+   76 | void validate_boot_marker(const fs::path& path =
+      |      ^~~~~~~~~~~~~~~~~~~~

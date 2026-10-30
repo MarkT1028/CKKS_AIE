@@ -1,0 +1,312 @@
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+INDEXING phase=ablation_block1 files=468 source_MiB=1.6
+INDEX 50/468
+INDEX 100/468
+INDEX 150/468
+INDEX 200/468
+INDEX 250/468
+INDEX 300/468
+INDEX 350/468
+INDEX 400/468
+INDEX 450/468
+INDEX 468/468
+PACKING gzip level=1; retaining all original files
+PACK 20/469
+PACK 40/469
+PACK 60/469
+PACK 80/469
+PACK 100/469
+PACK 120/469
+PACK 140/469
+PACK 160/469
+PACK 180/469
+PACK 200/469
+PACK 220/469
+PACK 240/469
+PACK 260/469
+PACK 280/469
+PACK 300/469
+PACK 320/469
+PACK 340/469
+PACK 360/469
+PACK 380/469
+PACK 400/469
+PACK 420/469
+PACK 440/469
+PACK 460/469
+PACK 469/469
+VERIFYING compressed members against saved SHA256
+VERIFY 20/469
+VERIFY 40/469
+VERIFY 60/469
+VERIFY 80/469
+VERIFY 100/469
+VERIFY 120/469
+VERIFY 140/469
+VERIFY 160/469
+VERIFY 180/469
+VERIFY 200/469
+VERIFY 220/469
+VERIFY 240/469
+VERIFY 260/469
+VERIFY 280/469
+VERIFY 300/469
+VERIFY 320/469
+VERIFY 340/469
+VERIFY 360/469
+VERIFY 380/469
+VERIFY 400/469
+VERIFY 420/469
+VERIFY 440/469
+VERIFY 460/469
+VERIFY 469/469
+{
+  "status": "COLLECTED_AND_BYTE_VERIFIED",
+  "download_this_file": "/tmp/research-study-test-tmd1hyml/collected_study_ablation_block1_20261030T073133804700Z.tar.gz",
+  "files": 469,
+  "source_bytes": 1702065,
+  "bytes": 392179,
+  "sha256": "fed452dbfaa2c8db2cfd343d15aead86717367b6ec0389cd4e6b059e821dc436",
+  "phase": "ablation",
+  "block": 1,
+  "scientific_summary_status": "BOARD_DATA_COMPLETE_PENDING_INDEPENDENT_CRYPTO",
+  "crypto": "PENDING_INDEPENDENT_ORIGINAL_CONTEXT_VERIFICATION"
+}
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+{
+  "status": "PASS_SYNTHETIC_STUDY_PROTOCOL_AND_FAULT_TESTS",
+  "checks": [
+    "all_11_steps_with_distinct_boots_and_two_reverse_ablation_blocks",
+    "status_does_not_rewrite_raw_run_comparisons",
+    "boot_build_context_and_output_integrity_rejections",
+    "failed_attempts_retained_not_counted_as_success",
+    "phase_block_gzip_index_sha_nested_evidence_and_failure_retention",
+    "unsafe_symlink_collection_rejected",
+    "whole_step_cross_package_device_lock_reentrancy_and_release",
+    "duplicate_success_rejected_without_fastest_sample_selection",
+    "UTC_clock_rollback_does_not_reorder_independent_boots"
+  ],
+  "synthetic_data_only": true,
+  "hardware_executed": false,
+  "board_performance": "PENDING"
+}

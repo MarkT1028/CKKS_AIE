@@ -1,0 +1,38 @@
+{
+  "v32_diag_2_pipe": {
+    "aie_sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67",
+    "reducer_sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b",
+    "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+    "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+    "cores": 2,
+    "PL_Hz": 225000000,
+    "host_ablation_mode": "map_pingpong"
+  },
+  "v32_aie_only_2_pipe": {
+    "aie_sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57",
+    "reducer_sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b",
+    "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+    "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+    "cores": 2,
+    "PL_Hz": 225000000,
+    "host_ablation_mode": "map_pingpong"
+  },
+  "v32_reducer_only_2_pipe": {
+    "aie_sha256": "a8b6e17e92793e66c38b96bfd4233d960ce523179fa0d0c98a8d9c069d76fe67",
+    "reducer_sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2",
+    "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+    "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+    "cores": 2,
+    "PL_Hz": 225000000,
+    "host_ablation_mode": "map_pingpong"
+  },
+  "v32_core_2_pipe": {
+    "aie_sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57",
+    "reducer_sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2",
+    "reader_sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7",
+    "clock_config_sha256": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338",
+    "cores": 2,
+    "PL_Hz": 225000000,
+    "host_ablation_mode": "map_pingpong"
+  }
+}

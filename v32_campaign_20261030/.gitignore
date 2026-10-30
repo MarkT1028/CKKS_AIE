@@ -1,0 +1,13 @@
+bin/
+__pycache__/
+results_overlap_*/
+results_cpu_diag_*/
+study_runs/
+study_summary.*
+collected_study_*
+collection_index_*
+switch_logs/
+.study.lock
+.board.lock
+!offline_evidence/
+!offline_evidence/**

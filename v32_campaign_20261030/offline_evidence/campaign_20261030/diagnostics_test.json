@@ -1,0 +1,11 @@
+{
+  "status": "PASS_CPU_DIAGNOSTIC_ORCHESTRATION",
+  "source_sha256": "6deea9d117197df9ccc88e7e3cc29de2aa68eb10ce082ca7bf83d6c640636290",
+  "same_binary_identity_checked": true,
+  "same_process_AA_records": true,
+  "reported_ticks_and_last_cpu_fields": true,
+  "missing_PMU_not_zeroed": true,
+  "failed_child_retained": true,
+  "formal_comparison_not_replaced": true,
+  "hardware_executed": false
+}

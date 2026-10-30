@@ -1,0 +1,138 @@
+{
+  "schema": "v32_research_campaign_v1",
+  "host_target_independent_boots": 3,
+  "ablation_mode": "map_pingpong",
+  "formal_hardware_repetitions_per_run": 5,
+  "formal_runs_per_step": 2,
+  "hardware_warmups_per_formal": 1,
+  "cpu_repetitions_per_adjacent_stage": 3,
+  "cpu_threads": 2,
+  "steps": [
+    {
+      "id": "H01",
+      "phase": "host",
+      "variant": "v32_core_2_pipe",
+      "block": 0,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "H02",
+      "phase": "host",
+      "variant": "v32_core_2_pipe",
+      "block": 0,
+      "formal_reverse_flags": [
+        true,
+        false
+      ]
+    },
+    {
+      "id": "H03",
+      "phase": "host",
+      "variant": "v32_core_2_pipe",
+      "block": 0,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A01",
+      "phase": "ablation",
+      "variant": "v32_core_2_pipe",
+      "block": 1,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A02",
+      "phase": "ablation",
+      "variant": "v32_aie_only_2_pipe",
+      "block": 1,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A03",
+      "phase": "ablation",
+      "variant": "v32_reducer_only_2_pipe",
+      "block": 1,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A04",
+      "phase": "ablation",
+      "variant": "v32_diag_2_pipe",
+      "block": 1,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A05",
+      "phase": "ablation",
+      "variant": "v32_diag_2_pipe",
+      "block": 2,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A06",
+      "phase": "ablation",
+      "variant": "v32_reducer_only_2_pipe",
+      "block": 2,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A07",
+      "phase": "ablation",
+      "variant": "v32_aie_only_2_pipe",
+      "block": 2,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "A08",
+      "phase": "ablation",
+      "variant": "v32_core_2_pipe",
+      "block": 2,
+      "formal_reverse_flags": [
+        false,
+        true
+      ]
+    }
+  ],
+  "workload": {
+    "N": 131072,
+    "L": 14,
+    "K": 16,
+    "chunks": 16,
+    "fixed_capture": "h_s.4 BSGS5 diagonals80..95"
+  },
+  "host_modes": [
+    "map_pingpong",
+    "map_finish_overlap"
+  ],
+  "boot_policy": "Different Linux boot_id for every enrolled step within each phase. A01 may reuse the H03 boot. A04 and A05 require different boots despite using the same variant.",
+  "counterbalancing_scope": "Two reverse-order hardware blocks are descriptive cross-boot controls, not a randomized causal experiment.",
+  "primary_metric": "Actual full resident verified replay wall; warmups, smoke, one-time setup and independent export replay excluded and retained separately.",
+  "cpu_drift_review_threshold_percent": 5,
+  "cryptographic_return": "PENDING_NEW_BOARD_OUTPUTS"
+}

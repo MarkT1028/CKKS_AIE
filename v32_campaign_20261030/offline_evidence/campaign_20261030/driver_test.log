@@ -1,0 +1,170 @@
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=H01 v32_core_2_pipe
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+STEP_COMPLETE=H01; output cryptographic verification pending.
+STUDY_PROGRESS=1/11
+HOST_BOOTS=1/3
+ABLATION_STEPS=0/8
+REVIEW_REQUIRED=False
+H01 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+NEXT_STEP=H02 phase=host variant=v32_core_2_pipe
+RUN: sh run_study.sh host
+CHECKING_PACKAGE_AND_SAVED_STEPS
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=H02 v32_core_2_pipe
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+STEP_COMPLETE=H02; output cryptographic verification pending.
+STUDY_PROGRESS=2/11
+HOST_BOOTS=2/3
+ABLATION_STEPS=0/8
+REVIEW_REQUIRED=False
+H01 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H02 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+NEXT_STEP=H03 phase=host variant=v32_core_2_pipe
+RUN: sh run_study.sh host
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=H03 v32_core_2_pipe
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=H03 v32_core_2_pipe
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+STEP_COMPLETE=H03; output cryptographic verification pending.
+HOST_PHASE_COMPLETE: python3 collect_results.py --phase host
+STUDY_PROGRESS=3/11
+HOST_BOOTS=3/3
+ABLATION_STEPS=0/8
+REVIEW_REQUIRED=True
+H01 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H02 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H03 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+NEXT_STEP=A01 phase=ablation variant=v32_core_2_pipe
+FIXED_HOST_MODE=map_pingpong; ablation block=1
+RUN: sh run_study.sh ablation
+CHECKING_PACKAGE_AND_SAVED_STEPS
+CHECKING_PACKAGE_AND_SAVED_STEPS
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=A01 v32_core_2_pipe
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+STEP_COMPLETE=A01; output cryptographic verification pending.
+STUDY_PROGRESS=4/11
+HOST_BOOTS=3/3
+ABLATION_STEPS=1/8
+REVIEW_REQUIRED=True
+H01 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H02 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H03 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+ABLATION_BLOCK_1 complete=False
+  v32_core_2_pipe wall_ms=80.787
+NEXT_STEP=A02 phase=ablation variant=v32_aie_only_2_pipe
+FIXED_HOST_MODE=map_pingpong; ablation block=1
+RUN: sh run_study.sh ablation
+CHECKING_PACKAGE_AND_SAVED_STEPS
+CHECKING_PACKAGE_AND_SAVED_STEPS
+STARTING_STEP=A02 v32_aie_only_2_pipe
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+STEP_COMPLETE=A02; output cryptographic verification pending.
+STUDY_PROGRESS=5/11
+HOST_BOOTS=3/3
+ABLATION_STEPS=2/8
+REVIEW_REQUIRED=True
+H01 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H02 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+H03 old_ms=80.787 new_ms=65.787 reduction=+18.57%
+ABLATION_BLOCK_1 complete=False
+  v32_core_2_pipe wall_ms=80.787
+  v32_aie_only_2_pipe wall_ms=80.787
+NEXT_STEP=A03 phase=ablation variant=v32_reducer_only_2_pipe
+FIXED_HOST_MODE=map_pingpong; ablation block=1
+RUN: sh run_study.sh ablation
+{
+  "status": "PASS_ACTUAL_COORDINATOR_WITH_SYNTHETIC_BACKEND",
+  "three_independent_host_boots": true,
+  "H02_reverse_formal_order": true,
+  "whole_step_lock_held_across_calls": true,
+  "same_boot_rejected_before_hardware": true,
+  "wrong_phase_and_variant_rejected_before_hardware": true,
+  "failed_partial_step_retained_and_retry_allowed": true,
+  "A01_reuses_H03_boot_but_A02_requires_new_boot": true,
+  "CPU_diagnostics_host_only": true,
+  "summary_JSON_CSV_generated": true,
+  "hardware_executed": false,
+  "boot_files_or_registers_changed": false
+}

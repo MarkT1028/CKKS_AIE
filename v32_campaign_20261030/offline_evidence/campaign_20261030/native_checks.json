@@ -1,0 +1,19 @@
+{
+  "status": "PASS_UNCHANGED_ARITHMETIC_AND_NATIVE_HOST_CHECKS",
+  "unchanged_source_file_counts": {
+    "host": 1,
+    "common": 2,
+    "reference": 11,
+    "tests": 2,
+    "variants": 43
+  },
+  "all_four_host_full_16_chunk_split_merge": true,
+  "all_four_official_XRT_header_syntax": true,
+  "reused_CPU_selftest": true,
+  "reused_baseline_overlap_and_edge_model": true,
+  "address_and_undefined_sanitizers": true,
+  "shell_and_Python_syntax": true,
+  "firmware_rebuilt": false,
+  "hardware_executed": false,
+  "new_performance": "PENDING"
+}

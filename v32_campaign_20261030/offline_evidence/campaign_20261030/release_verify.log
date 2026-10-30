@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/v32_gpu/v32_gpu/integration/v32_campaign_20261030/verify_release.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/e/v32_gpu/v32_gpu/integration/v32_campaign_20261030/verify_release.py", line 14, in main
+    archive=P.with_suffix('.zip');assert not archive.exists()
+                                         ^^^^^^^^^^^^^^^^^^^^
+AssertionError

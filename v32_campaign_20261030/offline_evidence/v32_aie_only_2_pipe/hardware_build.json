@@ -1,0 +1,29 @@
+{
+  "status": "PASS_PHYSICAL_ABLATION_BUILD",
+  "variant": "v32_aie_only_2_pipe",
+  "build": "/home/mark/v32_overlap_20261029/hardware/systems/v32_aie_only_2_pipe",
+  "inputs": {
+    "base.xsa": {
+      "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/base.xsa",
+      "sha256": "62cf1c3ee8c72849c286a54813bca4926784f31546c30a1b23d1abaf5ac4ff0a"
+    },
+    "ct_reader.xo": {
+      "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/ct_reader.xo",
+      "sha256": "9ab56c93adf2fcd85b9733ba95922233b16047bcb187f2f4978eea2d20dea8b7"
+    },
+    "ct_reduce_accum.xo": {
+      "source": "/home/mark/v32_aie_20261027/hardware/systems/v32_diag_2_pipe/ct_reduce_accum.xo",
+      "sha256": "88c4e11bb01789464837f0bc05cb002b95fd381327eebecea52274b892087a5b"
+    },
+    "libadf.a": {
+      "source": "/home/mark/v32_coreopt_20261029/hardware/systems/v32_core_2_pipe/libadf.a",
+      "sha256": "82788f828e42c931a699e841304d760f667848f6629a85a18baecfdf47b7eb57"
+    }
+  },
+  "uuid": "f562f05930ff572e8a707a85f3625787",
+  "boot_sha256": "cacc3cdc9288decfa1c11526e899190e14f167349cbaee2f8d131c3945283013",
+  "metadata_sha256": "efb175694fc5d2977a951cd206db9a9c06d37635097f0a5a01ce7355c19ee815",
+  "elapsed_seconds": 2220.2202744310002,
+  "board_tested": false,
+  "board_performance": "PENDING"
+}

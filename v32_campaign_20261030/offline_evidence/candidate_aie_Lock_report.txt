@@ -1,0 +1,21 @@
+
+Lock Report
+portinst: i3_pi0 idx[0] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[0].in[0]):
+  Lock 0 MG(16,0) bankId 2 offset 0x0 size 512 name buf0
+  Lock 0 MG(16,0) bankId 0 offset 0x3e00 size 512 name buf0d
+portinst: i3_pi1 idx[1] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[0].in[1]):
+  Lock 2 MG(16,0) bankId 3 offset 0x0 size 512 name buf1
+  Lock 2 MG(16,0) bankId 1 offset 0x2200 size 512 name buf1d
+portinst: i3_po0 idx[2] datatype:buff<uint32> mem out bw_utlization = 1 (variable name:  mul[0].out[0]):
+  Lock 0 MG(17,1) bankId 0 offset 0x0 size 1792 name buf2
+  Lock 0 MG(17,1) bankId 1 offset 0x0 size 1792 name buf2d
+portinst: i7_pi0 idx[0] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[1].in[0]):
+  Lock 0 MG(18,0) bankId 0 offset 0x0 size 512 name buf3
+  Lock 0 MG(18,0) bankId 3 offset 0x0 size 512 name buf3d
+portinst: i7_pi1 idx[1] datatype:buff<int16> mem in bw_utlization = 1 (variable name:  mul[1].in[1]):
+  Lock 0 MG(18,1) bankId 0 offset 0x0 size 512 name buf4
+  Lock 0 MG(18,1) bankId 1 offset 0x0 size 512 name buf4d
+portinst: i7_po0 idx[2] datatype:buff<uint32> mem out bw_utlization = 1 (variable name:  mul[1].out[0]):
+  Lock 2 MG(18,0) bankId 1 offset 0x0 size 1792 name buf5
+  Lock 2 MG(18,0) bankId 2 offset 0x0 size 1792 name buf5d
+

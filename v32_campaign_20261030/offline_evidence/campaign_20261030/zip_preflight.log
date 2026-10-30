@@ -1,0 +1,10 @@
+{
+  "status": "PASS_RESEARCH_CAMPAIGN_PACKAGE",
+  "files": 286,
+  "base_files": 126,
+  "base": "/mnt/e/v32_gpu/v32_gpu/board_packages/v32_hs4_20261027",
+  "manifest_sha256": "9b67cbdbae9d60cc8de61129d79f189878b07a89ebc5b4372063302058048154",
+  "base_manifest_sha256": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+  "firmware_changed": false,
+  "board_performance": "PENDING"
+}

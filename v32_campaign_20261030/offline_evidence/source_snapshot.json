@@ -1,0 +1,18 @@
+{
+  "base_manifest_sha256": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+  "frozen_reference_files": {
+    "reference/design/ct_mac.hpp": "d88bcc00065ea3ed67c0bae6039b453ecd6a70a517657d0fe9594ae18ad4d6b8",
+    "reference/design/ct_reader.cpp": "41eb67020a2aabf98b9fea6701ffb9421de9147e4c11e83adc0f3086f6189f3f",
+    "reference/design/record_io.hpp": "9fc5c06ada2a6bce39d2595415c91482ae96ad21b9ac8531770b502f3a4f29dd",
+    "reference/design/reducer_pipeline.cpp": "9ed97456c6304d587dd05d3f01711f106cae822449d21bb758f8bcc555828bb7",
+    "reference/design/rtl_tb.cpp": "45c1d3ecba993171d075a0ce406e8f61c8158df9f6ec6f8bd8a7cb6e00c89fdd",
+    "reference/design/test_reducer.cpp": "916ee9f0cc0ee7976a5ed9033fbaf3aace1859b528702c881ceeadb07ed0c081",
+    "reference/aie/aie.cfg": "68434a675134c14071dc26ad14b5a1a27958ff7fc9df176a3b81d5a24386ad49",
+    "reference/aie/graph.cpp": "79207fa1566c6738349fb458aefc8367aabdec628f704018f7d37c800d8bbe94",
+    "reference/aie/graph.hpp": "15f50a072806f6fe0bec04057b2aa369e9a66c406194301ffa9046b3a024163e",
+    "reference/aie/limb_diag.cpp": "7339ca04c6d5d4ff25b70a3894ad2e1f0558d9cebe882eb4fccf291312b7d5f5",
+    "reference/aie/limb_mul.cpp": "235ea564e543ce334c2a7bed89431d11339a7d15ee9c4d49986e56e303a64c7d",
+    "reference/aie/limb_mul.hpp": "fd3c5fa0c4334ca08d1162f2889097baf4bb32e9523c3e54fcf4f721b522d6dc"
+  },
+  "board_tested": false
+}

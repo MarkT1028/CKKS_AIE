@@ -1,0 +1,84 @@
+{
+  "status": "OFFLINE_RESEARCH_PROTOCOL_VERIFIED_NEW_BOARD_DATA_PENDING",
+  "new_firmware_compiled": false,
+  "all_four_physical_images_reused_byte_exact": true,
+  "host_arithmetic_changed": false,
+  "old_frozen_package_unchanged": true,
+  "checks": {
+    "diagnostics_test": {
+      "status": "PASS_CPU_DIAGNOSTIC_ORCHESTRATION",
+      "source_sha256": "6deea9d117197df9ccc88e7e3cc29de2aa68eb10ce082ca7bf83d6c640636290",
+      "same_binary_identity_checked": true,
+      "same_process_AA_records": true,
+      "reported_ticks_and_last_cpu_fields": true,
+      "missing_PMU_not_zeroed": true,
+      "failed_child_retained": true,
+      "formal_comparison_not_replaced": true,
+      "hardware_executed": false
+    },
+    "driver_test": {
+      "status": "PASS_ACTUAL_COORDINATOR_WITH_SYNTHETIC_BACKEND",
+      "three_independent_host_boots": true,
+      "H02_reverse_formal_order": true,
+      "whole_step_lock_held_across_calls": true,
+      "same_boot_rejected_before_hardware": true,
+      "wrong_phase_and_variant_rejected_before_hardware": true,
+      "failed_partial_step_retained_and_retry_allowed": true,
+      "A01_reuses_H03_boot_but_A02_requires_new_boot": true,
+      "CPU_diagnostics_host_only": true,
+      "summary_JSON_CSV_generated": true,
+      "hardware_executed": false,
+      "boot_files_or_registers_changed": false
+    },
+    "legacy_test": {
+      "status": "PASS_REUSED_RUNNER_TIMELINE_AND_CPU_DIAGNOSTIC_REGRESSIONS",
+      "timeline_missing_duplicate_reuse_concurrent_status_and_aggregate_faults_rejected": true,
+      "all_four_variant_run_commands_checked": true,
+      "formal_counts_and_cpu_before_after_unchanged": true,
+      "wrong_boot_and_tampered_binary_rejected": true,
+      "manifest_unsafe_and_corrupt_entries_rejected": true,
+      "CPU_diagnostics_fake_child_and_failure_cleanup": true,
+      "hardware_executed": false
+    },
+    "study_test": {
+      "status": "PASS_SYNTHETIC_STUDY_PROTOCOL_AND_FAULT_TESTS",
+      "checks": [
+        "all_11_steps_with_distinct_boots_and_two_reverse_ablation_blocks",
+        "status_does_not_rewrite_raw_run_comparisons",
+        "boot_build_context_and_output_integrity_rejections",
+        "failed_attempts_retained_not_counted_as_success",
+        "phase_block_gzip_index_sha_nested_evidence_and_failure_retention",
+        "unsafe_symlink_collection_rejected",
+        "whole_step_cross_package_device_lock_reentrancy_and_release",
+        "duplicate_success_rejected_without_fastest_sample_selection",
+        "UTC_clock_rollback_does_not_reorder_independent_boots"
+      ],
+      "synthetic_data_only": true,
+      "hardware_executed": false,
+      "board_performance": "PENDING"
+    }
+  },
+  "native_checks": {
+    "status": "PASS_UNCHANGED_ARITHMETIC_AND_NATIVE_HOST_CHECKS",
+    "unchanged_source_file_counts": {
+      "host": 1,
+      "common": 2,
+      "reference": 11,
+      "tests": 2,
+      "variants": 43
+    },
+    "all_four_host_full_16_chunk_split_merge": true,
+    "all_four_official_XRT_header_syntax": true,
+    "reused_CPU_selftest": true,
+    "reused_baseline_overlap_and_edge_model": true,
+    "address_and_undefined_sanitizers": true,
+    "shell_and_Python_syntax": true,
+    "firmware_rebuilt": false,
+    "hardware_executed": false,
+    "new_performance": "PENDING"
+  },
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "crypto": "PENDING_NEW_ACTUAL_BOARD_OUTPUTS",
+  "scope": "Synthetic protocol/fault tests and unchanged native source checks are not hardware performance or a new decryption result."
+}

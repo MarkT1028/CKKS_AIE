@@ -1,0 +1,16 @@
+{
+  "reference_manifest_sha256": "83e5ba97a3ec7ff9047f668207e95ee0f74f497fe6797591dcffb9c3ac7ad268",
+  "copies": {
+    "reference/host/cached_host.cpp": "fa50944cc94269e0d438f55b75d93ff6b480348b8ea5b8359cd741ebe4066787",
+    "reference/host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+    "reference/host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/host/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+    "reference/cpu/cached_cpu.cpp": "c74e0bcac3ada4f9f15399de5894fb4b513fdbd686331d38f991cfe1f2adb132",
+    "reference/cpu/cpu_bench.cpp": "e0300276e9f44f43382ab2dcdd575f7e5c54ba8d9505576d73959b4652721d4e",
+    "reference/cpu/parser/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/cpu/parser/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/cpu/parser/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+    "reference/common/dataset_cache.hpp": "f21bcbd17eb36c6704cfc6c3fbb2203ea57217c99793c3525f2f4083a4f9f981"
+  }
+}

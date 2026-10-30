@@ -1,0 +1,17 @@
+{
+  "status": "PASS_SYNTHETIC_STUDY_PROTOCOL_AND_FAULT_TESTS",
+  "checks": [
+    "all_11_steps_with_distinct_boots_and_two_reverse_ablation_blocks",
+    "status_does_not_rewrite_raw_run_comparisons",
+    "boot_build_context_and_output_integrity_rejections",
+    "failed_attempts_retained_not_counted_as_success",
+    "phase_block_gzip_index_sha_nested_evidence_and_failure_retention",
+    "unsafe_symlink_collection_rejected",
+    "whole_step_cross_package_device_lock_reentrancy_and_release",
+    "duplicate_success_rejected_without_fastest_sample_selection",
+    "UTC_clock_rollback_does_not_reorder_independent_boots"
+  ],
+  "synthetic_data_only": true,
+  "hardware_executed": false,
+  "board_performance": "PENDING"
+}
