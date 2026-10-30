@@ -1,0 +1,66 @@
+{
+  "status": "PASS_OVERLAP_OFFLINE_AUDIT",
+  "four_actual_boot_images_and_matching_flat_metadata": true,
+  "physical_two_by_two_XO_libadf_matrix_verified": true,
+  "new_ablations_timing": {
+    "v32_aie_only_2_pipe": {
+      "setup_slack_ns": 0.359,
+      "hold_slack_ns": 0.013,
+      "drc_errors": 0,
+      "board_tested": false
+    },
+    "v32_reducer_only_2_pipe": {
+      "setup_slack_ns": 0.315,
+      "hold_slack_ns": 0.014,
+      "drc_errors": 0,
+      "board_tested": false
+    }
+  },
+  "CPU_source_and_baseline_scheduler_unchanged": true,
+  "full_real_independent_host_model_chunks": 16,
+  "full_real_raw_words_per_replay": 5505024,
+  "small_and_single_chunk_zero_max_random_cases": true,
+  "address_and_undefined_sanitizers": true,
+  "thread_sanitizer": true,
+  "thread_sanitizer_environment": "setarch x86_64 -R for the one test process only",
+  "eight_fault_types_at_first_middle_last": true,
+  "all_four_hosts_official_XRT_header_syntax": true,
+  "all_four_hosts_real_partitions": true,
+  "both_actual_AIE_to_reducer_random_stall_RTL_endpoint_words": 5376,
+  "tools": {
+    "status": "PASS_ISOLATED_OVERLAP_TOOLS",
+    "timeline_bounds_status_bank_lifetime_and_graph_order": true,
+    "baseline_vs_finish_overlap_accounting": true,
+    "CPU_unchanged_before_after": true,
+    "smoke_formal_forward_reverse_host_ablation_commands": true,
+    "export_separate_from_primary_samples": true,
+    "campaign_boots_and_modes_separate": true,
+    "all_four_ablation_cells_accounted": true,
+    "corruption_symlinks_and_binary_tampering_rejected": true,
+    "archive_index_hash_verified": true,
+    "PC_hardware_guard": true,
+    "board_tested": false,
+    "source_sha256": {
+      "board_runner.py": "e4db05384746224204c72705fe3fd585c6979f92cf29061324b4fec3cc98e27d",
+      "summarize_results.py": "cdb45d630242c5f60f72885b096ed52451af4bd3cbbd69ff5a7d188843ff8dad",
+      "summarize_campaign.py": "a2014c14515a9cd3790c00f697e56dc3cf95b681d80ea9672df7abfc8e9f09bf",
+      "collect_results.py": "d88d65fc7eebe34c69ffda116899c0f425760446fc11ea66ea5d2d8421932a8b"
+    }
+  },
+  "previous_frozen_packages_unchanged": {
+    "v32_hs4_20261027": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+    "v32_hostopt_20261029": "83e5ba97a3ec7ff9047f668207e95ee0f74f497fe6797591dcffb9c3ac7ad268",
+    "v32_bo_20261029": "ec8f29e3929c8dad1949ad3dbcaf5226de781617e3f8e3bed68319be7a1d67a3",
+    "v32_coreopt_20261029": "fa86d44bfd6acecae5a66516c71c99d8bfbb63b94a04cf414860e2ebbfda8fb1"
+  },
+  "original_v32_source_unchanged": true,
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "cryptographic_return": "PENDING_NEW_BOARD_OUTPUTS",
+  "limitations": [
+    "Independent asynchronous arithmetic model is not XRT or device execution.",
+    "RTL chains cover endpoint residues, not concurrent full PL/AIE system simulation.",
+    "Current input remains the one fixed real h_s.4 group.",
+    "New start-to-wait envelopes can include prior-output work; primary comparison must use actual full wall."
+  ]
+}

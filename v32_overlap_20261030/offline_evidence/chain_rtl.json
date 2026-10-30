@@ -1,0 +1,32 @@
+{
+  "status": "PASS_ACTUAL_AIE_OUTPUT_TO_NEW_REDUCER_CSIM_AND_RANDOM_STALL_RTL",
+  "inputs": [
+    {
+      "lane": 0,
+      "original_AIE_output_sha256": "691e011327f63871e159c8aafac2a989fd40836c2dc9cb88c1efe60c6f5e91e6",
+      "canonical_partials_sha256": "7bd983feef753e0ad946fbd0c4313a0d3b4be21e9dcaaa44906e40002f136cd5",
+      "golden_chunk": 0,
+      "coefficient_start": 0,
+      "expected_sha256": "944a4a90be7f83918daca3c1c893139dbdbd44f16faeb9beac195d0ae33a3af6"
+    },
+    {
+      "lane": 1,
+      "original_AIE_output_sha256": "4fef6226ebce06cc03900e8dc4c4589ef35c88a44a268ac1fe2660fda31f7591",
+      "canonical_partials_sha256": "9cc5d6795d78be644f1e068df1be6591ef5b83431dbb2439874572e6f95845bd",
+      "golden_chunk": 15,
+      "coefficient_start": 8128,
+      "expected_sha256": "11ba14a557748df3aef71e2c08c7089d0c6854057055868adf0e91860b75a158"
+    }
+  ],
+  "source_sha256": "5336500d736b7db357f235fe08368ac8872a2a8edbd03da8eb20d5e9e8dd559d",
+  "AIE_source_sha256": "2386ef824f6808526f9a519787fceac2a509db34e9e39dc320583dbfce865f24",
+  "lanes": 2,
+  "frames_each": 896,
+  "beats_each": 100352,
+  "verified_words_each": 2688,
+  "all_14_real_towers": true,
+  "all_16_real_ciphertext_pairs": true,
+  "full_original_ring": false,
+  "scope": "Actual cycle-simulator AIE output consumed by cycle-accurate reducer RTL with randomized stalls and exact original golden endpoint residues; not concurrent whole-system co-simulation and not board performance",
+  "elapsed_seconds": 121.03393109599983
+}

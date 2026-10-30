@@ -1,0 +1,22 @@
+{
+  "v32_diag_2_pipe": {
+    "uuid": "6719127d5f785a7fa4fab0a9869d6ccd",
+    "boot_sha256": "398f9b917ce256e32c347b01a40c46383aa6d251a19ac533243eff01c1997822",
+    "metadata_sha256": "938525af774d79c9d3427734793f5969ef5b7aefb175c4ef2cf106cf943ef821"
+  },
+  "v32_aie_only_2_pipe": {
+    "uuid": "f562f05930ff572e8a707a85f3625787",
+    "boot_sha256": "cacc3cdc9288decfa1c11526e899190e14f167349cbaee2f8d131c3945283013",
+    "metadata_sha256": "efb175694fc5d2977a951cd206db9a9c06d37635097f0a5a01ce7355c19ee815"
+  },
+  "v32_reducer_only_2_pipe": {
+    "uuid": "d8c3e07c10375578829a22582579847f",
+    "boot_sha256": "ac01907a7981edba9723fcd4a2714cc9c37c924d57bf592c474716b0bef07e67",
+    "metadata_sha256": "41d22e225a7484a62c898691c0eb71055d3c7b43896604f0f052d5f38d204297"
+  },
+  "v32_core_2_pipe": {
+    "uuid": "050ea5cc23fb5038bad0aca23cbd240b",
+    "boot_sha256": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+    "metadata_sha256": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b"
+  }
+}

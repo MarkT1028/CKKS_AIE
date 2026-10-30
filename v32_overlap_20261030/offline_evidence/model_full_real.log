@@ -1,0 +1,1 @@
+PASS FINISH_OVERLAP_FUNCTIONAL chunks=16 each_repetitions=3 independent_math=1 byte_equal=1 canaries=1 single_graph=1 status_before_next=1 faults=24 board_performance=NOT_MEASURED

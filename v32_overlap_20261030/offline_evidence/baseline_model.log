@@ -1,0 +1,1 @@
+PASS FUNCTIONAL_SCHEDULE_ONLY modes=3 repetitions_each=3 chunks=2 saved_output_sets=3 canaries=1 failure_cleanup=1 alias_bounds=1 board_performance=NOT_MEASURED

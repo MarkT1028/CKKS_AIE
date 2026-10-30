@@ -1,0 +1,103 @@
+{
+  "status": "PASS_FOUR_ROUTED_RESOURCE_MATRIX",
+  "scope": "Vivado routed top-level totals including common platform; BRAM in 36Kb equivalents; AIE count separately from retained AIE library mapping. Not measured power or performance.",
+  "variants": {
+    "v32_diag_2_pipe": {
+      "total_LUT": 35292,
+      "logic_LUT": 27101,
+      "LUTRAM": 5827,
+      "SRL": 2364,
+      "FF": 47571,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36_equivalent": 25.0,
+      "AIE": 2,
+      "PL_Hz": 225000000,
+      "timing": {
+        "setup_slack_ns": 0.359,
+        "hold_slack_ns": 0.013,
+        "drc_errors": 0,
+        "board_tested": false,
+        "xsa_sha256": "865f3464f563ff17ed977d975ea0468162272bd8d0f52ed64e45581f2ac736e8",
+        "bus_skew_min_slack_ns": 12.457,
+        "routing_errors": 0,
+        "provenance": "independent routed checkpoint reopened with project postcheck.tcl",
+        "report_sha256": {
+          "postcheck.log": "7e94a26171327b2d8995e1d5e8434aceb73fe9532f3cce01db82ee76f5cb1de9",
+          "postcheck_bus_skew.rpt": "c6a08f5fb35cfe6cc0a709bdd1aacf0a76601322e9b2f41d9aadcd68932474ee",
+          "postcheck_clocks.rpt": "c582c9ddfa6e212008a0a9b9b613089dc53a6ad286681669119d671acf0b32cc",
+          "postcheck_drc.rpt": "e2185311edeaae483571255241ee4637e46b8e1e514134518f668db13d9deb03",
+          "postcheck_route_status.rpt": "7b9b4e0473b13601e1c97295c77ae6b1ae224f31ddef5f55a91901658d3e19a2",
+          "postcheck_timing_summary.rpt": "d8db41fc7da81eb5822402fb96e7664be7247d1e0f1e12f655e329d3bb4c8eb6",
+          "postcheck_utilization.rpt": "bb4bc11ba014fa48aecb541297ad7b39db1e07cec2414f106d1026305bce3d5d"
+        }
+      },
+      "utilization_sha256": "bb4bc11ba014fa48aecb541297ad7b39db1e07cec2414f106d1026305bce3d5d"
+    },
+    "v32_core_2_pipe": {
+      "total_LUT": 35857,
+      "logic_LUT": 28072,
+      "LUTRAM": 5429,
+      "SRL": 2356,
+      "FF": 45748,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36_equivalent": 25.0,
+      "AIE": 2,
+      "PL_Hz": 225000000,
+      "timing": {
+        "setup_slack_ns": 0.315,
+        "hold_slack_ns": 0.014,
+        "drc_errors": 0,
+        "board_tested": false
+      },
+      "utilization_sha256": "60390c07e44e76080c2208f53423e10218e6dec55f08eab46b5a3068d6fcfcab"
+    },
+    "v32_aie_only_2_pipe": {
+      "total_LUT": 35292,
+      "logic_LUT": 27101,
+      "LUTRAM": 5827,
+      "SRL": 2364,
+      "FF": 47571,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36_equivalent": 25.0,
+      "AIE": 2,
+      "PL_Hz": 225000000,
+      "timing": {
+        "setup_slack_ns": 0.359,
+        "hold_slack_ns": 0.013,
+        "drc_errors": 0,
+        "board_tested": false
+      },
+      "utilization_sha256": "1bf7d7e4c5796dc138ce55c4b833b7764b846a478397de9f88da6c088541e699"
+    },
+    "v32_reducer_only_2_pipe": {
+      "total_LUT": 35857,
+      "logic_LUT": 28072,
+      "LUTRAM": 5429,
+      "SRL": 2356,
+      "FF": 45748,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36_equivalent": 25.0,
+      "AIE": 2,
+      "PL_Hz": 225000000,
+      "timing": {
+        "setup_slack_ns": 0.315,
+        "hold_slack_ns": 0.014,
+        "drc_errors": 0,
+        "board_tested": false
+      },
+      "utilization_sha256": "122c773f5297b5bca45697dfccd16f89993b63d5de1e8a06a804ec9dd223aa70"
+    }
+  }
+}

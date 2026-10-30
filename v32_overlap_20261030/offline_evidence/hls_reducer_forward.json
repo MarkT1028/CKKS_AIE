@@ -1,0 +1,9 @@
+{
+  "unit": "reducer_forward",
+  "status": "PASS_HLS_CSIM_SYNTH_RANDOM_STALL_COSIM_XO",
+  "source_sha256": "5336500d736b7db357f235fe08368ac8872a2a8edbd03da8eb20d5e9e8dd559d",
+  "xo_sha256": "74d0d58c5928d35b26e2ebbece0c4e6a97b7f9ebcd814e8ef5c6180b0e3459f2",
+  "elapsed_seconds": 97.983237143,
+  "build": "/home/mark/v32_coreopt_20261029/hls/reducer_forward",
+  "board_performance": "PENDING"
+}

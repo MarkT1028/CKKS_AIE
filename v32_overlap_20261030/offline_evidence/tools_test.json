@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ISOLATED_OVERLAP_TOOLS",
+  "timeline_bounds_status_bank_lifetime_and_graph_order": true,
+  "baseline_vs_finish_overlap_accounting": true,
+  "CPU_unchanged_before_after": true,
+  "smoke_formal_forward_reverse_host_ablation_commands": true,
+  "export_separate_from_primary_samples": true,
+  "campaign_boots_and_modes_separate": true,
+  "all_four_ablation_cells_accounted": true,
+  "corruption_symlinks_and_binary_tampering_rejected": true,
+  "archive_index_hash_verified": true,
+  "PC_hardware_guard": true,
+  "board_tested": false,
+  "source_sha256": {
+    "board_runner.py": "e4db05384746224204c72705fe3fd585c6979f92cf29061324b4fec3cc98e27d",
+    "summarize_results.py": "cdb45d630242c5f60f72885b096ed52451af4bd3cbbd69ff5a7d188843ff8dad",
+    "summarize_campaign.py": "a2014c14515a9cd3790c00f697e56dc3cf95b681d80ea9672df7abfc8e9f09bf",
+    "collect_results.py": "d88d65fc7eebe34c69ffda116899c0f425760446fc11ea66ea5d2d8421932a8b"
+  }
+}

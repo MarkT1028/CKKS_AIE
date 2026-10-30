@@ -1,0 +1,10 @@
+bin/
+__pycache__/
+results_overlap_*/
+results_cpu_diag_*/
+collected_overlap_*
+collection_index_*
+switch_logs/
+.board.lock
+!offline_evidence/
+!offline_evidence/**

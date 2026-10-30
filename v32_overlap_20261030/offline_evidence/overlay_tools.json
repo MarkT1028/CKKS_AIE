@@ -1,0 +1,16 @@
+{
+  "status": "PASS_ISOLATED_COREOPT_RUNNER_AND_ACCOUNTING",
+  "both_boot_variants_and_wrong_boot_guard": true,
+  "CPU_before_after_fixed_two_threads": true,
+  "CPU_and_host_scheduler_unchanged": true,
+  "tampered_binary_rejected": true,
+  "timeline_missing_duplicate_bank_order_faults_rejected": true,
+  "export_cannot_enter_measured_samples": true,
+  "CPU_compute_and_full_wall_distinguished": true,
+  "three_boot_ABA_cohorts_not_pooled": true,
+  "saved_full_output_corruption_rejected": true,
+  "progressful_archive_hash_inventory_checked": true,
+  "unsafe_collection_symlink_rejected": true,
+  "PC_hardware_guard": true,
+  "hardware_executed": false
+}

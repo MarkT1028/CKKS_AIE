@@ -1,0 +1,220 @@
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_diag_2_pipe_smoke_20261029T163038274636Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_diag_2_pipe_smoke_20261029T163038275877Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_diag_2_pipe_smoke_20261029T163038276566Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_diag_2_pipe_smoke_20261029T163038277372Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_diag_2_pipe_formal_20261029T163038277964Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_diag_2_pipe_formal_20261029T163038278694Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_diag_2_pipe_formal_20261029T163038279291Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_diag_2_pipe_formal_20261029T163038279954Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_aie_only_2_pipe_smoke_20261029T163038280469Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_aie_only_2_pipe_smoke_20261029T163038281147Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_aie_only_2_pipe_smoke_20261029T163038281683Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_aie_only_2_pipe_smoke_20261029T163038282379Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_aie_only_2_pipe_formal_20261029T163038282879Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_aie_only_2_pipe_formal_20261029T163038283606Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_aie_only_2_pipe_formal_20261029T163038284246Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_aie_only_2_pipe_formal_20261029T163038284940Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_reducer_only_2_pipe_smoke_20261029T163038285973Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_reducer_only_2_pipe_smoke_20261029T163038286676Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_reducer_only_2_pipe_smoke_20261029T163038287202Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_reducer_only_2_pipe_smoke_20261029T163038287874Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_reducer_only_2_pipe_formal_20261029T163038288452Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_reducer_only_2_pipe_formal_20261029T163038289065Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_reducer_only_2_pipe_formal_20261029T163038289637Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_reducer_only_2_pipe_formal_20261029T163038290394Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_core_2_pipe_smoke_20261029T163038290980Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_core_2_pipe_smoke_20261029T163038291778Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_core_2_pipe_smoke_20261029T163038292474Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_core_2_pipe_smoke_20261029T163038293146Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_core_2_pipe_formal_20261029T163038293883Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_core_2_pipe_formal_20261029T163038294552Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_host_v32_core_2_pipe_formal_20261029T163038295142Z
+NEXT: python3 collect_results.py
+RESULTS=/tmp/finish-overlap-tools-txnhpvsf/cli/results_overlap_ablation_v32_core_2_pipe_formal_20261029T163038295895Z
+NEXT: python3 collect_results.py
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_finish_overlap: verified wall=65.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+map_pingpong__to__map_finish_overlap: +18.57% less wall time; 1.2280x
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+v32_aie_only_2_pipe/ablation/map_pingpong/boot_v32_aie_only_2_pipe wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/ablation/map_pingpong/boot_v32_core_2_pipe wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_diag_2_pipe/ablation/map_pingpong/boot_v32_diag_2_pipe wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_reducer_only_2_pipe/ablation/map_pingpong/boot_v32_reducer_only_2_pipe wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_pingpong/boot_core_0 wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_finish_overlap/boot_core_0 wall_ms=65.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_finish_overlap/boot_core_1 wall_ms=65.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_pingpong/boot_core_1 wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_pingpong/boot_core_2 wall_ms=80.787 samples=5 CPU_drift_review=False
+v32_core_2_pipe/host/map_finish_overlap/boot_core_2 wall_ms=65.787 samples=5 CPU_drift_review=False
+CORE_HOST_FORMAL_BOOTS=3
+ALL_ABLATION_CELLS_PRESENT=True
+ALL_ABLATION_CELLS_10_SAMPLES=False
+CAMPAIGN_SUMMARY=/tmp/finish-overlap-tools-txnhpvsf/campaign/campaign_summary.json
+INDEXING files=357 source_MiB=1.6
+INDEX 50/357
+INDEX 100/357
+INDEX 150/357
+INDEX 200/357
+INDEX 250/357
+INDEX 300/357
+INDEX 350/357
+INDEX 357/357
+PACKING compression=gz level=1
+PACK 20/358
+PACK 40/358
+PACK 60/358
+PACK 80/358
+PACK 100/358
+PACK 120/358
+PACK 140/358
+PACK 160/358
+PACK 180/358
+PACK 200/358
+PACK 220/358
+PACK 240/358
+PACK 260/358
+PACK 280/358
+PACK 300/358
+PACK 320/358
+PACK 340/358
+PACK 358/358
+VERIFYING compressed archive against the saved SHA-256 inventory
+VERIFY 20/358
+VERIFY 40/358
+VERIFY 60/358
+VERIFY 80/358
+VERIFY 100/358
+VERIFY 120/358
+VERIFY 140/358
+VERIFY 160/358
+VERIFY 180/358
+VERIFY 200/358
+VERIFY 220/358
+VERIFY 240/358
+VERIFY 260/358
+VERIFY 280/358
+VERIFY 300/358
+VERIFY 320/358
+VERIFY 340/358
+VERIFY 358/358
+{
+  "status": "COLLECTED_AND_VERIFIED",
+  "download_this_file": "/tmp/finish-overlap-tools-txnhpvsf/campaign/collected_overlap_20261029T163038725256Z.tar.gz",
+  "files": 358,
+  "source_bytes": 1696036,
+  "bytes": 375365,
+  "sha256": "d711c580b43dbf52698b0c9574d69421a96871ea082076e2ad2b9aea62e9d5f2",
+  "compression": "gz"
+}
+Overlap campaign v32_aie_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_core_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_diag_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+Overlap campaign v32_reducer_only_2_pipe. Primary: actual verified replay wall; setup and export are separate.
+map_pingpong: verified wall=80.787 ms; host run/wait sum=48.000 ms; input-sync host overlap=0.300 ms; CPU drift=+0.00%
+Faster than BOTH adjacent CPU full walls: False; faster than BOTH CPU compute-only times: False
+Stage work sums are not wall latency. Return the archive for independent original-context verification.
+{
+  "status": "PASS_ISOLATED_OVERLAP_TOOLS",
+  "timeline_bounds_status_bank_lifetime_and_graph_order": true,
+  "baseline_vs_finish_overlap_accounting": true,
+  "CPU_unchanged_before_after": true,
+  "smoke_formal_forward_reverse_host_ablation_commands": true,
+  "export_separate_from_primary_samples": true,
+  "campaign_boots_and_modes_separate": true,
+  "all_four_ablation_cells_accounted": true,
+  "corruption_symlinks_and_binary_tampering_rejected": true,
+  "archive_index_hash_verified": true,
+  "PC_hardware_guard": true,
+  "board_tested": false,
+  "source_sha256": {
+    "board_runner.py": "e4db05384746224204c72705fe3fd585c6979f92cf29061324b4fec3cc98e27d",
+    "summarize_results.py": "cdb45d630242c5f60f72885b096ed52451af4bd3cbbd69ff5a7d188843ff8dad",
+    "summarize_campaign.py": "a2014c14515a9cd3790c00f697e56dc3cf95b681d80ea9672df7abfc8e9f09bf",
+    "collect_results.py": "d88d65fc7eebe34c69ffda116899c0f425760446fc11ea66ea5d2d8421932a8b"
+  }
+}
