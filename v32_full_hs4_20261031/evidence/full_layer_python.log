@@ -1,0 +1,22 @@
+{
+  "status": "PYTHON_FULL_LAYER_REPLAY_PENDING_NATIVE_EXACT_CHECK",
+  "consumed_groups": [
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "full_layer_source": "unmodified v32.sat_diag_conv including ensure,rescale,im2col,baby rotations,giant rotations,aggregation,bias",
+  "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "level": 43,
+  "degree": 2,
+  "slots": 65536,
+  "valid_mean_values": 1536,
+  "decode_max_abs": 6.841630326798187e-06,
+  "cpu_repeat_decode_max_abs": 6.847749099758715e-06,
+  "decode_tolerance": 2.739099639903486e-05,
+  "ground_replay_wall_ms": 21266.330200014636,
+  "scope": "Full h_s.4(mean) functional ground replay using provided6 returns. Raw MACs occurred separately; this time excludes board/transport and is NOT live full-layer latency. No original MAC recomputed in callback."
+}

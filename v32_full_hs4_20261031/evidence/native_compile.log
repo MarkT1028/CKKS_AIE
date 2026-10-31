@@ -1,0 +1,3 @@
+[ 50%] Building CXX object CMakeFiles/full_bridge.dir/full_bridge.cpp.o
+[100%] Linking CXX executable full_bridge
+[100%] Built target full_bridge

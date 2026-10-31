@@ -1,0 +1,23 @@
+{
+  "status": "PASS_ACTUAL_AIE_X86_ALL_SIX_NEW_REAL_GROUPS",
+  "actual_simulator_outputs": [
+    {
+      "core": 0,
+      "samples": 2408448,
+      "actual_sha256": "625cc297152e97716a7b653b16097ffe179c5e19b55ec6f9c3d36e7aa302b44b"
+    },
+    {
+      "core": 1,
+      "samples": 2408448,
+      "actual_sha256": "114f0723b779e2e3d4cfd78cb566ac665b54674ff8342184a4bb38ee2f6c7384"
+    }
+  ],
+  "new_real_groups": 6,
+  "frames_per_core": 5376,
+  "towers": 14,
+  "pairs": 16,
+  "positions": "full-ring first64 and last64 per group",
+  "kernel_sha256": "2386ef824f6808526f9a519787fceac2a509db34e9e39dc320583dbfce865f24",
+  "data_manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+  "scope": "Actual AIE x86 numerical simulation; no new hardware or board performance measurement."
+}

@@ -1,0 +1,126 @@
+{
+  "status": "PASS_SIX_DIFFERENT_REAL_GROUPS_INDEPENDENT_U128_AND_ORIGINAL_CONTEXT",
+  "groups": [
+    {
+      "group": 5,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.44334775200862e-07,
+        "square_vs_original_cpu_max_abs": 8.600603683686878e-07,
+        "cpu_repeat_decode_max_abs": 5.523898715803499e-07,
+        "square_cpu_repeat_decode_max_abs": 8.014012646013489e-07,
+        "decode_tolerance": 2.2095594863213996e-06,
+        "square_decode_tolerance": 3.2056050584053957e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 4,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.353532303544243e-07,
+        "square_vs_original_cpu_max_abs": 3.3050188332528204e-07,
+        "cpu_repeat_decode_max_abs": 5.224213723785986e-07,
+        "square_cpu_repeat_decode_max_abs": 3.525315632308028e-07,
+        "decode_tolerance": 2.0896854895143945e-06,
+        "square_decode_tolerance": 1.4101262529232113e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 3,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.738284849660943e-07,
+        "square_vs_original_cpu_max_abs": 2.987790723531008e-07,
+        "cpu_repeat_decode_max_abs": 5.436260707163532e-07,
+        "square_cpu_repeat_decode_max_abs": 3.0081278067554173e-07,
+        "decode_tolerance": 2.174504282865413e-06,
+        "square_decode_tolerance": 1.203251122702167e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 2,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.484480245490235e-07,
+        "square_vs_original_cpu_max_abs": 4.168668863835894e-07,
+        "cpu_repeat_decode_max_abs": 5.48153255358221e-07,
+        "square_cpu_repeat_decode_max_abs": 4.4517225743320054e-07,
+        "decode_tolerance": 2.192613021432884e-06,
+        "square_decode_tolerance": 1.7806890297328022e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 1,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 4.982035048119249e-07,
+        "square_vs_original_cpu_max_abs": 4.763418036191938e-07,
+        "cpu_repeat_decode_max_abs": 5.99376672971174e-07,
+        "square_cpu_repeat_decode_max_abs": 4.6752731098490184e-07,
+        "decode_tolerance": 2.397506691884696e-06,
+        "square_decode_tolerance": 1.8701092439396074e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 0,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.62479397495156e-07,
+        "square_vs_original_cpu_max_abs": 6.842799348994956e-07,
+        "cpu_repeat_decode_max_abs": 5.424754765515145e-07,
+        "square_cpu_repeat_decode_max_abs": 6.51868185822509e-07,
+        "decode_tolerance": 2.169901906206058e-06,
+        "square_decode_tolerance": 2.607472743290036e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    }
+  ],
+  "data": {
+    "status": "PASS_FULL_HS4_COMPACT_DATA",
+    "files": 221,
+    "bytes": 3552664614,
+    "manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+    "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+    "full_checksums": true,
+    "production": true,
+    "groups": 6,
+    "output_words": 33030144
+  },
+  "raw_words": 33030144,
+  "scope": "Local offline model outputs, NOT board outputs; full layer return is a separate exact check."
+}

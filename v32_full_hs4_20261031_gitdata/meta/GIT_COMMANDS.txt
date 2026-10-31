@@ -1,0 +1,26 @@
+cd /d E:\vek280_AIe_ckks\AIE_git
+REM Run ONE block at a time. Push must finish successfully before next block.
+
+REM BATCH 1/4
+git add -- v32_full_hs4_20261031 v32_full_hs4_20261031_gitdata/.gitattributes v32_full_hs4_20261031_gitdata/.gitignore v32_full_hs4_20261031_gitdata/meta
+git add -- v32_full_hs4_20261031_gitdata/batch_1
+git commit -m "data: add full h_s.4 fixture batch 1 of 4"
+git push origin main
+
+REM BATCH 2/4
+git add -- v32_full_hs4_20261031_gitdata/batch_2
+git commit -m "data: add full h_s.4 fixture batch 2 of 4"
+git push origin main
+
+REM BATCH 3/4
+git add -- v32_full_hs4_20261031_gitdata/batch_3
+git commit -m "data: add full h_s.4 fixture batch 3 of 4"
+git push origin main
+
+REM BATCH 4/4
+git add -- v32_full_hs4_20261031_gitdata/batch_4
+git commit -m "data: add full h_s.4 fixture batch 4 of 4"
+git push origin main
+
+REM On the REMOTE Windows PC, after git pull:
+powershell -NoProfile -ExecutionPolicy Bypass -File .\v32_full_hs4_20261031_gitdata\meta\restore_data.ps1

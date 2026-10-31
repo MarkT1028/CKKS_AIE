@@ -1,0 +1,1 @@
+PASS_FULL_HS4_CPU_SIX_MAC repetition=0 warmup=0 compute_sum_ms=267.162 full_six_streamed_wall_ms=21254.7 verified_words=33030144

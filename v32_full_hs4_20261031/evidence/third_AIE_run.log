@@ -1,0 +1,8 @@
+{"status": "PASS", "actual_simulator_outputs": [{"core": 0, "samples": 1792, "actual_sha256": "2731407ee76dc83f6b5fcc433e193742af30047c6601c11094f023273069ddfe"}, {"core": 1, "samples": 1792, "actual_sha256": "74225fc38c0409b70081a667d650ea9cc22de8b41c2bf03f405aea6a10ace1df"}, {"core": 2, "samples": 1792, "actual_sha256": "2731407ee76dc83f6b5fcc433e193742af30047c6601c11094f023273069ddfe"}]}
+PASS_THIRD_AIE edges x86sim
+{"status": "PASS", "actual_simulator_outputs": [{"core": 0, "samples": 1792, "actual_sha256": "7e00d8c9840c2153ee8fa2f73138ae51d12e1b73a24ca5c9a18860a20428690f"}, {"core": 1, "samples": 1792, "actual_sha256": "949c92030f8c7b599561269f454e50faa7fc87dd4d331aefca4192779e539dad"}, {"core": 2, "samples": 1792, "actual_sha256": "881d404f08f33e33b7fec28c83dd8bb402154146f9a079954684ee9597e1db2b"}]}
+PASS_THIRD_AIE edges hw
+{"status": "PASS", "actual_simulator_outputs": [{"core": 0, "samples": 401408, "actual_sha256": "7bc6123e7c5eed8f4789ba954dd8af0d1ce1fe6e46781afd11fd520cc620ba42"}, {"core": 1, "samples": 401408, "actual_sha256": "6e4b787711bf331f0123df60d1d461390f88b9278e4530c80f02cdcd450ca04c"}, {"core": 2, "samples": 401408, "actual_sha256": "e15340a7d497ad10bd4f71fc37ddb1775accb42ef22c8547a7cf6b88ca02fd83"}]}
+PASS_THIRD_AIE real x86sim
+{"status": "PASS", "actual_simulator_outputs": [{"core": 0, "samples": 401408, "actual_sha256": "d8d85df337e3ade56542c811f032b76478b5832d3c4c681d43ba5bdc773aa0a6"}, {"core": 1, "samples": 401408, "actual_sha256": "bd9db3700895730dfe6e22061e5265ce9606442b8731a69eb01b483369db2a8f"}, {"core": 2, "samples": 401408, "actual_sha256": "77371c6b03565f22cdf4d6bf7f098710a831c0266ebbc006284cf595275a8b94"}]}
+PASS_THIRD_AIE real hw

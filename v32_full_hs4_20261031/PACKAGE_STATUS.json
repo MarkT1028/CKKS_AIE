@@ -1,0 +1,19 @@
+{
+  "status": "OFFLINE_VERIFIED_FULL_HS4_MEAN_READY_FOR_BOARD",
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "cryptographic_return": "PENDING_ACTUAL_BOARD_OUTPUTS",
+  "offline_complete_layer": "PASS",
+  "AIE": 2,
+  "boot_uuid": "050ea5cc23fb5038bad0aca23cbd240b",
+  "firmware_changed": false,
+  "groups": 6,
+  "N": 131072,
+  "L": 14,
+  "K": 16,
+  "chunks_per_group": 16,
+  "scope": "h_s.4(mean)96 channels,4x4 positions; no live full-model claim",
+  "data_directory": "v32_full_hs4_20261031_data",
+  "data_manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+  "data_archive_sha256": "1942e4fab7b7d8737c45d7a9791ad0ca2a68e1aae44cf03472a62f8287a00a90"
+}

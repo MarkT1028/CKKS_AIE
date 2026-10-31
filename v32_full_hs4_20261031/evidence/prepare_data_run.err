@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\prepare_data.py", line 26, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\prepare_data.py", line 13, in main
+    state=io.load(CAP/'progress.json') if (CAP/'progress.json').exists() else {};io.need(state.get('status')!='FAILED_CAPTURE_RETAINED','real capture failed; retain private state and log');io.need(a.wait and time.monotonic()-start<4*3600,'complete real capture required');print('WAIT_REAL_HS4_CAPTURE',state.get('status'),state.get('groups_complete',0),flush=True);time.sleep(30)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\board_files\compact_io.py", line 7, in need
+    if not x:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: real capture failed; retain private state and log

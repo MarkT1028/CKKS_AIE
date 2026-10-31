@@ -1,0 +1,128 @@
+{
+  "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "original_source_unchanged": true,
+  "previous_frozen_packages_unchanged": {
+    "v32_hs4_20261027": "db3bcc84a5cd925868e476ba2e6a2a4feb56fd4806fd3344a5f9940aba999d3b",
+    "v32_hostopt_20261029": "83e5ba97a3ec7ff9047f668207e95ee0f74f497fe6797591dcffb9c3ac7ad268",
+    "v32_bo_20261029": "ec8f29e3929c8dad1949ad3dbcaf5226de781617e3f8e3bed68319be7a1d67a3",
+    "v32_coreopt_20261029": "fa86d44bfd6acecae5a66516c71c99d8bfbb63b94a04cf414860e2ebbfda8fb1",
+    "v32_overlap_20261030": "1bcb9582a15d6555abe83c4984397ea1aece53419aa42c8148a49b31e4eba3f6",
+    "v32_campaign_20261030": "5b34757fef7e8ddb693a2209d6c336808ca29da25383ba3a9b17f0f5b8ff4fcc"
+  },
+  "inherited_sources": {
+    "common/finish_overlap.hpp": "86c2edc132ca3724756351c4fc8902dc5ee13c3afaec8ef057e30a61a7e8ebf7",
+    "common/replay.hpp": "fec0727cfab0688f6b25a9e5065b637050d890caab359c7086374bc79b849563",
+    "host/bo_host.cpp": "3be3e37310558e2526760222526fe3f87a0b54afcc2baa4c4e718b200698f426",
+    "tests/fake_backend.cpp": "daa5be213a3e81a20ca675574e4ba11d538049023a940d9657fbec94afdb0f33",
+    "tests/finish_overlap_test.cpp": "3a140d4347a2f90b7538b871a7c4d2d83eb56d00a2426c77f5e437803ce0f9bb",
+    "test_fixture/chunks.tsv": "89670e08e35d7143a0769045678e48f7ef1accfdb1a85e26bdab2eadd97c706f",
+    "test_fixture/shape.json": "b91f1d7850a499dd9badb32f47696d67864d4f11d127c757405676dd45217916",
+    "test_fixture_edge/chunks.tsv": "9dad85d5e21dd0b84f28168f7f4e8d4f7a7923e583749774cefd85ff72281c6c",
+    "test_fixture_edge/shape.json": "4e88cc6f7e80cc0665c2c986b5cd980f90a212ded7d8d8c1342c493d701b8dd3",
+    "reference/common/dataset_cache.hpp": "f21bcbd17eb36c6704cfc6c3fbb2203ea57217c99793c3525f2f4083a4f9f981",
+    "reference/cpu/cached_cpu.cpp": "c74e0bcac3ada4f9f15399de5894fb4b513fdbd686331d38f991cfe1f2adb132",
+    "reference/cpu/cpu_bench.cpp": "e0300276e9f44f43382ab2dcdd575f7e5c54ba8d9505576d73959b4652721d4e",
+    "reference/host/cached_host.cpp": "fa50944cc94269e0d438f55b75d93ff6b480348b8ea5b8359cd741ebe4066787",
+    "reference/host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+    "reference/host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/host/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+    "reference/cpu/parser/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "reference/cpu/parser/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "reference/cpu/parser/variant_config.hpp": "de7ba3baeb8f973bb546176681dec23489d771f10e1dae5f9b6f74569b397ecd",
+    "test_fixture/chunks/chunk_0_expected.bin": "3e55d418a881999226b3e6001c4c1adad68e0195dc54f16aead0813cbfe640a0",
+    "test_fixture/chunks/chunk_0_input.bin": "4c680898e9051ebb64f22b8a3d3f62cef351c61057afe0c64a7fdd59d506e213",
+    "test_fixture/chunks/chunk_1_expected.bin": "7679ce234de02177a1e5a06e05ceb493b0bff0702c8aa01f5c0a2f23399bc0d0",
+    "test_fixture/chunks/chunk_1_input.bin": "91254498abf26c71c3358245c646d2d773d8a50dd48ffcba630d91a7e8f3e522",
+    "test_fixture_edge/chunks/chunk_0_expected.bin": "846e20b9166fabfe51bcc5a22bb95b3b129fe88f6aab100eebfedd1975e0ce0c",
+    "test_fixture_edge/chunks/chunk_0_input.bin": "0c0384c3f1ecd3eb95d122fbfe59b3daa4d4c9535299361236fe08a6d4c6f60f",
+    "variants/v32_core_2_pipe/boot0001.bin": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+    "variants/v32_core_2_pipe/ckks_hw_boot.xclbin": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b",
+    "variants/v32_core_2_pipe/EXPECTED_BOOT_SHA256": "f0457f54ea5e5777206e42a365d5475b989e422bdd0f5615cff814a5be2802db",
+    "variants/v32_core_2_pipe/EXPECTED_BOOT_UUID": "b86976dc01e20911b620bab63887413be06beca5c17a58fee6f4131fc2a4e666",
+    "variants/v32_core_2_pipe/manifest.json": "e2ff24e08d53fffdddc687dbf1c5318bc1b0f551d4661843ba8446231e16ca27",
+    "variants/v32_core_2_pipe/host/bo_host.cpp": "7958906b92ca46a5bc162fe1b13080445c5fc2e56f66eca2ba3e3f2616bafb43",
+    "variants/v32_core_2_pipe/host/cached_host.cpp": "fa50944cc94269e0d438f55b75d93ff6b480348b8ea5b8359cd741ebe4066787",
+    "variants/v32_core_2_pipe/host/expected_reader.hpp": "9b22ccf399aede52d8692e34b72b4be8d0fef8bff1289cc5ca3fcce69a27b8d0",
+    "variants/v32_core_2_pipe/host/perf_host.cpp": "fa25f8d5edcafaec7b681ef9e1f84fdfdacb33c9ad20f27329b60b0ebf88a7b1",
+    "variants/v32_core_2_pipe/host/timed_base.hpp": "ae270bfa75dd57508bd72b57095f0c1e6477ff46edc4b518c6ab9435ea24267a",
+    "variants/v32_core_2_pipe/host/variant_config.hpp": "0a829d5b3ad67c5815afcd9271afb93d52a9bd7f438183e931fc7061fc334317"
+  },
+  "inherited_copy_changes": {
+    "reference/common/dataset_cache.hpp": {
+      "original": "f21bcbd17eb36c6704cfc6c3fbb2203ea57217c99793c3525f2f4083a4f9f981",
+      "new": "e0114da5fbdf99f2af62e9c13440e9cafcaac078f40a4190b24c6514a89329cc"
+    },
+    "variants/v32_core_2_pipe/host/bo_host.cpp": {
+      "original": "7958906b92ca46a5bc162fe1b13080445c5fc2e56f66eca2ba3e3f2616bafb43",
+      "new": "1fb04c252b1bc577be2ac4f958b7ee4029ba04ee55ff05714a4a428751ac1a4e"
+    }
+  },
+  "inherited_change_reasons": [
+    "Add empty CachedDataset constructor for one-group loading without changing parser/math",
+    "Expose output destination and guard inherited standalone main for one persistent six-group backend"
+  ],
+  "ground_validation_sources": {
+    "analyze_board_return.py": "0a2712cd3a2863c4c768b6d3994bcc2e1c9b4b2749b05ec3e070d06b1615f15d",
+    "capture_full_hs4.py": "c5a9d778b7e2407d0135f065e21960b635c57a4e1c84eddc5dba3a5340d9eb18",
+    "finalize_saved_capture.py": "867866f495ab4bb95aaea438829d7e2ceed8a38c14f5b799396b874dcc48f7c2",
+    "finish_layer_checks.py": "526ed30f76508d18abfdd334fdc4be31142d71f6d295c266106673ff123d8481",
+    "package_data.py": "f1e6b6dd73ac4e405b5cf50a46f6507476105265bd66596bcfecba643d991d7c",
+    "prepare_data.py": "2f6bf038c7ec515a027e0fe36013a30b2c509d59370276fe4e9f69841583b9e2",
+    "prepare_release.py": "9cdf0d57f87ddea3a1581aa9fbecc662f7a0f2214f258894e71081e3dd15f307",
+    "resume_layer_capture.py": "aa5fc0b7a4b31ba1df641da2ad719c1df987ee751b12a02d6a623a61078a65ac",
+    "test_compact_data.py": "495fbbdfe2eb4965d232fff08dd5fdc087ce44b14ab5f2f01241d31faa316868",
+    "test_full_groups_aie.py": "8cadae9b177aab97b0d97ca74b5c9fc80d73d14adf1c77a381cc3751a55237bd",
+    "test_result_contracts.py": "ae61508609feef0c99c9da7e99afde22b47d4d18598885a15320842277233869",
+    "test_third_aie.py": "a031e1a8f0332610735ae823532207beb765fad582e4565c6f85d43764957955",
+    "verify_full_layer.py": "120845ac97213f4c23b586c0933d27743b844e903dbb9011de18c8a5f9d2913a",
+    "verify_release.py": "61da242a6359a11dd37a36b14c29fb67ae55633d4435850ce31f8bd79b0dbd9d",
+    "native\\CMakeLists.txt": "76602f794a2d9457d4715c3bf23230dfb7faeb7f1ca0a2713692cbd028d0c286",
+    "native\\full_bridge.cpp": "3091993e25e3b80892eb2ff8c6809a1e892325b836c8ce2814bba8c93e0d0a13",
+    "native\\historical_bridge_impl.hpp": "2645d71a82de0f5fb688cf98039a66405b04db3016db96f7ae1365df27af20e3"
+  },
+  "OpenFHE_version": "1.4.2",
+  "Windows_runtime_files": {
+    "runtime\\libgcc_s_seh-1.dll": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+    "runtime\\libgomp-1.dll": "ca871c4537de215af144c74d8c1fbed83c1ff2e1621c1efd68ed1928a3eb97a5",
+    "runtime\\libOPENFHEbinfhe.dll": "816c81975673310cd5fcf947dc7b2bd65e2f2280085bfbf520fe78888a0df95f",
+    "runtime\\libOPENFHEcore.dll": "6e9c007443dc0dc56a72106c26e7ce56479b09d2ef10d6a809679e4806b7e426",
+    "runtime\\libOPENFHEpke.dll": "17f4429598968789ab1fccd3a7cf87d44e084d33be05541c0a384229ff6dabef",
+    "runtime\\libstdc++-6.dll": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+    "runtime\\libwinpthread-1.dll": "e271f374468d584905afcdf7da96a6adeb5ee15702b39869e2003b0f102f20c4",
+    "openfhe.cp310-win_amd64.pyd": "c908e8cddcdadb170f277f794bda7be3673a2b4af435f526237621dbd3efc30e",
+    "_ppcnn_env.py": "15a86ee19f66f21d618dc624c2a13738a7068cf18d2c50f15075aa68102310aa"
+  },
+  "WSL_OpenFHE_CMake": "/home/mark/v32_aie_20261027/openfhe-install/lib/OpenFHE",
+  "Vitis": "2025.2",
+  "boot_uuid": "050ea5cc23fb5038bad0aca23cbd240b",
+  "boot_sha256": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+  "xclbin_sha256": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b",
+  "firmware_bytes_unchanged": true,
+  "data_identity": {
+    "status": "PASS_FULL_HS4_COMPACT_DATA",
+    "files": 221,
+    "bytes": 3552664614,
+    "manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+    "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+    "full_checksums": true,
+    "production": true,
+    "groups": 6,
+    "output_words": 33030144
+  },
+  "recovery": {
+    "status": "PASS_REAL_FULL_HS4_CAPTURE_FROM_ORIGINAL_LAYER_INPUT_CHECKPOINT",
+    "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+    "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+    "reused_real_input_checkpoint": true,
+    "fresh_original_diagonal_encryption": true,
+    "original_cpu_full_inference_completed": false,
+    "original_full_mean_layer_reference_completed": true,
+    "plaintext_mean_max_abs_error": 8.766546864880098e-06,
+    "retained_failures": [
+      "Windows AppContainer denied hardlink; switched capture to ordinary file copies and resumed exact real input checkpoint",
+      "Six groups and full layer saved; final PIL helper import failed; explicit Image import fixed, finalized saved ciphertext without repeating arithmetic"
+    ],
+    "all_failed_attempts_retained_locally": true
+  }
+}

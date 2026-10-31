@@ -1,0 +1,15 @@
+{
+  "status": "PASS_REAL_FULL_HS4_CAPTURE_FROM_ORIGINAL_LAYER_INPUT_CHECKPOINT",
+  "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+  "reused_real_input_checkpoint": true,
+  "fresh_original_diagonal_encryption": true,
+  "original_cpu_full_inference_completed": false,
+  "original_full_mean_layer_reference_completed": true,
+  "plaintext_mean_max_abs_error": 8.766546864880098e-06,
+  "retained_failures": [
+    "Windows AppContainer denied hardlink; switched capture to ordinary file copies and resumed exact real input checkpoint",
+    "Six groups and full layer saved; final PIL helper import failed; explicit Image import fixed, finalized saved ciphertext without repeating arithmetic"
+  ],
+  "all_failed_attempts_retained_locally": true
+}

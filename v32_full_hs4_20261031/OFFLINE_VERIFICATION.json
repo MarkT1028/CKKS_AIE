@@ -1,0 +1,28 @@
+{
+  "status": "PASS_OFFLINE_FULL_HS4_MEAN_RELEASE_GATES",
+  "evidence": {
+    "all_six_crypto.json": "PASS_SIX_DIFFERENT_REAL_GROUPS_INDEPENDENT_U128_AND_ORIGINAL_CONTEXT",
+    "full_layer_original_backend.json": "PASS_ORIGINAL_COMPLETE_HS4_MEAN_LAYER_AND_ALL_INPUT_ROTATIONS_EXACT",
+    "all_six_AIE_x86.json": "PASS_ACTUAL_AIE_X86_ALL_SIX_NEW_REAL_GROUPS",
+    "third_AIE_simulations.json": "PASS_THREE_AIE_X86_AND_CYCLE_SIM",
+    "compact_contract_tests_release.json": "PASS_DIFFERENT_SIX_GROUPS_CPU_AND_PARSER_FAULT_TESTS",
+    "data_archive.json": "PASS_SEPARATE_FULL_HS4_RAW_DATA_ARCHIVE_ALL_MEMBERS",
+    "result_contracts.json": "PASS_SYNTHETIC_RESULT_SCHEMA_COLLECTION_AND_ARCHIVE_FAULTS"
+  },
+  "raw_words_verified": 33030144,
+  "independent_real_groups": 6,
+  "complete_ciphertext_pairs_exact": 17,
+  "valid_mean_values": 1536,
+  "all_six_AIE_x86_frames_per_core": 5376,
+  "three_AIE_x86_and_cycle_sim": true,
+  "three_AIE_PL_route_or_boot_image": false,
+  "three_AIE_measured_speed": "PENDING",
+  "ASan_UBSan_TSan_and_cross_group_faults": "PASS",
+  "official_XRT_syntax": "PASS_WITH_EXISTING_DEPRECATION_WARNINGS",
+  "full_real_96_chunk_parser_CPU": "PASS",
+  "data_manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+  "data_archive_sha256": "1942e4fab7b7d8737c45d7a9791ad0ca2a68e1aae44cf03472a62f8287a00a90",
+  "hardware_tested": false,
+  "board_performance": "PENDING",
+  "scope": "Offline proof from all6 real groups plus original complete h_s.4(mean). No actual new board outputs, live integration timing or full-model acceleration is claimed. Sealed-byte Git/ZIP/CLI verification is recorded separately after freezing."
+}
