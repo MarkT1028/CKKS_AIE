@@ -1,0 +1,585 @@
+{
+  "status": "PASS_THREE_AIE_X86_AND_CYCLE_SIM",
+  "results": [
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 1792,
+          "actual_sha256": "2731407ee76dc83f6b5fcc433e193742af30047c6601c11094f023273069ddfe"
+        },
+        {
+          "core": 1,
+          "samples": 1792,
+          "actual_sha256": "74225fc38c0409b70081a667d650ea9cc22de8b41c2bf03f405aea6a10ace1df"
+        },
+        {
+          "core": 2,
+          "samples": 1792,
+          "actual_sha256": "2731407ee76dc83f6b5fcc433e193742af30047c6601c11094f023273069ddfe"
+        }
+      ],
+      "case": "edges",
+      "cores": 3,
+      "frames_per_core": 4,
+      "L": 1,
+      "K": 1,
+      "values_per_output": 1792,
+      "target": "x86sim",
+      "board_performance": "NOT_MEASURED"
+    },
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 1792,
+          "actual_sha256": "7e00d8c9840c2153ee8fa2f73138ae51d12e1b73a24ca5c9a18860a20428690f"
+        },
+        {
+          "core": 1,
+          "samples": 1792,
+          "actual_sha256": "949c92030f8c7b599561269f454e50faa7fc87dd4d331aefca4192779e539dad"
+        },
+        {
+          "core": 2,
+          "samples": 1792,
+          "actual_sha256": "881d404f08f33e33b7fec28c83dd8bb402154146f9a079954684ee9597e1db2b"
+        }
+      ],
+      "case": "edges",
+      "cores": 3,
+      "frames_per_core": 4,
+      "L": 1,
+      "K": 1,
+      "values_per_output": 1792,
+      "target": "hw",
+      "board_performance": "NOT_MEASURED"
+    },
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 401408,
+          "actual_sha256": "7bc6123e7c5eed8f4789ba954dd8af0d1ce1fe6e46781afd11fd520cc620ba42"
+        },
+        {
+          "core": 1,
+          "samples": 401408,
+          "actual_sha256": "6e4b787711bf331f0123df60d1d461390f88b9278e4530c80f02cdcd450ca04c"
+        },
+        {
+          "core": 2,
+          "samples": 401408,
+          "actual_sha256": "e15340a7d497ad10bd4f71fc37ddb1775accb42ef22c8547a7cf6b88ca02fd83"
+        }
+      ],
+      "case": "real",
+      "cores": 3,
+      "frames_per_core": 896,
+      "L": 14,
+      "K": 16,
+      "values_per_output": 401408,
+      "target": "x86sim",
+      "board_performance": "NOT_MEASURED"
+    },
+    {
+      "status": "PASS",
+      "actual_simulator_outputs": [
+        {
+          "core": 0,
+          "samples": 401408,
+          "actual_sha256": "d8d85df337e3ade56542c811f032b76478b5832d3c4c681d43ba5bdc773aa0a6"
+        },
+        {
+          "core": 1,
+          "samples": 401408,
+          "actual_sha256": "bd9db3700895730dfe6e22061e5265ce9606442b8731a69eb01b483369db2a8f"
+        },
+        {
+          "core": 2,
+          "samples": 401408,
+          "actual_sha256": "77371c6b03565f22cdf4d6bf7f098710a831c0266ebbc006284cf595275a8b94"
+        }
+      ],
+      "case": "real",
+      "cores": 3,
+      "frames_per_core": 896,
+      "L": 14,
+      "K": 16,
+      "values_per_output": 401408,
+      "target": "hw",
+      "board_performance": "NOT_MEASURED"
+    }
+  ],
+  "kernel_sha256": "2386ef824f6808526f9a519787fceac2a509db34e9e39dc320583dbfce865f24",
+  "partition": {
+    "status": "PASS_TWO_AND_THREE_LANE_EXACT_COVERAGE",
+    "plans": [
+      {
+        "AIE": 2,
+        "rounds": 16,
+        "useful_shards": 32,
+        "padded_shards": 0,
+        "frames": [
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 0,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 4096,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 8192,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 12288,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 16384,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 20480,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 24576,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 28672,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 32768,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 36864,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 40960,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 45056,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 49152,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 53248,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 57344,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 61440,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 65536,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 69632,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 73728,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 77824,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 81920,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 86016,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 90112,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 94208,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 98304,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 102400,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 106496,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 110592,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 114688,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 118784,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 122880,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 126976,
+              "valid": 4096,
+              "padded": 0
+            }
+          ]
+        ]
+      },
+      {
+        "AIE": 3,
+        "rounds": 11,
+        "useful_shards": 32,
+        "padded_shards": 1,
+        "frames": [
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 0,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 4096,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 8192,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 12288,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 16384,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 20480,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 24576,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 28672,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 32768,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 36864,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 40960,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 45056,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 49152,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 53248,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 57344,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 61440,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 65536,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 69632,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 73728,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 77824,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 81920,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 86016,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 90112,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 94208,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 98304,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 102400,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 106496,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 110592,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 114688,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 118784,
+              "valid": 4096,
+              "padded": 0
+            }
+          ],
+          [
+            {
+              "lane": 0,
+              "coefficient_start": 122880,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 1,
+              "coefficient_start": 126976,
+              "valid": 4096,
+              "padded": 0
+            },
+            {
+              "lane": 2,
+              "coefficient_start": 131072,
+              "valid": 0,
+              "padded": 4096
+            }
+          ]
+        ]
+      }
+    ],
+    "scope": "Three equal4096-coefficient lanes require one zero dummy shard at the final round; do not divide8192 by3 or drop a tail. No measured speedup."
+  },
+  "scope": "AIE graph/kernel simulation only. No third reader/reducer PL route/boot image or measured full-layer speed. Keep verified two-AIE release as primary."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS_SYNTHETIC_RESULT_SCHEMA_COLLECTION_AND_ARCHIVE_FAULTS",
+  "synthetic_only": true,
+  "board_tested": false,
+  "tests": [
+    "6group aggregate recomputation",
+    "96 raw output digest inventory",
+    "192 frame trace ownership checks",
+    "wrong word count rejected",
+    "modified output rejected",
+    "wrong BO bank rejected",
+    "collector preserves interrupted folder",
+    "all collected member hashes verified",
+    "escape absolute Windows paths rejected",
+    "duplicate symlink and wrong-index archives rejected"
+  ]
+}

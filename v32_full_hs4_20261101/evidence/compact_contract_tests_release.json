@@ -1,0 +1,115 @@
+{
+  "status": "PASS_DIFFERENT_SIX_GROUPS_CPU_AND_PARSER_FAULT_TESTS",
+  "fixture": {
+    "status": "PASS_FULL_HS4_COMPACT_DATA",
+    "files": 39,
+    "bytes": 1492385,
+    "manifest_sha256": "8dcf71cfcb78b4249c24a287cb81c529b309780289cc2f9f20d48e2eb216858a",
+    "capture_id": "synthetic-contract-test-only",
+    "full_checksums": true,
+    "production": false,
+    "groups": 6,
+    "output_words": 13824
+  },
+  "cases": [
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_cpu",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stdout": "PASS CPU_SELFTEST configurations=18 repetitions_each=5 edge_zero_max_random=1 corruption_detected=1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_parser",
+        "--check-data",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release"
+      ],
+      "returncode": 0,
+      "stdout": "PASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=5 chunks=2 words=2304\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=4 chunks=2 words=2304\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=3 chunks=2 words=2304\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=2 chunks=2 words=2304\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=1 chunks=2 words=2304\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS HOST_SPLIT_MERGE_AND_FAULT_TEST words=1152\nPASS_COMPACT_GROUP group=0 chunks=2 words=2304\nPASS_ALL_SIX_GROUPS words=13824 fixture_only_no_XRT=true\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_cpu",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_cpu_descending_release",
+        "2",
+        "1",
+        "descending"
+      ],
+      "returncode": 0,
+      "stdout": "PASS_FULL_HS4_CPU_SIX_MAC repetition=0 warmup=1 compute_sum_ms=0.66693 full_six_streamed_wall_ms=73.1881 verified_words=13824\nPASS_FULL_HS4_CPU_SIX_MAC repetition=1 warmup=0 compute_sum_ms=0.637443 full_six_streamed_wall_ms=60.8488 verified_words=13824\nPASS_FULL_HS4_CPU_SIX_MAC repetition=2 warmup=0 compute_sum_ms=0.65369 full_six_streamed_wall_ms=61.5174 verified_words=13824\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_cpu",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_cpu_ascending_release",
+        "2",
+        "1",
+        "ascending"
+      ],
+      "returncode": 0,
+      "stdout": "PASS_FULL_HS4_CPU_SIX_MAC repetition=0 warmup=1 compute_sum_ms=0.668913 full_six_streamed_wall_ms=73.2773 verified_words=13824\nPASS_FULL_HS4_CPU_SIX_MAC repetition=1 warmup=0 compute_sum_ms=0.642599 full_six_streamed_wall_ms=59.8165 verified_words=13824\nPASS_FULL_HS4_CPU_SIX_MAC repetition=2 warmup=0 compute_sum_ms=0.727115 full_six_streamed_wall_ms=82.3304 verified_words=13824\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_cpu",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_reject_swapped_group_release",
+        "1",
+        "0",
+        "descending"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL CPU mismatch at word 0\n"
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_parser",
+        "--check-data",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL compact version/kind\n"
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_parser",
+        "--check-data",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL invalid reciprocal at tower 0\n"
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_parser",
+        "--check-data",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL noncanonical compact operand at word 0\n"
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/full_parser",
+        "--check-data",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_full_hs4_20261031/build/test_compact_release"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL compact file length\n"
+    }
+  ],
+  "board_performance": "NOT_MEASURED"
+}
