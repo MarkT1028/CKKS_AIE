@@ -1,0 +1,1 @@
+PASS_FULL_SIX_GROUP_PERSISTENT_BACKEND_WORKER_AND_GROUP_TRANSITION_FAULTS variants=7 repetitions=3 groups=6 shared_resources=1 board_performance=NOT_MEASURED

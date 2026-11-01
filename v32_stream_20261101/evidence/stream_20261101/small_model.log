@@ -1,0 +1,4 @@
+PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=1 export_only=0 request_wall_ms=13.1043 checked_words=13824
+PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=0 request_wall_ms=9.87785 checked_words=13824
+PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=2 warmup=0 export_only=0 request_wall_ms=12.7606 checked_words=13824
+PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=3 warmup=0 export_only=1 request_wall_ms=77.3534 checked_words=13824

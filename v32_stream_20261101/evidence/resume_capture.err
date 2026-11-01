@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\resume_layer_capture.py", line 54, in <module>
+    if __name__=='__main__':main()
+  File "E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\resume_layer_capture.py", line 50, in main
+    print('RESUME_REAL_LAYER_INPUT_EXACT_NO_EARLIER_MODEL_RECOMPUTATION',flush=True);D,m,npd=ground.diagonal_cts('h_s.4',None,checkpoint['weight_level'],'h_s.4',ch_slice=slice(96,192));need((m,npd)==(96,576),'diagonal dimensions');bias=load(common/'bias.bin');X=[load(common/'layer_input.bin')];need(X[0].GetLevel()==checkpoint['input_level'] and X[0].GetNoiseScaleDeg()==checkpoint['input_degree'],'input checkpoint metadata');out=v.sat_diag_conv(be,'h_s.4',X,v.LAY_C4,v.LAY_C4,dict(v.LAYER_SPECS['h_s.4'],C_out=96),D,bias,m,npd,release_input=True);need(len(groups)==6 and len(out)==1,'incomplete layer');save(common/'expected_layer_output.bin',out[0]);sim=ground.truth(__import__('numpy').array(__import__('PIL').Image.open(v.INPUT_PNG).convert('RGB'),dtype='float64').transpose(2,0,1)/255.0);ground.verify('h_s.4(mean)',out,v.LAY_C4,sim['h_s.4.conv_out'][96:],96,5e-2)
+AttributeError: module 'PIL' has no attribute 'Image'

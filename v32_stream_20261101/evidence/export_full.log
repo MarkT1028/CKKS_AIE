@@ -1,0 +1,6 @@
+PASS_EXPORTED_FULL_LAYER_GROUP group=5 files=32 shared_baby_exact=true
+PASS_EXPORTED_FULL_LAYER_GROUP group=4 files=32 shared_baby_exact=true
+PASS_EXPORTED_FULL_LAYER_GROUP group=3 files=32 shared_baby_exact=true
+PASS_EXPORTED_FULL_LAYER_GROUP group=2 files=32 shared_baby_exact=true
+PASS_EXPORTED_FULL_LAYER_GROUP group=1 files=32 shared_baby_exact=true
+PASS_EXPORTED_FULL_LAYER_GROUP group=0 files=32 shared_baby_exact=true

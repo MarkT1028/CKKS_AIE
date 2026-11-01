@@ -1,0 +1,41 @@
+{
+  "status": "PASS_HS4_STREAM_OFFLINE_FUNCTION_AND_ERROR_CONTRACTS",
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "checks": {
+    "stream_contracts.json": {
+      "status": "PASS_STREAM_PACK_MATH_PERSISTENCE_MUTATION_AND_CANCEL_CONTRACTS",
+      "sha256": "b83673ccc350e2f5f0c01787cf25874358c73255851c48f97818db6b39b6eb5c"
+    },
+    "sanitizers.json": {
+      "status": "PASS_STREAM_ASAN_UBSAN_TSAN",
+      "sha256": "c6638ec5ce4ef5dd93aed0b5ed0afd4c8899d30f0f930bc1da73d0f855e6b8f0"
+    },
+    "python_contracts.json": {
+      "status": "PASS_STREAM_PYTHON_CSV_TRACE_OUTPUT_COLLECTION_AND_PROCESS_GUARDS",
+      "sha256": "e8e1a30ee89565ef1206925f6fa81b06770c3bb943ed013a316c6d4df4cc04b2"
+    },
+    "full_context_roundtrip.json": {
+      "status": "PASS_STREAM_SOFTWARE_MODEL_ORIGINAL_FULL_HS4_MEAN",
+      "sha256": "90def78e2678897c97d31e81725a1a3ac6fa6f32c62dc2381a851fd22ab6dcc2"
+    }
+  },
+  "real_data_pack_equivalence": {
+    "groups": 6,
+    "chunks": 96,
+    "raw_words": 33030144
+  },
+  "original_context": {
+    "raw_relin_square_groups": 6,
+    "complete_layer_ciphertext_pairs": 17,
+    "software_model_only": true
+  },
+  "sanitizers": [
+    "ASan",
+    "UBSan",
+    "TSan"
+  ],
+  "XRT_syntax": "PASS_WITH_EXISTING_READ_REGISTER_DEPRECATION_WARNINGS_NOT_BOARD_LINK_OR_EXECUTION",
+  "meaning": "Local function/model tests only. Actual board output, ARM build and speed remain pending.",
+  "scope": "h_s.4(mean)96 channels only; no whole model or new live inference claim"
+}
