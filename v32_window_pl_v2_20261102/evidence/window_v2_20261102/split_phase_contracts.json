@@ -1,0 +1,111 @@
+{
+  "status": "PASS_SPLIT_PHASE_OUTPUT_AND_SANITIZER_CONTRACTS",
+  "cases": [
+    {
+      "label": "group_retain_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "group_retain_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "group_bounded_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "group_bounded_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "group_export_bounded_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "group_export_bounded_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_retain_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_retain_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_bounded_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_bounded_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_export_bounded_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "chunk_export_bounded_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "invalid_bad10",
+      "expected_success": false,
+      "returncode": 1
+    },
+    {
+      "label": "invalid_export20",
+      "expected_success": false,
+      "returncode": 1
+    },
+    {
+      "label": "invalid_export11",
+      "expected_success": false,
+      "returncode": 1
+    },
+    {
+      "label": "measure_never_saves",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "export_save_error_is_fatal",
+      "expected_success": false,
+      "returncode": 1
+    },
+    {
+      "label": "asan_ubsan_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "asan_ubsan_export",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "tsan_measure",
+      "expected_success": true,
+      "returncode": 0
+    },
+    {
+      "label": "tsan_export",
+      "expected_success": true,
+      "returncode": 0
+    }
+  ],
+  "board_tested": false
+}

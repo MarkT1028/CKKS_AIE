@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STREAM_PYTHON_CSV_TRACE_OUTPUT_COLLECTION_AND_PROCESS_GUARDS",
+  "synthetic_only": true,
+  "model_never_accepted_as_board": true,
+  "real_full_size_record_contracts_validated": true,
+  "mutated_count_raw_output_and_trace_rejected": true,
+  "incomplete_attempts_collected_and_all_members_verified": true,
+  "unknown_binary_rejected": true,
+  "subprocess_nonzero_retained": true,
+  "board_tested": false
+}

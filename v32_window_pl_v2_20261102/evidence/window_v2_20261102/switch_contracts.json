@@ -1,0 +1,9 @@
+{
+  "status": "PASS_LOCKED_MANUAL_SWITCH_ORCHESTRATION",
+  "both_variants": true,
+  "check_only": true,
+  "manual_arm_only": true,
+  "auto_reboot": false,
+  "isolated_mock_commands": true,
+  "board_changed": false
+}

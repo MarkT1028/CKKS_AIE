@@ -1,0 +1,16 @@
+本機 Windows CMD（尚未替你 git add、commit 或 push）：
+
+cd /d E:\vek280_AIe_ckks\AIE_git
+git add -- v32_window_pl_v2_20261102
+git commit -m "Fix h_s.4 benchmark ordering to export after CPU comparison"
+git push origin main
+
+遠端 Windows CMD，進入你原本的 CKKS_AIE repository 後：
+
+git pull --ff-only origin main
+
+再用 MobaXterm SFTP 把 v32_window_pl_v2_20261102 整個資料夾放到板子的：
+/root/114C75007/vek280/AIE/
+
+不需要重新傳既有 v32_full_hs4_20261031_data，或執行 git add . 把其它變動一起送出。
+板上下一步請讀 START_HERE.md。

@@ -1,0 +1,1 @@
+PASS CPU_SELFTEST configurations=18 repetitions_each=5 edge_zero_max_random=1 corruption_detected=1

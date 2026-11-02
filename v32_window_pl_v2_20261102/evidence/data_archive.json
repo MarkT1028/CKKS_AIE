@@ -1,0 +1,11 @@
+{
+  "status": "PASS_SEPARATE_FULL_HS4_RAW_DATA_ARCHIVE_ALL_MEMBERS",
+  "files": 222,
+  "uncompressed_payload_bytes": 3552664614,
+  "archive_bytes": 3036730296,
+  "archive_sha256": "1942e4fab7b7d8737c45d7a9791ad0ca2a68e1aae44cf03472a62f8287a00a90",
+  "data_manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+  "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+  "contains_keys_or_context": false,
+  "Git_inclusion": false
+}

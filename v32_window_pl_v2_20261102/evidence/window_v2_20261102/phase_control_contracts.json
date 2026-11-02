@@ -1,0 +1,27 @@
+{
+  "status": "PASS_V2_SPLIT_EXPORT_CONTROLS",
+  "cases": [
+    "drifted_smoke_never_promoted_to_speedup",
+    "actual96_output_hashes_and_split_trace",
+    "reject_old_protocol",
+    "reject_old_export_order",
+    "reject_export_before_cpu_after",
+    "reject_combined_measured_process",
+    "reject_overlapping_export_process",
+    "reject_export_in_measurement",
+    "reject_software_model_label",
+    "reject_wrong_median",
+    "reject_export_missing",
+    "reject_wrong_output",
+    "same_pure_PL_accounting",
+    "formal_stable_cohort_eligible",
+    "aie_smoke_CPU_after_precedes_export",
+    "aie_formal_CPU_after_precedes_export",
+    "pl_smoke_CPU_after_precedes_export",
+    "pl_formal_CPU_after_precedes_export",
+    "CPU_after_failure_prevents_export"
+  ],
+  "synthetic_only": true,
+  "board_tested": false,
+  "scope": "Fake phase summaries only for orchestration tests; never performance evidence."
+}

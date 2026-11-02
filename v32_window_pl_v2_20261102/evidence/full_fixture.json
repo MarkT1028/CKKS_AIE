@@ -1,0 +1,11 @@
+{
+  "status": "PASS_FULL_HS4_COMPACT_DATA",
+  "files": 221,
+  "bytes": 3552664614,
+  "manifest_sha256": "dc7e92d889061e0a3c30bf4ffa5377099cb25558713dba6fd736f69c277314c1",
+  "capture_id": "a5998d4545649c33c33cd3f94c50249b822ddcddcb8c49a6b1bd899419ccba30:7a3975d00789d110909427d8cd4164228c0b035451f9a11957383dd8fbc6232e",
+  "full_checksums": true,
+  "production": true,
+  "groups": 6,
+  "output_words": 33030144
+}

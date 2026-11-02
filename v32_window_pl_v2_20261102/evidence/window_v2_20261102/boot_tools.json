@@ -1,0 +1,51 @@
+{
+  "status": "PASS_OFFLINE_BOOT_TOOLS",
+  "tests": [
+    {
+      "test": "all four boot scripts pass POSIX shell syntax",
+      "status": "PASS"
+    },
+    {
+      "test": "backup then atomic candidate staging preserves stock BOOT and slot 2",
+      "status": "PASS"
+    },
+    {
+      "test": "repeated staging of the same image is idempotent",
+      "status": "PASS"
+    },
+    {
+      "test": "legacy rollback restores exact old bytes and backs up the candidate",
+      "status": "PASS"
+    },
+    {
+      "test": "wrong source and current slot digests reject without any mock SD changes",
+      "status": "PASS"
+    },
+    {
+      "test": "an existing corrupt backup blocks staging without overwriting it",
+      "status": "PASS"
+    },
+    {
+      "test": "a symlink backup blocks staging",
+      "status": "PASS"
+    },
+    {
+      "test": "successful and rejected mock operations leave no temporary files",
+      "status": "PASS"
+    },
+    {
+      "test": "real entry points refuse the PC before SD or shutdown modifications",
+      "status": "PASS"
+    },
+    {
+      "test": "static reset-command provenance and storage/readback guards match the existing project flow",
+      "status": "PASS"
+    }
+  ],
+  "isolated_mock_files_only": true,
+  "actual_SD_changed": false,
+  "shutdown_hook_installed": false,
+  "reboot_armed": false,
+  "register_commands_executed": false,
+  "actual_board_boot_tested": false
+}

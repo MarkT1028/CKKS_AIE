@@ -1,0 +1,295 @@
+{
+  "status": "PASS_WINDOW_SOFTWARE_MODEL_ORIGINAL_FULL_HS4_MEAN",
+  "groups": [
+    {
+      "group": 5,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.503282347006061e-07,
+        "square_vs_original_cpu_max_abs": 9.159486383397429e-07,
+        "cpu_repeat_decode_max_abs": 6.017087223450902e-07,
+        "square_cpu_repeat_decode_max_abs": 7.947865414242809e-07,
+        "decode_tolerance": 2.406834889380361e-06,
+        "square_decode_tolerance": 3.1791461656971236e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 4,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.257206979252057e-07,
+        "square_vs_original_cpu_max_abs": 3.423153643269048e-07,
+        "cpu_repeat_decode_max_abs": 5.741040801504615e-07,
+        "square_cpu_repeat_decode_max_abs": 3.484862108903946e-07,
+        "decode_tolerance": 2.296416320601846e-06,
+        "square_decode_tolerance": 1.3939448435615784e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 3,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.475424597056744e-07,
+        "square_vs_original_cpu_max_abs": 2.956746708812036e-07,
+        "cpu_repeat_decode_max_abs": 5.264104591548098e-07,
+        "square_cpu_repeat_decode_max_abs": 2.7412098131512647e-07,
+        "decode_tolerance": 2.105641836619239e-06,
+        "square_decode_tolerance": 1.0964839252605059e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 2,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.712376769360165e-07,
+        "square_vs_original_cpu_max_abs": 4.063523885232914e-07,
+        "cpu_repeat_decode_max_abs": 5.950979179464208e-07,
+        "square_cpu_repeat_decode_max_abs": 3.575835657682911e-07,
+        "decode_tolerance": 2.3803916717856833e-06,
+        "square_decode_tolerance": 1.4303342630731644e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 1,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.243760884757304e-07,
+        "square_vs_original_cpu_max_abs": 5.11538117435445e-07,
+        "cpu_repeat_decode_max_abs": 5.192279477483908e-07,
+        "square_cpu_repeat_decode_max_abs": 5.056962300205418e-07,
+        "decode_tolerance": 2.076911790993563e-06,
+        "square_decode_tolerance": 2.022784920082167e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 0,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.712190475700947e-07,
+        "square_vs_original_cpu_max_abs": 6.325756044875833e-07,
+        "cpu_repeat_decode_max_abs": 5.85206619639708e-07,
+        "square_cpu_repeat_decode_max_abs": 6.49595104095861e-07,
+        "decode_tolerance": 2.340826478558832e-06,
+        "square_decode_tolerance": 2.598380416383444e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    }
+  ],
+  "layer": {
+    "status": "PYTHON_FULL_LAYER_REPLAY_PENDING_NATIVE_EXACT_CHECK",
+    "consumed_groups": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "full_layer_source": "unmodified v32.sat_diag_conv including ensure,rescale,im2col,baby rotations,giant rotations,aggregation,bias",
+    "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+    "level": 43,
+    "degree": 2,
+    "slots": 65536,
+    "valid_mean_values": 1536,
+    "decode_max_abs": 7.038320993560565e-06,
+    "cpu_repeat_decode_max_abs": 7.655811828932713e-06,
+    "decode_tolerance": 3.062324731573085e-05,
+    "ground_replay_wall_ms": 20572.52420007717,
+    "exact_check_pairs": [
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\returned_full_hs4_ct.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\expected_layer_output.bin",
+        "label": "complete_hs4_mean"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_00.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_00.bin",
+        "label": "reconstructed_actual_input_rotation_0"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_01.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_01.bin",
+        "label": "reconstructed_actual_input_rotation_1"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_02.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_02.bin",
+        "label": "reconstructed_actual_input_rotation_2"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_03.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_03.bin",
+        "label": "reconstructed_actual_input_rotation_3"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_04.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_04.bin",
+        "label": "reconstructed_actual_input_rotation_4"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_05.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_05.bin",
+        "label": "reconstructed_actual_input_rotation_5"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_06.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_06.bin",
+        "label": "reconstructed_actual_input_rotation_6"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_07.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_07.bin",
+        "label": "reconstructed_actual_input_rotation_7"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_08.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_08.bin",
+        "label": "reconstructed_actual_input_rotation_8"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_09.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_09.bin",
+        "label": "reconstructed_actual_input_rotation_9"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_10.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_10.bin",
+        "label": "reconstructed_actual_input_rotation_10"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_11.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_11.bin",
+        "label": "reconstructed_actual_input_rotation_11"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_12.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_12.bin",
+        "label": "reconstructed_actual_input_rotation_12"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_13.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_13.bin",
+        "label": "reconstructed_actual_input_rotation_13"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_14.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_14.bin",
+        "label": "reconstructed_actual_input_rotation_14"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_window_pl_20261102\\build\\real_window_context_return_r2\\full_layer\\replayed_baby_15.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_15.bin",
+        "label": "reconstructed_actual_input_rotation_15"
+      }
+    ],
+    "scope": "Full h_s.4(mean) functional ground replay using provided6 returns. Raw MACs occurred separately; this time excludes board/transport and is NOT live full-layer latency. No original MAC recomputed in callback."
+  },
+  "complete_ciphertext_pairs": [
+    {
+      "label": "complete_hs4_mean",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_0",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_1",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_2",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_3",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_4",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_5",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_6",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_7",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_8",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_9",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_10",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_11",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_12",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_13",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_14",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_15",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    }
+  ],
+  "hardware_tested": false,
+  "board_performance": "PENDING",
+  "scope": "Real96 chunks packed by new source and computed by explicit software model. Original native1.4.2 raw/relin/square and Python full mean return; not board execution or new performance evidence."
+}

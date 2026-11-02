@@ -1,0 +1,52 @@
+{
+  "status": "PASS_V2_SPLIT_EXPORT_OFFLINE_READY_FOR_BOARD",
+  "parent_manifest_sha256": "1484bcd91bacbbfb0abe2daad9e85ef3ac771dbde45ae18642444107056c3a98",
+  "gates": {
+    "window_contracts.json": {
+      "status": "PASS_WINDOW_LAYOUT_CACHE_OUTPUT_OWNERSHIP_AND_ERROR_CONTRACTS",
+      "sha256": "5e3cbf1a6279390efe90621d49d493b5194dcf2f83a1c1178c6d43e8c13179bb"
+    },
+    "window_sanitizers.json": {
+      "status": "PASS_WINDOW_ASAN_UBSAN_TSAN",
+      "sha256": "25e35764fdfc0feb53f1c9d34c83b3723d8039484d982dc5775193c9285cd115"
+    },
+    "split_phase_contracts.json": {
+      "status": "PASS_SPLIT_PHASE_OUTPUT_AND_SANITIZER_CONTRACTS",
+      "sha256": "beda9f8bf059927d529fd70b4b504211c74cb5063daf348c6ee517c00a9cd2ef"
+    },
+    "phase_control_contracts.json": {
+      "status": "PASS_V2_SPLIT_EXPORT_CONTROLS",
+      "sha256": "2b09406118913e9656952f6e17793e3a41de6b5b6df9842f24864f637ddd11f0"
+    },
+    "real_split.json": {
+      "status": "PASS_REAL96_SPLIT_PHASE_SOFTWARE_MODEL",
+      "sha256": "487600c151cbb78f97793146989e3613790ec1f525ea5e8d81423ad560047aad"
+    },
+    "boot_tools.json": {
+      "status": "PASS_OFFLINE_BOOT_TOOLS",
+      "sha256": "1e8ecb54a2703f139a2e6e76b866c3f778a7f9eb10ce520a1f3be72dc460f723"
+    },
+    "metadata_contracts.json": {
+      "status": "PASS_DEPLOYED_AIE_AND_PURE_PL_AXLF_VALIDATORS",
+      "sha256": "ac3b923f7fb4bbbd13f359f304d5109245577d0f5d24eca65d55b02302ca3a2f"
+    },
+    "switch_contracts.json": {
+      "status": "PASS_LOCKED_MANUAL_SWITCH_ORCHESTRATION",
+      "sha256": "6a01060d4811e83c89ae0553bc3e88c860ec5393a42396193a556e3460c5c60c"
+    },
+    "collection_contracts.json": {
+      "status": "PASS_DEDUP_COLLECTION_AND_BYTE_EXACT_SAFE_RESTORE",
+      "sha256": "430c0f8def880235bc0a3e984231fe6a0a594c1e464a9a521beb261da51d271c"
+    }
+  },
+  "host_functional_cases": 46,
+  "split_phase_and_sanitizer_cases": 21,
+  "phase_order_and_accounting_cases": 19,
+  "real_words_checked": 33030144,
+  "raw96_byte_exact_to_prior_original_context_verified_outputs": true,
+  "CPU_math_loader_scheduler_and_both_firmware_unchanged": true,
+  "XRT_header_syntax_passed": true,
+  "installed_ARM_compile_and_actual_XRT_execution": "PENDING_USER_BOARD",
+  "new_performance": "PENDING",
+  "no_board_or_boot_operations": true
+}
