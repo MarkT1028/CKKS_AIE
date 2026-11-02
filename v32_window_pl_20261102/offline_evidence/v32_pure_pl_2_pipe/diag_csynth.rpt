@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'ct_limb_diag'
+================================================================
+* Date:           Mon Nov  2 16:18:54 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        project
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: versalaiedge
+* Target device:  xcve2802-vsvh1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.268 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+----------+----------+-----------+-----+----------+---------+
+    |  Latency (cycles)  |  Latency (absolute)  |    Interval    | Pipeline|
+    |   min   |    max   |    min   |    max    | min |    max   |   Type  |
+    +---------+----------+----------+-----------+-----+----------+---------+
+    |        2|  14680079|  6.400 ns|  46.976 ms|    3|  14680080|       no|
+    +---------+----------+----------+-----------+-----+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+--------------------------------+---------+----------+----------+-----------+-----+----------+----------+
+        |                                           |                                |  Latency (cycles)  |  Latency (absolute)  |    Interval    | Pipeline |
+        |                  Instance                 |             Module             |   min   |    max   |    min   |    max    | min |    max   |   Type   |
+        +-------------------------------------------+--------------------------------+---------+----------+----------+-----------+-----+----------+----------+
+        |grp_p_anonymous_namespace_pipeline_fu_117  |p_anonymous_namespace_pipeline  |      456|  14680072|  1.459 us|  46.976 ms|  457|  14680073|  dataflow|
+        +-------------------------------------------+--------------------------------+---------+----------+----------+-----------+-----+----------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|     216|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        0|    22|     4158|    6948|    0|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        0|     134|    -|
+|Register         |        -|     -|      331|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|    22|     4489|    7298|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1200|  1312|  1041408|  520704|  264|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     1|       ~0|       1|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |                  Instance                 |             Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |control_s_axi_U                            |control_s_axi                   |        0|   0|   182|   296|    0|
+    |mul_32s_26ns_32_2_1_U90                    |mul_32s_26ns_32_2_1             |        0|   2|    23|     0|    0|
+    |mul_32s_32s_32_2_1_U91                     |mul_32s_32s_32_2_1              |        0|   4|    46|    42|    0|
+    |grp_p_anonymous_namespace_pipeline_fu_117  |p_anonymous_namespace_pipeline  |        0|  16|  3907|  6610|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |Total                                      |                                |        0|  22|  4158|  6948|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln18_1_fu_147_p2                                        |         +|   0|  0|  32|          32|           2|
+    |add_ln18_fu_136_p2                                          |         +|   0|  0|  32|          32|           8|
+    |add_ln19_fu_163_p2                                          |         +|   0|  0|  32|          32|           2|
+    |add_ln20_fu_184_p2                                          |         +|   0|  0|  32|          32|           2|
+    |and_ln18_fu_152_p2                                          |       and|   0|  0|  31|          32|          32|
+    |grp_p_anonymous_namespace_pipeline_fu_117_partials_TREADY   |       and|   0|  0|   2|           1|           1|
+    |icmp_ln18_1_fu_157_p2                                       |      icmp|   0|  0|  13|          32|           1|
+    |icmp_ln18_fu_141_p2                                         |      icmp|   0|  0|  16|          32|          13|
+    |icmp_ln19_fu_178_p2                                         |      icmp|   0|  0|  11|          28|           1|
+    |icmp_ln20_fu_199_p2                                         |      icmp|   0|  0|  11|          28|           1|
+    |ap_block_state1                                             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_p_anonymous_namespace_pipeline_fu_117_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0| 216|         283|          65|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+-----+-----------+-----+-----------+
+    |             Name            | LUT | Input Size| Bits| Total Bits|
+    +-----------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                    |    5|          9|    1|          9|
+    |ap_done                      |    1|          2|    1|          2|
+    |left_r_TREADY_int_regslice   |    1|          2|    1|          2|
+    |partials_TDATA_int_regslice  |  118|          2|  128|        256|
+    |retval_0_reg_96              |    8|          4|    2|          8|
+    |right_r_TREADY_int_regslice  |    1|          2|    1|          2|
+    +-----------------------------+-----+-----------+-----+-----------+
+    |Total                        |  134|         21|  134|        279|
+    +-----------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+-----+----+-----+-----------+
+    |                              Name                              |  FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                                       |    8|   0|    8|          0|
+    |ap_done_reg                                                     |    1|   0|    1|          0|
+    |ap_rst_n_inv                                                    |    1|   0|    1|          0|
+    |ap_rst_reg_1                                                    |    1|   0|    1|          0|
+    |ap_rst_reg_2                                                    |    1|   0|    1|          0|
+    |ap_sync_reg_grp_p_anonymous_namespace_pipeline_fu_117_ap_done   |    1|   0|    1|          0|
+    |ap_sync_reg_grp_p_anonymous_namespace_pipeline_fu_117_ap_ready  |    1|   0|    1|          0|
+    |grp_p_anonymous_namespace_pipeline_fu_117_ap_start_reg          |    1|   0|    1|          0|
+    |k_read_reg_242                                                  |   32|   0|   32|          0|
+    |l_read_reg_249                                                  |   32|   0|   32|          0|
+    |lshr_ln_reg_276                                                 |   26|   0|   26|          0|
+    |mul_ln70_reg_281                                                |   32|   0|   32|          0|
+    |n_read_reg_256                                                  |   32|   0|   32|          0|
+    |partials_TDATA_reg                                              |  128|   0|  128|          0|
+    |retval_0_reg_96                                                 |    2|   0|    2|          0|
+    |shl_ln70_reg_292                                                |   32|   0|   32|          0|
+    +----------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                           |  331|   0|  331|          0|
+    +----------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   | Source Object|    C Type    |
++-----------------------+-----+-----+---------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|          s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|          s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|          s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|          s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|          s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|          s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|          s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|          s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|          s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|          s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|          s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|          s_axi|       control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|  ct_limb_diag|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|  ct_limb_diag|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|  ct_limb_diag|  return value|
+|left_r_TDATA           |   in|  128|           axis|        left_r|       pointer|
+|left_r_TVALID          |   in|    1|           axis|        left_r|       pointer|
+|left_r_TREADY          |  out|    1|           axis|        left_r|       pointer|
+|right_r_TDATA          |   in|  128|           axis|       right_r|       pointer|
+|right_r_TVALID         |   in|    1|           axis|       right_r|       pointer|
+|right_r_TREADY         |  out|    1|           axis|       right_r|       pointer|
+|partials_TDATA         |  out|  128|           axis|      partials|       pointer|
+|partials_TVALID        |  out|    1|           axis|      partials|       pointer|
+|partials_TREADY        |   in|    1|           axis|      partials|       pointer|
++-----------------------+-----+-----+---------------+--------------+--------------+
+

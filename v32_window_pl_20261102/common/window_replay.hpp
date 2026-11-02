@@ -1,0 +1,24 @@
+#pragma once
+namespace { namespace windowed {
+template<class Backend>
+void run_requests(Backend& backend,windowio::Dataset& source,boexp::Worker& worker,const fs::path& dir,unsigned reps,unsigned warm,bool ascending,const std::string& layout,const std::string& policy){
+ require(reps>0&&reps<=20&&warm<=3&&!fs::exists(dir),"window request counts/new directory");auto jobs=tasks(source.dimensions.chunks,layout,ascending);bounded(policy,false);fs::create_directories(dir/"outputs");
+ std::ofstream its(dir/"iterations.csv"),trace(dir/"timeline.csv"),res(dir/"resources.jsonl");for(auto* f:{&its,&trace,&res})*f<<std::fixed<<std::setprecision(6);
+ its<<"repetition,warmup,export_only,request_wall_ms,shared_validate_ms,pipeline_wall_ms,baby_loads,baby_BO_fills,retired_records,verified_words\n";
+ trace<<"repetition,warmup,export_only,job,group,chunk,bank,stage,lane,begin_ms,end_ms\n";std::vector<double> walls,exports;
+ try{for(unsigned rep=0;rep<reps+warm+1;++rep){bool w=rep<warm,ex=rep==reps+warm;bool release=bounded(policy,ex);if(ex)for(unsigned g=0;g<6;++g)fs::create_directories(dir/"outputs"/("group_"+std::to_string(g)));
+  backend.configure(jobs,dir/"outputs",release);auto before=streamio::Metrics::now();auto start=Clock::now();source.begin_request();auto shared=ms(start,Clock::now());auto r=boexp::run_finish_overlap(backend,unsigned(jobs.size()),worker,ex);source.complete_coverage();source.end_request();auto wall=ms(start,Clock::now());auto after=streamio::Metrics::now();
+  const auto expected=expected_cache_counts(jobs);require(source.baby_loads==expected.first,"baby cache load coverage");require(source.baby_BO_fills==expected.second,"bank baby fill coverage");require(source.retired_records==(release?13*source.dimensions.chunks:0),"input retirement coverage");
+  its<<rep<<','<<w<<','<<ex<<','<<wall<<','<<shared<<','<<r.wall_ms<<','<<source.baby_loads<<','<<source.baby_BO_fills<<','<<source.retired_records<<','<<source.verified_words()<<'\n';
+  for(unsigned i=0;i<r.frames.size();++i){const auto& f=r.frames[i];const auto job=jobs[i];for(unsigned j=0;j<f.count;++j){const auto& s=f.spans[j];trace<<rep<<','<<w<<','<<ex<<','<<i<<','<<job.group<<','<<job.chunk<<','<<f.bank<<','<<s.name<<','<<s.lane<<','<<s.begin<<','<<s.end<<'\n';}}
+  res<<"{\"repetition\":"<<rep<<",\"warmup\":"<<w<<",\"export_only\":"<<ex<<",\"bounded_advice\":"<<release<<",\"process_metrics\":"<<after.delta_json(before)<<"}\n";for(auto* f:{&its,&trace,&res}){f->flush();require(bool(*f),"window trace write failed");}
+  if(!w&&!ex)walls.push_back(wall);if(ex)exports.push_back(wall);std::cout<<"PASS_WINDOW_SIX_GROUPS backend="<<Backend::execution_backend<<" repetition="<<rep<<" warmup="<<w<<" export_only="<<ex<<" layout="<<layout<<" request_wall_ms="<<wall<<" verified_words="<<source.verified_words()<<'\n'<<std::flush;
+ }}catch(...){source.cancel_request();backend.cancel();worker.close();throw;}
+ std::ofstream summary(dir/"summary.json");summary<<std::setprecision(12)<<"{\"status\":\"PASS_WINDOW_SIX_GROUPS\",\"execution_backend\":\""<<Backend::execution_backend<<"\",\"AIE_compute_tiles\":"<<Backend::aie_tiles<<",\"measured\":"<<reps<<",\"warmups\":"<<warm<<",\"layout\":\""<<layout<<"\",\"cache_policy\":\""<<policy<<"\",\"request_wall_median_ms\":"<<median(walls)<<",\"export_full_recompute_ms\":"<<exports.at(0)<<",\"protocol\":\"hs4_window_v1\",\"scope\":\"Full six-group request includes canonical checks, cache copies, packing, sync, hardware, merge, retirement advice and complete verification. Setup/detail CSV formatting and separate export excluded from ordinary request. Export recomputes all six groups and saves252MiB; ordinary buffered output, no fsync durability claim. Advisory retirement is per consumed immutable file; no global drop_caches. Not live complete h_s.4 latency.\"}\n";summary.close();require(bool(summary),"window summary write");
+}
+template<class Backend>
+void serve(Backend& b,windowio::Dataset& s,boexp::Worker& w,const fs::path& root){
+ require(!fs::exists(root),"new service directory");fs::create_directories(root);std::cout<<"WINDOW_READY fixture_only=1 backend="<<Backend::execution_backend<<'\n'<<std::flush;std::string line;
+ while(std::getline(std::cin,line)){if(line=="QUIT"){std::cout<<"WINDOW_STOPPED\n";return;}require(line.size()<=256,"oversized window service request");std::istringstream in(line);std::string op,id,order,layout,policy,extra;unsigned n,warm;require(bool(in>>op>>id>>n>>warm>>order>>layout>>policy)&&!(in>>extra)&&op=="RUN"&&!id.empty()&&id.size()<=64&&std::all_of(id.begin(),id.end(),[](unsigned char c){return std::isalnum(c)||c=='_'||c=='-';})&&(order=="ascending"||order=="descending"),"invalid fixture service command");run_requests(b,s,w,root/id,n,warm,order=="ascending",layout,policy);std::cout<<"WINDOW_DONE "<<id<<'\n'<<std::flush;}
+}
+} }

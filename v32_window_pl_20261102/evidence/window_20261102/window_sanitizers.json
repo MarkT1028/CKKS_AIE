@@ -1,0 +1,32 @@
+{
+  "status": "PASS_WINDOW_ASAN_UBSAN_TSAN",
+  "reports": [
+    {
+      "name": "asan_ubsan",
+      "status": "PASS",
+      "layouts": [
+        "group",
+        "chunk"
+      ],
+      "policies": [
+        "retain",
+        "bounded",
+        "export_bounded"
+      ]
+    },
+    {
+      "name": "tsan",
+      "status": "PASS",
+      "layouts": [
+        "group",
+        "chunk"
+      ],
+      "policies": [
+        "retain",
+        "bounded",
+        "export_bounded"
+      ]
+    }
+  ],
+  "board_tested": false
+}

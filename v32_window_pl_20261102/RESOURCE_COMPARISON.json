@@ -1,0 +1,41 @@
+{
+  "status": "ACTUAL_ROUTED_TOTALS_NOT_BOARD_TIMING",
+  "variants": {
+    "v32_core_2_pipe": {
+      "LUT": 35857,
+      "FF": 45748,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36_equivalent": 25.0,
+      "AIE_compute_tiles": 2,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.315,
+        "hold_slack_ns": 0.014,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    },
+    "v32_pure_pl_2_pipe": {
+      "LUT": 66979,
+      "FF": 58712,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 376,
+      "BRAM36_equivalent": 25.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.308,
+        "hold_slack_ns": 0.011,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    }
+  },
+  "scope": "Whole bd_wrapper including common platform and interfaces, same report hierarchy and225MHz target. BRAM36_equivalent=RAMB36+RAMB18/2. PurePL retains two lanes and exact7-diagonal interface; not a claim of optimal PL architecture. Hardware AIE block may exist in platform; purePL has no AIE compute metadata, libadf or host graph invocation.",
+  "board_performance": "PENDING"
+}

@@ -1,0 +1,65 @@
+{
+  "status": "PASS_OFFLINE_WINDOW_AND_PURE_PL_READY_FOR_USER_BOARD_TEST",
+  "gates": {
+    "hls_diag_pl.json": {
+      "status": "PASS_PURE_PL_DIAG_CSIM_SYNTH_RANDOM_STALL_COSIM_XO",
+      "sha256": "49d74cdef67cb46d768f84990e9f2ac82bb83b00d9944ff18c959e64773dae43"
+    },
+    "full_chain_pl.json": {
+      "status": "PASS_FULL_PURE_PL_RAW_MAC_CSIM_AND_RANDOM_STALL_RTL_COSIM",
+      "sha256": "e80221795550ff3aa83f74c1437c52a39e7ef235d061a0c8c405151d53c1df3d"
+    },
+    "hardware_pure_pl.json": {
+      "status": "PASS_PURE_PL_ROUTED_TIMING_DRC_BOOT_IDENTITY_PENDING_BOARD",
+      "sha256": "d06c43865b33a9a10fcd40499a2c51b420bc605959f465fb8f823f965670d7e2"
+    },
+    "window_contracts.json": {
+      "status": "PASS_WINDOW_LAYOUT_CACHE_OUTPUT_OWNERSHIP_AND_ERROR_CONTRACTS",
+      "sha256": "3e8e2d916cd7e623687ef4d380064da350e1098639c51abd1c6c8cabdf4a28dc"
+    },
+    "window_sanitizers.json": {
+      "status": "PASS_WINDOW_ASAN_UBSAN_TSAN",
+      "sha256": "25e35764fdfc0feb53f1c9d34c83b3723d8039484d982dc5775193c9285cd115"
+    },
+    "full_context_roundtrip.json": {
+      "status": "PASS_WINDOW_SOFTWARE_MODEL_ORIGINAL_FULL_HS4_MEAN",
+      "sha256": "5dc5406a789204fde7c629ab4f7f88239f3f1ea3a9b39959480a4b9b31a52187"
+    },
+    "board_control_contracts.json": {
+      "status": "PASS_SYNTHETIC_ORCHESTRATOR_CONTROLS",
+      "sha256": "0ceac51f92bd79896081a1bef9f630cdf61a1cbee636e89126a2d9ae6788cd1b"
+    },
+    "metadata_contracts.json": {
+      "status": "PASS_DEPLOYED_AIE_AND_PURE_PL_AXLF_VALIDATORS",
+      "sha256": "ac3b923f7fb4bbbd13f359f304d5109245577d0f5d24eca65d55b02302ca3a2f"
+    },
+    "switch_contracts.json": {
+      "status": "PASS_LOCKED_MANUAL_SWITCH_ORCHESTRATION",
+      "sha256": "6a01060d4811e83c89ae0553bc3e88c860ec5393a42396193a556e3460c5c60c"
+    },
+    "boot_tools.json": {
+      "status": "PASS_OFFLINE_BOOT_TOOLS",
+      "sha256": "1e8ecb54a2703f139a2e6e76b866c3f778a7f9eb10ce520a1f3be72dc460f723"
+    },
+    "collection_contracts.json": {
+      "status": "PASS_DEDUP_COLLECTION_AND_BYTE_EXACT_SAFE_RESTORE",
+      "sha256": "430c0f8def880235bc0a3e984231fe6a0a594c1e464a9a521beb261da51d271c"
+    }
+  },
+  "host_functional_cases": 46,
+  "host_cases_repeated_after_final_source_change": 2,
+  "real_source_words_checked": 33030144,
+  "real_packing": "exact full96 against frozen stream packer",
+  "software_model_original_context": "six groups raw/relin/square and17 complete ciphertext pairs; original1.4.2 source unchanged",
+  "pure_PL": "actual r3 Csim,synthesis,random-stall C/RTL cosim,full rawMAC chain,225MHz routed timing/DRC/route,boot partition identity",
+  "XRT_syntax": "saved official headers only; PC DISABLE_ABI_CHECK applies only to syntax. Board must compile/link against installed headers without override.",
+  "not_executed": [
+    "new ARM host binaries on board",
+    "new AIE host performance",
+    "pure PL board performance",
+    "new actual-board output cryptographic return"
+  ],
+  "board_tested": false,
+  "board_performance": "PENDING",
+  "source_unchanged": true
+}

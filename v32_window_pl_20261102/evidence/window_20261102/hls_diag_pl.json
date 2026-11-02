@@ -1,0 +1,8 @@
+{
+  "status": "PASS_PURE_PL_DIAG_CSIM_SYNTH_RANDOM_STALL_COSIM_XO",
+  "build": "/home/mark/v32_window_pl_20261102/hls/diag_pl_r3",
+  "elapsed_seconds": 92.197097119,
+  "xo_sha256": "a31db9cc1d5c35d24872cf7e8e6c464109888b268d2e139247d7501079a1a8fb",
+  "AIE_compute_tiles": 0,
+  "board_tested": false
+}

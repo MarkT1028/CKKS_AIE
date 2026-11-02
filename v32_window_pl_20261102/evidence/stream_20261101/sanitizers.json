@@ -1,0 +1,18 @@
+{
+  "status": "PASS_STREAM_ASAN_UBSAN_TSAN",
+  "results": [
+    {
+      "name": "asan",
+      "status": "PASS",
+      "output": "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/asan_run_1793510738616814933",
+      "software_model_only": true
+    },
+    {
+      "name": "tsan",
+      "status": "PASS",
+      "output": "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/tsan_run_1793510744866689694",
+      "software_model_only": true
+    }
+  ],
+  "board_tested": false
+}

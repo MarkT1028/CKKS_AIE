@@ -1,0 +1,7 @@
+In file included from board_files/cpu/stream_cpu.cpp:4:
+board_files/cpu/../common/mapped_source.hpp:26:7: warning: ‘streamio::Record’ has a field ‘{anonymous}::InputCase streamio::Record::shape’ whose type uses the anonymous namespace [-Wsubobject-linkage]
+   26 | class Record {
+      |       ^~~~~~
+board_files/cpu/../common/mapped_source.hpp:67:7: warning: ‘streamio::Dataset’ has a field ‘{anonymous}::InputCase streamio::Dataset::shape’ whose type uses the anonymous namespace [-Wsubobject-linkage]
+   67 | class Dataset {
+      |       ^~~~~~~

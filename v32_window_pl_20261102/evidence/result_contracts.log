@@ -1,0 +1,20 @@
+INDEXING_FULL_HS4_RESULTS files=112
+INDEX 24/112
+INDEX 48/112
+INDEX 72/112
+INDEX 96/112
+COMPRESSING gzip_level=1 output=E:\v32_gpu\v32_gpu\integration\v32_full_hs4_20261031\build\result_contract_tests\kit\collected_full_hs4_20261030T173423305523Z.tar.gz
+COMPRESS 24/112
+COMPRESS 48/112
+COMPRESS 72/112
+COMPRESS 96/112
+ARCHIVE_STREAM_WRITTEN members=113
+{
+  "status": "COLLECTED_AND_ALL_MEMBERS_VERIFIED",
+  "download_this_file": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\build\\result_contract_tests\\kit\\collected_full_hs4_20261030T173423305523Z.tar.gz",
+  "files": 113,
+  "bytes": 45761,
+  "sha256": "937fc191fc1d87d496d87f584a8cf86c93bb2c0697ed5414a813a1136169c18d",
+  "scope": "All preserved full-six-MAC result folders, including failures; no raw fixtures or private keys. Ground full-layer reconstruction and decrypt still required."
+}
+PASS_SYNTHETIC_RESULT_SCHEMA_COLLECTION_AND_ARCHIVE_FAULTS
