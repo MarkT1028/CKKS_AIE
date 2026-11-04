@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/run_sanitizers.py", line 12, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/run_sanitizers.py", line 10, in main
+    prefix=['setarch','x86_64','-R'] if name=='tsan' else [];out=R/'build'/(name+'_run_'+str(time.time_ns()));run(prefix+[binary,'SOFTWARE_ONLY',d,out,2,1,'ascending'],name+'_run.log');results.append(dict(name=name,status='PASS',output=str(out),software_model_only=True))
+                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/run_sanitizers.py", line 5, in run
+    with (R/'evidence'/label).open('w') as f:subprocess.run(list(map(str,args)),cwd=R,env=env,stdout=f,stderr=subprocess.STDOUT,check=True,timeout=600)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/stream_asan', 'SOFTWARE_ONLY', '/tmp/v32-stream-contract-2nmwf8ml/data', '/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/asan_run_1793508963817547710', '2', '1', 'ascending']' returned non-zero exit status 1.

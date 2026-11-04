@@ -1,0 +1,12 @@
+REM 本機 Windows CMD，在此資料夾執行
+cd /d E:\vek280_AIe_ckks\AIE_git
+git add -- v32_native_pl_20261103
+git commit -m "feat: add native pure-PL h_s.4 MAC pipeline and AIE comparison"
+git push origin main
+
+REM 遠端 Windows CMD，在原 CKKS_AIE repository 執行
+git pull origin main
+
+REM 將 v32_native_pl_20261103 完整資料夾透過 SFTP 新增到板子 AIE 目錄
+REM 不需重傳原資料，不要把 build/private/大型資料壓縮檔加入 Git
+REM 板上逐行步驟見 START_HERE_NATIVE.md

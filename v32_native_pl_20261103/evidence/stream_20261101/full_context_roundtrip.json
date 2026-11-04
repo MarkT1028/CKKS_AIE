@@ -1,0 +1,295 @@
+{
+  "status": "PASS_STREAM_SOFTWARE_MODEL_ORIGINAL_FULL_HS4_MEAN",
+  "groups": [
+    {
+      "group": 5,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.749997790383059e-07,
+        "square_vs_original_cpu_max_abs": 9.637824158233616e-07,
+        "cpu_repeat_decode_max_abs": 6.1438204471497e-07,
+        "square_cpu_repeat_decode_max_abs": 8.066489680911557e-07,
+        "decode_tolerance": 2.45752817885988e-06,
+        "square_decode_tolerance": 3.2265958723646227e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 4,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.787008569846375e-07,
+        "square_vs_original_cpu_max_abs": 3.4570224946899233e-07,
+        "cpu_repeat_decode_max_abs": 5.16112330974514e-07,
+        "square_cpu_repeat_decode_max_abs": 3.8666890659948133e-07,
+        "decode_tolerance": 2.064449323898056e-06,
+        "square_decode_tolerance": 1.5466756263979253e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 3,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.10737115290182e-07,
+        "square_vs_original_cpu_max_abs": 2.9626442729363143e-07,
+        "cpu_repeat_decode_max_abs": 5.20133288795791e-07,
+        "square_cpu_repeat_decode_max_abs": 2.8305400944825335e-07,
+        "decode_tolerance": 2.080533155183164e-06,
+        "square_decode_tolerance": 1.1322160377930134e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 2,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.439676793386537e-07,
+        "square_vs_original_cpu_max_abs": 4.0872820609870696e-07,
+        "cpu_repeat_decode_max_abs": 5.068919985124841e-07,
+        "square_cpu_repeat_decode_max_abs": 4.280473061060984e-07,
+        "decode_tolerance": 2.0275679940499364e-06,
+        "square_decode_tolerance": 1.7121892244243935e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 1,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 5.454516614126281e-07,
+        "square_vs_original_cpu_max_abs": 5.254705906909433e-07,
+        "cpu_repeat_decode_max_abs": 6.811466721588526e-07,
+        "square_cpu_repeat_decode_max_abs": 4.691005012280935e-07,
+        "decode_tolerance": 2.7245866886354104e-06,
+        "square_decode_tolerance": 1.876402004912374e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    },
+    {
+      "group": 0,
+      "verification": {
+        "status": "PASS_CAPTURE_RECONSTRUCTION",
+        "raw_residues_checked": 5505024,
+        "slots_checked": 65536,
+        "integer_raw_relin_square_and_metadata_exact": true,
+        "mac_vs_original_cpu_max_abs": 6.172695344769001e-07,
+        "square_vs_original_cpu_max_abs": 6.686371242556579e-07,
+        "cpu_repeat_decode_max_abs": 6.446663068082322e-07,
+        "square_cpu_repeat_decode_max_abs": 7.208278015608156e-07,
+        "decode_tolerance": 2.5786652272329287e-06,
+        "square_decode_tolerance": 2.8833112062432626e-06,
+        "raw_level": 43,
+        "square_level": 44,
+        "firmware_performance": "not measured by this verifier"
+      }
+    }
+  ],
+  "layer": {
+    "status": "PYTHON_FULL_LAYER_REPLAY_PENDING_NATIVE_EXACT_CHECK",
+    "consumed_groups": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "full_layer_source": "unmodified v32.sat_diag_conv including ensure,rescale,im2col,baby rotations,giant rotations,aggregation,bias",
+    "source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+    "level": 43,
+    "degree": 2,
+    "slots": 65536,
+    "valid_mean_values": 1536,
+    "decode_max_abs": 6.782674359577671e-06,
+    "cpu_repeat_decode_max_abs": 6.878237821010469e-06,
+    "decode_tolerance": 2.7512951284041875e-05,
+    "ground_replay_wall_ms": 19926.923100021668,
+    "exact_check_pairs": [
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\returned_full_hs4_ct.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\expected_layer_output.bin",
+        "label": "complete_hs4_mean"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_00.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_00.bin",
+        "label": "reconstructed_actual_input_rotation_0"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_01.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_01.bin",
+        "label": "reconstructed_actual_input_rotation_1"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_02.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_02.bin",
+        "label": "reconstructed_actual_input_rotation_2"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_03.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_03.bin",
+        "label": "reconstructed_actual_input_rotation_3"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_04.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_04.bin",
+        "label": "reconstructed_actual_input_rotation_4"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_05.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_05.bin",
+        "label": "reconstructed_actual_input_rotation_5"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_06.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_06.bin",
+        "label": "reconstructed_actual_input_rotation_6"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_07.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_07.bin",
+        "label": "reconstructed_actual_input_rotation_7"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_08.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_08.bin",
+        "label": "reconstructed_actual_input_rotation_8"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_09.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_09.bin",
+        "label": "reconstructed_actual_input_rotation_9"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_10.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_10.bin",
+        "label": "reconstructed_actual_input_rotation_10"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_11.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_11.bin",
+        "label": "reconstructed_actual_input_rotation_11"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_12.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_12.bin",
+        "label": "reconstructed_actual_input_rotation_12"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_13.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_13.bin",
+        "label": "reconstructed_actual_input_rotation_13"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_14.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_14.bin",
+        "label": "reconstructed_actual_input_rotation_14"
+      },
+      {
+        "actual": "E:\\v32_gpu\\v32_gpu\\integration\\v32_stream_20261101\\build\\real_stream_context_return\\full_layer\\replayed_baby_15.bin",
+        "expected": "E:\\v32_gpu\\v32_gpu\\integration\\v32_full_hs4_20261031\\private\\full_hs4_checkpoint_resume\\common\\b_15.bin",
+        "label": "reconstructed_actual_input_rotation_15"
+      }
+    ],
+    "scope": "Full h_s.4(mean) functional ground replay using provided6 returns. Raw MACs occurred separately; this time excludes board/transport and is NOT live full-layer latency. No original MAC recomputed in callback."
+  },
+  "complete_ciphertext_pairs": [
+    {
+      "label": "complete_hs4_mean",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_0",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_1",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_2",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_3",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_4",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_5",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_6",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_7",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_8",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_9",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_10",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_11",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_12",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_13",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_14",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    },
+    {
+      "label": "reconstructed_actual_input_rotation_15",
+      "status": "PASS_COMPLETE_INTEGER_AND_METADATA_EQUALITY"
+    }
+  ],
+  "hardware_tested": false,
+  "board_performance": "PENDING",
+  "scope": "Real96 chunk data packed by new loader and computed by explicitly labelled host software model. Native1.4.2 raw/relin/square and original full-layer CT equality pass; this does not claim new board execution."
+}

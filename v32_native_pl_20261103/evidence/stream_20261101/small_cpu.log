@@ -1,0 +1,3 @@
+PASS_STREAM_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=28.791 compute_sum_ms=0.662795 checked_words=13824
+PASS_STREAM_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=9.04574 compute_sum_ms=0.615994 checked_words=13824
+PASS_STREAM_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=11.04 compute_sum_ms=0.608591 checked_words=13824

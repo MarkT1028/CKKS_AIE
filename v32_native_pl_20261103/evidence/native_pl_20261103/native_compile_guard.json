@@ -1,0 +1,5 @@
+{
+  "status": "PASS_NATIVE_NO_GRAPH_COMPILE_FLAG_GUARD",
+  "invalid_flag_combination_rejected": true,
+  "correct_three_host_syntax_tested_separately": true
+}

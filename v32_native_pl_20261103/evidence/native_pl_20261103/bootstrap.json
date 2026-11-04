@@ -1,0 +1,6 @@
+{
+  "parent_manifest_sha256": "e86bfda2b201849cf171dd73a9e785836a8fbffc91df3f42cd40cbcdac84a013",
+  "parent_unchanged": true,
+  "math": "60x60 exact product; inherited Barrett and accumulate",
+  "original_v32_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916"
+}

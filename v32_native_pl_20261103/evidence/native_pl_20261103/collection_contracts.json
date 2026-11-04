@@ -1,0 +1,14 @@
+{
+  "status": "PASS_DEDUP_COLLECTION_AND_BYTE_EXACT_SAFE_RESTORE",
+  "synthetic_only": true,
+  "logical_output_files": 6,
+  "unique_blobs": 2,
+  "rejected": [
+    "corrupt_payload",
+    "path_escape",
+    "wrong_logical_hash",
+    "symlink",
+    "no_overwrite"
+  ],
+  "board_tested": false
+}

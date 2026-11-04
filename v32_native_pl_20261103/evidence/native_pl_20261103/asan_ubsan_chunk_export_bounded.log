@@ -1,0 +1,4 @@
+PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=35.0752 verified_words=27648
+PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=19.3134 verified_words=27648
+PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=26.4309 verified_words=27648
+PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=135.322 verified_words=27648

@@ -1,0 +1,16 @@
+{
+  "status": "PASS_NATIVE_AIE_BALANCED_CAMPAIGN_ACCOUNTING",
+  "cases": [
+    "native_alone_not_a_comparison",
+    "before_only_is_provisional",
+    "balanced_same_capture_both_AIE_cohorts",
+    "CPU_review_retained",
+    "different_capture_not_pooled",
+    "smoke_not_pooled",
+    "orders_not_pooled",
+    "wrong_release_rejected",
+    "failed_attempt_retained",
+    "slower_candidate_not_declared_faster"
+  ],
+  "synthetic_only": true
+}

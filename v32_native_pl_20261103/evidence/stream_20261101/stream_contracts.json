@@ -1,0 +1,148 @@
+{
+  "status": "PASS_STREAM_PACK_MATH_PERSISTENCE_MUTATION_AND_CANCEL_CONTRACTS",
+  "synthetic_only": true,
+  "board_tested": false,
+  "fixture": "/mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/stream_contract_1793510653392730790/data",
+  "cases": [
+    {
+      "label": "original_full_lane_pack_equivalence",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_SOURCE_FULL_AND_LANE_PACK_EXACT groups=6 checked_words=27648 corrupted_output_rejected=1\n",
+      "stderr": ""
+    },
+    {
+      "label": "source_mutation_rejected",
+      "returncode": 0,
+      "stdout": "PASS_MAPPED_SOURCE_MUTATION_REJECTED\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=29.8635 compute_sum_ms=1.22651 checked_words=27648\nPASS_STREAM_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=14.3615 compute_sum_ms=1.28752 checked_words=27648\nPASS_STREAM_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=18.0256 compute_sum_ms=1.31104 checked_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "model_descending",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=1 export_only=0 request_wall_ms=22.022 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=0 request_wall_ms=17.6141 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=2 warmup=0 export_only=0 request_wall_ms=16.8346 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=3 warmup=0 export_only=1 request_wall_ms=136.816 checked_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=24.8334 compute_sum_ms=1.25666 checked_words=27648\nPASS_STREAM_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=15.1141 compute_sum_ms=1.14474 checked_words=27648\nPASS_STREAM_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=14.2265 compute_sum_ms=1.11939 checked_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "model_ascending",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=1 export_only=0 request_wall_ms=18.7752 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=0 request_wall_ms=19.1904 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=2 warmup=0 export_only=0 request_wall_ms=15.207 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=3 warmup=0 export_only=1 request_wall_ms=119.973 checked_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "persistent_two_requests",
+      "returncode": 0,
+      "stdout": "STREAM_READY backend=SOFTWARE_MODEL_NOT_BOARD fixture_only=1\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=0 export_only=0 request_wall_ms=20.8239 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=1 request_wall_ms=147.924 checked_words=27648\nSTREAM_DONE first\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=0 export_only=0 request_wall_ms=15.7033 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=1 request_wall_ms=147.732 checked_words=27648\nSTREAM_DONE second\nSTREAM_STOPPED\n",
+      "stderr": ""
+    },
+    {
+      "label": "cancel_prepare",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_prepare\n"
+    },
+    {
+      "label": "cancel_start",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_start\n"
+    },
+    {
+      "label": "cancel_wait",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_wait\n"
+    },
+    {
+      "label": "cancel_status",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=1 bank=1 stage=status lane=-1: SYNTHETIC_FAULT_status\n"
+    },
+    {
+      "label": "cancel_finish",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_finish\n"
+    },
+    {
+      "label": "cancel_verify",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=1 bank=1 stage=verify lane=-1: SYNTHETIC_FAULT_verify\n"
+    },
+    {
+      "label": "cancel_save",
+      "returncode": 1,
+      "stdout": "PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=0 export_only=0 request_wall_ms=24.414 checked_words=27648\n",
+      "stderr": "FAIL chunk=1 bank=1 stage=output_save lane=-1: SYNTHETIC_FAULT_save\n"
+    },
+    {
+      "label": "bad_id",
+      "returncode": 1,
+      "stdout": "STREAM_READY backend=SOFTWARE_MODEL_NOT_BOARD fixture_only=1\n",
+      "stderr": "FAIL fixture service protocol\n"
+    },
+    {
+      "label": "duplicate_id",
+      "returncode": 1,
+      "stdout": "STREAM_READY backend=SOFTWARE_MODEL_NOT_BOARD fixture_only=1\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=0 export_only=0 request_wall_ms=19.2739 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=1 request_wall_ms=151.087 checked_words=27648\nSTREAM_DONE first\n",
+      "stderr": "FAIL stream request counts/results\n"
+    },
+    {
+      "label": "reject_kind",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL mapped version/kind\n"
+    },
+    {
+      "label": "reject_reciprocal",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL invalid reciprocal at tower 0\n"
+    },
+    {
+      "label": "reject_noncanonical",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL noncanonical mapped source /mnt/e/v32_gpu/v32_gpu/integration/v32_stream_20261101/build/stream_contract_1793510653392730790/data/shared/chunk_0_baby.bin at 0\n"
+    },
+    {
+      "label": "reject_truncated",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL mapped exact length\n"
+    },
+    {
+      "label": "reject_symlink",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL cannot open immutable record: /tmp/v32-stream-symlink-vp2yi3x4/data/shared/chunk_0_baby.bin\n"
+    },
+    {
+      "label": "reject_swapped_weight_group",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=0 bank=0 stage=verify lane=-1: mapped full output mismatch group=3 chunk=0 word=0\n"
+    },
+    {
+      "label": "changed_input_content",
+      "returncode": 0,
+      "stdout": "PASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=0 warmup=0 export_only=0 request_wall_ms=21.6332 checked_words=27648\nPASS_STREAM_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD repetition=1 warmup=0 export_only=1 request_wall_ms=163.144 checked_words=27648\n",
+      "stderr": ""
+    }
+  ],
+  "timed_trace_chunks_checked": 192,
+  "original_source_unchanged": true
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_NATIVE_PL_OFFLINE_READY_FOR_BOARD",
+  "gates": {
+    "hls_native_pl_chain.json": {
+      "status": "PASS_CSIM_SYNTH_RANDOM_STALL_RTL",
+      "sha256": "042574e122f7087e79c5eb590a6650496be460fd9ae0ea766065cc9b74d17c45"
+    },
+    "hls_ct_reader.json": {
+      "status": "PASS_CSIM_SYNTH_XO",
+      "sha256": "6b758935a2ee26e1132d60c78be0de805472c7174283752d750004eb97ad99ab"
+    },
+    "hls_ct_reduce_accum.json": {
+      "status": "PASS_CSIM_SYNTH_XO",
+      "sha256": "d8ad6b595bd2c55ba894e8530d9363e60dd1e36bdb3284b741cd378a5da57bd9"
+    },
+    "large_native_RTL.json": {
+      "status": "PASS_L14_L16_NATIVE_CSIM_RANDOM_STALL_RTL",
+      "sha256": "cbc2803f5b8ed5445b1ab07a3223e4cf92bdd1e0a1b3068a68cd14084b7e07ad"
+    },
+    "hardware_native_pl.json": {
+      "status": "PASS_NATIVE_PL_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+      "sha256": "14622ca95cb8ee4e1dbba329bf50ae807488e80d3235d3bdddf02159baeafe6a"
+    },
+    "real_native_model_verification.json": {
+      "status": "PASS_ACTUAL_NATIVE_HLS_C_MODEL_REAL96_ALL_WORDS",
+      "sha256": "42c783365b2862ccfb221a6bd0bad55956bc5b1c3af5d36f17a245ac1030dc66"
+    },
+    "window_contracts.json": {
+      "status": "PASS_WINDOW_LAYOUT_CACHE_OUTPUT_OWNERSHIP_AND_ERROR_CONTRACTS",
+      "sha256": "24020daacd782916b724aefeefeddd6142390d4c7ffabeabb5aee629d81cff16"
+    },
+    "window_sanitizers.json": {
+      "status": "PASS_WINDOW_ASAN_UBSAN_TSAN",
+      "sha256": "25e35764fdfc0feb53f1c9d34c83b3723d8039484d982dc5775193c9285cd115"
+    },
+    "split_phase_contracts.json": {
+      "status": "PASS_SPLIT_PHASE_OUTPUT_AND_SANITIZER_CONTRACTS",
+      "sha256": "beda9f8bf059927d529fd70b4b504211c74cb5063daf348c6ee517c00a9cd2ef"
+    },
+    "phase_control_contracts.json": {
+      "status": "PASS_V2_SPLIT_EXPORT_CONTROLS",
+      "sha256": "d0903b68fcad2b463a780a584a789e7d1581e7d0c80036b69db435ed813c655c"
+    },
+    "native_campaign_contracts.json": {
+      "status": "PASS_NATIVE_AIE_BALANCED_CAMPAIGN_ACCOUNTING",
+      "sha256": "b8da7b834d1e9cb10bab691570a08865fe2c743601356db52ca4f6ef6e9a6c1c"
+    },
+    "control_source_identity.json": {
+      "status": "PASS_AIE_AND_OLD_PL_CONTROL_CPP_TOKENS_UNCHANGED",
+      "sha256": "7c19047d5b30da0b25db02fd94810cbf255fdb4cce91ae04c38aa5a113a0ba86"
+    },
+    "metadata_contracts.json": {
+      "status": "PASS_DEPLOYED_AIE_AND_PURE_PL_AXLF_VALIDATORS",
+      "sha256": "4787d755b056567bf023081929e6d88d68fcf0a045656a2f5812b92f25659cd6"
+    },
+    "switch_contracts.json": {
+      "status": "PASS_LOCKED_MANUAL_SWITCH_ORCHESTRATION",
+      "sha256": "3c71bbee9b066afe9841fb1c0e294f60aa2f11993c48325c9250eb1ccb93a73f"
+    },
+    "collection_contracts.json": {
+      "status": "PASS_DEDUP_COLLECTION_AND_BYTE_EXACT_SAFE_RESTORE",
+      "sha256": "ac6f66b81beccdc130ea279ccfd187a1b619ab2e9a891a46737eebbf8dc1d2be"
+    },
+    "native_compile_guard.json": {
+      "status": "PASS_NATIVE_NO_GRAPH_COMPILE_FLAG_GUARD",
+      "sha256": "47e07172634df3ce45d1c9e4e9635763981ad489ca2eeeb00be78f9fda3d3643"
+    },
+    "boot_tools.json": {
+      "status": "PASS_OFFLINE_BOOT_TOOLS",
+      "sha256": "1e8ecb54a2703f139a2e6e76b866c3f778a7f9eb10ce520a1f3be72dc460f723"
+    }
+  },
+  "real_model_words_checked": 33030144,
+  "negative_and_independent_Barrett_cases": 15016,
+  "model_only_not_board": true,
+  "metadata_rejection_cases": 36,
+  "original_v32_unchanged": true,
+  "control_CPP_tokens_unchanged": true,
+  "actual_board_speed": "PENDING",
+  "actual_board_crypto": "PENDING",
+  "host_ARM_build": "PENDING_USER_BOARD"
+}

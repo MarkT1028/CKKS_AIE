@@ -1,0 +1,32 @@
+{
+  "utc": "20261031T163337978842Z",
+  "boot_id": "02038cbe-bda7-410e-8bc1-d39dba0bf6db",
+  "boot_uuid": "050ea5cc23fb5038bad0aca23cbd240b",
+  "kernel": {
+    "system": "Linux",
+    "node": "xilinx-vek280-20252",
+    "release": "6.12.40-xilinx-g31626ef92ff1",
+    "version": "#1 SMP Fri Nov  7 15:28:23 UTC 2025",
+    "machine": "aarch64",
+    "processor": ""
+  },
+  "affinity": [
+    0,
+    1
+  ],
+  "loadavg": "0.50 1.04 0.87 1/107 254842",
+  "meminfo": "MemTotal:        4020300 kB\nMemFree:          406100 kB\nMemAvailable:    3729820 kB\nBuffers:           23944 kB\nCached:          3412168 kB\nSwapCached:            0 kB\nActive:          2154256 kB\nInactive:        1320616 kB\nActive(anon):       1780 kB\nInactive(anon):    47188 kB\nActive(file):    2152476 kB\nInactive(file):  1273428 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                20 kB\nWriteback:             0 kB\nAnonPages:         38704 kB\nMapped:            28396 kB\nShmem:             10200 kB\nKReclaimable:      59400 kB\nSlab:              93048 kB\nSReclaimable:      59400 kB\nSUnreclaim:        33648 kB\nKernelStack:        1728 kB\nPageTables:         1728 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     2010148 kB\nCommitted_AS:      94652 kB\nVmallocTotal:   135288315904 kB\nVmallocUsed:        8424 kB\nVmallocChunk:          0 kB\nPercpu:              656 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:         524288 kB\nCmaFree:          125652 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB",
+  "cpu_policy": {
+    "scaling_min_freq": "350000",
+    "scaling_available_governors": "userspace",
+    "scaling_governor": "userspace",
+    "scaling_available_frequencies": "350000 466666 700000 1400000",
+    "scaling_cur_freq": "1400000",
+    "scaling_setspeed": "1400000",
+    "scaling_max_freq": "1400000",
+    "scaling_driver": "cpufreq-dt"
+  },
+  "thermal": {
+    "/sys/class/thermal/thermal_zone0/temp": "36757"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CSIM_SYNTH_XO",
+  "top": "ct_reduce_accum",
+  "build": "/home/mark/v32_native_pl_20261103/hls/r2/ct_reduce_accum",
+  "elapsed_seconds": 46.00549191700003,
+  "source": {
+    "ct_mac.hpp": "2d37e4a6f690086ba42b113d252f915e6f55da1bc4d932101a6b90b2f01870f6",
+    "native_chain.cpp": "b7d38e21cbf15d5f3a86effe85bad8dc00012a7539e1c01ca73ca61060b301b1",
+    "native_reader.cpp": "f24adbba2c86ef417175b8a9890848cc78830246854e0317441d0a5267c70e7f",
+    "native_reduce.cpp": "6e680ea14d7b55de672a78ad9cacc4f69213a056a577689cbc4b4eb8ac53c4d4",
+    "native_tb.cpp": "b182b0c79a5afd4c424bc526bed19daee63fdacae5a2aabf97a109c53610a9c8"
+  },
+  "xo_sha256": "6f26f67f706b59c7c1bdca3b3dabe65262d024eb986d1dc0e859d3eb2d834b38"
+}

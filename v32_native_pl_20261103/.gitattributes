@@ -1,0 +1,3 @@
+* -text
+*.sh text eol=lf
+ckks-perf2-srst text eol=lf

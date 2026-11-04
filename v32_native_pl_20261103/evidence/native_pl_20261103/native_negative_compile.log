@@ -1,0 +1,17 @@
+In file included from /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_common.h:668,
+                 from /home/mark/AMDDesignTools/2025.2/Vitis/include/ap_int.h:10,
+                 from /mnt/e/v32_gpu/v32_gpu/integration/v32_native_pl_20261103/design/ct_mac.hpp:2,
+                 from /mnt/e/v32_gpu/v32_gpu/integration/v32_native_pl_20261103/design/native_reader.cpp:1:
+In member function ‘ap_private<_AP_W, false> _private_range_ref<_AP_W, _AP_S>::get() const [with int _AP_W = 512; bool _AP_S = false]’,
+    inlined from ‘ap_private<_AP_W, _AP_S, false>::ap_private(const _private_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 512; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’ at /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_private.h:3400:11,
+    inlined from ‘ap_private<_AP_W, _AP_S, false>& ap_private<_AP_W, _AP_S, false>::operator=(const _private_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 512; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’ at /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_private.h:4837:13,
+    inlined from ‘ap_int_base<_AP_W2, false> ap_range_ref<_AP_W, _AP_S>::get() const [with int _AP_W = 512; bool _AP_S = false]’ at /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_int_ref.h:628:11,
+    inlined from ‘ap_int_base<_AP_W, _AP_S>::ap_int_base(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 512; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]’ at /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_int_base.h:370:27,
+    inlined from ‘ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 512; bool _AP_S2 = false; int _AP_W = 240; bool _AP_S = false]’ at /home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_int_ref.h:382:22,
+    inlined from ‘void {anonymous}::load(const ctmac::input_t*, hls::stream_of_blocks<ap_uint<240> [64], 2>&, unsigned int, unsigned int, unsigned int)’ at /mnt/e/v32_gpu/v32_gpu/integration/v32_native_pl_20261103/design/native_reader.cpp:19:68:
+/home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_private.h:6766:7: warning: iteration 330 invokes undefined behavior [-Waggressive-loop-optimizations]
+ 6766 |       for (int i = 0, j = l_index; j >= 0 && j >= h_index; j--, i++)
+      |       ^~~
+/home/mark/AMDDesignTools/2025.2/Vitis/include/etc/ap_private.h:6766:43: note: within this loop
+ 6766 |       for (int i = 0, j = l_index; j >= 0 && j >= h_index; j--, i++)
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~

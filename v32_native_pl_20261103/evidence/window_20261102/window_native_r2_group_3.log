@@ -1,0 +1,2 @@
+DECODE mac_diff=5.47542e-07 square_diff=2.95675e-07 cpu_repeat=5.2641e-07 square_cpu_repeat=2.74121e-07
+PASS RETURNED_MAC_RELIN_DECRYPT_FLEXIBLEAUTO_SQUARE slots=65536

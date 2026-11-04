@@ -1,0 +1,1 @@
+PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=measure repetition=0 warmup=0 export_only=0 layout=chunk request_wall_ms=19049.5 verified_words=33030144

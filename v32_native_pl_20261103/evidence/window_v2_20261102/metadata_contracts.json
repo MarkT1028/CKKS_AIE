@@ -1,0 +1,161 @@
+{
+  "status": "PASS_DEPLOYED_AIE_AND_PURE_PL_AXLF_VALIDATORS",
+  "parser_only_no_XRT": true,
+  "board_tested": false,
+  "cases": [
+    {
+      "label": "v32_core_2_pipe_correct_flat_metadata",
+      "pass_expected": true,
+      "returncode": 0,
+      "stdout": "PASS xclbin mode=flat action_mask=0 boot_programmed uuid=050ea5cc23fb5038bad0aca23cbd240b\n",
+      "stderr": ""
+    },
+    {
+      "label": "v32_core_2_pipe_reject_wrong_backend_uuid",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin UUID does not match CKKS boot image\n"
+    },
+    {
+      "label": "v32_core_2_pipe_truncated",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "truncated xclbin header\n"
+    },
+    {
+      "label": "v32_core_2_pipe_bad_magic",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "invalid xclbin magic\n"
+    },
+    {
+      "label": "v32_core_2_pipe_bad_size",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin length mismatch\n"
+    },
+    {
+      "label": "v32_core_2_pipe_action_mask",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "expected flat boot-programmed metadata with action_mask=0; refusing hardware reload\n"
+    },
+    {
+      "label": "v32_core_2_pipe_wrong_uuid",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin UUID does not match CKKS boot image\n"
+    },
+    {
+      "label": "v32_core_2_pipe_zero_sections",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "invalid xclbin section table\n"
+    },
+    {
+      "label": "v32_core_2_pipe_PDI",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "boot metadata must not contain PDI, BITSTREAM, partition or overlay\n"
+    },
+    {
+      "label": "v32_core_2_pipe_section_bounds",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin section exceeds file bounds\n"
+    },
+    {
+      "label": "v32_core_2_pipe_AIE_section_contract",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing kernel layout or packaged AIE resources\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_correct_flat_metadata",
+      "pass_expected": true,
+      "returncode": 0,
+      "stdout": "PASS xclbin mode=flat action_mask=0 boot_programmed uuid=2ab320bee38253bb8e6105aac63c06f5\n",
+      "stderr": ""
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_reject_wrong_backend_uuid",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin UUID does not match CKKS boot image\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_truncated",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "truncated xclbin header\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_bad_magic",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "invalid xclbin magic\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_bad_size",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin length mismatch\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_action_mask",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "expected flat boot-programmed metadata with action_mask=0; refusing hardware reload\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_wrong_uuid",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin UUID does not match CKKS boot image\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_zero_sections",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "invalid xclbin section table\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_PDI",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "boot metadata must not contain PDI, BITSTREAM, partition or overlay\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_section_bounds",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "xclbin section exceeds file bounds\n"
+    },
+    {
+      "label": "v32_pure_pl_2_pipe_AIE_section_contract",
+      "pass_expected": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "pure PL metadata requires kernel layout and no AIE sections\n"
+    }
+  ]
+}

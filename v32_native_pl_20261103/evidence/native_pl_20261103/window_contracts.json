@@ -1,0 +1,284 @@
+{
+  "status": "PASS_WINDOW_LAYOUT_CACHE_OUTPUT_OWNERSHIP_AND_ERROR_CONTRACTS",
+  "cases": [
+    {
+      "label": "full_lane_pack_equivalence",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_FULL_LANE_PACK_EQUIVALENCE groups=6 verified_words=27648 no_XRT_execution=1\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_group_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=34.4692 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=29.6333 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=22.5553 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=178.799 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_group_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=19.7461 compute_sum_ms=1.26354 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=18.5165 compute_sum_ms=1.2057 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=18.8484 compute_sum_ms=1.30661 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_group_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=39.4689 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=30.5627 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=50.5834 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=170.992 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_group_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=33.3202 compute_sum_ms=1.19496 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=37.6721 compute_sum_ms=1.43745 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=34.5395 compute_sum_ms=1.55554 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_group_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=26.5312 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=25.3684 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=21.9801 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=132.989 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_group_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=22.3341 compute_sum_ms=1.17229 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=15.6376 compute_sum_ms=1.22159 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=21.7561 compute_sum_ms=1.16249 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_chunk_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=21.9784 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=19.2061 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=24.2447 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=145.358 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_chunk_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=19.3503 compute_sum_ms=1.2085 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=19.007 compute_sum_ms=1.18461 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=31.3997 compute_sum_ms=1.16222 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_chunk_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=26.4009 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=44.3123 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=30.9122 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=171.5 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_chunk_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=18.838 compute_sum_ms=1.19083 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=48.1906 compute_sum_ms=1.31792 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=30.4811 compute_sum_ms=1.38113 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "descending_chunk_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=21.9272 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=23.9054 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=58.2183 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=152.685 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_descending_chunk_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=19.9021 compute_sum_ms=1.18381 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=15.8128 compute_sum_ms=1.17382 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=14.0032 compute_sum_ms=1.24025 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_group_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=25.7562 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=20.6485 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=25.0852 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=156.775 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_group_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=20.2382 compute_sum_ms=1.34789 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=17.6306 compute_sum_ms=1.18125 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=15.1958 compute_sum_ms=1.19532 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_group_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=25.1764 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=43.1574 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=41.427 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=187.596 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_group_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=34.9577 compute_sum_ms=1.1857 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=36.4747 compute_sum_ms=1.40608 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=31.3578 compute_sum_ms=1.22074 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_group_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=group request_wall_ms=26.3833 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=group request_wall_ms=24.9435 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=group request_wall_ms=25.6052 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=group request_wall_ms=130.003 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_group_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=30.3327 compute_sum_ms=1.73398 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=16.7874 compute_sum_ms=1.17963 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=23.4396 compute_sum_ms=1.16927 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_chunk_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=19.2661 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=31.4586 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=27.842 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=163.915 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_chunk_retain",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=18.6746 compute_sum_ms=1.34849 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=16.3269 compute_sum_ms=1.23473 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=39.1346 compute_sum_ms=1.19187 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_chunk_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=23.1609 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=30.8702 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=29.1806 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=150.401 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_chunk_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=19.9693 compute_sum_ms=1.34875 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=28.7699 compute_sum_ms=1.24955 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=34.5482 compute_sum_ms=1.1903 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "ascending_chunk_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=1 export_only=0 layout=chunk request_wall_ms=25.2091 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=0 layout=chunk request_wall_ms=20.6264 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=2 warmup=0 export_only=0 layout=chunk request_wall_ms=20.1541 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=3 warmup=0 export_only=1 layout=chunk request_wall_ms=151.365 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "CPU_ascending_chunk_export_bounded",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_CPU_SIX_GROUPS repetition=0 warmup=1 request_wall_ms=21.8914 compute_sum_ms=1.20518 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=1 warmup=0 request_wall_ms=17.9109 compute_sum_ms=1.42709 verified_words=27648\nPASS_WINDOW_CPU_SIX_GROUPS repetition=2 warmup=0 request_wall_ms=13.3826 compute_sum_ms=1.16738 verified_words=27648\n",
+      "stderr": ""
+    },
+    {
+      "label": "persistent_two_changed_modes",
+      "returncode": 0,
+      "stdout": "WINDOW_READY fixture_only=1 backend=SOFTWARE_MODEL_NOT_BOARD\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=0 export_only=0 layout=group request_wall_ms=28.1368 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=1 layout=group request_wall_ms=143.911 verified_words=27648\nWINDOW_DONE first\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=0 export_only=0 layout=chunk request_wall_ms=16.31 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=1 layout=chunk request_wall_ms=158.354 verified_words=27648\nWINDOW_DONE second\nWINDOW_STOPPED\n",
+      "stderr": ""
+    },
+    {
+      "label": "cancel_prepare",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_prepare\n"
+    },
+    {
+      "label": "cancel_start",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_start\n"
+    },
+    {
+      "label": "cancel_wait",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_wait\n"
+    },
+    {
+      "label": "cancel_status",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=8 bank=0 stage=status lane=-1: SYNTHETIC_FAULT_status\n"
+    },
+    {
+      "label": "cancel_finish",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL SYNTHETIC_FAULT_finish\n"
+    },
+    {
+      "label": "cancel_verify",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=8 bank=0 stage=verify lane=-1: SYNTHETIC_FAULT_verify\n"
+    },
+    {
+      "label": "cancel_retire",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=8 bank=0 stage=input_retire lane=-1: SYNTHETIC_FAULT_retire\n"
+    },
+    {
+      "label": "cancel_save",
+      "returncode": 1,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=0 export_only=0 layout=chunk request_wall_ms=33.2769 verified_words=27648\n",
+      "stderr": "FAIL chunk=8 bank=0 stage=output_save lane=-1: SYNTHETIC_FAULT_save\n"
+    },
+    {
+      "label": "bad_id",
+      "returncode": 1,
+      "stdout": "WINDOW_READY fixture_only=1 backend=SOFTWARE_MODEL_NOT_BOARD\n",
+      "stderr": "FAIL invalid fixture service command\n"
+    },
+    {
+      "label": "duplicate_id",
+      "returncode": 1,
+      "stdout": "WINDOW_READY fixture_only=1 backend=SOFTWARE_MODEL_NOT_BOARD\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=0 export_only=0 layout=chunk request_wall_ms=77.0304 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=1 layout=chunk request_wall_ms=129.417 verified_words=27648\nWINDOW_DONE first\n",
+      "stderr": "FAIL window request counts/new directory\n"
+    },
+    {
+      "label": "bad_layout",
+      "returncode": 1,
+      "stdout": "WINDOW_READY fixture_only=1 backend=SOFTWARE_MODEL_NOT_BOARD\n",
+      "stderr": "FAIL window task layout\n"
+    },
+    {
+      "label": "bad_policy",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL window cache policy\n"
+    },
+    {
+      "label": "bad_order",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL window order\n"
+    },
+    {
+      "label": "bad_layout",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL window request counts/new directory\n"
+    },
+    {
+      "label": "bad_kind",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL mapped version/kind\n"
+    },
+    {
+      "label": "bad_mu",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL invalid reciprocal at tower 0\n"
+    },
+    {
+      "label": "noncanonical_baby",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL noncanonical mapped source /mnt/e/v32_gpu/v32_gpu/integration/v32_native_pl_20261103/build/contracts_1793721694678719432/data/shared/chunk_0_baby.bin at 0\n"
+    },
+    {
+      "label": "truncated",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL mapped exact length\n"
+    },
+    {
+      "label": "wrong_group_rejected",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "FAIL chunk=2 bank=0 stage=verify lane=-1: mapped full output mismatch group=3 chunk=0 word=0\n"
+    },
+    {
+      "label": "fresh_input_changed",
+      "returncode": 0,
+      "stdout": "PASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=0 warmup=0 export_only=0 layout=chunk request_wall_ms=47.0609 verified_words=27648\nPASS_WINDOW_SIX_GROUPS backend=SOFTWARE_MODEL_NOT_BOARD phase=combined repetition=1 warmup=0 export_only=1 layout=chunk request_wall_ms=132.945 verified_words=27648\n",
+      "stderr": ""
+    }
+  ],
+  "synthetic_only": true,
+  "board_tested": false,
+  "work": "/mnt/e/v32_gpu/v32_gpu/integration/v32_native_pl_20261103/build/contracts_1793721694678719432"
+}

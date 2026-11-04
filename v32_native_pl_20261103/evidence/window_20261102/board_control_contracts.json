@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SYNTHETIC_ORCHESTRATOR_CONTROLS",
+  "cases": [
+    "recomputed_actual96_hashes_and_raw_trace",
+    "CPU_drift_is_retained",
+    "reject_software_model_as_board",
+    "reject_wrong_AIE_count",
+    "reject_false_median",
+    "reject_wrong_counts",
+    "reject_missing_export",
+    "reject_incorrect_job_identity",
+    "reject_missing_stage",
+    "reject_bad_output",
+    "reject_resource_export_tag",
+    "pure_PL_same_scope_zero_AIE",
+    "PL_binary_selected_without_AIE",
+    "failed_stage_stops_and_retains_evidence"
+  ],
+  "board_tested": false,
+  "all_fake_phase_summaries_scope": "TEST_ONLY_NEVER_PERFORMANCE_EVIDENCE"
+}

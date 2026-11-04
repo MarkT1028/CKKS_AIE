@@ -1,0 +1,19 @@
+{
+  "status": "PASS_FULL_PURE_PL_RAW_MAC_CSIM_AND_RANDOM_STALL_RTL_COSIM",
+  "verification_top_not_deployed": true,
+  "build": "/home/mark/v32_window_pl_20261102/hls/chain_test_r3",
+  "elapsed_seconds": 118.067906728,
+  "modulus_bits": [
+    45,
+    51,
+    60
+  ],
+  "K": [
+    1,
+    16,
+    1,
+    16
+  ],
+  "repetitions": 4,
+  "board_tested": false
+}

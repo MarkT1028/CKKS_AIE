@@ -1,0 +1,13 @@
+{
+  "native_reader_argument_ids": {
+    "inputs": 0,
+    "products": 1,
+    "N": 2,
+    "L": 3,
+    "K": 4
+  },
+  "reducer_argument_ids_unchanged": true,
+  "host_packing_and_CPU_unchanged": true,
+  "AIE_and_old_PL_variants_retained": true,
+  "hardware_placeholder_removed": true
+}
