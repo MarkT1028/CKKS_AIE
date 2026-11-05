@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+SHA256SUMS* text eol=lf
+*.bin -text
+*.xclbin -text
+*.tsv -text
+*.part -text
+*.rpt -text
+offline_evidence/** -text

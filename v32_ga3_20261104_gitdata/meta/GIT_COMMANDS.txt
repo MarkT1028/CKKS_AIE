@@ -1,0 +1,1 @@
+Read TRANSFER_README.md. Code/metadata first; then choose either the 37 Git batches or GitHub Release. Never force-add every part in one push.

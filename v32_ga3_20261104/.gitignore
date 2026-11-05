@@ -1,0 +1,8 @@
+bin/
+__pycache__/
+results_*/
+switch_logs/
+collected_*
+BUILD_IDENTITY.json
+DATA_CHECK_RECEIPT.json
+RECOVERY_REQUIRED.json

@@ -1,0 +1,62 @@
+{
+  "status": "PASS_OFFLINE_COMPLETE_GA3_PENDING_BOARD",
+  "created_utc": "2026-11-04T11:36:22.029364+00:00",
+  "coverage": {
+    "N": 131072,
+    "L": 53,
+    "K": 16,
+    "output_ciphertexts": 16,
+    "raw_MAC_groups": 64,
+    "coefficient_windows": 16,
+    "jobs": 4096,
+    "windows": 1024,
+    "verified_words": 1333788672
+  },
+  "evidence": {
+    "offline_evidence/ga3_local/contracts.json": "e8f1117d58e0c52f48464268770d550228c2f7ad4d41285acfcc89e0a4bbf51d",
+    "offline_evidence/ga3_local/full_crypto_import.json": "8241a655ee4188b9d81287a189efa6509b7c94e9094384f41e736c1ae14b4da4",
+    "offline_evidence/ga3_local/full_layer_return.json": "48f740ab6ac471a72a9c71f0ce1304302f081619d988c749b98820e8f0c11ca4",
+    "offline_evidence/ga3_local/full_model.json": "64c2685f012eeed8619c7c2c333422c94dfb0fd374ab0e811fb3090d48a72ab0",
+    "offline_evidence/ga3_local/full_transport.json": "6c896ee1c69f4957b604e1051eba53cf27b60fc7adb92a6c0ef0932555458ebb",
+    "offline_evidence/ga3_local/loader_validation.json": "998c3de4f5446de284a91aeed82a448263ef4ae53c62edad646690cd7e21a2a2",
+    "offline_evidence/ga3_local/pipeline_tsan.txt": "0094aab34daa28623053662dc44a12745fb700f4b2eeb595c14919c6c0c788db",
+    "offline_evidence/ga3_local/protocol_tests.json": "0a32792646e78c1c4db16d92179dc9cc042228d3a6bbafd11eaa760b42563ee8",
+    "offline_evidence/ga3_local/release_download.json": "4a558a65278d5166de22d4b1b1b4364920afec74b58249c05950db8945e72231",
+    "offline_evidence/ga3_local/release_upload_mock.json": "39c3a8ea9dbdfcb9384042c7dc639dded0892abdc2b2474778c31521bb004800",
+    "offline_evidence/ga3_local/test_sources/make_fixture.py": "7a965d8db13aaf2a99300eb834412020ca3d0b27fc2dbcbe58212826de6b20d9",
+    "offline_evidence/ga3_local/test_sources/run_host_tests.sh": "1b36d71969286eb0c60c3eddf24bdf7ff3d511718ad4a64ebcd305d999053ebd",
+    "offline_evidence/ga3_local/test_sources/test_contracts.py": "ad301cf28c98fa11c04bd24484306130a9e8b5e2c16f079db5895772c1ee738f",
+    "offline_evidence/ga3_local/test_sources/test_final_checkout.py": "b8e97c926e37619c6bef2b3ec0e7a9df7dfa0e0462212bfa585c0f8c4bf37cd2",
+    "offline_evidence/ga3_local/test_sources/test_loader.py": "2f45b04a274d82ffeabec64605ecc89d23fd0eeaeeefea0263e9037c0d8a466e",
+    "offline_evidence/ga3_local/test_sources/test_pipeline.cpp": "588877186bc4279e83e461258cbef2620a55609fabf6473361d91fbff47f857f",
+    "offline_evidence/ga3_local/test_sources/test_protocol.py": "12f1a861eadbb33a645731b61adeda26323c8a0a0ab12fd3ee35a09cb2a7c5dd",
+    "offline_evidence/ga3_local/test_sources/test_release_download.py": "6bc474d5cc5974f41990205f342d4b3b2cfca482f349d5974788691af7d068dc",
+    "offline_evidence/ga3_local/test_sources/test_release_upload_mock.ps1": "24faa12cc1391e9b799922814be4e44fc77ab40b538c01e4320cf8acc4c143f6",
+    "offline_evidence/ga3_local/test_sources/test_windows_transport.py": "bc29784c6e16a7bb0a051dc513af4912cd8d7e13be07c213f083bb9c46ff2208",
+    "offline_evidence/ga3_local/windows_transport.json": "1fd2754505da8102e9158b71d6c6d7ae34a0f507ffd8fb8e41d6771b18dbf83d"
+  },
+  "checks": [
+    "full real independent integer export",
+    "complete final bulk-reader software replay",
+    "64 raw MAC original-context raw/relin/decrypt/square return",
+    "256 original babies and 32 complete ga3/ga5 ciphertext returns",
+    "ASan/UBSan real boundary and shorter RNS shard",
+    "TSan pipeline ownership plus seven failure paths",
+    "both real XRT header object compilations; native object has no graph dependency",
+    "full actual Windows 36.63 GiB archive reconstruction and every tar member SHA",
+    "isolated local bare Git batch/Windows LF roundtrip",
+    "safe extraction, failure retention, ABA drift guard and hash-witness reconstruction",
+    "owned child interrupted-controller cleanup and same-boot recovery guard",
+    "offline Release resume and mocked uploader; no GitHub writes"
+  ],
+  "board_execution": "PENDING_USER_VEK280_TEST",
+  "board_performance": "PENDING",
+  "ARM_link_and_runtime": "PENDING_BOARD_BUILD",
+  "known_limits": [
+    "No live whole-original-layer end-to-end performance claim",
+    "No new hardware simulation performed; reused bit-identical hardware images",
+    "XRT managed-kernel read_register deprecation warnings retained from validated host ABI",
+    "Default export keeps all actual-output digests and 8 actual byte files; other tested outputs require explicitly labelled hash-identical reconstruction",
+    "Full capture diagnostic includes disk IO and must not be a CPU benchmark"
+  ]
+}

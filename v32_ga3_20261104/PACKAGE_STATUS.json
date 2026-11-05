@@ -1,0 +1,11 @@
+{
+  "status": "READY_FOR_USER_BOARD_BUILD_AND_TEST",
+  "created_utc": "2026-11-04T11:36:22.029364+00:00",
+  "scope": "Complete real ga3 raw MAC comparison",
+  "firmware_images_changed": false,
+  "host_changed": true,
+  "data_profile": "full",
+  "board_performance": "PENDING",
+  "private_material_included": false,
+  "original_v32_changed": false
+}

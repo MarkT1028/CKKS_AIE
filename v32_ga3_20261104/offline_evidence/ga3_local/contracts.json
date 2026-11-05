@@ -1,0 +1,46 @@
+{
+  "status": "PASS_GA3_CONTRACTS",
+  "cases": [
+    {
+      "name": "duplicate",
+      "returncode": 1,
+      "stderr": "FAIL ga3 job coverage/shape\n"
+    },
+    {
+      "name": "missing_tail",
+      "returncode": 1,
+      "stderr": "FAIL incomplete declared ga3 job count\n"
+    },
+    {
+      "name": "unsafe",
+      "returncode": 1,
+      "stderr": "FAIL unsafe ga3 data path\n"
+    },
+    {
+      "name": "gold_corrupt",
+      "returncode": 1,
+      "stderr": "FAIL ga3 complete output mismatch\n"
+    },
+    {
+      "name": "tail_corrupt",
+      "returncode": 1,
+      "stderr": "FAIL ga3 complete output mismatch\n"
+    },
+    {
+      "name": "baby_kind",
+      "returncode": 1,
+      "stderr": "FAIL mapped version/kind\n"
+    },
+    {
+      "name": "reject_model_as_hardware",
+      "pass_": true
+    },
+    {
+      "name": "reject_pilot_as_full_layer",
+      "pass_": true
+    }
+  ],
+  "actual_digest_files": 512,
+  "actual_samples": 8,
+  "synthetic_only": true
+}
