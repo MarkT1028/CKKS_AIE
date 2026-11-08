@@ -1,0 +1,11 @@
+{
+  "source_package": "v32_ga3_hostopt_20261108",
+  "manifest_sha256": "f4d230990df535bb63ef3d943fcd120405199865a15cbd4e48d42217e5e8c297",
+  "retained_common": {
+    "record.hpp": "9c0e8aa877d81b5981ad5a36bd75842b4047840e1ee4cd1fe578ce43e4ab8621",
+    "ga3_source.hpp": "61b70e7512e575df11c1533c6e3ba178605b3f7962d878ce1c92d53223a332cb",
+    "hostopt_memory.hpp": "b6f16624f9c04b4082d589c8c7fb59348ea1fd6b364b075b374c9e30cebbf9ce"
+  },
+  "board_archive_sha256": "98bbfeccf738bcac7a9b8985966c72cae9596db522dd9bbf55a196f2d53c4f6f",
+  "scope": "Legacy is the measured cacheable-BO hostopt implementation, including full gold reads and word comparison. Same two hardware images and existing data."
+}

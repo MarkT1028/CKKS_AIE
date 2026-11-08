@@ -1,0 +1,14 @@
+{
+  "status": "READY_FOR_BOARD_IO_SCREEN",
+  "board_performance": "PENDING",
+  "firmware_changed": false,
+  "full_dataset_upload_required": false,
+  "first_board_run": "sh run_screen.sh",
+  "profiles": [
+    "legacy",
+    "sequential",
+    "sha256"
+  ],
+  "data_directory": "../v32_ga3_20261104_data",
+  "SHA256_capability_checked_before_hardware": true
+}

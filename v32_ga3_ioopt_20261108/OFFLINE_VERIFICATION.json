@@ -1,0 +1,31 @@
+{
+  "status": "PASS_IOOPT_OFFLINE_COMPLETE_REAL_MODELS_AND_NEGATIVE_TESTS",
+  "board_executed": false,
+  "board_performance": "PENDING",
+  "full_real_models": {
+    "profiles": [
+      "sequential",
+      "sha256"
+    ],
+    "windows_per_profile": 1024,
+    "verified_words_per_profile": 1333788672,
+    "all_L": 53,
+    "all_N": 131072
+  },
+  "negative_cases": 16,
+  "control_mutations": 18,
+  "output_digest_vectors": "independent PicoSHA2 including 3MiB and SHA256 block/padding boundaries",
+  "sanitizers": [
+    "ASan",
+    "UBSan"
+  ],
+  "complete_synthetic_export_digests": 512,
+  "actual_byte_samples": 8,
+  "CPU_arithmetic_source_unchanged": true,
+  "both_hardware_backends_API_syntax": true,
+  "ARM64_native_API_syntax": true,
+  "pure_PL_objects_no_AIE_graph_symbols": true,
+  "single_request_pilot_both_orders": true,
+  "data_receipt_reuse_and_mutation_rejection": true,
+  "crypto_scope": "Userspace OpenSSL EVP tested on x86 Linux. ARM64 board library availability and actual BO coherency/performance require board tests. No emulated hardware timing claim."
+}

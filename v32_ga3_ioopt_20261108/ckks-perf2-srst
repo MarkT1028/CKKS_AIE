@@ -1,0 +1,25 @@
+#!/bin/sh
+# One-shot PMC SRST; reset addresses/order are the project's verified 2025.2 flow.
+[ "${1-}" = reboot ] || exit 0
+flag=/run/ckks-perf2-altboot.once
+[ -f "$flag" ] || exit 0
+IFS= read -r token < "$flag" || exit 0
+[ "$token" = CKKS_PERF2_SLOT1 ] || exit 0
+rm -f "$flag" || exit 1
+root_ro=no
+sd_rw=no
+while read -r task_dev task_mnt task_fs task_opts task_rest;do
+  if [ "$task_mnt" = / ];then case ",$task_opts," in *,ro,*) root_ro=yes;;esac;fi
+  case "$task_dev" in /dev/mmcblk*) case ",$task_opts," in *,rw,*) sd_rw=yes;;esac;;esac
+done < /proc/mounts
+if [ "$root_ro" != yes ] || [ "$sd_rw" = yes ];then
+  echo 'PERF2_SRST_ABORT: storage still writable; use normal reboot.' >&2
+  exit 1
+fi
+/usr/sbin/devmem 0xf1110004 32 0xf0000001 || exit 1
+task_readback=$(/usr/sbin/devmem 0xf1110004 32) || exit 1
+case "$task_readback" in 0xF0000001|0xf0000001) ;;*) echo 'PERF2_SRST_ABORT: MultiBoot readback mismatch' >&2;exit 1;;esac
+echo 'PERF2_SRST: storage read-only; selecting SD slot 1 and triggering PMC_SRST.' >&2
+/usr/sbin/devmem 0xf126031c 32 0x8
+echo 'PERF2_SRST: reset write returned; normal reboot may follow.' >&2
+exit 1

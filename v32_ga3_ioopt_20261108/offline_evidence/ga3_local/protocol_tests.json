@@ -1,0 +1,13 @@
+{
+  "status": "PASS_GA3_PROTOCOL_COLLECTION_EXTRACTION_AND_RECONSTRUCTION",
+  "synthetic_only": true,
+  "board_executed": false,
+  "tests": [
+    "owned_child_cleanup_and_same_boot_interruption_guard",
+    "failed_and_interrupted_runs_retained_with_verified_archive",
+    "ABA_CPU_cross_boot_guard_and_duplicate_retention",
+    "stream_archive_hash_member_hash_path_and_symlink_guards",
+    "hash_linked_reconstruction_preserves_actual_vs_reference_and_subset_scope"
+  ],
+  "test_path": "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/protocol_1793792087005726975"
+}

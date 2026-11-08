@@ -1,0 +1,36 @@
+{
+  "status": "OFFLINE_VERIFIED_BOARD_PENDING",
+  "profiles": {
+    "legacy": {
+      "reference": "measured previous cacheable implementation",
+      "verification": "FULL_CANONICAL_WORD_COMPARE"
+    },
+    "sequential": {
+      "read": "explicit header, sequential hint,4MiB bulk read",
+      "verification": "FULL_CANONICAL_WORD_COMPARE"
+    },
+    "sha256": {
+      "read": "same complete inputs; omit gold payload reads",
+      "verification": "FULL_CANONICAL_SHA256",
+      "CPU_and_hardware_same_verification": true
+    }
+  },
+  "all_profiles_BO": "cacheable",
+  "all_profiles_cache_retirement": "per-file DONTNEED, no global clear",
+  "expected_full_payload_GiB": {
+    "legacy": 43.0625,
+    "sha256": 33.125,
+    "gold_avoided": 9.9375
+  },
+  "payload_reduction_percent": 23.076923076923077,
+  "export_reuses_this_trials_verified_digest": true,
+  "firmware_changed": false,
+  "full_dataset_upload_required": false,
+  "board_performance": "PENDING",
+  "CUDA_speedup": "NOT_ESTABLISHED",
+  "official_sources": [
+    "https://docs.openssl.org/3.0/man3/EVP_DigestInit/",
+    "https://man7.org/linux/man-pages/man2/posix_fadvise.2.html",
+    "https://man7.org/linux/man-pages/man2/pread.2.html"
+  ]
+}
