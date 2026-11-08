@@ -36,4 +36,4 @@ for profile,name in enumerate(b.PROFILES):
     else:raise AssertionError('missing sample accepted')
     samples.write_text(original);b.summarize(folder)
 receipt=dict(status='PASS_HOSTOPT_MODEL_REJECTION_SUBSET_COORDINATES_PROFILES_AND_MUTATIONS',valid_profiles=list(b.PROFILES),negative_cases=records,software_model_only=True,board_executed=False)
-(R/'build/control_verification.json').write_text(json.dumps(receipt,indent=2)+'\n');print(receipt['status'])
+(R/'build/control_verification.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8',newline='\n');print(receipt['status'])
