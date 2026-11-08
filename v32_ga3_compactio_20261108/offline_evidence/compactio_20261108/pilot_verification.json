@@ -1,0 +1,26 @@
+{
+  "status": "PASS_BOTH_PROFILES_BOTH_ORDERS_PILOT",
+  "cases": [
+    {
+      "profile": "sha256",
+      "order": "descending",
+      "status": "PASS_SOFTWARE_AND_CONTROL_ONLY"
+    },
+    {
+      "profile": "sha256",
+      "order": "ascending",
+      "status": "PASS_SOFTWARE_AND_CONTROL_ONLY"
+    },
+    {
+      "profile": "packed",
+      "order": "descending",
+      "status": "PASS_SOFTWARE_AND_CONTROL_ONLY"
+    },
+    {
+      "profile": "packed",
+      "order": "ascending",
+      "status": "PASS_SOFTWARE_AND_CONTROL_ONLY"
+    }
+  ],
+  "board_executed": false
+}

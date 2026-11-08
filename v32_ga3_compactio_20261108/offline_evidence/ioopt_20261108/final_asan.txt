@@ -1,0 +1,2 @@
+PASS_GA3_WINDOW window=1/128 L=16 checked_words=1572864
+PASS_GA3_WINDOW window=2/128 L=5 checked_words=2064384

@@ -1,0 +1,42 @@
+{
+  "status": "PASS_SINGLE_REQUEST_PILOT_BOTH_ORDERS_ALL_PROFILES",
+  "cases": [
+    {
+      "profile": "legacy",
+      "order": "ascending",
+      "verification": "FULL_CANONICAL_WORD_COMPARE",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    },
+    {
+      "profile": "legacy",
+      "order": "descending",
+      "verification": "FULL_CANONICAL_WORD_COMPARE",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    },
+    {
+      "profile": "sequential",
+      "order": "ascending",
+      "verification": "FULL_CANONICAL_WORD_COMPARE",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    },
+    {
+      "profile": "sequential",
+      "order": "descending",
+      "verification": "FULL_CANONICAL_WORD_COMPARE",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    },
+    {
+      "profile": "sha256",
+      "order": "ascending",
+      "verification": "FULL_CANONICAL_SHA256",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    },
+    {
+      "profile": "sha256",
+      "order": "descending",
+      "verification": "FULL_CANONICAL_SHA256",
+      "status": "PASS_SOFTWARE_AND_SCHEMA_ONLY"
+    }
+  ],
+  "board_executed": false
+}

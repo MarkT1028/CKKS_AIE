@@ -1,0 +1,38 @@
+{
+  "status": "PASS_COMPACTIO_COMPLETE_REAL_INPUTS_AND_FULL_MAC_SOFTWARE_MODEL",
+  "board_executed": false,
+  "board_performance": "PENDING",
+  "all_real_inputs_disk_roundtrip": 1280,
+  "all_original_canonical_SHA256_match": true,
+  "real_model_windows": 1024,
+  "verified_words": 1333788672,
+  "full_output_digests": 4096,
+  "all_N": 131072,
+  "all_L": 53,
+  "K": 16,
+  "codec_independent_bit_oracle_widths": "2..60",
+  "codec_blocks": 236,
+  "noncanonical_codec_rejections": 118,
+  "ARM64_QEMU_codec": true,
+  "sanitizers": [
+    "ASan",
+    "UBSan"
+  ],
+  "all_2_profiles_x_2_backends_x86_and_ARM64_API_syntax": true,
+  "native_PL_no_undefined_AIE_graph_API_symbols": true,
+  "corruption_and_cache_identity_cases": 16,
+  "summary_protocol_mutations": 24,
+  "synthetic_exports_each": {
+    "digests": 512,
+    "actual_samples": 8,
+    "paths": [
+      "packed",
+      "hybrid"
+    ]
+  },
+  "pilot_both_profiles_both_orders": true,
+  "cache_resume_and_rename_checkpoint_recovery": true,
+  "original_data_and_hardware_unchanged": true,
+  "CPU_arithmetic_unchanged": true,
+  "scope": "Software correctness only. Local/QEMU times are not board performance. Board total time and new original-context return require collected board results."
+}

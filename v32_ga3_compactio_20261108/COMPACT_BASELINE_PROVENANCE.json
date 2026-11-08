@@ -1,0 +1,8 @@
+{
+  "source_package": "v32_ga3_ioopt_20261108",
+  "manifest_sha256": "eb70ed44c3c103bcf557843aa08314f0c20662d653ac45e0148652f9cf86c36a",
+  "board_archive_sha256": "7a83d9a6668e25e421b3cf727d054eabf861710a7bc9ac9ea0c2afe89bb9a285",
+  "baseline": "Measured SHA256 profile; same arithmetic, output verification, BO path and bitstreams",
+  "board_free_GiB_reported": 17,
+  "original_data_preserved": true
+}

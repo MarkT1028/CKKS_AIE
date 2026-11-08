@@ -1,0 +1,12 @@
+{
+  "status": "READY_FOR_BOARD_COMPACT_INPUT_SCREEN",
+  "board_performance": "PENDING",
+  "firmware_changed": false,
+  "new_program_only_upload": true,
+  "full_dataset_upload_required": false,
+  "first_board_run": "prepare pilot then sh run_screen.sh",
+  "data_directory": "../v32_ga3_20261104_data",
+  "pilot_cache_bytes": 958685088,
+  "full_cache_bytes": 25564935680,
+  "first_use_acceleration": "NOT_CLAIMED; preparation cost must be counted"
+}

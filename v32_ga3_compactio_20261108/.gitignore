@@ -1,0 +1,12 @@
+bin/
+__pycache__/
+results_*/
+switch_logs/
+collected_*
+BUILD_IDENTITY.json
+DATA_CHECK_RECEIPT.json
+RECOVERY_REQUIRED.json
+!offline_evidence/hostopt_20261108/*.log
+HASH_CAPABILITIES.json
+CACHE_PREPARATION_*.json
+compact_screen_summary.json

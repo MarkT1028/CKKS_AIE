@@ -1,0 +1,12 @@
+{
+  "status": "PASS_FULL_WINDOWS_RESTORE_AND_EVERY_TAR_PAYLOAD",
+  "archive_path": "D:\\CodexBuilds\\v32_ga3_20261104\\full_transport_roundtrip_1793789274411804800\\v32_ga3_20261104_data.tar.gz",
+  "archive_bytes": 39334819787,
+  "archive_sha256": "f9d28c8e22ae5fcc3c96b5ee42babb64ab157cd0d09eff94b035d0ca84c095cf",
+  "data_files": 5379,
+  "data_bytes": 46240984576,
+  "parts": 1173,
+  "batches": 37,
+  "private_or_unsafe_members": 0,
+  "all_member_hashes_match": true
+}

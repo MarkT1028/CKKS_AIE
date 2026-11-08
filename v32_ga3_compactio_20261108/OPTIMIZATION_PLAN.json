@@ -1,0 +1,23 @@
+{
+  "status": "OFFLINE_VERIFIED_BOARD_PENDING",
+  "profiles": [
+    "sha256",
+    "packed"
+  ],
+  "codec": "Exact q.bit_length() per original canonical block; LE bit stream -> unchanged uint64 residues",
+  "full_input_logical_payload_bytes": 35567697920,
+  "full_packed_bytes_including_headers": 25564935680,
+  "input_size_reduction_percent": 28.12316462678729,
+  "pilot_packed_bytes": 958685088,
+  "full_dataset_upload_required": false,
+  "firmware_changed": false,
+  "AIE_tiles_unchanged": true,
+  "primary_metric": "Controller runner wall including preflight, setup, admission, decode, transfers, run/wait and full-output SHA256 verification",
+  "first_use_metric": "One-time cumulative cache preparation + packed runner wall; may be slower",
+  "preparation": "Original sealed SHA check, exact encode, write/fsync, actual disk read-back, exact decode and sealed canonical SHA; no original data deletion",
+  "full_MAC_coverage_preserved": true,
+  "partial_cache_is_declared_hybrid": true,
+  "missing_declared_cache_is_fatal": true,
+  "cache_retirement": "Per-file DONTNEED on both paths; advice not guaranteed physical cache eviction",
+  "board_performance": "PENDING"
+}

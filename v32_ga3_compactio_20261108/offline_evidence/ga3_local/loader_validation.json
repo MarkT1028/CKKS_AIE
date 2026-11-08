@@ -1,0 +1,241 @@
+{
+  "status": "PASS_REAL_BULK_LOADER_EQUIVALENCE_ASAN_UBSAN_ABI",
+  "real_records_checked": 12,
+  "all_RNS_batches": true,
+  "board_executed": false,
+  "source_sha256": {
+    "host/ga3_host.cpp": "328198352f7b78930481a17ee3dc69fdfd43bf58ed6c945d42b698f40df9ce71",
+    "host/ga3_xrt.hpp": "379263021caf1defa5f52f9330667208bc453d8f3c7b14c46944abebbf0e5269",
+    "common/record.hpp": "e46fe89d309bef217b1b22ace6f65679f219eff4ee5d344dfb43cd315616b391",
+    "common/ga3_source.hpp": "f4c250fa45af49f7a198f97383a208bcb18142fd10b40e280152b8f1f1467342"
+  },
+  "commands": [
+    {
+      "command": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "-pthread",
+        "-DWINDOW_SOFTWARE_MODEL",
+        "/mnt/e/v32_gpu/v32_gpu/board_packages/v32_ga3_20261104/host/ga3_host.cpp",
+        "-o",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/weights/r0_c0_g3.bin",
+        "3"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/baby/r0_c0_o00.bin",
+        "4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/gold/r0_c0_o00_g3.bin",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/weights/r16_c0_g3.bin",
+        "3"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/baby/r16_c0_o00.bin",
+        "4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/gold/r16_c0_o00_g3.bin",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/weights/r32_c0_g3.bin",
+        "3"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/baby/r32_c0_o00.bin",
+        "4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/gold/r32_c0_o00_g3.bin",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/weights/r48_c0_g3.bin",
+        "3"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/baby/r48_c0_o00.bin",
+        "4"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "--check-record",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2/gold/r48_c0_o00_g3.bin",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "unused",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/real_smoke",
+        "smoke",
+        "2",
+        "1",
+        "descending",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "g++",
+        "-O1",
+        "-g",
+        "-std=c++17",
+        "-pthread",
+        "-DWINDOW_SOFTWARE_MODEL",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/mnt/e/v32_gpu/v32_gpu/board_packages/v32_ga3_20261104/host/ga3_host.cpp",
+        "-o",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/asan"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/asan",
+        "unused",
+        "/mnt/d/CodexBuilds/v32_ga3_20261104/public_data_v2",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/real_asan_smoke",
+        "smoke",
+        "1",
+        "0",
+        "ascending",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/model",
+        "unused",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/invalid_canonical",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/invalid_output",
+        "smoke",
+        "1",
+        "0",
+        "descending",
+        "2"
+      ],
+      "returncode": 1
+    },
+    {
+      "command": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "-pthread",
+        "-DDISABLE_ABI_CHECK",
+        "-I/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers",
+        "-c",
+        "/mnt/e/v32_gpu/v32_gpu/board_packages/v32_ga3_20261104/host/ga3_host.cpp",
+        "-o",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/aie.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "nm",
+        "-u",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/aie.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "-pthread",
+        "-DDISABLE_ABI_CHECK",
+        "-I/mnt/e/v32_gpu/v32_gpu/experiments/ckks_perf2_20261017/host_api_headers",
+        "-DWINDOW_PURE_PL",
+        "-DWINDOW_NATIVE_PL",
+        "-c",
+        "/mnt/e/v32_gpu/v32_gpu/board_packages/v32_ga3_20261104/host/ga3_host.cpp",
+        "-o",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/native.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "nm",
+        "-u",
+        "/mnt/e/v32_gpu/v32_gpu/integration/v32_ga3_20261104/build/loader_1793787329517856450/native.o"
+      ],
+      "returncode": 0
+    }
+  ]
+}
