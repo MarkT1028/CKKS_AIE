@@ -1,0 +1,14 @@
+{
+  "status": "READY_FOR_BOARD_SCREENING",
+  "board_performance": "PENDING",
+  "firmware_changed": false,
+  "full_dataset_upload_required": false,
+  "profiles": [
+    "baseline",
+    "burst",
+    "cacheable"
+  ],
+  "first_board_run": "sh run_screen.sh",
+  "default_data_directory": "../v32_ga3_20261104_data",
+  "formal_GPU_speedup_claim": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS_WINDOWS_LOCAL_GIT_BATCH_RESTORE",
+  "test_path": "D:\\CodexBuilds\\v32_ga3_20261104\\transport_test_1793791208043858600",
+  "local_only": true,
+  "remote_network_push": false,
+  "parts": 17,
+  "batches": 2,
+  "checks": [
+    "two automatic batches",
+    "Windows checkout autocrlf",
+    "actual archive SHA256",
+    "idempotent restore",
+    "corrupt part rejection before output creation",
+    "unrelated staged files protected"
+  ]
+}

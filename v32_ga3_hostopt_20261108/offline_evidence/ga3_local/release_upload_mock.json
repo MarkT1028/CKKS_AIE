@@ -1,0 +1,38 @@
+{
+  "mock_calls": [
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "release create ga3-full-20261104-f9d28c8e22ae --repo MarkT1028/CKKS_AIE --target bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb --draft --prerelease --title Complete real g_a.3 comparison data --notes-file E:\\v32_gpu\\v32_gpu\\integration\\v32_ga3_20261104\\build\\release_upload_mock_1793791157118\\repo\\v32_ga3_20261104_gitdata\\meta\\RELEASE_NOTES.md",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "release upload ga3-full-20261104-f9d28c8e22ae E:\\v32_gpu\\v32_gpu\\integration\\v32_ga3_20261104\\build\\release_upload_mock_1793791157118\\assets\\ga3_full_001.part --repo MarkT1028/CKKS_AIE",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "release upload ga3-full-20261104-f9d28c8e22ae E:\\v32_gpu\\v32_gpu\\integration\\v32_ga3_20261104\\build\\release_upload_mock_1793791157118\\assets\\ga3_full_001.part --repo MarkT1028/CKKS_AIE",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "api repos/MarkT1028/CKKS_AIE/releases?per_page=100&page=1",
+    "api repos/MarkT1028/CKKS_AIE/releases/123/assets?per_page=100",
+    "release edit ga3-full-20261104-f9d28c8e22ae --repo MarkT1028/CKKS_AIE --draft=false"
+  ],
+  "status": "PASS_GA3_RELEASE_UPLOADER_MOCK_ONLY",
+  "actual_release_created": false,
+  "network_contacted": false,
+  "checks": [
+    "default_zero_API_calls",
+    "exact_commit_draft_creation",
+    "uploaded_digest_and_size_verified",
+    "repeat_skips_identical_asset",
+    "bad_digest_blocks_publish",
+    "missing_asset_blocks_publish",
+    "unrelated_release_rejected",
+    "publish_only_after_verified_assets",
+    "no_clobber_or_delete"
+  ]
+}

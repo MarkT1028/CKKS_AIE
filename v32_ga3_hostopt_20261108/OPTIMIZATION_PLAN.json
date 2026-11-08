@@ -1,0 +1,39 @@
+{
+  "status": "IMPLEMENTED_OFFLINE_VERIFIED_BOARD_PENDING",
+  "profiles": {
+    "baseline": {
+      "BO": "normal",
+      "packing": "original scalar interleaved with baby reuse",
+      "output": "original canonical merge plus full verification"
+    },
+    "burst": {
+      "BO": "normal",
+      "packing": "ARM64 NEON or portable 32KiB scratch then contiguous copy; rewrites baby",
+      "output": "canonical materialization plus fused full lane comparison"
+    },
+    "cacheable": {
+      "BO": "cacheable requested via documented XRT constructor",
+      "packing": "ARM64 NEON direct with original per-bank baby reuse",
+      "output": "canonical materialization plus fused full lane comparison"
+    }
+  },
+  "shared_candidate_loader": "reuse existing vector capacity; full read, range and identity checks retained",
+  "profile_scope": "same data, firmware, clocks, CPU arithmetic and output meaning; candidate loader is shared by CPU/hardware phases",
+  "data_admission_timing": [
+    "header",
+    "allocation",
+    "pread",
+    "range_validation",
+    "identity",
+    "per_file_retirement"
+  ],
+  "hardware_batching_changed": false,
+  "global_cache_clear": false,
+  "automatic_boot_or_reboot": false,
+  "board_performance": "PENDING",
+  "gpu_speedup": "NOT_ESTABLISHED",
+  "official_sources": [
+    "https://xilinx.github.io/XRT/2024.1/html/xrt_native_apis.html",
+    "https://xilinx.github.io/XRT/master/html/xrt_native.main.html"
+  ]
+}

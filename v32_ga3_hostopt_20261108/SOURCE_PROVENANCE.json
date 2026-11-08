@@ -1,0 +1,28 @@
+{
+  "base_package_manifest_sha256": "089c64d6c6faa45b108303db4f10625bfb61f6546f26a3e20c7e1c21eb051922",
+  "original_v32_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "original_GPU_backend_sha256": "e4f3d2fe45d7f7b148da9b76bc23abe55473aa37058b4e4b3e1697efffc1b8cc",
+  "cpu_reference_source_sha256": "5eeb2298483071284cdbcc87d930128c1f74a4a3c317ebea656f2edff61e5ff4",
+  "new_code": {
+    "host/ga3_host.cpp": "9278d9969984ec34e75038ddaa4878e4d319346046b6eb68c6ad573cee7a571b",
+    "host/ga3_xrt.hpp": "b04a16cbddb213cf655a9e4ccdae67eb3f21d2c68d2291de03ded09531708aac",
+    "common/finish_overlap.hpp": "86c2edc132ca3724756351c4fc8902dc5ee13c3afaec8ef057e30a61a7e8ebf7",
+    "common/ga3_source.hpp": "61b70e7512e575df11c1533c6e3ba178605b3f7962d878ce1c92d53223a332cb",
+    "common/hostopt_memory.hpp": "b6f16624f9c04b4082d589c8c7fb59348ea1fd6b364b075b374c9e30cebbf9ce",
+    "common/record.hpp": "9c0e8aa877d81b5981ad5a36bd75842b4047840e1ee4cd1fe578ce43e4ab8621",
+    "common/replay.hpp": "fec0727cfab0688f6b25a9e5065b637050d890caab359c7086374bc79b849563",
+    "common/stream_output.hpp": "4e092d9b6c1c35ab8b69f9eff74f50ef4de7eb4953e2050611a678ce3721f095"
+  },
+  "hardware": {
+    "v32_core_2_pipe": {
+      "boot0001.bin": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+      "ckks_hw_boot.xclbin": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b"
+    },
+    "v32_native_pl_2_pipe": {
+      "boot0001.bin": "fedfbea228036efc37b33fa25b3fdea0c77cb8e97abccd75a7717d7ebcbfc274",
+      "ckks_hw_boot.xclbin": "c3184e302d7b7b758607ff311fbba3bc3f4578919c4b7e786cb512748b359e39"
+    }
+  },
+  "full_model_binary_sha256": "07a6e5781d98213deb149d389923a927ae3ac7c55df0e50185b501b55d24012e",
+  "scope": "All optimizations are in the new host package. No firmware or full dataset was modified; no keys are included."
+}

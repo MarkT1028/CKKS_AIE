@@ -1,0 +1,13 @@
+{
+  "status": "PASS_RELEASE_DOWNLOAD_RESUME_RESTORE_AND_READONLY_UPLOAD_PLAN",
+  "test_path": "D:\\CodexBuilds\\v32_ga3_20261104\\release_script_test_1793790154483385500",
+  "network_contacted": false,
+  "checks": [
+    "partial local-source resume",
+    "manifest-selected restore",
+    "archive checksum",
+    "idempotent complete downloads",
+    "corrupt asset preserved/rejected",
+    "uploader default is read-only plan"
+  ]
+}
