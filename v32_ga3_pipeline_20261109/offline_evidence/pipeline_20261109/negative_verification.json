@@ -1,0 +1,26 @@
+{
+  "status": "PASS_CAPABILITY_FAILURES_AND_EXACT_HYBRID_PREFETCH",
+  "cases": [
+    {
+      "case": "bad_read_size",
+      "result": "REJECTED",
+      "error": "FAIL read size must be 1,4,16 MiB"
+    },
+    {
+      "case": "bad_prefetch",
+      "result": "REJECTED",
+      "error": "FAIL invalid V32_GA3_PREFETCH"
+    },
+    {
+      "case": "missing_cache",
+      "result": "REJECTED",
+      "error": "FAIL filesystem error: cannot make canonical path: No such file or directory [/mnt/e/v32_gpu/v32_gpu/integration/ga3_pipeline_20261109/build/does_not_exist]"
+    },
+    {
+      "case": "missing_crypto",
+      "result": "REJECTED",
+      "error": "FAIL SHA256 candidate explicitly disabled"
+    }
+  ],
+  "board_executed": false
+}

@@ -1,0 +1,469 @@
+{
+  "status": "PASS_THREE_VARIANTS_TWO_IDENTITIES_METADATA_AND_MOCK_STAGING",
+  "parser_cases": [
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "baseline",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_core_2_pipe",
+      "profile": "candidate",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "baseline",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_pl_2_pipe",
+      "profile": "candidate",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "baseline",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_core_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_pl_2_pipe",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "identity_v32_native_lazy8_2_pipe",
+      "expected_accept": true,
+      "returncode": 0
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "truncated",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "bad_magic",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "action_mask",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "wrong_uuid",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "zero_sections",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "PDI",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "section_bounds",
+      "expected_accept": false,
+      "returncode": 1
+    },
+    {
+      "variant": "v32_native_lazy8_2_pipe",
+      "profile": "candidate",
+      "label": "AIE_contract",
+      "expected_accept": false,
+      "returncode": 1
+    }
+  ],
+  "actual_SD_changed": false,
+  "real_register_or_reboot": false
+}

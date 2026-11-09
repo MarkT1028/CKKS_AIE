@@ -1,0 +1,89 @@
+{
+  "status": "PASS_IOOPT_CORRUPTION_MANIFEST_CAPABILITY_EXPORT",
+  "cases": [
+    {
+      "case": "input_first",
+      "profile": 1,
+      "error": "FAIL noncanonical bulk source: /mnt/e/v32_gpu/v32_gpu/integration/ga3_ioopt_20261108/build/negative_1794146710365930015/input_first/record_3_16.bin"
+    },
+    {
+      "case": "input_first",
+      "profile": 2,
+      "error": "FAIL noncanonical bulk source: /mnt/e/v32_gpu/v32_gpu/integration/ga3_ioopt_20261108/build/negative_1794146710365930015/input_first/record_3_16.bin"
+    },
+    {
+      "case": "input_last_L5",
+      "profile": 1,
+      "error": "FAIL ga3 complete output mismatch"
+    },
+    {
+      "case": "input_last_L5",
+      "profile": 2,
+      "error": "FAIL complete canonical output SHA256 mismatch"
+    },
+    {
+      "case": "noncanonical",
+      "profile": 1,
+      "error": "FAIL noncanonical bulk source: /mnt/e/v32_gpu/v32_gpu/integration/ga3_ioopt_20261108/build/negative_1794146710365930015/noncanonical/record_4_16.bin"
+    },
+    {
+      "case": "noncanonical",
+      "profile": 2,
+      "error": "FAIL noncanonical bulk source: /mnt/e/v32_gpu/v32_gpu/integration/ga3_ioopt_20261108/build/negative_1794146710365930015/noncanonical/record_4_16.bin"
+    },
+    {
+      "case": "truncated",
+      "profile": 1,
+      "error": "FAIL mapped exact length"
+    },
+    {
+      "case": "truncated",
+      "profile": 2,
+      "error": "FAIL mapped exact length"
+    },
+    {
+      "case": "wrong_kind",
+      "profile": 1,
+      "error": "FAIL mapped version/kind"
+    },
+    {
+      "case": "wrong_kind",
+      "profile": 2,
+      "error": "FAIL mapped version/kind"
+    },
+    {
+      "case": "missing_digest",
+      "profile": 2,
+      "error": "FAIL missing sealed original output SHA256"
+    },
+    {
+      "case": "wrong_digest",
+      "profile": 2,
+      "error": "FAIL complete canonical output SHA256 mismatch"
+    },
+    {
+      "case": "duplicate_digest",
+      "profile": 2,
+      "error": "FAIL duplicate sealed manifest entry"
+    },
+    {
+      "case": "crypto_explicitly_disabled",
+      "profile": 2,
+      "error": "FAIL SHA256 candidate explicitly disabled"
+    },
+    {
+      "case": "word_profile_needs_no_crypto",
+      "profile": 0,
+      "status": "PASS"
+    },
+    {
+      "case": "word_profile_needs_no_crypto",
+      "profile": 1,
+      "status": "PASS"
+    }
+  ],
+  "complete_synthetic_output_digests": 512,
+  "actual_byte_samples": 8,
+  "real_data_mutated": false,
+  "board_executed": false
+}

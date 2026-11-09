@@ -1,0 +1,16 @@
+{
+  "status": "READY_FOR_BOARD_PIPELINE_SCREEN_AND_LAZY8_COMPARISON",
+  "board_performance": "PENDING",
+  "new_program_only_upload": true,
+  "full_dataset_upload_required": false,
+  "reuse_original_data": true,
+  "reuse_pilot_cache": true,
+  "first_board_run": "sh run_screen.sh descending on existing dual AIE image",
+  "new_image_switch": "Optional after current-image host screen; explicit check and arm then manual reboot",
+  "matched_CUDA_win": false,
+  "variants": [
+    "v32_core_2_pipe",
+    "v32_native_pl_2_pipe",
+    "v32_native_lazy8_2_pipe"
+  ]
+}

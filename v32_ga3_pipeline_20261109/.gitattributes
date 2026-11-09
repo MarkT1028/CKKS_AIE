@@ -1,0 +1,17 @@
+* -text
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.h text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ini text eol=lf
+SHA256SUMS_PACKAGE text eol=lf
+baseline_source/** -text
+legacy_source/** -text
+variants/** -text
+offline_evidence/** -text
+frozen_compactio/** -text

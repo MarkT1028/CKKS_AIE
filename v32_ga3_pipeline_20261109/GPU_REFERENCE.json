@@ -1,0 +1,19 @@
+{
+  "source": "reference_results/v32_results_full_gpu.json",
+  "source_sha256": "46eda3fdd2ddad1479ee3abfba26f71f40b550bd384c17f55e10ba56e91348f5",
+  "backend": "phantom-gpu",
+  "ring_dim": 131072,
+  "g_a3": {
+    "wall_sec": 25.656608199933544,
+    "gpu_mem_mib": 21016,
+    "cache": {
+      "loads": 150,
+      "bytes_loaded_GB": 29.88,
+      "load_sec": 24.4,
+      "evictions": 80,
+      "budget_GB": 12.5,
+      "resident_GB": 12.41
+    }
+  },
+  "scope": "Historical original Phantom GPU layer timing, including original layer verification; not a matched OpenFHE raw-MAC backend speed ratio. New hostopt board speed vs GPU remains pending."
+}

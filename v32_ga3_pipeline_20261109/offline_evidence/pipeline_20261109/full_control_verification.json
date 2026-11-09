@@ -1,0 +1,14 @@
+{
+  "status": "PASS_FULL_REAL_MODEL_1024_COORDINATES_4096_DIGESTS_PREFETCH_1023",
+  "source_model_is_not_board": true,
+  "real_words": 1333788672,
+  "synthetic_export": {
+    "status": "PASS_ALL_ACTUAL_OUTPUT_SHA256_MATCH_SEALED_ORIGINAL",
+    "hash_linked_output_files": 512,
+    "actual_byte_files": 8,
+    "ground_return": "PENDING_ORIGINAL_CONTEXT_VERIFICATION",
+    "verification_protocol": "FULL_CANONICAL_SHA256",
+    "scope": "Every full canonical output is verified using the declared protocol and its SHA256 is linked to the sealed original output. Default download retains actual bytes for both boundary windows; other tested bytes are reconstructed from the sealed hash-identical reference for ground crypto verification. Untested coefficients, if any, are not board evidence. Not all output byte files were downloaded."
+  },
+  "board_executed": false
+}

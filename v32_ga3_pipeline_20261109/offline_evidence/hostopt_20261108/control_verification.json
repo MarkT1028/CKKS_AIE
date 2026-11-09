@@ -1,0 +1,102 @@
+{
+  "status": "PASS_HOSTOPT_MODEL_REJECTION_SUBSET_COORDINATES_PROFILES_AND_MUTATIONS",
+  "valid_profiles": [
+    "baseline",
+    "burst",
+    "cacheable"
+  ],
+  "negative_cases": [
+    {
+      "profile": "baseline",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "baseline",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "baseline",
+      "case": "wrong_backend",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "baseline",
+      "case": "wrong_window_sum",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "baseline",
+      "case": "profile_mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "baseline",
+      "case": "missing_sample",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "wrong_backend",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "wrong_window_sum",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "profile_mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "burst",
+      "case": "missing_sample",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "wrong_backend",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "wrong_window_sum",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "profile_mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "cacheable",
+      "case": "missing_sample",
+      "status": "REJECTED"
+    }
+  ],
+  "software_model_only": true,
+  "board_executed": false
+}

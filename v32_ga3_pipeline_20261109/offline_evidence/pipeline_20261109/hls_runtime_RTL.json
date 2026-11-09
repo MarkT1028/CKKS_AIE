@@ -1,0 +1,24 @@
+{
+  "status": "PASS_L16_K16_AND_L5_K16_RANDOM_STALL_RTL",
+  "build": "/home/mark/ga3_pipeline_20261109/hls/runtime_validation_r1",
+  "runtime_shapes": [
+    [
+      128,
+      16,
+      16
+    ],
+    [
+      256,
+      5,
+      16
+    ]
+  ],
+  "elapsed_seconds": 109.92320955499986,
+  "source_sha256": {
+    "native_reader.cpp": "09338617c07d764015a116748b3c19cef3ba1fc2b84b81220fd2b888cd79d828",
+    "native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+    "native_large_chain.cpp": "9d4494b679aab10083946492b39ca8e7cb9ddd0a028289990fbf5c02119c18ab",
+    "native_large_tb.cpp": "40f38866ab9264adc9b5d56dcb87f43387ddd9ee41d593a4737cfcff541d0191"
+  },
+  "reader_reduce_XO_source_unchanged": true
+}

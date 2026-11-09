@@ -1,0 +1,11 @@
+{
+  "status": "PASS_COMPLETE_ORIGINAL_GA3_AND_GA5_GROUND_RETURN",
+  "raw_MAC_groups": 64,
+  "baby_ciphertexts_checked": 256,
+  "complete_layer_and_activation_ciphertexts_checked": 32,
+  "original_source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "verification": {
+    "g_a.3": 7.192723313967364e-07,
+    "g_a.5": 5.31637574896493e-06
+  }
+}

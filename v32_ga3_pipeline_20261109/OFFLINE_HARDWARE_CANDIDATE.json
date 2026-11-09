@@ -1,0 +1,30 @@
+{
+  "status": "PASS_LAZY8_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+  "variant": "v32_native_lazy8_2_pipe",
+  "uuid": "ff0611c29bc354578e6290b0be77171f",
+  "resource": {
+    "LUT": 45796,
+    "FF": 73354,
+    "RAMB36": 38,
+    "RAMB18": 2,
+    "URAM": 0,
+    "DSP": 286,
+    "BRAM36_equivalent": 39.0,
+    "AIE_compute_tiles": 0,
+    "PL_kernel_MHz": 225,
+    "signoff": {
+      "setup_slack_ns": 0.351,
+      "hold_slack_ns": 0.01,
+      "drc_errors": 0,
+      "board_tested": false
+    }
+  },
+  "arithmetic": "Exact128 sums then three Barrett reductions per coefficient vs64 in native baseline",
+  "stream": "8 full120-bit products/960-bit beat vs4/480-bit beat",
+  "external_ABI_unchanged": true,
+  "both_products_ends_rebuilt": true,
+  "board_execution": false,
+  "board_performance": "PENDING",
+  "baseline_source_frozen": true,
+  "baseline_new_variant_only_macro_override": true
+}

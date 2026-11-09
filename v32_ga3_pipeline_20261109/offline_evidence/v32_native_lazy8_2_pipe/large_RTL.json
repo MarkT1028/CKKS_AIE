@@ -1,0 +1,34 @@
+{
+  "status": "PASS_L14_L16_NATIVE_CSIM_RANDOM_STALL_RTL",
+  "build": "/home/mark/ga3_pipeline_20261109/hls/large_validation_r1",
+  "runtime_shapes": [
+    [
+      64,
+      14,
+      16
+    ],
+    [
+      128,
+      16,
+      1
+    ],
+    [
+      64,
+      1,
+      16
+    ],
+    [
+      128,
+      14,
+      16
+    ]
+  ],
+  "elapsed_seconds": 118.76142616200002,
+  "reader_reduce_XO_source_unchanged": true,
+  "source_sha256": {
+    "native_reader.cpp": "09338617c07d764015a116748b3c19cef3ba1fc2b84b81220fd2b888cd79d828",
+    "native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+    "native_large_chain.cpp": "9d4494b679aab10083946492b39ca8e7cb9ddd0a028289990fbf5c02119c18ab",
+    "native_large_tb.cpp": "ccb8fae61468752c52f9397813ff156a814eb1cd678435e843934d6e1b1e9275"
+  }
+}

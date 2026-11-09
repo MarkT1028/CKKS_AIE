@@ -1,0 +1,8 @@
+{
+  "source_package": "v32_ga3_compactio_20261108",
+  "manifest_sha256": "a4d8c3c8da83abefd3e11e4af454ed7856c0dca9a8ef3f7820c6d9ca2097b039",
+  "archive_sha256": "d9c3caf1a05c4aa78fed0a008015ffc3f959aab911c410cdf4aa6eb196bcf865",
+  "baseline": "Exact prior packed C++ host and original Python file-identity scan; current packed cache reused",
+  "board_baseline_runner_ms": 52488.20009599876,
+  "board_baseline_request_ms": 42378.6974615
+}
