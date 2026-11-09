@@ -1,0 +1,7 @@
+{
+  "status": "PASS_MATCHED_SCOPE_ORDER_TRIALS_CACHE_AND_COLD_ACCOUNTING",
+  "real_board": false,
+  "comparisons": 1,
+  "reuse_ablations": 1,
+  "unsupported_ABA_claim_rejected": true
+}

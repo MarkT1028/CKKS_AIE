@@ -1,0 +1,95 @@
+{
+  "status": "PASS_PIPELINE_FULL_REAL_MODEL_AND_LAZY8_RTL_ROUTED_PENDING_BOARD",
+  "board_executed": false,
+  "board_performance": "PENDING",
+  "real_model": {
+    "windows": 1024,
+    "verified_words": 1333788672,
+    "full_output_SHA256": 4096,
+    "prefetch_transitions": 1023,
+    "moduli": 53,
+    "K": 16
+  },
+  "all_inputs_disk_encode_decode_sealed_SHA256": 1280,
+  "host_settings": 6,
+  "settings_both_orders": true,
+  "sanitizers": [
+    "ASan",
+    "UBSan",
+    "ThreadSanitizer"
+  ],
+  "identity_equivalence_files": 5378,
+  "identity_negative_cases": 8,
+  "controller_rejected_mutations": 134,
+  "API_syntax": "two host sources x three variants x x86/ARM64",
+  "new_PL_exact_reduction_vectors": 34816,
+  "new_PL_real_AP_model_verified_words": 3907584,
+  "new_PL_real_AP_coordinates": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      15,
+      3,
+      122880
+    ],
+    [
+      7,
+      2,
+      65536
+    ]
+  ],
+  "new_PL_random_stall_RTL_shapes": [
+    [
+      64,
+      3,
+      1
+    ],
+    [
+      128,
+      3,
+      16
+    ],
+    [
+      64,
+      14,
+      16
+    ],
+    [
+      128,
+      16,
+      1
+    ],
+    [
+      64,
+      1,
+      16
+    ],
+    [
+      128,
+      14,
+      16
+    ],
+    [
+      128,
+      16,
+      16
+    ],
+    [
+      256,
+      5,
+      16
+    ]
+  ],
+  "new_PL_routed_signoff": {
+    "setup_slack_ns": 0.351,
+    "hold_slack_ns": 0.01,
+    "drc_errors": 0,
+    "board_tested": false
+  },
+  "baseline_CPP_and_existing_images_byte_identical": true,
+  "CPU_arithmetic_unchanged": true,
+  "scope": "Local models, RTL and routed checks prove declared correctness properties; they do not establish board speed, new cryptographic return or matched CUDA superiority."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS_SPLIT_BO_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+  "build": "/home/mark/ga3_splitbo_20261109/hardware/splitbo_r1",
+  "inputs": {
+    "base.xsa": "62cf1c3ee8c72849c286a54813bca4926784f31546c30a1b23d1abaf5ac4ff0a",
+    "ct_reader.xo": "8bbdda0140d5de790ebd2a5aa62b6e497702fe52a2504af3cee2d2c956cf550c",
+    "ct_reduce_accum.xo": "5e741bbe0982ed0f5f030c0f81271fa74c0d6927b8ad8dd51b9faf9786e8cf19"
+  },
+  "boot_manifest": {
+    "status": "OFFLINE_VALIDATED_NOT_BOARD_TESTED",
+    "source_sha256": {
+      "BOOT.BIN": "e73f7a483fea0db0e8398f7f8290ff914428ec4cf2cb632b3d86277218371afd",
+      "Image": "79359c3f0af65cef3dbabab725b156a4b7b1925f781ab42f2f997be70f6dc86c",
+      "boot.scr": "ac5f09919439a3a94cf9729ac070d26f6e637acae91796f74f6416d3c10e748e"
+    },
+    "xclbin_uuid_hex": "9bee253b8f345f39bd9c18d612897ce3",
+    "partitions": 11,
+    "candidate_sha256": "a0657642f65957fffc62da2d98be40c96bafb4abf82da56ceba82736e00383fd",
+    "metadata_sha256": "497a799cdd11f3837cd0c9a4f0094fa8bffe37480fc33206cf37acd964053950",
+    "hardware_boot_sha256": "2c933dacf90e08d06953e3a1ce28d49b85b11d9a7396236f88d7d9bc1bea4194",
+    "checks": [
+      "unchanged source files",
+      "identical linked hardware partitions",
+      "identical BL31/U-Boot addresses, privileges and payloads",
+      "patched DTB embedded at 0x1000",
+      "flat metadata action_mask=0"
+    ]
+  },
+  "PL_kernel_MHz": 225,
+  "lanes": 2,
+  "AIE_compute_tiles": 0,
+  "source": {
+    "ct_mac.hpp": "33fa9d99acfc3da0656f069383444a2ef169e27b9907c387612cb4f5879ee057",
+    "native_chain.cpp": "a5b25dbab7bd669ffa91d5c4a48fd05e8a398a6f729aba2bc0b7022ab45d2293",
+    "native_reader.cpp": "5a20dde2715af9780ed8b81767158537c8b453ba461af3a1060335ec071587cf",
+    "native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+    "native_tb.cpp": "67f71eb185d1041fd3504a4edba660ab24be62ebfcb812792980ad40bfca8f20"
+  },
+  "scope": "Canonical separate A/B BO inputs, shared read-only across two lanes; unchanged exact128 lazy8 reducer. Board speed pending."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_IMAGE_ABI_TIMING_ROUTE_AND_RESOURCE_IMPORT",
+  "uuid": "9bee253b8f345f39bd9c18d612897ce3",
+  "resources": {
+    "LUT": 48179,
+    "FF": 76591,
+    "RAMB36": 66,
+    "RAMB18": 4,
+    "URAM": 0,
+    "DSP": 284,
+    "BRAM36_equivalent": 68.0,
+    "AIE_compute_tiles": 0,
+    "PL_kernel_MHz": 225,
+    "signoff": {
+      "setup_slack_ns": 0.231,
+      "hold_slack_ns": 0.021,
+      "drc_errors": 0,
+      "board_tested": false
+    }
+  }
+}

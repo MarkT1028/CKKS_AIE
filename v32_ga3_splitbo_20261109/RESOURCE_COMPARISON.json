@@ -1,0 +1,68 @@
+{
+  "status": "ACTUAL_ROUTED_TOTALS_SPLIT_BO_BOARD_PERFORMANCE_PENDING",
+  "variants": {
+    "v32_core_2_pipe": {
+      "LUT": 35857,
+      "logic_LUT": 28072,
+      "LUTRAM": 5429,
+      "SRL": 2356,
+      "FF": 45748,
+      "RAMB36": 24,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 334,
+      "BRAM36eq": 25.0,
+      "AIE_compute_tiles": 2,
+      "PL_kernel_MHz": 225
+    },
+    "v32_native_pl_2_pipe": {
+      "LUT": 34031,
+      "logic_LUT": 27236,
+      "LUTRAM": 4413,
+      "SRL": 2382,
+      "FF": 45402,
+      "RAMB36": 38,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 420,
+      "BRAM36eq": 39.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225
+    },
+    "v32_native_lazy8_2_pipe": {
+      "LUT": 45796,
+      "FF": 73354,
+      "RAMB36": 38,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 286,
+      "BRAM36_equivalent": 39.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.351,
+        "hold_slack_ns": 0.01,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    },
+    "v32_native_splitbo_2_pipe": {
+      "LUT": 48179,
+      "FF": 76591,
+      "RAMB36": 66,
+      "RAMB18": 4,
+      "URAM": 0,
+      "DSP": 284,
+      "BRAM36_equivalent": 68.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.231,
+        "hold_slack_ns": 0.021,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    }
+  },
+  "scope": "Whole routed bd_wrapper, same platform, two lanes, PL225MHz. No board speed or power claim."
+}

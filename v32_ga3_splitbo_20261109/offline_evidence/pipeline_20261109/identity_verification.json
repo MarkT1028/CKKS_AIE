@@ -1,0 +1,37 @@
+{
+  "status": "PASS_FRESH_IDENTITY_EQUIVALENCE_AND_NAMESPACE_NEGATIVES",
+  "cases": [
+    "parent traversal",
+    "absolute path",
+    "backslash",
+    "intermediate directory symlink",
+    "leaf symlink",
+    "directory instead of file",
+    "mutation changes fresh identity",
+    "parent namespace replacement"
+  ],
+  "real_files": 5378,
+  "local_timings_ms": [
+    {
+      "method": "legacy",
+      "ms": 23447.80842,
+      "files": 5378
+    },
+    {
+      "method": "fast",
+      "ms": 2089.727119000031,
+      "files": 5378
+    },
+    {
+      "method": "fast",
+      "ms": 2287.71518100001,
+      "files": 5378
+    },
+    {
+      "method": "legacy",
+      "ms": 23712.225907000004,
+      "files": 5378
+    }
+  ],
+  "board_performance": false
+}

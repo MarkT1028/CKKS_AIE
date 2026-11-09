@@ -1,0 +1,201 @@
+                 U __aarch64_cas4_acq_rel
+                 U __aarch64_ldadd4_acq_rel
+                 U close
+                 U __cxa_allocate_exception
+                 U __cxa_begin_catch
+                 U __cxa_end_catch
+                 U __cxa_free_exception
+                 U __cxa_guard_abort
+                 U __cxa_guard_acquire
+                 U __cxa_guard_release
+                 U __cxa_rethrow
+                 U __cxa_throw
+                 U dlclose
+                 U dlopen
+                 U dlsym
+                 U __dynamic_cast
+                 U __errno_location
+                 U fstat
+                 U getenv
+                 U getrusage
+                 U __gxx_personality_v0
+                 U __isoc23_strtoul
+                 U __isoc23_strtoull
+                 U __libc_single_threaded
+                 U madvise
+                 U memcmp
+                 U memcpy
+                 U memmove
+                 U memset
+                 U mmap
+                 U munmap
+                 U open
+                 U posix_fadvise
+                 U pread
+                 U pthread_mutex_lock
+                 U pthread_mutex_unlock
+                 U __stack_chk_fail
+                 U __stack_chk_guard
+                 U strchr
+                 U strcmp
+                 U strlen
+                 U __udivti3
+                 U __umodti3
+                 U _Unwind_Resume
+                 U write
+                 U operator delete[](void*)
+                 U operator delete(void*, unsigned long)
+                 U xrt::bo::map()
+                 U xrt::bo::sync(xclBOSyncDirection, unsigned long, unsigned long)
+                 U xrt::bo::write(void const*, unsigned long, unsigned long)
+                 U xrt::bo::bo(xrt::device const&, unsigned long, unsigned int)
+                 U xrt::bo::bo(xrt::device const&, unsigned long, xrt::bo::flags, unsigned int)
+                 U xrt::bo::~bo()
+                 U xrt::ini::set(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U xrt::run::set_arg_at_index(int, void const*, unsigned long)
+                 U xrt::run::set_arg_at_index(int, xrt::bo const&)
+                 U xrt::run::abort()
+                 U xrt::run::start()
+                 U xrt::run::run(xrt::kernel const&)
+                 U xrt::run::~run()
+                 U xrt::device::load_xclbin(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U xrt::device::device(unsigned int)
+                 U xrt::device::~device()
+                 U xrt::kernel::kernel(xrt::device const&, xrt::uuid const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, xrt::kernel::cu_access_mode)
+                 U xrt::kernel::~kernel()
+                 U operator new[](unsigned long)
+                 U xrt::run::wait(std::chrono::duration<long, std::ratio<1l, 1000l> > const&) const
+                 U xrt::kernel::read_register(unsigned int) const
+                 U xrt::kernel::group_id(int) const
+                 U std::filesystem::__cxx11::path::has_root_directory() const
+                 U std::filesystem::__cxx11::path::_List::_Impl_deleter::operator()(std::filesystem::__cxx11::path::_List::_Impl*) const
+                 U std::filesystem::__cxx11::path::_List::end() const
+                 U std::filesystem::__cxx11::path::_List::begin() const
+                 U std::filesystem::__cxx11::path::compare(std::filesystem::__cxx11::path const&) const
+                 U std::ctype<char>::_M_widen_init() const
+                 U std::locale::id::_M_id() const
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned long) const
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned long, unsigned long) const
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char, unsigned long) const
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const
+                 U std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::str() const
+                 U std::istream& std::istream::_M_extract<unsigned int>(unsigned int&)
+                 U std::istream& std::istream::_M_extract<long>(long&)
+                 U std::istream& std::istream::_M_extract<unsigned long>(unsigned long&)
+                 U std::istream::get()
+                 U std::istream::read(char*, long)
+                 U std::istream::seekg(long, std::_Ios_Seekdir)
+                 U std::istream::seekg(std::fpos<__mbstate_t>)
+                 U std::ostream::put(char)
+                 U std::ostream::flush()
+                 U std::ostream& std::ostream::_M_insert<bool>(bool)
+                 U std::ostream& std::ostream::_M_insert<double>(double)
+                 U std::ostream& std::ostream::_M_insert<long>(long)
+                 U std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+                 U std::ostream::operator<<(int)
+                 U std::filesystem::symlink_status(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::create_directories(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::status(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::__cxx11::path::_M_split_cmpts()
+                 U std::filesystem::__cxx11::path::_List::_List(std::filesystem::__cxx11::path::_List const&)
+                 U std::filesystem::__cxx11::path::_List::_List()
+                 U std::filesystem::__cxx11::path::operator=(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::__cxx11::path::operator/=(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::canonical(std::filesystem::__cxx11::path const&)
+                 U std::filesystem::file_size(std::filesystem::__cxx11::path const&)
+                 U std::regex_error::~regex_error()
+                 U std::__basic_file<char>::~__basic_file()
+                 U std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode)
+                 U std::basic_filebuf<char, std::char_traits<char> >::close()
+                 U std::basic_filebuf<char, std::char_traits<char> >::basic_filebuf()
+                 U std::basic_filebuf<char, std::char_traits<char> >::~basic_filebuf()
+                 U std::runtime_error::runtime_error(char const*)
+                 U std::runtime_error::runtime_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U std::runtime_error::runtime_error(char const*)
+                 U std::runtime_error::~runtime_error()
+                 U std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode)
+                 U std::basic_ifstream<char, std::char_traits<char> >::~basic_ifstream()
+                 U std::basic_ofstream<char, std::char_traits<char> >::close()
+                 U std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode)
+                 U std::basic_ofstream<char, std::char_traits<char> >::~basic_ofstream()
+                 U std::__exception_ptr::exception_ptr::_M_release()
+                 U std::__exception_ptr::exception_ptr::_M_addref()
+                 U std::condition_variable::notify_all()
+                 U std::condition_variable::notify_one()
+                 U std::condition_variable::wait(std::unique_lock<std::mutex>&)
+                 U std::condition_variable::condition_variable()
+                 U std::condition_variable::~condition_variable()
+                 U std::ctype<char>::id
+                 U std::chrono::_V2::steady_clock::now()
+                 U std::locale::operator=(std::locale const&)
+                 U std::locale::locale(std::locale const&)
+                 U std::locale::locale()
+                 U std::locale::~locale()
+                 U std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)())
+                 U std::thread::join()
+                 U std::thread::_State::~_State()
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct(unsigned long, char)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+                 U std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::_M_sync(char*, unsigned long, unsigned long)
+                 U std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_istringstream()
+                 U std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream()
+                 U std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()
+                 U std::__cxx11::collate<char>::id
+                 U std::ios_base::ios_base()
+                 U std::ios_base::~ios_base()
+                 U std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
+                 U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+                 U operator new(unsigned long)
+                 U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+                 U std::__throw_bad_cast()
+                 U std::current_exception()
+                 U std::rethrow_exception(std::__exception_ptr::exception_ptr)
+                 U std::__throw_bad_alloc()
+                 U std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+                 U std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+                 U std::__throw_logic_error(char const*)
+                 U std::__throw_regex_error(std::regex_constants::error_type)
+                 U std::__throw_length_error(char const*)
+                 U std::__throw_out_of_range(char const*)
+                 U std::__throw_system_error(int)
+                 U std::ios_base_library_init()
+                 U std::__throw_invalid_argument(char const*)
+                 U std::__throw_out_of_range_fmt(char const*, ...)
+                 U std::__throw_bad_function_call()
+                 U std::__throw_bad_array_new_length()
+                 U std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+                 U std::cerr
+                 U std::cout
+                 U std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+                 U std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
+                 U std::terminate()
+                 U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)
+                 U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+                 U std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+                 U typeinfo for std::locale::facet
+                 U typeinfo for std::thread::_State
+                 U typeinfo for std::regex_error
+                 U typeinfo for std::runtime_error
+                 U typeinfo for std::ctype<char>
+                 U typeinfo for std::exception
+                 U VTT for std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
+                 U VTT for std::basic_ofstream<char, std::char_traits<char> >
+                 U vtable for __cxxabiv1::__class_type_info
+                 U vtable for __cxxabiv1::__si_class_type_info
+                 U vtable for std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
+                 U vtable for std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
+                 U vtable for std::regex_error
+                 U vtable for std::basic_filebuf<char, std::char_traits<char> >
+                 U vtable for std::basic_ofstream<char, std::char_traits<char> >
+                 U vtable for std::basic_streambuf<char, std::char_traits<char> >
+                 U vtable for std::basic_ios<char, std::char_traits<char> >

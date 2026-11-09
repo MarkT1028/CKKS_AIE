@@ -1,0 +1,17 @@
+{
+  "status": "READY_FOR_BOARD_SPLIT_BO_SHORT_COMPARISON",
+  "board_performance": "PENDING",
+  "new_program_and_new_image": true,
+  "new_original_data_upload_required": false,
+  "reuse_original_data": true,
+  "reuse_pilot_cache": true,
+  "first_board_run": "Existing lazy8 image: check, build, detect, run_short.sh; then explicit split image check/arm and manual reboot",
+  "recommended_full_campaign_first": false,
+  "variants": [
+    "v32_core_2_pipe",
+    "v32_native_pl_2_pipe",
+    "v32_native_lazy8_2_pipe",
+    "v32_native_splitbo_2_pipe"
+  ],
+  "matched_CUDA_win": false
+}

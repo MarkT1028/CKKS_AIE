@@ -1,0 +1,41 @@
+{
+  "status": "NEW_AB_INPUT_INTERFACE_FROM_IMMUTABLE_PIPELINE_PACKAGE",
+  "parent": {
+    "package": "v32_ga3_pipeline_20261109",
+    "manifest_sha256": "023ebc101a594130afbd01d1c1bb1d1d22d7eec6a0bdeb5d0abdb207194c2016",
+    "unchanged_prior_variants": [
+      "v32_core_2_pipe",
+      "v32_native_pl_2_pipe",
+      "v32_native_lazy8_2_pipe"
+    ]
+  },
+  "reader_external_ABI": [
+    "weights",
+    "baby",
+    "products",
+    "n",
+    "l",
+    "k",
+    "lane"
+  ],
+  "reader_arg_N": 3,
+  "reader_arg_lane": 6,
+  "reader_input_bundles_bits": {
+    "gmem_weights": 512,
+    "gmem_baby": 512
+  },
+  "unchanged_reducer_XO": "5e741bbe0982ed0f5f030c0f81271fa74c0d6927b8ad8dd51b9faf9786e8cf19",
+  "input_buffers": {
+    "weight": 4,
+    "baby": 1,
+    "shared_across_lanes": true,
+    "maximum_page_rounded_BO_bytes_estimate": 174080000,
+    "estimate_excludes_driver_overhead": true
+  },
+  "weight_key": "sealed source path with fresh file identities checked before/after each run",
+  "upload_timing": "All copies/sync inside trial; warmup and formal bytes retained separately",
+  "first_use_primary": "pilot runner/request wall; probe includes CPU anchors and repeated trials",
+  "data_upload_required": false,
+  "board_performance": "PENDING",
+  "matched_CUDA_superiority": false
+}

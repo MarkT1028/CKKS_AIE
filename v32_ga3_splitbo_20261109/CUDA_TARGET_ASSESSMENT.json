@@ -1,0 +1,54 @@
+{
+  "status": "CUDA_SUPERIORITY_NOT_ESTABLISHED",
+  "historical_CUDA": {
+    "wall_sec": 25.656608199933544,
+    "backend": "phantom-gpu",
+    "source": "reference_results/v32_results_full_gpu.json",
+    "source_sha256": "46eda3fdd2ddad1479ee3abfba26f71f40b550bd384c17f55e10ba56e91348f5",
+    "scope": "Original whole g_a.3 layer; includes operations beyond this captured raw-MAC replay. CKKS parameters and residency differ.",
+    "parameters": {
+      "N": 131072,
+      "depth": 55,
+      "scale_bits": 50,
+      "first_bits": 60
+    },
+    "cache_counters": "Cumulative across layers; g_a.3 load_sec=24.4 is not a layer-only load time."
+  },
+  "current_replay": {
+    "N": 131072,
+    "L": 53,
+    "K": 16,
+    "raw_MAC_groups": 64,
+    "coefficient_windows": 16,
+    "controller_windows": 1024,
+    "source_context": "OpenFHE depth56 scale45 first51; do not alter cryptographic parameters to fake a win",
+    "rotation_im2col_relinearization_activation_live_transport": "Remain original backend; not included in raw-MAC timing"
+  },
+  "measured_prior_board": {
+    "scope": "16-window packed pilot only",
+    "runner_sec": 52.488200096,
+    "request_sec": 42.3786974615,
+    "read_work_sec": 39.264710585,
+    "payload_bytes": 958660608,
+    "payload_MiB_per_sec": 23.284266874216154
+  },
+  "conditional_full_input_limit": {
+    "full_packed_bytes_including_headers": 25564935680,
+    "read_only_sec_at_prior_pilot_throughput": 1047.085686240422,
+    "required_MiB_per_sec_to_read_within_historical_CUDA_wall": 950.2667838477926,
+    "assumptions": "All unique packed inputs must be read once from storage at sustained historical pilot throughput; not a measured full-stream result. Excludes compute/decode/pack/verification; prefetch overlaps work, cannot remove required bytes. Cache preparation is extra first-use cost."
+  },
+  "matched_comparison_required": [
+    "Same captured arithmetic, moduli, input/output and exact correctness",
+    "Same timing envelope, declared input residency and initialization",
+    "GPU memory/transfers/verification and board transfers/verification included consistently",
+    "Original-context layer correctness and full-layer timing separately reported"
+  ],
+  "local_GPU": {
+    "observed_adapters": [
+      "Intel(R) UHD Graphics 770"
+    ],
+    "usable_NVIDIA_for_matched_test": false
+  },
+  "new_hardware_board_performance": "PENDING"
+}

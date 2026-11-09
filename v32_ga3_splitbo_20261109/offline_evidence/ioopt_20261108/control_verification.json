@@ -1,0 +1,96 @@
+{
+  "status": "PASS_IOOPT_CONTROL_PROTOCOL_COVERAGE_MUTATIONS",
+  "cases": [
+    {
+      "profile": "legacy",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "legacy",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "legacy",
+      "case": "wrong_timing",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "legacy",
+      "case": "wrong_admission",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "legacy",
+      "case": "wrong_verification_protocol",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sequential",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sequential",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sequential",
+      "case": "wrong_timing",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sequential",
+      "case": "wrong_admission",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sequential",
+      "case": "wrong_verification_protocol",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "subset_as_full",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "wrong_words",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "wrong_timing",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "wrong_admission",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "wrong_verification_protocol",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "missing_hashed_outputs",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "missing_hashed_bytes",
+      "status": "REJECTED"
+    },
+    {
+      "profile": "sha256",
+      "case": "missing_gold_read_bytes_avoided",
+      "status": "REJECTED"
+    }
+  ],
+  "board_executed": false
+}

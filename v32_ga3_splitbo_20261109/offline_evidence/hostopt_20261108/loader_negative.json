@@ -1,0 +1,31 @@
+{
+  "status": "PASS_OPTIMIZED_LOADER_AND_FUSED_MERGE_CORRUPTION_REJECTION",
+  "cases": [
+    {
+      "case": "gold_first",
+      "status": "REJECTED",
+      "error": "FAIL ga3 complete output mismatch"
+    },
+    {
+      "case": "gold_last_L5",
+      "status": "REJECTED",
+      "error": "FAIL ga3 complete output mismatch"
+    },
+    {
+      "case": "baby_noncanonical",
+      "status": "REJECTED",
+      "error": "FAIL noncanonical bulk source: /mnt/e/v32_gpu/v32_gpu/integration/ga3_hostopt_20261108/build/loader_negative_1794134439344011251/baby_noncanonical/record_4_16.bin"
+    },
+    {
+      "case": "truncated_record",
+      "status": "REJECTED",
+      "error": "FAIL mapped exact length"
+    },
+    {
+      "case": "wrong_kind",
+      "status": "REJECTED",
+      "error": "FAIL mapped version/kind"
+    }
+  ],
+  "scope": "Synthetic hardlink fixtures only; every mutation unlinks its own destination before writing. Real data untouched."
+}

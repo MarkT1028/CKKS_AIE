@@ -1,0 +1,6 @@
+PASS_REAL_SPLIT_BO_AP tower=0 L=16 cumulative_words=393216
+PASS_REAL_SPLIT_BO_AP tower=16 L=16 cumulative_words=786432
+PASS_REAL_SPLIT_BO_AP tower=32 L=16 cumulative_words=1179648
+PASS_REAL_SPLIT_BO_AP tower=48 L=5 cumulative_words=1302528
+PASS_REAL_SPLIT_BO_ALL_53_MODULI_1302528_WORDS software_only=1 ct=7 group=2 coefficient=65536
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 524288

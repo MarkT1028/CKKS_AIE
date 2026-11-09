@@ -1,0 +1,49 @@
+{
+  "status": "PASS_OFFLINE_SPLIT_BO_READY_FOR_CONTROLLED_BOARD_SCREEN",
+  "hardware": {
+    "status": "PASS_IMAGE_ABI_TIMING_ROUTE_AND_RESOURCE_IMPORT",
+    "uuid": "9bee253b8f345f39bd9c18d612897ce3",
+    "resources": {
+      "LUT": 48179,
+      "FF": 76591,
+      "RAMB36": 66,
+      "RAMB18": 4,
+      "URAM": 0,
+      "DSP": 284,
+      "BRAM36_equivalent": 68.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.231,
+        "hold_slack_ns": 0.021,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    }
+  },
+  "checks": {
+    "HLS_C_simulation": true,
+    "HLS_synthesis": true,
+    "random_stall_RTL_both_lanes_L3_L16_L5_K1_K16": true,
+    "real_HLS_C_model_selected_coordinates": 3,
+    "real_HLS_C_model_all_53_moduli_words": 3907584,
+    "full_real_transport_software_model_windows": 1024,
+    "full_real_transport_software_model_verified_words": 1333788672,
+    "full_real_transport_software_model_hashed_outputs": 4096,
+    "full_synthetic_export_windows": 128,
+    "actual_host_backend_BO_cache_and_refresh": true,
+    "corrupt_device_input_rejected": true,
+    "ASan_UBSan": true,
+    "TSan": true,
+    "ARM64_and_x86_XRT_syntax": true,
+    "no_AIE_graph_runtime_symbols": true,
+    "all_four_variant_metadata_and_staging_mock": true,
+    "controller_negative_cases": 32,
+    "matched_scope_and_order_comparison": true,
+    "original_CPU_arithmetic_and_canonical_SHA_unchanged": true
+  },
+  "resolved_local_test_environment_issue": "TSan initially failed to start due to WSL address mapping; per-process setarch -R enabled a clean run without modifying global sysctl or board settings.",
+  "board_execution": false,
+  "board_performance": "PENDING",
+  "scope": "Full software transport/model is distinct from selected real HLS reader/reducer checks; neither replaces actual board tests or whole live g_a.3 timing."
+}

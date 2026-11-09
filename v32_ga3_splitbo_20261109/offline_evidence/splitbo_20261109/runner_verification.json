@@ -1,0 +1,6 @@
+{
+  "status": "PASS_MEASURED_CONTROLLER_ENVIRONMENT_AND_RECOVERY_CONTRACTS",
+  "real_board": false,
+  "real_child_started": false,
+  "registers_or_boot_changed": false
+}

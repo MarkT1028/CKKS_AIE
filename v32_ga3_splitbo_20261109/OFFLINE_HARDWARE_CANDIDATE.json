@@ -1,0 +1,35 @@
+{
+  "status": "PASS_SPLIT_BO_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+  "variant": "v32_native_splitbo_2_pipe",
+  "uuid": "9bee253b8f345f39bd9c18d612897ce3",
+  "resources": {
+    "LUT": 48179,
+    "FF": 76591,
+    "RAMB36": 66,
+    "RAMB18": 4,
+    "URAM": 0,
+    "DSP": 284,
+    "BRAM36_equivalent": 68.0,
+    "AIE_compute_tiles": 0,
+    "PL_kernel_MHz": 225,
+    "signoff": {
+      "setup_slack_ns": 0.231,
+      "hold_slack_ns": 0.021,
+      "drc_errors": 0,
+      "board_tested": false
+    }
+  },
+  "external_ABI_changed": true,
+  "reader_arguments": [
+    "weights",
+    "baby",
+    "products",
+    "n",
+    "l",
+    "k",
+    "lane"
+  ],
+  "reducer_unchanged": true,
+  "board_execution": false,
+  "board_performance": "PENDING"
+}

@@ -1,0 +1,1 @@
+{"prefetch_enabled":true,"read_chunk_bytes":16777216,"prefetched_records":1023,"prefetch_work_ms":113525.890526,"prefetch_wait_ms":68152.271607,"source_mutated_while_active":false,"scope":"At most one next baby plus one read scratch; work time overlaps current window and must not be added to request wall"}

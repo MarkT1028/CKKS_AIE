@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CSIM_SYNTH_XO",
+  "top": "ct_reader",
+  "build": "/home/mark/ga3_pipeline_20261109/hls/lazy8_r1/ct_reader",
+  "elapsed_seconds": 41.054391741,
+  "source": {
+    "ct_mac.hpp": "0213371f654eea7fdf72741e2b0619c9be03025a02238ecf6bbcf48ae9d2df88",
+    "native_chain.cpp": "b7d38e21cbf15d5f3a86effe85bad8dc00012a7539e1c01ca73ca61060b301b1",
+    "native_reader.cpp": "09338617c07d764015a116748b3c19cef3ba1fc2b84b81220fd2b888cd79d828",
+    "native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+    "native_tb.cpp": "b182b0c79a5afd4c424bc526bed19daee63fdacae5a2aabf97a109c53610a9c8"
+  },
+  "xo_sha256": "4e69eb57058fe52c8a9ce14985a62654b8349a2905a5e99fc7ef2659486fa3ff"
+}

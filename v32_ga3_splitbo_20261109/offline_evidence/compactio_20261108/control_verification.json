@@ -1,0 +1,30 @@
+{
+  "status": "PASS_PROTOCOL_COVERAGE_BYTE_TIMING_MUTATIONS_AND_AMORTIZATION",
+  "cases": [
+    "sha256:fake_full",
+    "sha256:wrong_words",
+    "sha256:wrong_admission",
+    "sha256:wrong_time",
+    "sha256:policy:full_canonical_sha256_verification",
+    "sha256:policy:full_integer_verification",
+    "sha256:policy:packed_input_cache",
+    "sha256:accounting:hashed_outputs",
+    "sha256:accounting:hashed_bytes",
+    "sha256:accounting:gold_read_bytes_avoided",
+    "sha256:accounting:records",
+    "sha256:invalid_total_runner_time",
+    "packed:fake_full",
+    "packed:wrong_words",
+    "packed:wrong_admission",
+    "packed:wrong_time",
+    "packed:policy:full_canonical_sha256_verification",
+    "packed:policy:full_integer_verification",
+    "packed:policy:packed_input_cache",
+    "packed:accounting:hashed_outputs",
+    "packed:accounting:hashed_bytes",
+    "packed:accounting:gold_read_bytes_avoided",
+    "packed:accounting:records",
+    "packed:invalid_total_runner_time"
+  ],
+  "board_executed": false
+}

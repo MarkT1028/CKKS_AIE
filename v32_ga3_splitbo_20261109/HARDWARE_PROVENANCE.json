@@ -1,0 +1,141 @@
+{
+  "status": "TWO_IMMUTABLE_BASELINES_PLUS_NEW_ROUTED_LAZY8",
+  "PL_clock_MHz": 225,
+  "variants": {
+    "v32_core_2_pipe": {
+      "AIE_compute_tiles": 2,
+      "resources": {
+        "LUT": 35857,
+        "logic_LUT": 28072,
+        "LUTRAM": 5429,
+        "SRL": 2356,
+        "FF": 45748,
+        "RAMB36": 24,
+        "RAMB18": 2,
+        "URAM": 0,
+        "DSP": 334,
+        "BRAM36eq": 25.0
+      },
+      "boot_sha256": "5dda816efad8349b8de4e645d4a584ef707b60728c1cba79e89faf3f96a8bbce",
+      "metadata_sha256": "4f182dd616aaaecd5d4d5bd5bebb9a025d9c710da68047f434bb4a1bd24c7b7b",
+      "reports": {
+        "offline_evidence/v32_core_2_pipe/postcheck_bus_skew.rpt": "abfdd6030d2bbffdd2a60e106c9a93272e79d5911c5d4753890fb8391934980b",
+        "offline_evidence/v32_core_2_pipe/postcheck_clocks.rpt": "1fcd703a331acfcd67278a5197e84f20317428eba1d7e6f97a645d7af4cf76f5",
+        "offline_evidence/v32_core_2_pipe/postcheck_drc.rpt": "f51bcfaf619df07eee3070e41c7bcc20e0cb256d40aac513a5b177e78ab86aa9",
+        "offline_evidence/v32_core_2_pipe/postcheck_route_status.rpt": "73104deed40627a9c538acbf67be75da0f61d5e152933d40fca54f15d16e5942",
+        "offline_evidence/v32_core_2_pipe/postcheck_signoff.json": "14860f3e7bbf6d416ce780de73ba569cff8d86c7fc5fb8af99ed1cd535c7041f",
+        "offline_evidence/v32_core_2_pipe/postcheck_timing_summary.rpt": "0d444385c23a9bacb90056705e6eac20a0b8da486bcfdf445aa8c22df146fcb6",
+        "offline_evidence/v32_core_2_pipe/postcheck_utilization.rpt": "60390c07e44e76080c2208f53423e10218e6dec55f08eab46b5a3068d6fcfcab",
+        "offline_evidence/v32_core_2_pipe/system.cfg": "643a51decf31d310dc41b6794a6bc022deaeb7c5a1fcbc337e3c919600319338"
+      }
+    },
+    "v32_native_pl_2_pipe": {
+      "AIE_compute_tiles": 0,
+      "resources": {
+        "LUT": 34031,
+        "logic_LUT": 27236,
+        "LUTRAM": 4413,
+        "SRL": 2382,
+        "FF": 45402,
+        "RAMB36": 38,
+        "RAMB18": 2,
+        "URAM": 0,
+        "DSP": 420,
+        "BRAM36eq": 39.0
+      },
+      "boot_sha256": "fedfbea228036efc37b33fa25b3fdea0c77cb8e97abccd75a7717d7ebcbfc274",
+      "metadata_sha256": "c3184e302d7b7b758607ff311fbba3bc3f4578919c4b7e786cb512748b359e39",
+      "reports": {
+        "offline_evidence/v32_native_pl_2_pipe/ct_reader_csim.txt": "001ae5b9d436a0df4e6f8c54b379aeae739c7bf73d9f08e45442883c4679d97c",
+        "offline_evidence/v32_native_pl_2_pipe/ct_reader_csynth.rpt": "47cf5d6cddaa89bdf6b55a691037426ef0deb813d0dbec0baa8c6dac1f94e3c3",
+        "offline_evidence/v32_native_pl_2_pipe/ct_reader_csynth.xml": "fa69e8e197379938f6352fc24bd0df9528655c92a7d65574806a5c48a3d761f8",
+        "offline_evidence/v32_native_pl_2_pipe/ct_reduce_accum_csim.txt": "001ae5b9d436a0df4e6f8c54b379aeae739c7bf73d9f08e45442883c4679d97c",
+        "offline_evidence/v32_native_pl_2_pipe/ct_reduce_accum_csynth.rpt": "eb6026987b6ab049c6b39cdebac626184ff414baf7ac0f54eb2e47554dfd582a",
+        "offline_evidence/v32_native_pl_2_pipe/ct_reduce_accum_csynth.xml": "b4561abef65fa4c4ada5f55bdfec6bb8e297e9eb3e41dcbeb16db84951846b05",
+        "offline_evidence/v32_native_pl_2_pipe/hardware_build_receipt.json": "14622ca95cb8ee4e1dbba329bf50ae807488e80d3235d3bdddf02159baeafe6a",
+        "offline_evidence/v32_native_pl_2_pipe/native_ABI.json": "0e7279245714b666481f8c97c1b9ad88371a54dc722d34a5a7e0b05b69806b12",
+        "offline_evidence/v32_native_pl_2_pipe/native_chain_random_stall_cosim.rpt": "0855fa95e99726b463769bbffaa89e37c6d06ffd0f1d6350e0008a2e1d21027b",
+        "offline_evidence/v32_native_pl_2_pipe/native_large_chain_csim.txt": "ec696a20aeaba9cf0d614543480841b00cf1dab66799ca134b033b0ac9b820ce",
+        "offline_evidence/v32_native_pl_2_pipe/native_large_chain_random_stall_cosim.rpt": "ed9f6be79a3cb0e498d93b9ab47615552c85da2a78b82507ca88e0b9e3481baa",
+        "offline_evidence/v32_native_pl_2_pipe/native_pl_chain_csim.txt": "001ae5b9d436a0df4e6f8c54b379aeae739c7bf73d9f08e45442883c4679d97c",
+        "offline_evidence/v32_native_pl_2_pipe/native_pl_chain_csynth.rpt": "ae1c8db5aa635a5cef7fbe10358f7af4cfb27b8f3078a422096a4607703cc320",
+        "offline_evidence/v32_native_pl_2_pipe/native_pl_chain_csynth.xml": "59b3e3f95ec52b8649caf6e8942cb708981cec6e2cd01e74e4b187ba5b1ac71b",
+        "offline_evidence/v32_native_pl_2_pipe/native_xclbin_info.txt": "75e0033c167c40db3cbb5740c9b57d2ce4ce375b5e343ad2f40b116e9cbeddab",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_bus_skew.rpt": "64623fd05445d97e299724b8c9d047ff2a648d9205b4b3addeff83d85c7acb68",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_clocks.rpt": "5917ef4d87dff2899f45f25acb32c6a0eacdf9861c9981dc91f98dff617b2053",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_drc.rpt": "9dd07e15ea68f95c62c8bf2fdf9ae8116985b3db4169e1db4240891556144c27",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_route_status.rpt": "fcda66dd022090ec5161998d5e77b5f332d3baee9cf6c7512e519bb3c5f5e849",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_signoff.json": "429f815779374f5fe5df225998a2c1f21bfd6e775e7a70451cbcf1af7b94e98c",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_timing_summary.rpt": "2aaa7c9f2308a642fc602d37a0d6a75844a2db82af35ee5be1d878e9a4315853",
+        "offline_evidence/v32_native_pl_2_pipe/postcheck_utilization.rpt": "914ae5f5bfcf603b34f691c74325031f16b7574572a7aa2113c568254febe93a",
+        "offline_evidence/v32_native_pl_2_pipe/system.cfg": "922a1e03afa009410b530bd6f54f73cba103092f9ebb31113f2373a474707f8c"
+      }
+    }
+  },
+  "scope": "Whole routed PL resources. Two prior baseline images and reports are byte-identical. New lazy8 image, internal960-bit stream and routed reports are separately linked under offline_evidence/v32_native_lazy8_2_pipe; no board-speed or power claim.",
+  "report_filename_note": "C-simulation .log evidence copied as .txt with identical bytes/SHA256 so the existing Git root *.log ignore rule cannot omit required files. Frozen source package unchanged.",
+  "new_hardware_candidate": {
+    "status": "PASS_LAZY8_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+    "variant": "v32_native_lazy8_2_pipe",
+    "uuid": "ff0611c29bc354578e6290b0be77171f",
+    "resource": {
+      "LUT": 45796,
+      "FF": 73354,
+      "RAMB36": 38,
+      "RAMB18": 2,
+      "URAM": 0,
+      "DSP": 286,
+      "BRAM36_equivalent": 39.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.351,
+        "hold_slack_ns": 0.01,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    },
+    "arithmetic": "Exact128 sums then three Barrett reductions per coefficient vs64 in native baseline",
+    "stream": "8 full120-bit products/960-bit beat vs4/480-bit beat",
+    "external_ABI_unchanged": true,
+    "both_products_ends_rebuilt": true,
+    "board_execution": false,
+    "board_performance": "PENDING",
+    "baseline_source_frozen": true,
+    "baseline_new_variant_only_macro_override": true
+  },
+  "split_bo_candidate": {
+    "status": "PASS_SPLIT_BO_ROUTED_TIMING_DRC_BOOT_PENDING_BOARD",
+    "variant": "v32_native_splitbo_2_pipe",
+    "uuid": "9bee253b8f345f39bd9c18d612897ce3",
+    "resources": {
+      "LUT": 48179,
+      "FF": 76591,
+      "RAMB36": 66,
+      "RAMB18": 4,
+      "URAM": 0,
+      "DSP": 284,
+      "BRAM36_equivalent": 68.0,
+      "AIE_compute_tiles": 0,
+      "PL_kernel_MHz": 225,
+      "signoff": {
+        "setup_slack_ns": 0.231,
+        "hold_slack_ns": 0.021,
+        "drc_errors": 0,
+        "board_tested": false
+      }
+    },
+    "external_ABI_changed": true,
+    "reader_arguments": [
+      "weights",
+      "baby",
+      "products",
+      "n",
+      "l",
+      "k",
+      "lane"
+    ],
+    "board_tested": false,
+    "baseline_images_preserved": true
+  }
+}

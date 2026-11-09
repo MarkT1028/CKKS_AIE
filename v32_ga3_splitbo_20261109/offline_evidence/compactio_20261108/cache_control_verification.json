@@ -1,0 +1,22 @@
+{
+  "status": "PASS_CACHE_PREPARATION_RESUME_IDENTITY_CORRUPTION_CONTROLS",
+  "cases": [
+    "modified index",
+    "truncated cache identity",
+    "truncated actual packed data rejected by decoder",
+    "duplicate cache index",
+    "packed corruption byte 0",
+    "packed corruption byte 8",
+    "packed corruption byte 12",
+    "packed corruption byte 16",
+    "packed corruption byte 24",
+    "packed corruption byte 32",
+    "packed corruption byte 96",
+    "packed corruption byte 128",
+    "packed corruption byte 144",
+    "packed corruption byte 30933567",
+    "wrong original SHA256 before creation",
+    "missing declared cache entry fails replay"
+  ],
+  "board_executed": false
+}

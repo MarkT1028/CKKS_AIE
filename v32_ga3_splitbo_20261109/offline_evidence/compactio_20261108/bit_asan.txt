@@ -1,0 +1,1 @@
+PASS_INDEPENDENT_BIT_ORACLE widths=2..60 blocks=236 noncanonical_rejected=118

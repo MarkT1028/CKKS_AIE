@@ -1,0 +1,351 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Mon Nov  9 15:30:36 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/build.tcl'
+INFO: [HLS 200-1510] Running: open_project /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project 
+WARNING: [HLS 200-2182] The 'project' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project'.
+INFO: [HLS 200-1510] Running: set_top ct_reader 
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding test bench file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
+INFO: [HLS 200-10] Creating and opening solution '/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcve2802-vsvh1760-2MP-e-S 
+INFO: [HLS 200-1611] Setting target device to 'xcve2802-vsvh1760-2MP-e-S'
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-1510] Running: csim_design -O 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp in release mode
+   Generating csim.exe
+PASS_SPLIT N=64 L=3 K=1 lane=0 words=576
+PASS_SPLIT N=64 L=3 K=1 lane=1 words=576
+PASS_SPLIT N=128 L=16 K=16 lane=0 words=6144
+PASS_SPLIT N=128 L=16 K=16 lane=1 words=6144
+PASS_SPLIT N=128 L=5 K=16 lane=0 words=1920
+PASS_SPLIT N=128 L=5 K=16 lane=1 words=1920
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:07; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.47 seconds. CPU system time: 0.27 seconds. Elapsed time: 2.47 seconds; current allocated memory: 488.742 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:52:76)
+Resolution: For help on HLS 214-113 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-113.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp
+Resolution: For help on HLS 200-471 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 9.49 seconds. CPU system time: 1.45 seconds. Elapsed time: 14.08 seconds; current allocated memory: 491.852 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 1,166 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 482 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 376 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 363 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 363 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 496 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 337 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 353 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 376 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 345 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 345 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 341 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 344 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 387 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'ctmac::dimensions(unsigned int, unsigned int, unsigned int)' into 'ct_reader' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:66:13)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_35_4' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:35:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_16_5' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:16:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_35_4' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:35:21) in function '(anonymous namespace)::multiply' completely with a factor of 8 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:28:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_5' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:16:21) in function '(anonymous namespace)::load' completely with a factor of 4 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:8:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'weights'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:46:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'baby'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:46:0)
+INFO: [HLS 214-248] Applying array_partition to 'windows': Cyclic partitioning with factor 8 on dimension 1. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_0' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_1' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_2' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_3' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_4' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_5' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_6' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_7' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) has been inferred on bundle 'gmem_weights'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) has been inferred on bundle 'gmem_baby'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.82 seconds. CPU system time: 0.35 seconds. Elapsed time: 6.63 seconds; current allocated memory: 502.086 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 502.086 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 502.961 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 504.172 MB.
+INFO: [HLS 200-1947] Using 'stable' for argument 'gmem_weights' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'weights' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'gmem_baby' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'baby' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'n' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'l' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'k' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'lane' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [XFORM 203-712] Applying dataflow to function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1), detected/extracted 3 process function(s): 
+	 '(anonymous namespace)::load'
+	 '(anonymous namespace)::pipeline_Block_entry_proc'
+	 '(anonymous namespace)::multiply'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 527.020 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_32_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) and 'VITIS_LOOP_32_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:80) in function '(anonymous namespace)::multiply' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_30_1'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:30:19) and 'VITIS_LOOP_32_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) in function '(anonymous namespace)::multiply' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_10_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) and 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) in function '(anonymous namespace)::load' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_10_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:61) and 'VITIS_LOOP_10_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) in function '(anonymous namespace)::load' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_32_2' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) in function '(anonymous namespace)::multiply'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_30_1' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:30:19) in function '(anonymous namespace)::multiply'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_10_3' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) in function '(anonymous namespace)::load'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_10_2' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:61) in function '(anonymous namespace)::load'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 568.023 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ct_reader' ...
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' to 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load' to 'p_anonymous_namespace_load'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pipeline_Block_entry_proc' to 'p_anonymous_namespace_pipeline_Block_entry_proc'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)multiply' to 'p_anonymous_namespace_multiply'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pipeline' to 'p_anonymous_namespace_pipeline'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 82, loop 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.92 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.9 seconds; current allocated memory: 569.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.69 seconds. CPU system time: 0 seconds. Elapsed time: 1.71 seconds; current allocated memory: 569.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.69 seconds; current allocated memory: 569.461 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 569.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pipeline_Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 569.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 569.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3'.
+INFO: [HLS 200-2253] Unable to schedule 'load' operation 240 bit ('word', /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:37->/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:52) on array 'windows_0' in the first 1 clock cycle(s).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 572.383 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 572.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 572.383 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 572.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ct_reader' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 572.453 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 572.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' pipeline 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_31s_31s_31_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_13ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 574.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_27ns_36ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.93 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.96 seconds; current allocated memory: 579.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pipeline_Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pipeline_Block_entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 580.426 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_multiply' pipeline 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_60ns_60ns_120_5_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_multiply'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 582.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_weights_0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem_baby_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pipeline'.
+INFO: [HLS 200-740] Implementing PIPO ct_reader_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'ct_reader_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W_memcore' using distributed RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'mul1_loc_channel_U(ct_reader_fifo_w32_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 586.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ct_reader' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/gmem_weights' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/gmem_baby' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/baby' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/products' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/n' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/l' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/k' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ct_reader/lane' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ct_reader' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'weights', 'baby', 'n', 'k' and 'lane' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ct_reader'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 589.453 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.91 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.89 seconds; current allocated memory: 592.855 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.43 seconds; current allocated memory: 600.988 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ct_reader.
+INFO: [VLOG 209-307] Generating Verilog RTL for ct_reader.
+INFO: [HLS 200-789] **** Estimated Fmax: 430.29 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:32; Allocated memory: 112.582 MB.
+INFO: [HLS 200-1510] Running: export_design -format xo -rtl verilog -output /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/ct_reader.xo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Nov  9 15:31:21 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/solution1_data.json outdir=/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip srcdir=/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1 ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/misc
+INFO: Copied 26 verilog file(s) to /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/hdl/verilog
+INFO: Copied 21 vhdl file(s) to /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/drivers
+INFO: Import ports from HDL: /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/hdl/vhdl/ct_reader.vhd (ct_reader)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mark/AMDDesignTools/2025.2/data/ip'.
+INFO: Add axi4full interface m_axi_gmem_weights
+INFO: Add axi4full interface m_axi_gmem_baby
+INFO: Add axi4stream interface products
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/component.xml
+Generating XO file: ct_reader.xo in directory /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../..
+Running: package_xo -xo_path /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../../ct_reader.xo -kernel_xml /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../kernel.xml -kernel_name ct_reader -ip_directory /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip -kernel_files {/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../../../../../../../../mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../../../../../../../../mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/../../../../../../../../mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp} -hls_directory /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/misc/hls_files -kernel_json /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/solution1_data.json
+INFO: Created IP archive /home/mark/ga3_splitbo_20261109/hls/r1/ct_reader/project/solution1/impl/ip/xilinx_com_hls_ct_reader_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  9 15:31:26 2026...
+INFO: [HLS 200-802] Generated output file ct_reader.xo
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:06; Allocated memory: 4.695 MB.
+INFO: [HLS 200-112] Total CPU user time: 37.62 seconds. Total CPU system time: 4.94 seconds. Total elapsed time: 49.5 seconds; peak allocated memory: 605.684 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 50s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

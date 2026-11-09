@@ -1,0 +1,1544 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Mon Nov  9 15:31:27 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/build.tcl'
+INFO: [HLS 200-1510] Running: open_project /home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project 
+WARNING: [HLS 200-2182] The 'project' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project'.
+INFO: [HLS 200-1510] Running: set_top native_split_chain 
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp -cflags -std=c++14 -I/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design 
+INFO: [HLS 200-10] Adding test bench file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
+INFO: [HLS 200-10] Creating and opening solution '/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcve2802-vsvh1760-2MP-e-S 
+INFO: [HLS 200-1611] Setting target device to 'xcve2802-vsvh1760-2MP-e-S'
+INFO: [HLS 200-1510] Running: create_clock -period 3.2 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.2ns.
+INFO: [HLS 200-1510] Running: csim_design -O 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_tb.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp in release mode
+   Compiling /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp in release mode
+   Generating csim.exe
+PASS_SPLIT N=64 L=3 K=1 lane=0 words=576
+PASS_SPLIT N=64 L=3 K=1 lane=1 words=576
+PASS_SPLIT N=128 L=16 K=16 lane=0 words=6144
+PASS_SPLIT N=128 L=16 K=16 lane=1 words=6144
+PASS_SPLIT N=128 L=5 K=16 lane=0 words=1920
+PASS_SPLIT N=128 L=5 K=16 lane=1 words=1920
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:06; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.74 seconds. CPU system time: 0.27 seconds. Elapsed time: 2.74 seconds; current allocated memory: 488.727 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:52:76)
+Resolution: For help on HLS 214-113 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-113.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp
+Resolution: For help on HLS 200-471 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 9.25 seconds. CPU system time: 1.29 seconds. Elapsed time: 13.26 seconds; current allocated memory: 491.836 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 3,137 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 851 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 668 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 642 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 642 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,204 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 823 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 839 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 855 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 882 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 851 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 851 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 845 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 845 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 857 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 922 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'ctmac::dimensions(unsigned int, unsigned int, unsigned int)' into 'ct_reader' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:66:13)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::reduce_sum(ap_uint<128>, ap_uint<60>, ap_uint<84>)' into '(anonymous namespace)::accumulate(hls::stream<ap_uint<960>, 0>&, ap_uint<64>*, ap_uint<192> const*, unsigned int, unsigned int, unsigned int)' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:51:31)
+INFO: [HLS 214-131] Inlining function 'ctmac::dimensions(unsigned int, unsigned int, unsigned int)' into 'ct_reduce_accum' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:68:13)
+INFO: [HLS 214-131] Inlining function 'ctmac::valid_parameter(ap_uint<192>)' into 'ct_reduce_accum' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:69:69)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_28_4' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:28:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_30_5' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:30:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_42_9' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:42:24)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_35_4' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:35:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_16_5' is marked as complete unroll implied by the pipeline pragma (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:16:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_28_4' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:28:22) in function '(anonymous namespace)::accumulate' completely with a factor of 3 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:18:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_5' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:30:23) in function '(anonymous namespace)::accumulate' completely with a factor of 8 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:18:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_42_9' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:42:24) in function '(anonymous namespace)::accumulate' completely with a factor of 8 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:18:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_35_4' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:35:21) in function '(anonymous namespace)::multiply' completely with a factor of 8 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:28:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_5' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:16:21) in function '(anonymous namespace)::load' completely with a factor of 4 (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:8:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'outputs'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:58:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'weights'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:55:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'baby'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:55:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'weights'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:46:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'baby'. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:46:0)
+INFO: [HLS 214-248] Applying array_partition to 'windows': Cyclic partitioning with factor 8 on dimension 1. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-248] Applying array_partition to 'sums': Complete partitioning on dimension 1. Cyclic partitioning with factor 8 on dimension 2. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:20:15)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_0' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_1' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_2' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_3' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_4' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_5' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_6' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-241] Aggregating stream-of-blocks variable 'windows_7' with compact=bit mode in 240-bits (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:49:34)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_69_1> at /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:69:19 due to pipeline_loops threshold
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 64 has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:25:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.19 seconds. CPU system time: 0.33 seconds. Elapsed time: 6.78 seconds; current allocated memory: 502.676 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 502.676 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 504.223 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 506.441 MB.
+INFO: [HLS 200-1947] Using 'stable' for argument 'gmem0' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'weights' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'gmem1' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'baby' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'n' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'l' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'k' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'lane' of dataflow function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1).
+INFO: [XFORM 203-712] Applying dataflow to function '(anonymous namespace)::pipeline' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:47:1), detected/extracted 3 process function(s): 
+	 '(anonymous namespace)::load'
+	 '(anonymous namespace)::pipeline_Block_entry_proc'
+	 '(anonymous namespace)::multiply'.
+INFO: [XFORM 203-712] Applying dataflow to function 'native_split_chain' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_chain.cpp:3:2), detected/extracted 4 process function(s): 
+	 'ct_reader.1'
+	 'ct_reduce_accum.1'
+	 'Block_entry_proc'
+	 'Block_entry_proc_proc'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 530.395 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_32_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) and 'VITIS_LOOP_32_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:80) in function '(anonymous namespace)::multiply' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_30_1'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:30:19) and 'VITIS_LOOP_32_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) in function '(anonymous namespace)::multiply' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_10_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) and 'VITIS_LOOP_13_4'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:13:20) in function '(anonymous namespace)::load' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_10_2'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:61) and 'VITIS_LOOP_10_3'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) in function '(anonymous namespace)::load' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_37_7'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:37:22) and 'VITIS_LOOP_39_8'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:39:23) in function '(anonymous namespace)::accumulate' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_49_10'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:49:22) and 'VITIS_LOOP_49_11'(/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:49:68) in function '(anonymous namespace)::accumulate' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_32_2' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:32:20) in function '(anonymous namespace)::multiply'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_30_1' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:30:19) in function '(anonymous namespace)::multiply'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_10_3' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:116) in function '(anonymous namespace)::load'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_10_2' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:10:61) in function '(anonymous namespace)::load'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_37_7' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:37:22) in function '(anonymous namespace)::accumulate'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_6' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:36:21) in function '(anonymous namespace)::accumulate'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_49_10' (/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reduce.cpp:49:22) in function '(anonymous namespace)::accumulate'.
+WARNING: [HLS 200-1449] Process ct_reduce_accum.1 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+WARNING: [HLS 200-1450] Process ct_reduce_accum.1 has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+Resolution: For help on HLS 200-1450 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1450.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.22 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.23 seconds; current allocated memory: 658.215 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'native_split_chain' ...
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' to 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load' to 'p_anonymous_namespace_load'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pipeline_Block_entry_proc' to 'p_anonymous_namespace_pipeline_Block_entry_proc'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)multiply' to 'p_anonymous_namespace_multiply'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pipeline' to 'p_anonymous_namespace_pipeline'.
+WARNING: [SYN 201-103] Legalizing function name 'ct_reader.1' to 'ct_reader_1'.
+WARNING: [SYN 201-103] Legalizing function name 'ct_reduce_accum.1_Pipeline_VITIS_LOOP_69_1' to 'ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)accumulate_Pipeline_VITIS_LOOP_26_3' to 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L' to 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11' to 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)accumulate' to 'p_anonymous_namespace_accumulate'.
+WARNING: [SYN 201-103] Legalizing function name 'ct_reduce_accum.1' to 'ct_reduce_accum_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 82, loop 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.98 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.92 seconds; current allocated memory: 662.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.7 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.56 seconds; current allocated memory: 662.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.72 seconds. CPU system time: 0 seconds. Elapsed time: 1.67 seconds; current allocated memory: 662.129 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 662.129 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pipeline_Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 662.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 662.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3'.
+INFO: [HLS 200-2253] Unable to schedule 'load' operation 240 bit ('word', /mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:37->/mnt/e/v32_gpu/v32_gpu/integration/ga3_splitbo_20261109/design/native_reader.cpp:52) on array 'windows_0' in the first 1 clock cycle(s).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 665.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 665.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 665.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 665.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ct_reader_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 665.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 665.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 82, Depth = 82, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 665.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.99 seconds. CPU system time: 0 seconds. Elapsed time: 0.99 seconds; current allocated memory: 665.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.12 seconds. CPU system time: 0 seconds. Elapsed time: 1.12 seconds; current allocated memory: 667.250 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 667.250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_LOOP_39_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_LOOP_39_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 670.902 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 670.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_49_10_VITIS_LOOP_49_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16, loop 'VITIS_LOOP_49_10_VITIS_LOOP_49_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.56 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 671.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 671.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_accumulate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 671.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.02 seconds. CPU system time: 0 seconds. Elapsed time: 1.01 seconds; current allocated memory: 671.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ct_reduce_accum_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.83 seconds. CPU system time: 0 seconds. Elapsed time: 0.82 seconds; current allocated memory: 671.645 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 671.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 671.645 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 671.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry_proc_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 671.645 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 671.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'native_split_chain' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO a_channel (from ct_reader_1_U0 to Block_entry_proc_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 672.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 672.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13' pipeline 'VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_31s_31s_31_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_13ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 674.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_27ns_36ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.93 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.92 seconds; current allocated memory: 679.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pipeline_Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pipeline_Block_entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 680.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_multiply' pipeline 'VITIS_LOOP_30_1_VITIS_LOOP_32_2_VITIS_LOOP_32_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_60ns_60ns_120_5_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_multiply'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 682.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem0_0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_pipeline/m_axi_gmem1_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pipeline'.
+INFO: [HLS 200-740] Implementing PIPO native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W_memcore' using distributed RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'mul1_loc_channel_U(native_split_chain_fifo_w32_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 686.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ct_reader_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ct_reader_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 688.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_128ns_64ns_145_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 690.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.91 seconds. CPU system time: 0 seconds. Elapsed time: 0.9 seconds; current allocated memory: 692.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L' pipeline 'VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_LOOP_39_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_128_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 696.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11' pipeline 'VITIS_LOOP_49_10_VITIS_LOOP_49_11' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11/m_axi_gmem2_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mul_128ns_84ns_212_7_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_84ns_60ns_144_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_128_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_128_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.15 seconds; current allocated memory: 702.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_accumulate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_accumulate'.
+INFO: [RTMG 210-278] Implementing memory 'native_split_chain_p_anonymous_namespace_accumulate_sums_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 709.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ct_reduce_accum_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ct_reduce_accum_1'.
+INFO: [RTMG 210-278] Implementing memory 'native_split_chain_ct_reduce_accum_1_cached_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.11 seconds; current allocated memory: 712.832 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 715.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_proc_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_proc_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 715.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'native_split_chain' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/baby' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/outputs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/params' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/n' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/l' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/k' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'native_split_chain/lane' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'native_split_chain' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'weights', 'baby', 'outputs', 'params', 'n', 'l', 'k' and 'lane' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'native_split_chain'.
+INFO: [RTMG 210-285] Implementing FIFO 'a_channel_U(native_split_chain_fifo_w3_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'products_U(native_split_chain_fifo_w960_d32_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'b_channel_U(native_split_chain_fifo_w3_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'or_loc_channel_U(native_split_chain_fifo_w3_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 717.137 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.93 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.83 seconds; current allocated memory: 720.840 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.59 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.61 seconds; current allocated memory: 734.035 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for native_split_chain.
+INFO: [VLOG 209-307] Generating Verilog RTL for native_split_chain.
+INFO: [HLS 200-789] **** Estimated Fmax: 430.29 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:42; Allocated memory: 245.672 MB.
+INFO: [HLS 200-1510] Running: cosim_design -rtl verilog -tool xsim -O -random_stall -enable_dataflow_profiling -trace_level none 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/mark/AMDDesignTools/2025.2/Vitis/lnx64/tools/clang-16/bin/clang++"
+   Compiling apatb_native_split_chain.cpp
+   Compiling native_chain.cpp_pre.cpp.tb.cpp
+   Compiling native_reader.cpp_pre.cpp.tb.cpp
+   Compiling native_reduce.cpp_pre.cpp.tb.cpp
+   Compiling native_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_native_split_chain_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+PASS_SPLIT N=64 L=3 K=1 lane=0 words=576
+PASS_SPLIT N=64 L=3 K=1 lane=1 words=576
+PASS_SPLIT N=128 L=16 K=16 lane=0 words=6144
+PASS_SPLIT N=128 L=16 K=16 lane=1 words=6144
+PASS_SPLIT N=128 L=5 K=16 lane=0 words=1920
+PASS_SPLIT N=128 L=5 K=16 lane=1 words=1920
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+WARNING: [HLS 200-616] This design uses AXI slave interface in dataflow mode, which can result in simulation dead-lock and/or mismatching results (due to AXI slave FIFO sizing).
+WARNING: [HLS 200-616] This design uses AXI slave interface in dataflow mode, which can result in simulation dead-lock and/or mismatching results (due to AXI slave FIFO sizing).
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/mark/AMDDesignTools/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_native_split_chain_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj native_split_chain.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./native_split_chain_subsystem -s native_split_chain 
+Multi-threading is on. Using 18 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_fifo_w3_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w3_d2_S
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w3_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_ct_reduce_accum_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_ct_reduce_accum_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_49_10_VITIS_LOOP_49_11
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_accumulate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_ct_reduce_accum_1_cached_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_ct_reduce_accum_1_cached_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_128ns_84ns_212_7_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_128ns_84ns_212_7_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_load
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_srl
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem1_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_sparsemux_17_3_128_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_sparsemux_17_3_128_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_36_6_VITIS_LOOP_37_7_VITIS_L
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_load_Pipeline_VITIS_LOOP_10_2_VITIS_LOOP_10_3_VITIS_LOOP_13
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W_memcore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W_memcore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w32_d2_S
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w32_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_fifo_w960_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w960_d32_A
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w960_d32_A_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_60ns_60ns_120_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_60ns_60ns_120_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_native_split_chain_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_32s_13ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_32s_13ns_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_Block_entry_proc_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_Block_entry_proc_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_ct_reduce_accum_1_Pipeline_VITIS_LOOP_69_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_gmem3_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_load
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_read
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_srl
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem3_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_27ns_36ns_62_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_27ns_36ns_62_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_pipeline_Block_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_pipeline_Block_entry_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_31s_31s_31_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_31s_31s_31_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_Block_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_Block_entry_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_128ns_64ns_145_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_128ns_64ns_145_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_ct_reader_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_ct_reader_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_load.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_load
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_gmem2_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_store
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_write
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_srl
+INFO: [VRFC 10-311] analyzing module native_split_chain_gmem2_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_7ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_7ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_pipeline_windows_RAM_2P_LUTRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_sparsemux_7_2_128_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_sparsemux_7_2_128_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_accumulate_Pipeline_VITIS_LOOP_26_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_multiply
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_p_anonymous_namespace_accumulate_sums_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_p_anonymous_namespace_accumulate_sums_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_fifo_w3_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w3_d3_S
+INFO: [VRFC 10-311] analyzing module native_split_chain_fifo_w3_d3_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_mul_84ns_60ns_144_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module native_split_chain_mul_84ns_60ns_144_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/axivip/axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/axivip/axi_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/native_split_chain_subsystem/native_split_chain_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mark/ga3_splitbo_20261109/hls/r1/native_split_chain/project/solution1/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.native_split_chain_subsystem_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.native_split_chain_control_s_axi
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_m...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_l...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_b...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem0_m_axi(C...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_m...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_l...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_b...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem1_m_axi(C...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_b...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_t...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi_w...
+Compiling module xil_defaultlib.native_split_chain_gmem2_m_axi(C...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_m...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_l...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_b...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_s...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_f...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi_r...
+Compiling module xil_defaultlib.native_split_chain_gmem3_m_axi(C...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_mul_31s_31s_3...
+Compiling module xil_defaultlib.native_split_chain_mul_32s_13ns_...
+Compiling module xil_defaultlib.native_split_chain_flow_control_...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_mul_27ns_36ns...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_mul_7ns_32s_3...
+Compiling module xil_defaultlib.native_split_chain_mul_32s_32s_3...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_mul_60ns_60ns...
+Compiling module xil_defaultlib.native_split_chain_flow_control_...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_fifo_w32_d2_S...
+Compiling module xil_defaultlib.native_split_chain_fifo_w32_d2_S...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_ct_reader_1
+Compiling module xil_defaultlib.native_split_chain_ct_reduce_acc...
+Compiling module xil_defaultlib.native_split_chain_mul_128ns_64n...
+Compiling module xil_defaultlib.native_split_chain_ct_reduce_acc...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_sparsemux_7_2...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_mul_84ns_60ns...
+Compiling module xil_defaultlib.native_split_chain_mul_128ns_84n...
+Compiling module xil_defaultlib.native_split_chain_sparsemux_17_...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_p_anonymous_n...
+Compiling module xil_defaultlib.native_split_chain_ct_reduce_acc...
+Compiling module xil_defaultlib.native_split_chain_Block_entry_p...
+Compiling module xil_defaultlib.native_split_chain_Block_entry_p...
+Compiling module xil_defaultlib.native_split_chain_fifo_w3_d3_S_...
+Compiling module xil_defaultlib.native_split_chain_fifo_w3_d3_S_...
+Compiling module xil_defaultlib.native_split_chain_fifo_w960_d32...
+Compiling module xil_defaultlib.native_split_chain_fifo_w960_d32...
+Compiling module xil_defaultlib.native_split_chain_fifo_w3_d2_S_...
+Compiling module xil_defaultlib.native_split_chain_fifo_w3_d2_S_...
+Compiling module xil_defaultlib.native_split_chain
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,LEN_WIDTH=8...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=7,STRB_WIDTH=4...
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.df_fifo_intf_default
+Compiling module xil_defaultlib.df_process_intf_default
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=86)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=84)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_native_split_chain_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot native_split_chain
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Nov  9 15:32:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/native_split_chain/xsim_script.tcl
+# xsim {native_split_chain} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=native_split_chain_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {native_split_chain.tcl}
+Time resolution is 1 ps
+source native_split_chain.tcl
+## run all
+UVM_INFO /home/mark/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /home/mark/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO /home/mark/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-------------------------------------------------------------------------------------------------
+Name                                Type                                  Size  Value            
+-------------------------------------------------------------------------------------------------
+uvm_test_top                        native_split_chain_test_lib           -     @377             
+  top_env                           native_split_chain_env                -     @388             
+    axi_lite_control                uvm_env                               -     @542             
+      item_rtr_port                 uvm_analysis_port                     -     @561             
+      item_wtr_port                 uvm_analysis_port                     -     @551             
+      master                        uvm_agent                             -     @1014            
+        ardrv                       uvm_driver #(REQ,RSP)                 -     @1689            
+          item_read_imp             uvm_analysis_port                     -     @1718            
+          rsp_port                  uvm_analysis_port                     -     @1708            
+          seq_item_port             uvm_seq_item_pull_port                -     @1698            
+          m_num_sent                integral                              32    'h0              
+        arsqr                       axi_sequencer                         -     @1728            
+          rsp_export                uvm_analysis_export                   -     @1737            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @1855            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        awdrv                       uvm_driver #(REQ,RSP)                 -     @1161            
+          item_read_imp             uvm_analysis_port                     -     @1190            
+          rsp_port                  uvm_analysis_port                     -     @1180            
+          seq_item_port             uvm_seq_item_pull_port                -     @1170            
+          m_num_sent                integral                              32    'h0              
+        awsqr                       axi_sequencer                         -     @1200            
+          rsp_export                uvm_analysis_export                   -     @1209            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @1327            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        bdrv                        uvm_driver #(REQ,RSP)                 -     @1513            
+          item_read_imp             uvm_analysis_port                     -     @1542            
+          rsp_port                  uvm_analysis_port                     -     @1532            
+          seq_item_port             uvm_seq_item_pull_port                -     @1522            
+          m_num_sent                integral                              32    'h0              
+        bsqr                        axi_sequencer                         -     @1552            
+          rsp_export                uvm_analysis_export                   -     @1561            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @1679            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        rdrv                        uvm_driver #(REQ,RSP)                 -     @1865            
+          item_read_imp             uvm_analysis_port                     -     @1894            
+          rsp_port                  uvm_analysis_port                     -     @1884            
+          seq_item_port             uvm_seq_item_pull_port                -     @1874            
+          m_num_sent                integral                              32    'h0              
+        rsqr                        axi_sequencer                         -     @1904            
+          rsp_export                uvm_analysis_export                   -     @1913            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @2031            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        wdrv                        uvm_driver #(REQ,RSP)                 -     @1337            
+          item_read_imp             uvm_analysis_port                     -     @1366            
+          rsp_port                  uvm_analysis_port                     -     @1356            
+          seq_item_port             uvm_seq_item_pull_port                -     @1346            
+          m_num_sent                integral                              32    'h0              
+        wsqr                        axi_sequencer                         -     @1376            
+          rsp_export                uvm_analysis_export                   -     @1385            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @1503            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+      monitor                       uvm_monitor                           -     @836             
+        item_ar2r_port              uvm_analysis_port                     -     @905             
+        item_ar_port                uvm_analysis_port                     -     @875             
+        item_aw2b_port              uvm_analysis_port                     -     @895             
+        item_aw_port                uvm_analysis_port                     -     @845             
+        item_b_port                 uvm_analysis_port                     -     @865             
+        item_r_port                 uvm_analysis_port                     -     @885             
+        item_w_port                 uvm_analysis_port                     -     @855             
+        checks_enable               integral                              1     'h1              
+        coverage_enable             integral                              1     'h1              
+      state                         axi_state                             -     @915             
+        ar2r_imp                    uvm_analysis_imp_ar2r                 -     @984             
+        ar_imp                      uvm_analysis_imp_ar                   -     @954             
+        aw2b_imp                    uvm_analysis_imp_aw2b                 -     @974             
+        aw_imp                      uvm_analysis_imp_aw                   -     @924             
+        b_imp                       uvm_analysis_imp_b                    -     @944             
+        item_rtr_port               uvm_analysis_port                     -     @1004            
+        item_wtr_port               uvm_analysis_port                     -     @994             
+        r_imp                       uvm_analysis_imp_r                    -     @964             
+        w_imp                       uvm_analysis_imp_w                    -     @934             
+        avg_rate                    integral                              32    'h0              
+        exp_rate                    integral                              32    'h0              
+        win_size                    integral                              32    'h0              
+        bqnum_for_slaseq            integral                              32    'h0              
+        rq_from_model_num           integral                              32    'h0              
+      vsqr                          axi_virtual_sequencer                 -     @1023            
+        rsp_export                  uvm_analysis_export                   -     @1032            
+        seq_item_export             uvm_seq_item_pull_imp                 -     @1150            
+        arbitration_queue           array                                 0     -                
+        lock_queue                  array                                 0     -                
+        num_last_reqs               integral                              32    'd1              
+        num_last_rsps               integral                              32    'd1              
+      cfg                           axi_cfg                               -     @407             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    MASTER           
+        write_latency_mode          latency_mode_enum                     32    CHANNEL_FIRST    
+        read_latency_mode           latency_mode_enum                     32    CHANNEL_FIRST    
+        clatency                    axi_latency_control                   -     @540             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+    axi_master_gmem0                uvm_env                               -     @414             
+      item_rtr_port                 uvm_analysis_port                     -     @433             
+      item_wtr_port                 uvm_analysis_port                     -     @423             
+      monitor                       uvm_monitor                           -     @2114            
+        item_ar2r_port              uvm_analysis_port                     -     @2183            
+        item_ar_port                uvm_analysis_port                     -     @2153            
+        item_aw2b_port              uvm_analysis_port                     -     @2173            
+        item_aw_port                uvm_analysis_port                     -     @2123            
+        item_b_port                 uvm_analysis_port                     -     @2143            
+        item_r_port                 uvm_analysis_port                     -     @2163            
+        item_w_port                 uvm_analysis_port                     -     @2133            
+        checks_enable               integral                              1     'h1              
+        coverage_enable             integral                              1     'h1              
+      slave                         uvm_agent                             -     @2292            
+        ardrv                       uvm_driver #(REQ,RSP)                 -     @2969            
+          item_read_imp             uvm_analysis_port                     -     @2998            
+          rsp_port                  uvm_analysis_port                     -     @2988            
+          seq_item_port             uvm_seq_item_pull_port                -     @2978            
+          m_num_sent                integral                              32    'h0              
+        arsqr                       axi_sequencer                         -     @3008            
+          rsp_export                uvm_analysis_export                   -     @3017            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @3135            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        awdrv                       uvm_driver #(REQ,RSP)                 -     @2441            
+          item_read_imp             uvm_analysis_port                     -     @2470            
+          rsp_port                  uvm_analysis_port                     -     @2460            
+          seq_item_port             uvm_seq_item_pull_port                -     @2450            
+          m_num_sent                integral                              32    'h0              
+        awsqr                       axi_sequencer                         -     @2480            
+          rsp_export                uvm_analysis_export                   -     @2489            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @2607            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        bdrv                        uvm_driver #(REQ,RSP)                 -     @2793            
+          item_read_imp             uvm_analysis_port                     -     @2822            
+          rsp_port                  uvm_analysis_port                     -     @2812            
+          seq_item_port             uvm_seq_item_pull_port                -     @2802            
+          m_num_sent                integral                              32    'h0              
+        bsqr                        axi_sequencer                         -     @2832            
+          rsp_export                uvm_analysis_export                   -     @2841            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @2959            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        rdrv                        uvm_driver #(REQ,RSP)                 -     @3145            
+          item_read_imp             uvm_analysis_port                     -     @3174            
+          rsp_port                  uvm_analysis_port                     -     @3164            
+          seq_item_port             uvm_seq_item_pull_port                -     @3154            
+          m_num_sent                integral                              32    'h0              
+        rsqr                        axi_sequencer                         -     @3184            
+          rsp_export                uvm_analysis_export                   -     @3193            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @3311            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        wdrv                        uvm_driver #(REQ,RSP)                 -     @2617            
+          item_read_imp             uvm_analysis_port                     -     @2646            
+          rsp_port                  uvm_analysis_port                     -     @2636            
+          seq_item_port             uvm_seq_item_pull_port                -     @2626            
+          m_num_sent                integral                              32    'h0              
+        wsqr                        axi_sequencer                         -     @2656            
+          rsp_export                uvm_analysis_export                   -     @2665            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @2783            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+      state                         axi_state                             -     @2193            
+        ar2r_imp                    uvm_analysis_imp_ar2r                 -     @2262            
+        ar_imp                      uvm_analysis_imp_ar                   -     @2232            
+        aw2b_imp                    uvm_analysis_imp_aw2b                 -     @2252            
+        aw_imp                      uvm_analysis_imp_aw                   -     @2202            
+        b_imp                       uvm_analysis_imp_b                    -     @2222            
+        item_rtr_port               uvm_analysis_port                     -     @2282            
+        item_wtr_port               uvm_analysis_port                     -     @2272            
+        r_imp                       uvm_analysis_imp_r                    -     @2242            
+        w_imp                       uvm_analysis_imp_w                    -     @2212            
+        avg_rate                    integral                              32    'h0              
+        exp_rate                    integral                              32    'h0              
+        win_size                    integral                              32    'h0              
+        bqnum_for_slaseq            integral                              32    'h0              
+        rq_from_model_num           integral                              32    'h0              
+      vsqr                          axi_virtual_sequencer                 -     @2301            
+        rsp_export                  uvm_analysis_export                   -     @2310            
+        seq_item_export             uvm_seq_item_pull_imp                 -     @2428            
+        arbitration_queue           array                                 0     -                
+        lock_queue                  array                                 0     -                
+        num_last_reqs               integral                              32    'd1              
+        num_last_rsps               integral                              32    'd1              
+      cfg                           axi_cfg                               -     @403             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem0                     -     @409             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+    axi_master_gmem1                uvm_env                               -     @446             
+      item_rtr_port                 uvm_analysis_port                     -     @465             
+      item_wtr_port                 uvm_analysis_port                     -     @455             
+      monitor                       uvm_monitor                           -     @3392            
+        item_ar2r_port              uvm_analysis_port                     -     @3461            
+        item_ar_port                uvm_analysis_port                     -     @3431            
+        item_aw2b_port              uvm_analysis_port                     -     @3451            
+        item_aw_port                uvm_analysis_port                     -     @3401            
+        item_b_port                 uvm_analysis_port                     -     @3421            
+        item_r_port                 uvm_analysis_port                     -     @3441            
+        item_w_port                 uvm_analysis_port                     -     @3411            
+        checks_enable               integral                              1     'h1              
+        coverage_enable             integral                              1     'h1              
+      slave                         uvm_agent                             -     @3570            
+        ardrv                       uvm_driver #(REQ,RSP)                 -     @4247            
+          item_read_imp             uvm_analysis_port                     -     @4276            
+          rsp_port                  uvm_analysis_port                     -     @4266            
+          seq_item_port             uvm_seq_item_pull_port                -     @4256            
+          m_num_sent                integral                              32    'h0              
+        arsqr                       axi_sequencer                         -     @4286            
+          rsp_export                uvm_analysis_export                   -     @4295            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @4413            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        awdrv                       uvm_driver #(REQ,RSP)                 -     @3719            
+          item_read_imp             uvm_analysis_port                     -     @3748            
+          rsp_port                  uvm_analysis_port                     -     @3738            
+          seq_item_port             uvm_seq_item_pull_port                -     @3728            
+          m_num_sent                integral                              32    'h0              
+        awsqr                       axi_sequencer                         -     @3758            
+          rsp_export                uvm_analysis_export                   -     @3767            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @3885            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        bdrv                        uvm_driver #(REQ,RSP)                 -     @4071            
+          item_read_imp             uvm_analysis_port                     -     @4100            
+          rsp_port                  uvm_analysis_port                     -     @4090            
+          seq_item_port             uvm_seq_item_pull_port                -     @4080            
+          m_num_sent                integral                              32    'h0              
+        bsqr                        axi_sequencer                         -     @4110            
+          rsp_export                uvm_analysis_export                   -     @4119            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @4237            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        rdrv                        uvm_driver #(REQ,RSP)                 -     @4423            
+          item_read_imp             uvm_analysis_port                     -     @4452            
+          rsp_port                  uvm_analysis_port                     -     @4442            
+          seq_item_port             uvm_seq_item_pull_port                -     @4432            
+          m_num_sent                integral                              32    'h0              
+        rsqr                        axi_sequencer                         -     @4462            
+          rsp_export                uvm_analysis_export                   -     @4471            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @4589            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        wdrv                        uvm_driver #(REQ,RSP)                 -     @3895            
+          item_read_imp             uvm_analysis_port                     -     @3924            
+          rsp_port                  uvm_analysis_port                     -     @3914            
+          seq_item_port             uvm_seq_item_pull_port                -     @3904            
+          m_num_sent                integral                              32    'h0              
+        wsqr                        axi_sequencer                         -     @3934            
+          rsp_export                uvm_analysis_export                   -     @3943            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @4061            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+      state                         axi_state                             -     @3471            
+        ar2r_imp                    uvm_analysis_imp_ar2r                 -     @3540            
+        ar_imp                      uvm_analysis_imp_ar                   -     @3510            
+        aw2b_imp                    uvm_analysis_imp_aw2b                 -     @3530            
+        aw_imp                      uvm_analysis_imp_aw                   -     @3480            
+        b_imp                       uvm_analysis_imp_b                    -     @3500            
+        item_rtr_port               uvm_analysis_port                     -     @3560            
+        item_wtr_port               uvm_analysis_port                     -     @3550            
+        r_imp                       uvm_analysis_imp_r                    -     @3520            
+        w_imp                       uvm_analysis_imp_w                    -     @3490            
+        avg_rate                    integral                              32    'h0              
+        exp_rate                    integral                              32    'h0              
+        win_size                    integral                              32    'h0              
+        bqnum_for_slaseq            integral                              32    'h0              
+        rq_from_model_num           integral                              32    'h0              
+      vsqr                          axi_virtual_sequencer                 -     @3579            
+        rsp_export                  uvm_analysis_export                   -     @3588            
+        seq_item_export             uvm_seq_item_pull_imp                 -     @3706            
+        arbitration_queue           array                                 0     -                
+        lock_queue                  array                                 0     -                
+        num_last_reqs               integral                              32    'd1              
+        num_last_rsps               integral                              32    'd1              
+      cfg                           axi_cfg                               -     @404             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem1                     -     @444             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+    axi_master_gmem2                uvm_env                               -     @478             
+      item_rtr_port                 uvm_analysis_port                     -     @497             
+      item_wtr_port                 uvm_analysis_port                     -     @487             
+      monitor                       uvm_monitor                           -     @4670            
+        item_ar2r_port              uvm_analysis_port                     -     @4739            
+        item_ar_port                uvm_analysis_port                     -     @4709            
+        item_aw2b_port              uvm_analysis_port                     -     @4729            
+        item_aw_port                uvm_analysis_port                     -     @4679            
+        item_b_port                 uvm_analysis_port                     -     @4699            
+        item_r_port                 uvm_analysis_port                     -     @4719            
+        item_w_port                 uvm_analysis_port                     -     @4689            
+        checks_enable               integral                              1     'h1              
+        coverage_enable             integral                              1     'h1              
+      slave                         uvm_agent                             -     @4848            
+        ardrv                       uvm_driver #(REQ,RSP)                 -     @5525            
+          item_read_imp             uvm_analysis_port                     -     @5554            
+          rsp_port                  uvm_analysis_port                     -     @5544            
+          seq_item_port             uvm_seq_item_pull_port                -     @5534            
+          m_num_sent                integral                              32    'h0              
+        arsqr                       axi_sequencer                         -     @5564            
+          rsp_export                uvm_analysis_export                   -     @5573            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @5691            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        awdrv                       uvm_driver #(REQ,RSP)                 -     @4997            
+          item_read_imp             uvm_analysis_port                     -     @5026            
+          rsp_port                  uvm_analysis_port                     -     @5016            
+          seq_item_port             uvm_seq_item_pull_port                -     @5006            
+          m_num_sent                integral                              32    'h0              
+        awsqr                       axi_sequencer                         -     @5036            
+          rsp_export                uvm_analysis_export                   -     @5045            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @5163            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        bdrv                        uvm_driver #(REQ,RSP)                 -     @5349            
+          item_read_imp             uvm_analysis_port                     -     @5378            
+          rsp_port                  uvm_analysis_port                     -     @5368            
+          seq_item_port             uvm_seq_item_pull_port                -     @5358            
+          m_num_sent                integral                              32    'h0              
+        bsqr                        axi_sequencer                         -     @5388            
+          rsp_export                uvm_analysis_export                   -     @5397            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @5515            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        rdrv                        uvm_driver #(REQ,RSP)                 -     @5701            
+          item_read_imp             uvm_analysis_port                     -     @5730            
+          rsp_port                  uvm_analysis_port                     -     @5720            
+          seq_item_port             uvm_seq_item_pull_port                -     @5710            
+          m_num_sent                integral                              32    'h0              
+        rsqr                        axi_sequencer                         -     @5740            
+          rsp_export                uvm_analysis_export                   -     @5749            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @5867            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        wdrv                        uvm_driver #(REQ,RSP)                 -     @5173            
+          item_read_imp             uvm_analysis_port                     -     @5202            
+          rsp_port                  uvm_analysis_port                     -     @5192            
+          seq_item_port             uvm_seq_item_pull_port                -     @5182            
+          m_num_sent                integral                              32    'h0              
+        wsqr                        axi_sequencer                         -     @5212            
+          rsp_export                uvm_analysis_export                   -     @5221            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @5339            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+      state                         axi_state                             -     @4749            
+        ar2r_imp                    uvm_analysis_imp_ar2r                 -     @4818            
+        ar_imp                      uvm_analysis_imp_ar                   -     @4788            
+        aw2b_imp                    uvm_analysis_imp_aw2b                 -     @4808            
+        aw_imp                      uvm_analysis_imp_aw                   -     @4758            
+        b_imp                       uvm_analysis_imp_b                    -     @4778            
+        item_rtr_port               uvm_analysis_port                     -     @4838            
+        item_wtr_port               uvm_analysis_port                     -     @4828            
+        r_imp                       uvm_analysis_imp_r                    -     @4798            
+        w_imp                       uvm_analysis_imp_w                    -     @4768            
+        avg_rate                    integral                              32    'h0              
+        exp_rate                    integral                              32    'h0              
+        win_size                    integral                              32    'h0              
+        bqnum_for_slaseq            integral                              32    'h0              
+        rq_from_model_num           integral                              32    'h0              
+      vsqr                          axi_virtual_sequencer                 -     @4857            
+        rsp_export                  uvm_analysis_export                   -     @4866            
+        seq_item_export             uvm_seq_item_pull_imp                 -     @4984            
+        arbitration_queue           array                                 0     -                
+        lock_queue                  array                                 0     -                
+        num_last_reqs               integral                              32    'd1              
+        num_last_rsps               integral                              32    'd1              
+      cfg                           axi_cfg                               -     @405             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem2                     -     @476             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+    axi_master_gmem3                uvm_env                               -     @510             
+      item_rtr_port                 uvm_analysis_port                     -     @529             
+      item_wtr_port                 uvm_analysis_port                     -     @519             
+      monitor                       uvm_monitor                           -     @5948            
+        item_ar2r_port              uvm_analysis_port                     -     @6017            
+        item_ar_port                uvm_analysis_port                     -     @5987            
+        item_aw2b_port              uvm_analysis_port                     -     @6007            
+        item_aw_port                uvm_analysis_port                     -     @5957            
+        item_b_port                 uvm_analysis_port                     -     @5977            
+        item_r_port                 uvm_analysis_port                     -     @5997            
+        item_w_port                 uvm_analysis_port                     -     @5967            
+        checks_enable               integral                              1     'h1              
+        coverage_enable             integral                              1     'h1              
+      slave                         uvm_agent                             -     @6126            
+        ardrv                       uvm_driver #(REQ,RSP)                 -     @6803            
+          item_read_imp             uvm_analysis_port                     -     @6832            
+          rsp_port                  uvm_analysis_port                     -     @6822            
+          seq_item_port             uvm_seq_item_pull_port                -     @6812            
+          m_num_sent                integral                              32    'h0              
+        arsqr                       axi_sequencer                         -     @6842            
+          rsp_export                uvm_analysis_export                   -     @6851            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @6969            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        awdrv                       uvm_driver #(REQ,RSP)                 -     @6275            
+          item_read_imp             uvm_analysis_port                     -     @6304            
+          rsp_port                  uvm_analysis_port                     -     @6294            
+          seq_item_port             uvm_seq_item_pull_port                -     @6284            
+          m_num_sent                integral                              32    'h0              
+        awsqr                       axi_sequencer                         -     @6314            
+          rsp_export                uvm_analysis_export                   -     @6323            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @6441            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        bdrv                        uvm_driver #(REQ,RSP)                 -     @6627            
+          item_read_imp             uvm_analysis_port                     -     @6656            
+          rsp_port                  uvm_analysis_port                     -     @6646            
+          seq_item_port             uvm_seq_item_pull_port                -     @6636            
+          m_num_sent                integral                              32    'h0              
+        bsqr                        axi_sequencer                         -     @6666            
+          rsp_export                uvm_analysis_export                   -     @6675            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @6793            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        rdrv                        uvm_driver #(REQ,RSP)                 -     @6979            
+          item_read_imp             uvm_analysis_port                     -     @7008            
+          rsp_port                  uvm_analysis_port                     -     @6998            
+          seq_item_port             uvm_seq_item_pull_port                -     @6988            
+          m_num_sent                integral                              32    'h0              
+        rsqr                        axi_sequencer                         -     @7018            
+          rsp_export                uvm_analysis_export                   -     @7027            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @7145            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+        wdrv                        uvm_driver #(REQ,RSP)                 -     @6451            
+          item_read_imp             uvm_analysis_port                     -     @6480            
+          rsp_port                  uvm_analysis_port                     -     @6470            
+          seq_item_port             uvm_seq_item_pull_port                -     @6460            
+          m_num_sent                integral                              32    'h0              
+        wsqr                        axi_sequencer                         -     @6490            
+          rsp_export                uvm_analysis_export                   -     @6499            
+          seq_item_export           uvm_seq_item_pull_imp                 -     @6617            
+          arbitration_queue         array                                 0     -                
+          lock_queue                array                                 0     -                
+          num_last_reqs             integral                              32    'd1              
+          num_last_rsps             integral                              32    'd1              
+      state                         axi_state                             -     @6027            
+        ar2r_imp                    uvm_analysis_imp_ar2r                 -     @6096            
+        ar_imp                      uvm_analysis_imp_ar                   -     @6066            
+        aw2b_imp                    uvm_analysis_imp_aw2b                 -     @6086            
+        aw_imp                      uvm_analysis_imp_aw                   -     @6036            
+        b_imp                       uvm_analysis_imp_b                    -     @6056            
+        item_rtr_port               uvm_analysis_port                     -     @6116            
+        item_wtr_port               uvm_analysis_port                     -     @6106            
+        r_imp                       uvm_analysis_imp_r                    -     @6076            
+        w_imp                       uvm_analysis_imp_w                    -     @6046            
+        avg_rate                    integral                              32    'h0              
+        exp_rate                    integral                              32    'h0              
+        win_size                    integral                              32    'h0              
+        bqnum_for_slaseq            integral                              32    'h0              
+        rq_from_model_num           integral                              32    'h0              
+      vsqr                          axi_virtual_sequencer                 -     @6135            
+        rsp_export                  uvm_analysis_export                   -     @6144            
+        seq_item_export             uvm_seq_item_pull_imp                 -     @6262            
+        arbitration_queue           array                                 0     -                
+        lock_queue                  array                                 0     -                
+        num_last_reqs               integral                              32    'd1              
+        num_last_rsps               integral                              32    'd1              
+      cfg                           axi_cfg                               -     @406             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem3                     -     @508             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+    native_split_chain_virtual_sqr  native_split_chain_virtual_sequencer  -     @693             
+      rsp_export                    uvm_analysis_export                   -     @702             
+      seq_item_export               uvm_seq_item_pull_imp                 -     @820             
+      arbitration_queue             array                                 0     -                
+      lock_queue                    array                                 0     -                
+      num_last_reqs                 integral                              32    'd1              
+      num_last_rsps                 integral                              32    'd1              
+    refm                            native_split_chain_reference_model    -     @571             
+      trans_num_idx                 integral                              32    'h0              
+    subsys_mon                      native_split_chain_subsystem_monitor  -     @584             
+      control_rtr_imp               uvm_analysis_imp_axi_rtr_control      -     @683             
+      control_wtr_imp               uvm_analysis_imp_axi_wtr_control      -     @673             
+      gmem0_rtr_imp                 uvm_analysis_imp_axi_rtr_gmem0        -     @603             
+      gmem0_wtr_imp                 uvm_analysis_imp_axi_wtr_gmem0        -     @593             
+      gmem1_rtr_imp                 uvm_analysis_imp_axi_rtr_gmem1        -     @623             
+      gmem1_wtr_imp                 uvm_analysis_imp_axi_wtr_gmem1        -     @613             
+      gmem2_rtr_imp                 uvm_analysis_imp_axi_rtr_gmem2        -     @643             
+      gmem2_wtr_imp                 uvm_analysis_imp_axi_wtr_gmem2        -     @633             
+      gmem3_rtr_imp                 uvm_analysis_imp_axi_rtr_gmem3        -     @663             
+      gmem3_wtr_imp                 uvm_analysis_imp_axi_wtr_gmem3        -     @653             
+      scbd                          native_split_chain_scoreboard         -     @7234            
+        refm                        native_split_chain_reference_model    -     @571             
+          trans_num_idx             integral                              32    'h0              
+    refm                            native_split_chain_reference_model    -     @571             
+    native_split_chain_virtual_sqr  native_split_chain_virtual_sequencer  -     @693             
+    native_split_chain_cfg          native_split_chain_config             -     @402             
+      gmem0_cfg                     axi_cfg                               -     @403             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem0                     -     @409             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+      gmem1_cfg                     axi_cfg                               -     @404             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem1                     -     @444             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+      gmem2_cfg                     axi_cfg                               -     @405             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem2                     -     @476             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+      gmem3_cfg                     axi_cfg                               -     @406             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    SLAVE            
+        write_latency_mode          latency_mode_enum                     32    TRANSACTION_FIRST
+        read_latency_mode           latency_mode_enum                     32    TRANSACTION_FIRST
+        clatency                    axi_latency_gmem3                     -     @508             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+      control_cfg                   axi_cfg                               -     @407             
+        has_checker                 integral                              1     'h1              
+        has_coverage                integral                              1     'h1              
+        id_num                      integral                              32    'h1              
+        reset_level                 reset_level_enum                      32    RESET_LEVEL_LOW  
+        drv_type                    drv_type_enum                         32    MASTER           
+        write_latency_mode          latency_mode_enum                     32    CHANNEL_FIRST    
+        read_latency_mode           latency_mode_enum                     32    CHANNEL_FIRST    
+        clatency                    axi_latency_control                   -     @540             
+          wr_latency                integral                              32    'h0              
+          rd_latency                integral                              32    'h0              
+      check_ena                     integral                              32    'h0              
+      cover_ena                     integral                              32    'h0              
+-------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/mark/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 6 [n/a] @ "107000"
+// RTL Simulation : 1 / 6 [n/a] @ "4549000"
+// RTL Simulation : 2 / 6 [n/a] @ "8936000"
+// RTL Simulation : 3 / 6 [n/a] @ "95240000"
+// RTL Simulation : 4 / 6 [n/a] @ "181979000"
+// RTL Simulation : 5 / 6 [n/a] @ "209086000"
+// RTL Simulation : 6 / 6 [n/a] @ "236302000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 236344 ns : File "/home/mark/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:28 . Memory (MB): peak = 1426.223 ; gain = 0.000 ; free physical = 13949 ; free virtual = 30437
+## quit
+INFO: xsimkernel Simulation Memory Usage: 2194524 KB (Peak: 2260060 KB), Simulation CPU Usage: 29510 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 15:33:30 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+PASS_SPLIT N=64 L=3 K=1 lane=0 words=576
+PASS_SPLIT N=64 L=3 K=1 lane=1 words=576
+PASS_SPLIT N=128 L=16 K=16 lane=0 words=6144
+PASS_SPLIT N=128 L=16 K=16 lane=1 words=6144
+PASS_SPLIT N=128 L=5 K=16 lane=0 words=1920
+PASS_SPLIT N=128 L=5 K=16 lane=1 words=1920
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:01:08; Allocated memory: 16.711 MB.
+INFO: [HLS 200-112] Total CPU user time: 202.41 seconds. Total CPU system time: 8.71 seconds. Total elapsed time: 119.52 seconds; peak allocated memory: 750.746 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 3s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

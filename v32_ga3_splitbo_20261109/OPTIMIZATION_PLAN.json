@@ -1,0 +1,24 @@
+{
+  "target": "Reduce ARM interleaved input packing and repeated BO sync while preserving exact g_a.3 arithmetic and total-wall accounting",
+  "changes": [
+    "Separate canonical A/B input AXI ports",
+    "Four retained weight BOs and one baby BO shared by two readers",
+    "PL selects disjoint half-coefficient lanes",
+    "Retain first-upload and warmup/formal transfer bytes",
+    "Refresh control isolates BO reuse",
+    "Short matching-order pilot before expensive full campaign"
+  ],
+  "unchanged": [
+    "N/L/K/moduli and raw-MAC workload",
+    "Complete canonical SHA256 verification",
+    "Original dataset and lossless input cache",
+    "Exact128 lazy8 reducer XO",
+    "CPU reference arithmetic"
+  ],
+  "not_implemented": [
+    "Live full g_a.3 model offload",
+    "Elimination of SD input admission",
+    "Matched CUDA benchmark"
+  ],
+  "board_performance": "PENDING"
+}

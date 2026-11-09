@@ -1,0 +1,3 @@
+PASS_SPLIT_BACKEND refresh=0 first_use warm_reuse ct_change L16_to_L5 canonical_sync_and_merge=1
+PASS_SPLIT_BACKEND refresh=1 first_use warm_reuse ct_change L16_to_L5 canonical_sync_and_merge=1
+PASS_CORRUPTED_DEVICE_INPUT_REJECTED software_contract_only=1

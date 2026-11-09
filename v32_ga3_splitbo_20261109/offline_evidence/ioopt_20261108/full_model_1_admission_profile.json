@@ -1,0 +1,1 @@
+{"records":5376,"bytes":46238007296,"header_ms":122571.742651,"allocate_ms":95.548571,"pread_ms":1099085.30227,"range_ms":3363.808233,"identity_ms":3748.269844,"retire_ms":68.527093,"pread_calls":12736,"gold_read_bytes_avoided":0,"hashed_outputs":0,"hashed_bytes":0,"sha256_backend":"none","retirement_advice":"POSIX_FADV_DONTNEED","global_cache_clear":false}

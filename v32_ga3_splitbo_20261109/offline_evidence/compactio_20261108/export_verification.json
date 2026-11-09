@@ -1,0 +1,6 @@
+{
+  "status": "PASS_INDEPENDENT_EXPORT_HASHES_ACTUAL_BYTES_AND_HYBRID",
+  "digests_each": 512,
+  "actual_samples_each": 8,
+  "board_executed": false
+}

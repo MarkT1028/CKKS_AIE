@@ -1,0 +1,13 @@
+{
+  "status": "PASS_CSIM_SYNTH_XO",
+  "build": "/home/mark/ga3_splitbo_20261109/hls/r1/ct_reader",
+  "source": {
+    "ct_mac.hpp": "33fa9d99acfc3da0656f069383444a2ef169e27b9907c387612cb4f5879ee057",
+    "native_chain.cpp": "a5b25dbab7bd669ffa91d5c4a48fd05e8a398a6f729aba2bc0b7022ab45d2293",
+    "native_reader.cpp": "5a20dde2715af9780ed8b81767158537c8b453ba461af3a1060335ec071587cf",
+    "native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+    "native_tb.cpp": "67f71eb185d1041fd3504a4edba660ab24be62ebfcb812792980ad40bfca8f20"
+  },
+  "seconds": 51.699059514,
+  "xo_sha256": "8bbdda0140d5de790ebd2a5aa62b6e497702fe52a2504af3cee2d2c956cf550c"
+}
