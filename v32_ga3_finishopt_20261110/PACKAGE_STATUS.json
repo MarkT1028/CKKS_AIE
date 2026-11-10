@@ -1,0 +1,12 @@
+{
+  "status": "READY_FOR_BOARD_SHORT_SCREEN",
+  "entry": "START_HERE.md",
+  "firmware_changed": false,
+  "board_performance": "PENDING",
+  "expected_boot_uuid": "9bee253b8f345f39bd9c18d612897ce3",
+  "reuses_parent": "v32_ga3_splitbo_20261109",
+  "reuses_original_data": true,
+  "reuses_existing_pilot_cache": true,
+  "initial_board_command": "sh run_screen.sh",
+  "full1024_run_is_separate": true
+}

@@ -1,0 +1,39 @@
+{
+  "status": "HOST_ONLY_CANDIDATE_BOARD_RESULTS_PENDING",
+  "changes": [
+    "Full canonical SHA256 fed directly from per-RNS left/right output BO spans without a merged copy",
+    "Bounded two-window same-weight batch through existing finish-overlap scheduler; four shared weight BOs and two independent baby BOs"
+  ],
+  "profiles": {
+    "merge1": "one-window merged control",
+    "direct1": "one-window direct SHA",
+    "direct2": "two-window direct SHA"
+  },
+  "measured_boundary": "Batch begin/configuration through required initial BO copies/sync, execute/wait, output sync, complete verification; sum actual batch wall, never add overlapping stage work",
+  "excluded_but_recorded": [
+    "source admission/read/decode/range checks",
+    "one-time setup",
+    "controller wall overhead"
+  ],
+  "trials": {
+    "warmups": 0,
+    "complete_passes_per_process": 1,
+    "full_windows": 1024,
+    "full_batches_direct2": 512
+  },
+  "first_uploads_in_measurement": true,
+  "necessary_full_input_BO_bytes": 35567697920,
+  "output_poison_retained": true,
+  "full_canonical_header_and_payload_SHA256_retained": true,
+  "global_cache_clear": false,
+  "full_original_data_required_but_not_redistributed": true,
+  "cache_preparation_amortization_not_hidden": true,
+  "maximum_page_rounded_BO_bytes_estimate": 207634432,
+  "estimate_excludes_runtime_driver_overhead": true,
+  "limitations": [
+    "Software tests are not board speed or device-cycle evidence",
+    "Pilot16 is not full1024",
+    "No full live g_a.3 or matched CUDA speed claim",
+    "New actual board original-context verification is pending"
+  ]
+}

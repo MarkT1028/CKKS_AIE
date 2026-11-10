@@ -1,0 +1,8 @@
+bin/
+__pycache__/
+results_finish_*/
+collected_ga3_finishopt_*
+DATA_CHECK_RECEIPT.json
+BUILD_IDENTITY.json
+RECOVERY_REQUIRED.json
+screen_summary.json

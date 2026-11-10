@@ -1,0 +1,23 @@
+INDEX 0/16
+{
+  "status": "PASS_CONTROLLER_NEGATIVE_AND_COLLECTION_TESTS",
+  "negative_cases": [
+    "model_not_board",
+    "warmups",
+    "copied_bytes",
+    "synced_bytes",
+    "hashed_bytes",
+    "resident_batch_wall_sum_ms",
+    "complete_raw_MAC_coverage",
+    "boot_id",
+    "fresh_cache_identities_before_after",
+    "windows.csv",
+    "windows.csv",
+    "windows.csv",
+    "traces.csv",
+    "traces.csv",
+    "traces.csv"
+  ],
+  "scope": "Synthetic envelope with real model output digests; not board execution/performance.",
+  "collection_members": 17
+}

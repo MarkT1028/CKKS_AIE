@@ -1,0 +1,31 @@
+{
+  "status": "PASS_OFFLINE_NOT_BOARD_TESTED",
+  "board_performance": "PENDING",
+  "firmware_changed": false,
+  "checks": [
+    "12 randomized shape cases: parent merged digest == direct segmented digest, with corrupted bytes/lane/tower/length rejection",
+    "Actual new backend, separate software host/device memories, async readers, six profile/order scenarios, first upload and reuse counters, L16->L5, export byte comparisons",
+    "ASAN/UBSAN with leak detection and ThreadSanitizer pass; software ownership guards reject overwrite while active",
+    "x86 and ARM64 XRT syntax pass, ARM64 object compile pass; existing deprecated read_register warnings only",
+    "Three real-data pilot profiles64 digests each identical to sealed outputs",
+    "Full real-data direct2 model:1024 windows,512 batches,all53 moduli,4096 exact canonical digests,1333788672 words,8 actual output files independently hashed",
+    "Controller15 negative accounting/identity/timing/model-claim cases and collection readback",
+    "Full1024 controller CSV/SHA accounting plus missing/corrupted export evidence rejection"
+  ],
+  "real_model_evidence": "offline_evidence/real_audit.json",
+  "validation_scope": "Software execution of the new host data path, not RTL co-simulation or board execution. Unchanged PL image has parent board evidence. New host correctness/speed still require board test.",
+  "model_times_intentionally_not_published_as_performance": true,
+  "final_program_sources_sha256": {
+    "common/sealed_sha256.hpp": "2947ca4c2879ee151ec1342481d2d7f3d02568116778b1a6ffe65a2ae8f402fe",
+    "common/source.hpp": "e36c2b23c0c7bc6c0616fd7370ede940960985ba8f4241fcabd617ff41a20315",
+    "host/backend.hpp": "35a6383bba954852d5c7a030de91e397b799f5c8333d1a46e489d44b6a4e8131",
+    "host/candidate.cpp": "165980b2e41e2f6412234986afa99bdf3946984ee241f3ee169a43481fba4335",
+    "tests/backend_contract.cpp": "f3c8d07b4b63f1d70a15ec7236d77e6b8d0640b5faf33069c5b591d9c447054b",
+    "tests/mock_xrt.hpp": "872f181b9773bb2a09229cfffbc978c86bb6aede626f9a86d0d200dee9ad6222",
+    "tests/sha_selftest.cpp": "790da7d03171de7772270f153f0fe52cc307936032ff4efae6f2625d692f5e3e"
+  },
+  "build_tools": {
+    "local_crypto_check": "PASS_CANONICAL_SHA256_SELFTEST OpenSSL 3.0.13 30 Jan 2024 via libcrypto.so.3",
+    "ARM64_object_sha256": "7f254f81bb0095f4666dbc3577fe1bb0206b79b8bde4745cada2e3d4b061bf72"
+  }
+}

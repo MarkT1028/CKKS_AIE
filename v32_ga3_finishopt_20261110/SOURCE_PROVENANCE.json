@@ -1,0 +1,37 @@
+{
+  "status": "PINNED_IMMUTABLE_PARENT_HOST_OVERLAY",
+  "parent_package": "v32_ga3_splitbo_20261109",
+  "parent_manifest_sha256": "9046e08779347d8b766f5341264ca71fa24914b0a50fb2cd988f59661b0fa2a7",
+  "parent_files_unchanged_verified": true,
+  "source_data_manifest_sha256": "d1bc302affb05586f8a9e875a12efc1b9db7f009a573a09986355b77402218a3",
+  "variant": "v32_native_splitbo_2_pipe",
+  "boot_uuid": "9bee253b8f345f39bd9c18d612897ce3",
+  "boot_sha256": "a0657642f65957fffc62da2d98be40c96bafb4abf82da56ceba82736e00383fd",
+  "metadata_sha256": "497a799cdd11f3837cd0c9a4f0094fa8bffe37480fc33206cf37acd964053950",
+  "hardware_partitions_identical": true,
+  "AIE_compute_tiles": 0,
+  "PL_lanes": 2,
+  "PL_kernel_MHz": 225,
+  "hardware_resources_unchanged": {
+    "LUT": 48179,
+    "FF": 76591,
+    "DSP": 284,
+    "RAMB36": 66,
+    "RAMB18": 4,
+    "BRAM36_equivalent": 68,
+    "URAM": 0
+  },
+  "includes_new_hardware": false,
+  "redistributes_inputs_or_keys": false,
+  "parent_headers_used": [
+    "common/record.hpp",
+    "common/packed_input.hpp",
+    "common/finish_overlap.hpp",
+    "common/replay.hpp",
+    "common/stream_output.hpp",
+    "variants/v32_native_pl_2_pipe/host/bo_host.cpp",
+    "variants/v32_native_splitbo_2_pipe/host/identity_override_candidate.hpp"
+  ],
+  "official_reference": "https://docs.openssl.org/3.2/man3/EVP_DigestInit/",
+  "reference_basis": "Documented successive EVP_DigestUpdate calls; exact canonical byte ordering independently checked against parent single-payload digest"
+}

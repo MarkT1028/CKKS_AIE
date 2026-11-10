@@ -1,0 +1,26 @@
+{
+  "status": "PASS_FULL_REAL_SOFTWARE_MODEL_NOT_BOARD",
+  "source_manifest_sha256": "d1bc302affb05586f8a9e875a12efc1b9db7f009a573a09986355b77402218a3",
+  "profiles_pilot": 3,
+  "pilot_windows_each": 16,
+  "pilot_digests_each": 64,
+  "profiles_identical_outputs": true,
+  "full_profile": "direct2",
+  "full_windows": 1024,
+  "full_batches": 512,
+  "full_RNS": 53,
+  "full_N": 131072,
+  "K": 16,
+  "full_output_ciphertexts": 16,
+  "full_MAC_groups": 64,
+  "full_verified_words": 1333788672,
+  "full_expected_digests": 4096,
+  "canonical_actual_byte_files_independently_hashed": 8,
+  "necessary_copied_bytes": 35567697920,
+  "necessary_synced_bytes": 35567697920,
+  "scopes": [
+    "Actual new Source and Backend with separate software host/device memories and unsigned128 arithmetic, compared with sealed original outputs",
+    "Full logical fixture read; no board/XRT device execution; model times are deliberately omitted",
+    "No new cryptographic context return claimed before actual board outputs return"
+  ]
+}
