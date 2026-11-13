@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare serial reads with one-part prefetch using the first full g_a.9 block."""
+"""Compare serial reads with one-part prefetch using g_a.9 board data."""
 
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -72,6 +72,7 @@ class Reader:
         output = bytearray()
         while len(output) < count:
             if not self.buffer:
+                self.wire.check(self.next < len(self.entries), 'truncated input stream')
                 self.next_part()
             length = min(count-len(output), len(self.buffer))
             output.extend(self.buffer[:length])
@@ -79,7 +80,7 @@ class Reader:
         return output
 
 
-def trial(wire, command, entries, schedule, hashes, hardware, prefetch):
+def trial(wire, command, entries, schedule, hashes, hardware, prefetch, full):
     cache = discard_cached_parts(path for path, _, _ in entries)
     workers = ThreadPoolExecutor(max_workers=1) if prefetch else nullcontext()
     with workers as executor, subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE) as child:
@@ -117,10 +118,14 @@ def trial(wire, command, entries, schedule, hashes, hardware, prefetch):
                 receive_ns += receive
                 pl_ns += run
                 verified_words += n*l*3
+                if full and tile % 256 == 0:
+                    print(f'GA9_IO_PROGRESS tiles={tile}/{len(schedule)}', flush=True)
+            stop = source.read(4) if full else struct.pack('<I', wire.STOP)
+            wire.check(struct.unpack('<I', stop) == (wire.STOP,), 'wrong end of input stream')
+            wire.check(source.next == len(entries) and (not full or not source.buffer), 'unexpected input part coverage')
             read_after = process_read_bytes()
             wall_ns = time.perf_counter_ns() - start
-            wire.check(source.next == len(entries), 'unexpected short-test input part coverage')
-            child.stdin.write(struct.pack('<I', wire.STOP))
+            child.stdin.write(stop)
             child.stdin.close()
             wire.check(child.wait(timeout=15) == 0, 'server exit failed')
         except BaseException:
@@ -138,6 +143,7 @@ def trial(wire, command, entries, schedule, hashes, hardware, prefetch):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--full', action='store_true', help='replay all g_a.9 tiles in each trial')
     parser.add_argument('--model', type=Path, help='local software-model validation only')
     args = parser.parse_args()
     root = Path.cwd()
@@ -151,36 +157,46 @@ def main():
     wire.check(meta['layer'] == 'g_a.9' and meta['protocol'] == wire.PROTOCOL and
                meta['status'] == 'PASS_SEALED_OPENFHE_REFERENCE' and
                wire.digest((root / 'offline_files.py').read_bytes()) == meta['runner_sha256'], 'wrong g_a.9 bundle')
-    schedule = [row for row in wire.schedule('g_a.9') if row[4:] == (0, 0)]
-    wire.check(len(schedule) == 24, 'unexpected short-test tile count')
+    full_schedule = list(wire.schedule('g_a.9'))
+    wire.check(len(full_schedule) == meta['tiles'] == len(meta['output_sha256']) and
+               meta['request_bytes'] == wire.request_size('g_a.9'), 'unexpected full fixture coverage')
+    schedule = full_schedule if args.full else [row for row in full_schedule if row[4:] == (0, 0)]
     request_bytes = sum(28 + 8*l + wire.payload_size(l, flags) for _, l, _, flags, _, _ in schedule)
+    if args.full:
+        request_bytes += 4  # STOP is present at the end of the full stream.
+    verified_words = sum(8192*l*3 for _, l, _, _, _, _ in schedule)
     count = (request_bytes + wire.PART_BYTES-1)//wire.PART_BYTES
+    if args.full:
+        wire.check(count == len(meta['parts']) and verified_words == meta['verified_words'], 'unexpected full fixture size')
     entries = []
     for i in range(count):
         part = meta['parts'][i]
         name = wire.part_name(i)
         path = root / name
-        wire.check(part['path'] == name and part['bytes'] == wire.PART_BYTES and path.is_file() and
+        size = min(wire.PART_BYTES, meta['request_bytes']-i*wire.PART_BYTES)
+        wire.check(part['path'] == name and part['bytes'] == size and path.is_file() and
                    path.stat().st_size == part['bytes'], f'missing or incomplete part {name}')
         entries.append((path, part['bytes'], part['sha256']))
     service = root.parent / 'v32_ga_live_20261111/serve_board.sh'
     command = [str(args.model.resolve(strict=True))] if args.model else ['sh', str(service)]
-    print(f'GA9_IO_SHORT tiles={len(schedule)} parts={count} schedule=serial,prefetch,prefetch,serial', flush=True)
+    test_name = 'GA9_IO_FULL' if args.full else 'GA9_IO_SHORT'
+    print(f'{test_name} tiles={len(schedule)} parts={count} schedule=serial,prefetch,prefetch,serial', flush=True)
     trials = []
     for prefetch in (False, True, True, False):
-        result = trial(wire, command, entries, schedule, meta['output_sha256'], args.model is None, prefetch)
+        result = trial(wire, command, entries, schedule, meta['output_sha256'], args.model is None, prefetch, args.full)
+        wire.check(result['verified_words'] == verified_words, 'unexpected verified output size')
         trials.append(result)
         print(f'PASS_TRIAL {len(trials)}/4 {result["mode"]} wall_s={result["wall_ns"]/1e9:.3f}', flush=True)
     median = {mode: statistics.median(row['wall_ns'] for row in trials if row['mode'] == mode)
               for mode in ('serial', 'prefetch')}
-    wire.save_json(args.output, dict(status='PASS_GA9_IO_SHORT', backend='model' if args.model else 'pure_pl',
+    wire.save_json(args.output, dict(status=f'PASS_{test_name}', backend='model' if args.model else 'pure_pl',
                    manifest_sha256=hashlib.sha256(manifest_bytes).hexdigest(), request_bytes=request_bytes,
                    part_bytes_read=sum(size for _, size, _ in entries), trials=trials, median_wall_ns=median,
                    prefetch_reduction_percent=100*(1-median['prefetch']/median['serial']),
-                   timing_scope='Each trial times 24 tiles with exact SHA256 verification, after server handshake. '
+                   timing_scope=f'Each trial times {len(schedule)} tiles with exact SHA256 verification, after server handshake. '
                                 'File work and pipe/server timings can overlap. File reads can hit page cache. '
                                 'The existing server measures input receive, range check and BO sync together.'))
-    print(f'PASS_GA9_IO_SHORT backend={"model" if args.model else "pure_pl"} results={args.output}', flush=True)
+    print(f'PASS_{test_name} backend={"model" if args.model else "pure_pl"} results={args.output}', flush=True)
 
 
 if __name__ == '__main__':
