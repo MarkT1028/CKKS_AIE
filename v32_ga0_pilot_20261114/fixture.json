@@ -1,0 +1,41 @@
+{
+  "layer": "g_a.0",
+  "input": "input_64x64.png",
+  "image_size": [
+    64,
+    64,
+    3
+  ],
+  "model_source_sha256": "078db343138b5f51b018bf963c5aa638c0445b6e9bb6ec0c79713f6e565e8916",
+  "image_sha256": "e294ef1d10f6ba9ddf89cfb741eed5a679ffc970c668585d03c6dfd77b207029",
+  "checkpoint_sha256": "af53f4a49d881de4d1b095475e6a01bc4b19b9119d456a89468aceda4db17bc7",
+  "outputs": [
+    0,
+    15
+  ],
+  "complete_layer": false,
+  "full_N": 131072,
+  "L": 57,
+  "tile_N": 128,
+  "K": 16,
+  "groups_per_output": 4,
+  "tiles": 32,
+  "verified_words": 175104,
+  "output_level": 0,
+  "output_scale_degree": 2,
+  "output_scale": 1.2379403528801197e+27,
+  "reference_max_abs_error": [
+    1.5895014385258754e-07,
+    1.9658795780141958e-07
+  ],
+  "files": {
+    "request.bin": {
+      "bytes": 29888964,
+      "sha256": "bea6d353baaa70084234de7d9afa375c43b16193fc25da44e8540471ab1ffa24"
+    },
+    "reference.bin": {
+      "bytes": 1400832,
+      "sha256": "ffa61d9c5e60637a0fe5bcf4946f7c62df14f2c0707e235f93e2d059e3bfda0e"
+    }
+  }
+}
