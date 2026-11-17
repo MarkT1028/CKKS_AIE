@@ -1,0 +1,51 @@
+{
+  "status": "PASS_OFFLINE_CTPT_BOARD_TEST_PENDING",
+  "boot_uuid": "5ec2066393d459f8af16c486d5481a7c",
+  "hls": {
+    "status": "PASS_CSIM_RANDOM_STALL_RTL_AND_TWO_XO",
+    "source_sha256": {
+      "ctpt_reduce.cpp": "ea50cd90eec3dd4c3f27b4462989f76001a010776dff9c23c4898ff34d39d0aa",
+      "ctpt_tb.cpp": "60e542c50ffc4b2d263f7e02ee5a84396020489013037cb2fd14cf4ac695dfbe",
+      "ctpt_chain.cpp": "eb964aa05c1943186fe8bc24a0ec7cc9949eb12e476ba219011890f405e6cd5b",
+      "ctpt_reader.cpp": "41547d1bfe6012d1e35421dd51540defbad0250e3483876a0f25863db819c347",
+      "ct_mac.hpp": "79cc28c898563530884ead095b7ac951f1db0cf36a1d3264c8afa1a4420576cf"
+    },
+    "xo_sha256": {
+      "ct_reader": "5c9fb86156696a05e8fb0d1c40425fbd6621d6594fc33276950ea08b261e275d",
+      "ct_reduce_accum": "d2233ee05c683bbfddf65f21a9ae7214a0be73a9caafa2d66175522ef0ee7e38"
+    }
+  },
+  "host_model": {
+    "fixture_sha256": "9e6e516065c38240a03c540d97c4fcc74287efab6d6416ec22a72dc4b207c0fd",
+    "arm64_xrt_object": true,
+    "corrupted_output_rejected": true,
+    "executions": {
+      "smoke": {
+        "tiles": 32,
+        "verified_words": 1966080,
+        "uploaded_bytes": 167772160,
+        "device_readback_bytes": 10485760,
+        "read_bytes": 218103808,
+        "trace_sha256": "fc19ea689a3f64960c86642d6c1fccd74b92bd265093448dec4a34cab0125a1f"
+      },
+      "full": {
+        "tiles": 15360,
+        "verified_words": 1434451968,
+        "uploaded_bytes": 68853694464,
+        "device_readback_bytes": 7650410496,
+        "read_bytes": 8724152320,
+        "trace_sha256": "ee0ff2f5e83ff7672b132354cd8e8e627f6c971e9fc335bb818a920cd36c1ece"
+      }
+    }
+  },
+  "implementation": {
+    "setup_slack_ns": 0.493,
+    "hold_slack_ns": 0.012,
+    "drc_errors": 0,
+    "board_tested": false
+  },
+  "physical_board_execution": false,
+  "board_latency_seconds": null,
+  "old_fast_packing_and_resident_seconds": 65.75419347,
+  "scope": "All 15360 raw MAC tiles; original ciphertext layer aggregation and bias are external."
+}
