@@ -1,0 +1,22 @@
+{
+  "status": "PASS_OFFLINE",
+  "board_performance": "PENDING",
+  "boot_uuid": "9bee253b8f345f39bd9c18d612897ce3",
+  "test_scope": "Real sealed fixtures, x86 software model with full output SHA-256. Three native XRT translation units cross-compiled as ARM64 objects. Board runtime still needs testing.",
+  "smoke_profiles": ["baseline", "fast"],
+  "full_fast": {
+    "ga0": {"verified_tiles": 15360, "verified_words": 1434451968},
+    "ga3": {"verified_windows": 1024, "verified_words": 1333788672, "prefetched_windows": 1023},
+    "ga6": {"verified_tiles": 2048, "verified_words": 616562688, "prefetched_parts": 588},
+    "ga9": {"verified_tiles": 1152, "verified_words": 424673280, "prefetched_parts": 450}
+  },
+  "ntt_reference": {
+    "moduli": 57,
+    "vectors_compared": 114,
+    "input_scope": "Real input and signed-boundary regression cases",
+    "baseline_x86_seconds": 0.828665,
+    "lazy_x86_seconds": 0.204498
+  },
+  "prefetch_rejects_wrong_input_digest": ["ga6", "ga9"],
+  "local_xrt_compile": "The vendored snapshot lacks the generated version header. The ARM64 object check omits only the SDK ABI-version macro check. build_board.sh uses the board's installed SDK."
+}

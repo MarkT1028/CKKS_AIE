@@ -1,0 +1,7 @@
+**/bin/
+**/__pycache__/
+**/results_*/
+**/results_*.tar.gz
+**/BUILD_IDENTITY.json
+**/DATA_CHECK_RECEIPT.json
+**/RECOVERY_REQUIRED.json
