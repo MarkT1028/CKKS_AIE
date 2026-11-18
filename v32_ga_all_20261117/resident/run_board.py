@@ -13,7 +13,9 @@ import time
 
 
 ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT.parent / 'common'))
+PACKAGE_ROOT = ROOT.parent
+PACKAGE_MANIFEST = PACKAGE_ROOT / 'SHA256SUMS_PACKAGE'
+sys.path.insert(0, str(PACKAGE_ROOT / 'common'))
 from ga_all_board import VARIANT, XCLBIN, boot_uuid, input_source
 
 SPLIT = ROOT.parent.parent / 'v32_ga3_splitbo_20261109'
@@ -52,7 +54,8 @@ def write_json(path, value):
 
 
 def package_check():
-    subprocess.run(['sha256sum', '-c', 'SHA256SUMS_PACKAGE'], cwd=ROOT, check=True)
+    subprocess.run(['sha256sum', '-c', '--quiet', PACKAGE_MANIFEST.name],
+                   cwd=PACKAGE_MANIFEST.parent, check=True)
     for path, digest in DEPENDENCIES.items():
         require(path.is_file() and sha(path) == digest, f'missing or changed dependency: {path}')
     sys.path.insert(0, str(SPLIT))
@@ -195,7 +198,7 @@ def run(args, board, package):
                 status='PASS_GA_RESIDENT_FULL' if full else 'PASS_GA_RESIDENT_SMOKE',
                 layer=meta['layer'], scope=args.scope, profile=args.profile, boot_uuid=uuid,
                 hardware_variant=VARIANT, aie_compute_tiles=0, manifest_sha256=LAYERS[args.layer][3],
-                package_sha256=sha(ROOT / 'SHA256SUMS_PACKAGE'),
+                package_sha256=sha(PACKAGE_MANIFEST),
                 splitbo_manifest_sha256=package['manifest_sha256'],
                 binary_sha256=binary_sha, **native, stage_work_ms=stage_totals,
                 page_cache_policy=('per_input_part_advisory_retirement_no_global_clear' if source=='sd'
