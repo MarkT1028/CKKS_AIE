@@ -1,0 +1,11 @@
+/bin/
+/results_*/
+/switch_logs/
+/__pycache__/
+
+**/bin/
+**/results_*/
+**/BUILD_IDENTITY.json
+**/RECOVERY_REQUIRED.json
+**/DATA_CHECK_RECEIPT.json
+/campaigns/

@@ -1,0 +1,149 @@
+{
+  "status": "PASS_DUAL_MODE_OFFLINE_BOARD_PERFORMANCE_PENDING",
+  "boot_uuid": "482207edafa35becadd3d1d36d0aa719",
+  "mode_bits": {
+    "ctpt": 65536,
+    "ctct": 0
+  },
+  "product_passes": {
+    "ctpt": 2,
+    "ctct": 3
+  },
+  "hls": {
+    "status": "PASS_CSIM_RANDOM_STALL_RTL_AND_TWO_XO",
+    "source_sha256": {
+      "ga_tb.cpp": "0502acd8fe89a15ecd7af4efe8cd803a67ee0c0874be3c958215e079dc1b10a7",
+      "ga_chain.cpp": "b9c95d733ef6212b7cc273f85e0d7cf7f231421e0c37ef178d28313030581686",
+      "ga_reduce.cpp": "c7ff3784dc1407902fe26559627da8b4245adc97ee5be059b477f77d797ad8a8",
+      "ga_reader.cpp": "362621072572ad8a4df7ee21ac2aa59a0111624af60ed6f09e94836a250009b6",
+      "ct_mac.hpp": "ef832b2b00af5cd3b8e8488ff06ac3ab11ee8145dd3d7e0e3d02481246087cbe"
+    },
+    "xo_sha256": {
+      "ct_reader": "f1ca3a44282b7c57684d8f732de57336303228bda81896c71ba6fe0fd50efe24",
+      "ct_reduce_accum": "ed9a95a5b6f7f16ee3f6524d1fc06a2ce7da572cc5f9b2da2e9607ae4a1807ab"
+    }
+  },
+  "host": {
+    "raw": {
+      "scope": "software models and real input fixtures",
+      "layers": {
+        "ga0": {
+          "smoke_disk": {
+            "verified_words": 1966080,
+            "tiles": 32,
+            "input_source": "sd",
+            "ntt_fused_stages": true
+          },
+          "smoke_wire": {
+            "verified_words": 1966080,
+            "tiles": 32,
+            "input_source": "net",
+            "ntt_fused_stages": true
+          },
+          "rejected_corruption": true,
+          "full_wire": {
+            "verified_words": 1434451968,
+            "tiles": 15360,
+            "input_source": "net",
+            "ntt_fused_stages": true
+          }
+        },
+        "ga3": {
+          "smoke_disk": {
+            "verified_words": 2064384,
+            "windows": 2,
+            "input_source": "sd"
+          },
+          "smoke_wire": {
+            "verified_words": 2064384,
+            "windows": 2,
+            "input_source": "net",
+            "wire_bytes": 220204120,
+            "packed_records": 0
+          },
+          "rejected_corruption": true,
+          "full_wire": {
+            "verified_words": 1333788672,
+            "windows": 1024,
+            "input_source": "net",
+            "wire_bytes": 35568186880,
+            "packed_records": 0
+          }
+        },
+        "ga6": {
+          "smoke_disk": {
+            "verified_words": 13369344,
+            "tiles": 64,
+            "windows": 16,
+            "input_source": "sd"
+          },
+          "smoke_wire": {
+            "verified_words": 13369344,
+            "tiles": 64,
+            "windows": 16,
+            "input_source": "net"
+          },
+          "rejected_corruption": true,
+          "full_wire": {
+            "verified_words": 616562688,
+            "tiles": 2048,
+            "windows": 512,
+            "input_source": "net"
+          }
+        },
+        "ga9": {
+          "smoke_disk": {
+            "verified_words": 17104896,
+            "tiles": 48,
+            "windows": 8,
+            "input_source": "sd"
+          },
+          "smoke_wire": {
+            "verified_words": 17104896,
+            "tiles": 48,
+            "windows": 8,
+            "input_source": "net"
+          },
+          "rejected_corruption": true,
+          "full_wire": {
+            "verified_words": 424673280,
+            "tiles": 1152,
+            "windows": 192,
+            "input_source": "net"
+          }
+        }
+      }
+    },
+    "packed_ga3": {
+      "smoke_packed": {
+        "verified_words": 2064384,
+        "windows": 2,
+        "input_source": "net",
+        "wire_bytes": 158765400,
+        "packed_records": 10
+      },
+      "full_packed": {
+        "verified_words": 1333788672,
+        "windows": 1024,
+        "input_source": "net",
+        "wire_bytes": 25564935680,
+        "packed_records": 1280
+      },
+      "rejected_corruption": true
+    },
+    "ARM64_object_sha256": {
+      "ga0": "f507118e22f1e64266cafb0369b56f46bfd962a352c04c419583720b6cda0f49",
+      "ga3": "30f4c9487f80b724b09af78f412cd5c4635eea6447e8294447dbbd41df3c6e84",
+      "resident": "2f791bd4e032fef7170bef383e113a3f4bde0986d3d62d5e7cc55a9c6a04ca16"
+    }
+  },
+  "implementation": {
+    "setup_slack_ns": 0.312,
+    "hold_slack_ns": 0.014,
+    "drc_errors": 0,
+    "board_tested": false
+  },
+  "AIE_compute_tiles": 0,
+  "physical_board_execution": false,
+  "scope": "All raw MAC replays, each verified independently."
+}
