@@ -1,0 +1,175 @@
+{
+  "status": "PASS_MODEL_REPLAYS_BOARD_TIMING_PENDING",
+  "host": {
+    "scope": "software models and real input fixtures",
+    "layers": {
+      "ga0": {
+        "smoke_disk": {
+          "verified_words": 1966080,
+          "tiles": 32,
+          "input_source": "sd",
+          "ntt_fused_stages": true,
+          "plaintext_pipeline": true
+        },
+        "smoke_wire": {
+          "verified_words": 1966080,
+          "tiles": 32,
+          "input_source": "net",
+          "ntt_fused_stages": true,
+          "plaintext_pipeline": true
+        },
+        "smoke_wire_no_prefetch": {
+          "verified_words": 1966080,
+          "tiles": 32,
+          "input_source": "net",
+          "ntt_fused_stages": true,
+          "plaintext_pipeline": true
+        },
+        "rejected_corruption": true,
+        "full_wire": {
+          "verified_words": 1434451968,
+          "tiles": 15360,
+          "input_source": "net",
+          "ntt_fused_stages": true,
+          "plaintext_pipeline": true
+        }
+      },
+      "ga3": {
+        "smoke_disk": {
+          "verified_words": 2064384,
+          "windows": 2,
+          "input_source": "sd"
+        },
+        "smoke_wire": {
+          "verified_words": 2064384,
+          "windows": 2,
+          "input_source": "net",
+          "wire_bytes": 220204120,
+          "packed_records": 0
+        },
+        "smoke_wire_no_prefetch": {
+          "verified_words": 2064384,
+          "windows": 2,
+          "input_source": "net",
+          "wire_bytes": 220204120,
+          "packed_records": 0
+        },
+        "rejected_corruption": true,
+        "full_wire": {
+          "verified_words": 1333788672,
+          "windows": 1024,
+          "input_source": "net",
+          "wire_bytes": 35568186880,
+          "packed_records": 0
+        },
+        "smoke_wire_baseline": {
+          "verified_words": 2064384,
+          "windows": 2,
+          "input_source": "net",
+          "wire_bytes": 220204120,
+          "packed_records": 0
+        }
+      },
+      "ga6": {
+        "smoke_disk": {
+          "verified_words": 13369344,
+          "tiles": 64,
+          "windows": 16,
+          "input_source": "sd"
+        },
+        "smoke_wire": {
+          "verified_words": 13369344,
+          "tiles": 64,
+          "windows": 16,
+          "input_source": "net"
+        },
+        "smoke_wire_no_prefetch": {
+          "verified_words": 13369344,
+          "tiles": 64,
+          "windows": 16,
+          "input_source": "net"
+        },
+        "rejected_corruption": true,
+        "full_wire": {
+          "verified_words": 616562688,
+          "tiles": 2048,
+          "windows": 512,
+          "input_source": "net"
+        },
+        "smoke_wire_baseline": {
+          "verified_words": 13369344,
+          "tiles": 64,
+          "windows": 16,
+          "input_source": "net"
+        }
+      },
+      "ga9": {
+        "smoke_disk": {
+          "verified_words": 17104896,
+          "tiles": 48,
+          "windows": 8,
+          "input_source": "sd"
+        },
+        "smoke_wire": {
+          "verified_words": 17104896,
+          "tiles": 48,
+          "windows": 8,
+          "input_source": "net"
+        },
+        "smoke_wire_no_prefetch": {
+          "verified_words": 17104896,
+          "tiles": 48,
+          "windows": 8,
+          "input_source": "net"
+        },
+        "rejected_corruption": true,
+        "full_wire": {
+          "verified_words": 424673280,
+          "tiles": 1152,
+          "windows": 192,
+          "input_source": "net"
+        },
+        "smoke_wire_baseline": {
+          "verified_words": 17104896,
+          "tiles": 48,
+          "windows": 8,
+          "input_source": "net"
+        }
+      }
+    }
+  },
+  "candidate": {
+    "uuid": "6cc21e10b0805092bc88f9000f5a6d4f",
+    "signoff": {
+      "setup_slack_ns": 0.386,
+      "hold_slack_ns": 0.007,
+      "drc_errors": 0,
+      "board_tested": false
+    },
+    "hls": {
+      "status": "PASS_BOTH_SPECIALIZED_RTL_RANDOM_STALL_AND_FOUR_XO",
+      "source_sha256": {
+        "ctpt/ctpt_chain.cpp": "eb964aa05c1943186fe8bc24a0ec7cc9949eb12e476ba219011890f405e6cd5b",
+        "ctpt/ctpt_reader.cpp": "41547d1bfe6012d1e35421dd51540defbad0250e3483876a0f25863db819c347",
+        "ctpt/ctpt_reduce.cpp": "ea50cd90eec3dd4c3f27b4462989f76001a010776dff9c23c4898ff34d39d0aa",
+        "ctpt/ctpt_tb.cpp": "60e542c50ffc4b2d263f7e02ee5a84396020489013037cb2fd14cf4ac695dfbe",
+        "ctpt/ct_mac.hpp": "79cc28c898563530884ead095b7ac951f1db0cf36a1d3264c8afa1a4420576cf",
+        "ctct/ct_mac.hpp": "33fa9d99acfc3da0656f069383444a2ef169e27b9907c387612cb4f5879ee057",
+        "ctct/native_chain.cpp": "a5b25dbab7bd669ffa91d5c4a48fd05e8a398a6f729aba2bc0b7022ab45d2293",
+        "ctct/native_reader.cpp": "5a20dde2715af9780ed8b81767158537c8b453ba461af3a1060335ec071587cf",
+        "ctct/native_reduce.cpp": "fee71dbadc85dcd18fefe44bf430933f697004e3c63fae6b8b2efbb790e5d43e",
+        "ctct/native_tb.cpp": "67f71eb185d1041fd3504a4edba660ab24be62ebfcb812792980ad40bfca8f20"
+      },
+      "xo_sha256": {
+        "ct_reader": "fa712196c9c69fd241e6472479aea312a15094d2cf597bd14253cdf6a8ccd1ea",
+        "ct_reduce_accum": "c25402c08532739cb4cbebabcc8bbe20c612ccfebf0832e1c90d6e5f7b03d7ca",
+        "ctpt_reader": "71cbb032663ee156da2f02dccb55074ea9020f33f497ae97ecbdef79fe4977e2",
+        "ctpt_reduce_accum": "89fde9d831912e5f419e8b385e319f97ae64ae3776f5f0a508288533eb04054b"
+      }
+    },
+    "ctct_products": 4,
+    "ctpt_products": 2,
+    "instantiated_lanes": 4,
+    "active_lanes_per_layer": 2
+  }
+}
