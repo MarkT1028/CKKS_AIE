@@ -1,0 +1,73 @@
+{
+  "format": "v32_ga5_ct0_split_v1",
+  "fixture_sha256": "3bd791f123f1563c5874498abe32021f1197fc36a9b84c982c29ca5c7b2866fc",
+  "request_sha256": "3d3aea956b362f30c4d19c3ed1c85576d50c0139bff0446571c7ae46fe41e52e",
+  "request_bytes": 650142340,
+  "parts": [
+    {
+      "name": "part_000.part",
+      "bytes": 50331648,
+      "sha256": "bc7d965db84906e3517ddd172d64e9408defc5bce394e6d0d95422f7adacb7bf"
+    },
+    {
+      "name": "part_001.part",
+      "bytes": 50331648,
+      "sha256": "8d1fbdc6522815f01ca11308f9563688f9feb836b7d69bc5bdd383c463f0d318"
+    },
+    {
+      "name": "part_002.part",
+      "bytes": 50331648,
+      "sha256": "06d70b41ed69446ad7a17d73faaabf3198ff19a94be4eef04d3538a3b4b1e700"
+    },
+    {
+      "name": "part_003.part",
+      "bytes": 50331648,
+      "sha256": "1cd2385e64fb374842aa7e2dd113294e4928af3d6ecc1965c00708d56a17c1e5"
+    },
+    {
+      "name": "part_004.part",
+      "bytes": 50331648,
+      "sha256": "ca97d8ee3747d3e553d106a6d6435b1533597d561d7bf33fb1a936d42850afb4"
+    },
+    {
+      "name": "part_005.part",
+      "bytes": 50331648,
+      "sha256": "a83c644f6b667d838be5157bd2582261007096446e322a5c899f6fa8ee04c025"
+    },
+    {
+      "name": "part_006.part",
+      "bytes": 50331648,
+      "sha256": "29cec58df1e13e0283a676aee31437ed4476d3350c216d085a7e0554ced237a8"
+    },
+    {
+      "name": "part_007.part",
+      "bytes": 50331648,
+      "sha256": "833758ff378bf6d3366a1d57dc1ef41935894eca2c9322f51f743f4874189dfe"
+    },
+    {
+      "name": "part_008.part",
+      "bytes": 50331648,
+      "sha256": "57cf9fc7167cfdd5d5eb3c1b6829dbebc54ce349ea608ace7fa48afb5e88814b"
+    },
+    {
+      "name": "part_009.part",
+      "bytes": 50331648,
+      "sha256": "6dc5a9c7dad972bc143dae21ea75fc73c77caaa0c16216c9fff6ae61ff105c93"
+    },
+    {
+      "name": "part_010.part",
+      "bytes": 50331648,
+      "sha256": "58afca9d612be9b8c91f445f0369bd5384ba20dde6ab5a60e9ceb44cc1b5ebfb"
+    },
+    {
+      "name": "part_011.part",
+      "bytes": 50331648,
+      "sha256": "ff81dc1943f5582040a081bbda7c869cf8fd7a1c805d490a0409e35b0561eff4"
+    },
+    {
+      "name": "part_012.part",
+      "bytes": 46162564,
+      "sha256": "15647069c6307d3911a2c4372a4fc5bc00cd24b3adf7e9a2685ff16487ac234d"
+    }
+  ]
+}
