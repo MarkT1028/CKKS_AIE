@@ -1,0 +1,99 @@
+{
+  "status": "PASS_OFFLINE_MODELS",
+  "hardware_measurements": "PENDING_VEK280",
+  "hardware_image": "v32_ga_tuned_2_pipe",
+  "expected_boot_uuid": "6cc21e10b0805092bc88f9000f5a6d4f",
+  "scope": "Independent full raw MAC fixture replays per layer.",
+  "words_per_full_four_layer_replay": 3809476608,
+  "layers": {
+    "ga0": {
+      "full_file_replay": {
+        "verified_words": 1434451968,
+        "tiles": 15360,
+        "input_source": "sd",
+        "ntt_fused_stages": true,
+        "plaintext_pipeline": true
+      },
+      "full_loopback_replay": {
+        "verified_words": 1434451968,
+        "tiles": 15360,
+        "input_source": "net",
+        "ntt_fused_stages": true,
+        "plaintext_pipeline": true
+      },
+      "rejected_corrupt_network_input": true
+    },
+    "ga3": {
+      "full_file_replay": {
+        "verified_words": 1333788672,
+        "windows": 1024,
+        "input_source": "sd"
+      },
+      "full_loopback_replay": {
+        "verified_words": 1333788672,
+        "windows": 1024,
+        "input_source": "net",
+        "wire_bytes": 35568186880,
+        "packed_records": 0
+      },
+      "rejected_corrupt_network_input": true
+    },
+    "ga6": {
+      "full_file_replay": {
+        "verified_words": 616562688,
+        "tiles": 2048,
+        "windows": 512,
+        "input_source": "sd"
+      },
+      "full_loopback_replay": {
+        "verified_words": 616562688,
+        "tiles": 2048,
+        "windows": 512,
+        "input_source": "net"
+      },
+      "rejected_corrupt_network_input": true,
+      "mixed_cache_run": {
+        "compact_parts": 2,
+        "verified_parts": 589,
+        "part_read_bytes": 19730264068,
+        "input_stream_bytes": 19722159212
+      }
+    },
+    "ga9": {
+      "full_file_replay": {
+        "verified_words": 424673280,
+        "tiles": 1152,
+        "windows": 192,
+        "input_source": "sd"
+      },
+      "full_loopback_replay": {
+        "verified_words": 424673280,
+        "tiles": 1152,
+        "windows": 192,
+        "input_source": "net"
+      },
+      "rejected_corrupt_network_input": true,
+      "mixed_cache_run": {
+        "compact_parts": 2,
+        "verified_parts": 451,
+        "part_read_bytes": 15099664900,
+        "input_stream_bytes": 15091576410
+      }
+    }
+  },
+  "auxiliary_checks": [
+    "PASS_THREE_BANK_OWNERSHIP_AND_FAULTS",
+    "PASS_COMPACT_ROUNDTRIP_AND_MATCHED_INPUT_ABBA",
+    "PASS_GA_TUNED_CAMPAIGN_ROUTING_AND_COLLECTION",
+    "PASS_GA3_PARAMETER_REUSE_BOARD_RECEIPT_AUDIT",
+    "PASS_REJECT_MODEL_OUTPUT_FAULT ga0",
+    "PASS_REJECT_MODEL_OUTPUT_FAULT ga6",
+    "PASS_REJECT_MODEL_OUTPUT_FAULT ga9"
+  ],
+  "cortex_a72_xrt_header_object_sha256": {
+    "ga0": "0833a7d69947d58c9b6fa44a9abf2437b4a7f94df41f3939dd47db109bc84fe7",
+    "ga3": "37e958781e3302f6111075047e3edc33633f166a7fdb87c0e6eeb43ec047f374",
+    "resident": "325b95fdbadce1649dd44427ccd36c11f861bf2074da421edce87989ad58fb12"
+  },
+  "measurement_note": "Full fixtures and sealed reference output digests were checked with the software contract model. FPGA timing and board performance require a physical run."
+}
