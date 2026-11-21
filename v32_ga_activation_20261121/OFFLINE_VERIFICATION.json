@@ -1,0 +1,138 @@
+{
+  "status": "PASS_LOCAL_MODELS",
+  "physical_board": "PENDING_VEK280",
+  "unchanged_hardware_uuid": "6cc21e10b0805092bc88f9000f5a6d4f",
+  "convolution_full_words": {
+    "ga0": 1434451968,
+    "ga3": 1333788672,
+    "ga6": 616562688,
+    "ga9": 424673280
+  },
+  "short_cases": [
+    {
+      "layer": "ga0",
+      "scope": "smoke",
+      "setting": 512,
+      "words": 1966080,
+      "tiles": 32
+    },
+    {
+      "layer": "ga0",
+      "scope": "smoke",
+      "setting": 1024,
+      "words": 1966080,
+      "tiles": 32
+    },
+    {
+      "layer": "ga0",
+      "scope": "smoke",
+      "setting": 2048,
+      "words": 1966080,
+      "tiles": 32
+    },
+    {
+      "layer": "ga6",
+      "scope": "pilot-head",
+      "setting": 2,
+      "words": 25165824,
+      "tiles": 64
+    },
+    {
+      "layer": "ga6",
+      "scope": "pilot-head",
+      "setting": 3,
+      "words": 25165824,
+      "tiles": 64
+    },
+    {
+      "layer": "ga6",
+      "scope": "pilot-tail",
+      "setting": 2,
+      "words": 1572864,
+      "tiles": 64
+    },
+    {
+      "layer": "ga6",
+      "scope": "pilot-tail",
+      "setting": 3,
+      "words": 1572864,
+      "tiles": 64
+    },
+    {
+      "layer": "ga9",
+      "scope": "pilot-head",
+      "setting": 2,
+      "words": 18874368,
+      "tiles": 48
+    },
+    {
+      "layer": "ga9",
+      "scope": "pilot-head",
+      "setting": 3,
+      "words": 18874368,
+      "tiles": 48
+    },
+    {
+      "layer": "ga9",
+      "scope": "pilot-tail",
+      "setting": 2,
+      "words": 15335424,
+      "tiles": 48
+    },
+    {
+      "layer": "ga9",
+      "scope": "pilot-tail",
+      "setting": 3,
+      "words": 15335424,
+      "tiles": 48
+    }
+  ],
+  "full_cases": [
+    {
+      "layer": "ga0",
+      "scope": "full",
+      "setting": 1024,
+      "words": 1434451968,
+      "tiles": 15360
+    },
+    {
+      "layer": "ga6",
+      "scope": "full",
+      "setting": 2,
+      "words": 616562688,
+      "tiles": 2048
+    },
+    {
+      "layer": "ga9",
+      "scope": "full",
+      "setting": 2,
+      "words": 424673280,
+      "tiles": 1152
+    }
+  ],
+  "ga5": {
+    "full_local_software_round_trip": {
+      "tiles": 3072,
+      "raw_words": 975175680,
+      "ciphertexts_checked": 16
+    },
+    "offline_pilot": {
+      "tiles": 96,
+      "raw_words": 36864,
+      "ciphertexts_checked": 16
+    },
+    "full_reconstructed_ciphertext_exact": true,
+    "portable_pilot_requires_ground_reference_for_untested_slices": true,
+    "fixture_manifest_sha256": "57cc618df1880cf2af223aa0f31339803581c4158394c97fe16ff496eb3189a3"
+  },
+  "auxiliary_checks": [
+    "PASS_BOARD_STUDY_AND_COLLECTION",
+    "PASS_GA5_REJECTS_CHANGED_INPUT"
+  ],
+  "cortex_a72_xrt_object_sha256": {
+    "ga0": "0cd33b817d5070e052a5395ed7361ad3c2f92cdb057717c79a6a49b2098a4f5d",
+    "ga3": "37e958781e3302f6111075047e3edc33633f166a7fdb87c0e6eeb43ec047f374",
+    "resident": "fc3a8e9444283c7d2fa0626f5213f3f3646cad53bf5107a102f137032990ab23",
+    "ga5": "89a6e64abe1d532ad39895cf52059bdd91d11ddadfce2bc568cc46deb54b6679"
+  }
+}
